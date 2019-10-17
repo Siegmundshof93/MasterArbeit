@@ -1,0 +1,50 @@
+\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{List of Tables}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Objective}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Scope}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{Outline}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{Fundamentals and Related Work}{}% 8
+\BOOKMARK [1][-]{section.2.1}{Technologies }{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.1.1}{Technology A}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.2}{Technology B}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.3}{Comparison of Technologies}{section.2.1}% 12
+\BOOKMARK [1][-]{section.2.2}{Standardization }{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.1}{Internet Engineering Task Force}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.2}{International Telecommunication Union}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.3}{3GPP}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.4}{Open Mobile Alliance}{section.2.2}% 17
+\BOOKMARK [1][-]{section.2.3}{Concurrent Approaches }{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{Requirements}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{Technical Requirements}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.2.1}{Sub-component A}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.2}{Sub-component B}{section.3.2}% 23
+\BOOKMARK [1][-]{section.3.3}{Social Requirements}{chapter.3}% 24
+\BOOKMARK [0][-]{chapter.4}{Concept}{}% 25
+\BOOKMARK [1][-]{section.4.1}{Sub-component A}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.2}{Sub-component B}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.3}{Proposed API}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.4}{Layer X}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.5}{Interworking of X and Y}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.6}{Interface Specification}{chapter.4}% 31
+\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 32
+\BOOKMARK [1][-]{section.5.1}{Environment}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.2}{Project Structure}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.3}{Important Implementation Aspects}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.4}{Graphical User Interface}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.5}{Documentation}{chapter.5}% 37
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 38
+\BOOKMARK [1][-]{section.6.1}{Test Environment}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.2}{Scalability}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.3}{Usability}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.4}{Performance Measurements}{chapter.6}% 42
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 43
+\BOOKMARK [1][-]{section.7.1}{Summary}{chapter.7}% 44
+\BOOKMARK [1][-]{section.7.2}{Dissemination}{chapter.7}% 45
+\BOOKMARK [1][-]{section.7.3}{Problems Encountered}{chapter.7}% 46
+\BOOKMARK [1][-]{section.7.4}{Outlook}{chapter.7}% 47
+\BOOKMARK [0][-]{chapter*.8}{List of Acronyms}{}% 48
+\BOOKMARK [0][-]{chapter*.9}{Bibliography}{}% 49
+\BOOKMARK [0][-]{chapter*.10}{Annex}{}% 50
