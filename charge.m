@@ -1,4 +1,7 @@
 function Wh_vec = charge(grad, day1end,stromChar,dt,V,day2beg)
+  
+ 
+  
   Wh_vec = zeros(4,length(grad));
 for i = 1:length(grad)-1
   

@@ -17,7 +17,7 @@ for i = 1:length(grad)
     end
     
   elseif i > day1end & i < day2beg
-    Wh_(1,i) = Wh_(1,day1end) - (V * (ADisch * 1.3)* (i-day1end) * dt);
+    Wh_(1,i) = Wh_(1,day1end) - (V * (ADisch * 1.3)* (i-day1end) * dt) - (V * (BDisch * 1.3)* (i-day1end) * dt);
     Wh_(2,i) = Wh_(2,day1end) - 0;
     Wh_(3,i) = Wh_(3,day1end) - 0;
     Wh_(4,i) = Wh_(4,day1end) - 0;
