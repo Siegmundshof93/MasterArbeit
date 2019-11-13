@@ -22,9 +22,9 @@ LeistungChar = 10;# ----------------- Ladestrom [W]
 ###################                                                               
                                                                                   
 ###################                                                               
-TmE  = 300;        #                                                                
-TmZ =  300;        # ------------- Modus time [min]
-TmD =  300;        #
+TmE  = 600;       #                                                                
+TmZ =  300;       # ------------- Modus time [min]
+TmD =  300;       #
 ###################
 
 #########################
@@ -70,11 +70,11 @@ WhOrbMax = Wh_end(Tz-1); # highest charge point in orbit
 Wh_mittlewert = WhOrbMax / 360; # approximation how much energy will you get for 1 degree
 Wh_OUTPUT = discharge(Time, Wh_mittlewert, FirstMode, SecondMode, ThirdMode, dt, Tz, TmE, TmZ, TmD, StartPoint, SoClim); # discharge function
 
-
+soC = 100 * (Wh_OUTPUT) / 30;
 
 figure(1);
-plot(Time,Wh_OUTPUT,'r', [T,T],[0,30], [2*T,2*T],[0,30],[3*T,3*T],[0,30],[4*T,4*T],[0,30],[5*T,5*T],[0,30],[6*T,6*T],[0,30], [7*T,7*T],[0,30],[8*T,8*T],[0,30],[9*T,9*T],[0,30]);
-title('Kapazitet der Akku')
-ylim([0,30])   
-xlabel('zeit');
-ylabel('Kapazitet');
+plot(Time/3600, soC,'r',1:T/3600:length(Time)/3600,0, ':bs');
+title('SoC')
+ylim([0,100])   
+xlabel('h');
+ylabel('Wh');
