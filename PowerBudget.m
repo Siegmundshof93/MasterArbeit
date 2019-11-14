@@ -23,9 +23,15 @@ LeistungChar = 10;# ----------------- Ladestrom [W]
                                                                                   
 ###################                                                               
 TmE  = 600;       #                                                                
-TmZ =  300;       # ------------- Modus time [min]
+TmZ =  15;       # ------------- Modus time [min]
 TmD =  300;       #
 ###################
+
+
+########################
+limDis = 20;           # - limit of discharge
+########################
+
 
 #########################
  StartPoint = 25;       # ---------- start point of SoC [Wh] 
@@ -37,7 +43,7 @@ SoClim = 30;          #--------------SoC limit[Wh]
 
 ########################
 FirstMode = 6;         #
-SecondMode = 7;        #------------Power consumption per Mode
+SecondMode = 30;        #------------Power consumption per Mode
 ThirdMode = 6;         #
 ########################
 
@@ -72,9 +78,16 @@ Wh_OUTPUT = discharge(Time, Wh_mittlewert, FirstMode, SecondMode, ThirdMode, dt,
 
 soC = 100 * (Wh_OUTPUT) / 30;
 
+
+x = Time/3600;
+y = soC;
 figure(1);
-plot(Time/3600, soC,'r',1:T/3600:length(Time)/3600,0, ':bs');
+plot(x, y, 'b','Linewidth',1)
+hold on
+plot(x(1:T:length(Time)),y(1:T:length(Time)),'r*')
+hold on
+plot([0,length(Time)/3600],[limDis,limDis]);
 title('SoC')
 ylim([0,100])   
-xlabel('h');
-ylabel('Wh');
+xlabel('[h]');
+ylabel('[%]');
