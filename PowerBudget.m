@@ -18,23 +18,23 @@ eclipse = 132.13;#---------------eclipse angle [deg]                            
 ################################################################################### 
      
 ###################                                                               
-Char1 = 7;        #
-Char2 = 8;       #
+Char1 = 15;        #
+Char2 = 9;       #
 Char3 = 15.19;    # ----------------- Ladestrom for different modes[W]
 Char4 = 9.23;     #                              
 ###################  
 
 ########################
-MODE1 = 5;             #
-MODE2 = 4;            #------------Power consumption per Mode
+MODE1 = 6;             #
+MODE2 = 10;            #------------Power consumption per Mode
 MODE3 = 2;             #
 MODE4 = 5;             #
 ########################                                                             
                                                                                   
 ####################                                                               
-Tm1  =  20;       #                                                                
+Tm1  =  20;        #                                                                
 Tm2  =  20;        # ------------- Modus time [min]
-Tm3  =  30;       #
+Tm3  =  30;        #
 Tm4  =  50;        #
 Tm5  =  60;        # 
 Tm6  =  10;        #
@@ -61,7 +61,7 @@ SoClim = 30;          #--------------SoC limit[Wh]
 
 
 #########################
-FirstMode   = MODE1;    #
+FirstMode   = MODE2;    #
 SecondMode  = MODE1;    #
 ThirdMode   = MODE2;    #
 FourthMode  = MODE1;    #
