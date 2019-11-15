@@ -38,7 +38,7 @@ Tm3  =  30;        #
 Tm4  =  50;        #
 Tm5  =  60;        # 
 Tm6  =  10;        #
-Tm7  =  100;       #
+Tm7  =  10;       #
 Tm8  =  0;         #
 Tm9  =  0;         #
 Tm10 =  0;         #
@@ -68,9 +68,9 @@ FourthMode  = MODE1;    #
 FifthMode   = MODE2;    #
 SixthMode   = MODE1;    #------------Modes continuation
 SeventhMode = MODE2;    #
-EightMode   = 0;        #
-NinethMode  = 0;        #
-TenthMode   = 0;        #
+EightMode   = MODE1;        #
+NinethMode  = MODE2;        #
+TenthMode   = MODE1;        #
 #########################
 
 ###########################################################################################################
@@ -223,4 +223,4 @@ ylim([0,100])
 xlabel('Time[h]');
 ylabel('State of Charge[%]');
 grid on
-legend ("state of charge", "orbital period", "limit of discharge","mode 1","mode 2", "mode 3", "mode 4", "mode 5","mode 6", "mode 7", "mode 9", "mode 10", "location", "NorthEastOutside");
+legend ("state of charge", "orbital period", "limit of discharge","1st mode","2nd mode", "3rd mode", "4th mode", "5th mode","6th mode", "7th mode","8th mode", "9th mode", "10th mode", "location", "NorthEastOutside");
