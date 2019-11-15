@@ -18,10 +18,16 @@ eclipse = 132.13;#---------------eclipse angle [deg]                            
 ################################################################################### 
      
 ###################                                                               
-Char1 = 15;        #
-Char2 = 9;       #
-Char3 = 15.19;    # ----------------- Ladestrom for different modes[W]
-Char4 = 9.23;     #                              
+Char1 = 25;       #
+Char2 = 10;       #
+Char3 = 10;       # 
+Char4 = 9;        #
+Char5 = 9.23;     #----------------- Ladestrom for different modes[W]
+Char6 = 9.23;     #
+Char7 = 9.23;     #
+Char8 = 9.23;     #
+Char9 = 9.23;     #
+Char10 = 9.23;    #               
 ###################  
 
 ########################
@@ -29,6 +35,12 @@ MODE1 = 6;             #
 MODE2 = 10;            #------------Power consumption per Mode
 MODE3 = 2;             #
 MODE4 = 5;             #
+MODE5 = 6;             #
+MODE6 = 7;             #
+MODE7 = 8;             #
+MODE8 = 9;             #
+MODE9 = 2;             #
+MODE10 = 3;            #
 ########################                                                             
                                                                                   
 ####################                                                               
@@ -38,7 +50,7 @@ Tm3  =  30;        #
 Tm4  =  50;        #
 Tm5  =  60;        # 
 Tm6  =  10;        #
-Tm7  =  10;       #
+Tm7  =  10;        #
 Tm8  =  0;         #
 Tm9  =  0;         #
 Tm10 =  0;         #
@@ -68,9 +80,9 @@ FourthMode  = MODE1;    #
 FifthMode   = MODE2;    #
 SixthMode   = MODE1;    #------------Modes continuation
 SeventhMode = MODE2;    #
-EightMode   = MODE1;        #
-NinethMode  = MODE2;        #
-TenthMode   = MODE1;        #
+EightMode   = MODE1;    #
+NinethMode  = MODE2;    #
+TenthMode   = MODE1;    #
 #########################
 
 ###########################################################################################################
@@ -134,28 +146,9 @@ grad = 0:Tz-1;
           end
 
           
-##############
-Wh_end = charge(grad, day1end,Char1, Char2, Char3, Char4, dt, day2beg, Tz);
-
-  Wh_1end = Wh_end(1,:);
-  Wh_2end = Wh_end(2,:);
-  Wh_3end = Wh_end(3,:);
-  Wh_4end = Wh_end(4,:);
-  
-  WhOrbMax1 = Wh_1end(Tz-1);
-  WhOrbMax2 = Wh_2end(Tz-1);
-  WhOrbMax3 = Wh_3end(Tz-1);
-  WhOrbMax4 = Wh_4end(Tz-1);
-  
-  Wh_mittlewert1 = WhOrbMax1 / 360;
-  Wh_mittlewert2 = WhOrbMax2 / 360;
-  Wh_mittlewert3 = WhOrbMax3 / 360;
-  Wh_mittlewert4 = WhOrbMax4 / 360;
-Wh_OUTPUT = discharge(Time, Wh_mittlewert1, Wh_mittlewert2, FirstMode, SecondMode, ThirdMode, FourthMode, FifthMode, SixthMode, SeventhMode, EightMode, NinethMode, TenthMode, dt, Tz, Tm1, Tm2, Tm3, Tm4, Tm5, Tm6, Tm7, Tm8, Tm9, Tm10, StartPoint, SoClim, MODE1, MODE2);
-
-##############          
-
-soC = 100 * (Wh_OUTPUT) / 30;
+#functions
+Wh_end = charge(grad, day1end,Char1, Char2, Char3, Char4, Char5, Char6, Char7, Char8, Char9, Char10, dt, day2beg, Tz);
+soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthMode, FifthMode, SixthMode, SeventhMode, EightMode, NinethMode, TenthMode, dt, Tz, Tm1, Tm2, Tm3, Tm4, Tm5, Tm6, Tm7, Tm8, Tm9, Tm10, StartPoint, SoClim, MODE1, MODE2);      
 
 
 
@@ -218,6 +211,8 @@ hold on
 area(x9,y9)
 hold on
 area(x10,y10)
+hold on 
+%plotyy (x, y, 1:5)
 title('State of Charge versus Time ')
 ylim([0,100])   
 xlabel('Time[h]');
