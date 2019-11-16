@@ -127,14 +127,38 @@ function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthM
             Wh1_cha(i) = Wh1_cha(Tm2) + ((Wh_mittlewert2 * (i-Tm2))/dt); #charge of 
             Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
             Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif ThirdMode = MODE3
-%            Wh1_cha(i) = ((Wh_mittlewert3 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif ThirdMode = MODE4
-%            Wh1_cha(i) = ((Wh_mittlewert4 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif ThirdMode == MODE3
+            Wh1_cha(i) = Wh1_cha(Tm2) + ((Wh_mittlewert3 * (i-Tm2))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif ThirdMode == MODE4
+            Wh1_cha(i) = Wh1_cha(Tm2) + ((Wh_mittlewert4 * (i-Tm2))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif ThirdMode == MODE5
+            Wh1_cha(i) = Wh1_cha(Tm2) + ((Wh_mittlewert5 * (i-Tm2))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif ThirdMode == MODE6
+            Wh1_cha(i) = Wh1_cha(Tm2) + ((Wh_mittlewert6 * (i-Tm2))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif ThirdMode == MODE7
+            Wh1_cha(i) = Wh1_cha(Tm2) + ((Wh_mittlewert7 * (i-Tm2))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif ThirdMode == MODE8
+            Wh1_cha(i) = Wh1_cha(Tm2) + ((Wh_mittlewert8 * (i-Tm2))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif ThirdMode == MODE9
+            Wh1_cha(i) = Wh1_cha(Tm2) + ((Wh_mittlewert9 * (i-Tm2))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif ThirdMode == MODE10
+            Wh1_cha(i) = Wh1_cha(Tm2) + ((Wh_mittlewert10 * (i-Tm2))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm2) + (((ThirdMode * 1.3)* (i-Tm2) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
             end
         elseif i > Tm3 & i <= Tm4
             if FourthMode == MODE1
@@ -145,14 +169,38 @@ function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthM
             Wh1_cha(i) = Wh1_cha(Tm3) + ((Wh_mittlewert2 * (i-Tm3))/dt);
             Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
             Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif FourthMode = MODE3
-%            Wh1_cha(i) = ((Wh_mittlewert3 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif FourthMode = MODE4
-%            Wh1_cha(i) = ((Wh_mittlewert4 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FourthMode == MODE3
+            Wh1_cha(i) = Wh1_cha(Tm3) + ((Wh_mittlewert3 * (i-Tm3))/dt);
+            Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FourthMode == MODE4
+            Wh1_cha(i) = Wh1_cha(Tm3) + ((Wh_mittlewert4 * (i-Tm3))/dt);
+            Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FourthMode == MODE5
+            Wh1_cha(i) = Wh1_cha(Tm3) + ((Wh_mittlewert5 * (i-Tm3))/dt);
+            Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FourthMode == MODE6
+            Wh1_cha(i) = Wh1_cha(Tm3) + ((Wh_mittlewert6 * (i-Tm3))/dt);
+            Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FourthMode == MODE7
+            Wh1_cha(i) = Wh1_cha(Tm3) + ((Wh_mittlewert7 * (i-Tm3))/dt);
+            Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FourthMode == MODE8
+            Wh1_cha(i) = Wh1_cha(Tm3) + ((Wh_mittlewert8 * (i-Tm3))/dt);
+            Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FourthMode == MODE9
+            Wh1_cha(i) = Wh1_cha(Tm3) + ((Wh_mittlewert9 * (i-Tm3))/dt);
+            Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FourthMode == MODE10
+            Wh1_cha(i) = Wh1_cha(Tm3) + ((Wh_mittlewert10 * (i-Tm3))/dt);
+            Wh1_dis(i) = Wh1_dis(Tm3) + (((FourthMode * 1.3)* (i-Tm3) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
             end
         elseif i > Tm4 & i <= Tm5
             if FifthMode == MODE1
@@ -163,14 +211,38 @@ function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthM
             Wh1_cha(i) = Wh1_cha(Tm4) + ((Wh_mittlewert2 * (i-Tm4))/dt); #charge of 
             Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
             Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif FifthMode = MODE3
-%            Wh1_cha(i) = ((Wh_mittlewert3 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif FifthMode = MODE4
-%            Wh1_cha(i) = ((Wh_mittlewert4 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FifthMode == MODE3
+            Wh1_cha(i) = Wh1_cha(Tm4) + ((Wh_mittlewert3 * (i-Tm4))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FifthMode == MODE4
+            Wh1_cha(i) = Wh1_cha(Tm4) + ((Wh_mittlewert4 * (i-Tm4))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FifthMode == MODE5
+            Wh1_cha(i) = Wh1_cha(Tm4) + ((Wh_mittlewert5 * (i-Tm4))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FifthMode == MODE6
+            Wh1_cha(i) = Wh1_cha(Tm4) + ((Wh_mittlewert6 * (i-Tm4))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FifthMode == MODE7
+            Wh1_cha(i) = Wh1_cha(Tm4) + ((Wh_mittlewert7 * (i-Tm4))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FifthMode == MODE8
+            Wh1_cha(i) = Wh1_cha(Tm4) + ((Wh_mittlewert8 * (i-Tm4))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FifthMode == MODE9
+            Wh1_cha(i) = Wh1_cha(Tm4) + ((Wh_mittlewert9 * (i-Tm4))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif FifthMode == MODE10
+            Wh1_cha(i) = Wh1_cha(Tm4) + ((Wh_mittlewert10 * (i-Tm4))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm4) + (((FifthMode * 1.3)* (i-Tm4) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
             end
         elseif i > Tm5 & i <= Tm6
             if SixthMode == MODE1
@@ -181,14 +253,38 @@ function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthM
             Wh1_cha(i) = Wh1_cha(Tm5) +((Wh_mittlewert2 * (i-Tm5))/dt); #charge of 
             Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
             Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif SixthMode = MODE3
-%            Wh1_cha(i) = ((Wh_mittlewert3 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif SixthMode = MODE4
-%            Wh1_cha(i) = ((Wh_mittlewert4 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SixthMode == MODE3
+            Wh1_cha(i) = Wh1_cha(Tm5) +((Wh_mittlewert3 * (i-Tm5))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SixthMode == MODE4
+            Wh1_cha(i) = Wh1_cha(Tm5) +((Wh_mittlewert4 * (i-Tm5))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SixthMode == MODE5
+            Wh1_cha(i) = Wh1_cha(Tm5) +((Wh_mittlewert5 * (i-Tm5))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SixthMode == MODE6
+            Wh1_cha(i) = Wh1_cha(Tm5) +((Wh_mittlewert6 * (i-Tm5))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SixthMode == MODE7
+            Wh1_cha(i) = Wh1_cha(Tm5) +((Wh_mittlewert7 * (i-Tm5))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SixthMode == MODE8
+            Wh1_cha(i) = Wh1_cha(Tm5) +((Wh_mittlewert8 * (i-Tm5))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SixthMode == MODE9
+            Wh1_cha(i) = Wh1_cha(Tm5) +((Wh_mittlewert9 * (i-Tm5))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SixthMode == MODE10
+            Wh1_cha(i) = Wh1_cha(Tm5) +((Wh_mittlewert10 * (i-Tm5))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm5) + (((SixthMode * 1.3)* (i-Tm5) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
             end
         elseif i > Tm6 & i <= Tm7
             if SeventhMode == MODE1
@@ -199,14 +295,38 @@ function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthM
             Wh1_cha(i) = Wh1_cha(Tm6) + ((Wh_mittlewert2 * (i-Tm6))/dt); #charge of 
             Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
             Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif SeventhMode = MODE3
-%            Wh1_cha(i) = ((Wh_mittlewert3 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif SeventhMode = MODE4
-%            Wh1_cha(i) = ((Wh_mittlewert4 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SeventhMode == MODE3
+            Wh1_cha(i) = Wh1_cha(Tm6) + ((Wh_mittlewert3 * (i-Tm6))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SeventhMode == MODE4
+            Wh1_cha(i) = Wh1_cha(Tm6) + ((Wh_mittlewert4 * (i-Tm6))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SeventhMode == MODE5
+            Wh1_cha(i) = Wh1_cha(Tm6) + ((Wh_mittlewert5 * (i-Tm6))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SeventhMode == MODE6
+            Wh1_cha(i) = Wh1_cha(Tm6) + ((Wh_mittlewert6 * (i-Tm6))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SeventhMode == MODE7
+            Wh1_cha(i) = Wh1_cha(Tm6) + ((Wh_mittlewert7 * (i-Tm6))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SeventhMode == MODE8
+            Wh1_cha(i) = Wh1_cha(Tm6) + ((Wh_mittlewert8 * (i-Tm6))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SeventhMode == MODE9
+            Wh1_cha(i) = Wh1_cha(Tm6) + ((Wh_mittlewert9 * (i-Tm6))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif SeventhMode == MODE10
+            Wh1_cha(i) = Wh1_cha(Tm6) + ((Wh_mittlewert10 * (i-Tm6))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm6) + (((SeventhMode * 1.3)* (i-Tm6) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
             end
         elseif i > Tm7 & i <= Tm8
             if EightMode == MODE1
@@ -217,14 +337,38 @@ function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthM
               Wh1_cha(i) = Wh1_cha(Tm7) +((Wh_mittlewert2 * (i-Tm7))/dt); #charge of 
             Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
             Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif EightMode = MODE3
-%            Wh1_cha(i) = ((Wh_mittlewert3 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif EightMode = MODE4
-%            Wh1_cha(i) = ((Wh_mittlewert4 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif EightMode == MODE3
+              Wh1_cha(i) = Wh1_cha(Tm7) +((Wh_mittlewert3 * (i-Tm7))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif EightMode == MODE4
+              Wh1_cha(i) = Wh1_cha(Tm7) +((Wh_mittlewert4 * (i-Tm7))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif EightMode == MODE5
+              Wh1_cha(i) = Wh1_cha(Tm7) +((Wh_mittlewert5 * (i-Tm7))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif EightMode == MODE6
+              Wh1_cha(i) = Wh1_cha(Tm7) +((Wh_mittlewert6 * (i-Tm7))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif EightMode == MODE7
+              Wh1_cha(i) = Wh1_cha(Tm7) +((Wh_mittlewert7 * (i-Tm7))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif EightMode == MODE8
+              Wh1_cha(i) = Wh1_cha(Tm7) +((Wh_mittlewert8 * (i-Tm7))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif EightMode == MODE9
+              Wh1_cha(i) = Wh1_cha(Tm7) +((Wh_mittlewert9 * (i-Tm7))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif EightMode == MODE10
+              Wh1_cha(i) = Wh1_cha(Tm7) +((Wh_mittlewert10 * (i-Tm7))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm7) + (((EightMode * 1.3)* (i-Tm7) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
             end
         elseif i > Tm8 & i <= Tm9
             if NinethMode == MODE1
@@ -235,14 +379,38 @@ function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthM
             Wh1_cha(i) = Wh1_cha(Tm8) +((Wh_mittlewert2 * (i-Tm8))/dt); #charge of 
             Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
             Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif NinethMode = MODE3
-%            Wh1_cha(i) = ((Wh_mittlewert3 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif NinethMode = MODE4
-%            Wh1_cha(i) = ((Wh_mittlewert4 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif NinethMode == MODE3
+            Wh1_cha(i) = Wh1_cha(Tm8) +((Wh_mittlewert3 * (i-Tm8))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif NinethMode == MODE4
+            Wh1_cha(i) = Wh1_cha(Tm8) +((Wh_mittlewert4 * (i-Tm8))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif NinethMode == MODE5
+            Wh1_cha(i) = Wh1_cha(Tm8) +((Wh_mittlewert5 * (i-Tm8))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif NinethMode == MODE6
+            Wh1_cha(i) = Wh1_cha(Tm8) +((Wh_mittlewert6 * (i-Tm8))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif NinethMode == MODE7
+            Wh1_cha(i) = Wh1_cha(Tm8) +((Wh_mittlewert7 * (i-Tm8))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif NinethMode == MODE8
+            Wh1_cha(i) = Wh1_cha(Tm8) +((Wh_mittlewert8 * (i-Tm8))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif NinethMode == MODE9
+            Wh1_cha(i) = Wh1_cha(Tm8) +((Wh_mittlewert9 * (i-Tm8))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif NinethMode == MODE10
+            Wh1_cha(i) = Wh1_cha(Tm8) +((Wh_mittlewert10 * (i-Tm8))/dt); #charge of 
+            Wh1_dis(i) = Wh1_dis(Tm8) + (((NinethMode * 1.3)* (i-Tm8) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
             end
         elseif i > Tm9 & i <= Tm10
             if TenthMode == MODE1
@@ -253,14 +421,38 @@ function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthM
             Wh1_cha(i) = Wh1_cha(Tm9) +((Wh_mittlewert2 * (i-Tm9))/dt); #charge of
             Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
             Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif TenthMode == MODE3
-%            Wh1_cha(i) = ((Wh_mittlewert3 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
-%            elseif TenthMode = MODE4
-%            Wh1_cha(i) = ((Wh_mittlewert4 * i)/dt); #charge of 
-%            Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
-%            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif TenthMode == MODE3
+            Wh1_cha(i) = Wh1_cha(Tm9) +((Wh_mittlewert3 * (i-Tm9))/dt); #charge of
+            Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif TenthMode == MODE4
+            Wh1_cha(i) = Wh1_cha(Tm9) +((Wh_mittlewert4 * (i-Tm9))/dt); #charge of
+            Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif TenthMode == MODE5
+            Wh1_cha(i) = Wh1_cha(Tm9) +((Wh_mittlewert5 * (i-Tm9))/dt); #charge of
+            Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif TenthMode == MODE6
+            Wh1_cha(i) = Wh1_cha(Tm9) +((Wh_mittlewert6 * (i-Tm9))/dt); #charge of
+            Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif TenthMode == MODE7
+            Wh1_cha(i) = Wh1_cha(Tm9) +((Wh_mittlewert7 * (i-Tm9))/dt); #charge of
+            Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif TenthMode == MODE8
+            Wh1_cha(i) = Wh1_cha(Tm9) +((Wh_mittlewert8 * (i-Tm9))/dt); #charge of
+            Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif TenthMode == MODE9
+            Wh1_cha(i) = Wh1_cha(Tm9) +((Wh_mittlewert9 * (i-Tm9))/dt); #charge of
+            Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
+            elseif TenthMode == MODE10
+            Wh1_cha(i) = Wh1_cha(Tm9) +((Wh_mittlewert10 * (i-Tm9))/dt); #charge of
+            Wh1_dis(i) = Wh1_dis(Tm9) + (((TenthMode * 1.3)* (i-Tm9) * dt) )/3600/dt;
+            Wh_OUTPUT(i) = StartPoint + Wh1_cha(i) - Wh1_dis(i);
             end
         end    
         

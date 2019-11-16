@@ -36,7 +36,7 @@ MODE2 = 10;            #------------Power consumption per Mode
 MODE3 = 2;             #
 MODE4 = 5;             #
 MODE5 = 6;             #
-MODE6 = 7;             #
+MODE6 = 15;             #
 MODE7 = 8;             #
 MODE8 = 9;             #
 MODE9 = 2;             #
@@ -51,9 +51,9 @@ Tm4  =  50;        #
 Tm5  =  60;        # 
 Tm6  =  10;        #
 Tm7  =  10;        #
-Tm8  =  0;         #
-Tm9  =  0;         #
-Tm10 =  0;         #
+Tm8  =  10;         #
+Tm9  =  20;         #
+Tm10 =  30;         #
 ####################
 
 
@@ -74,13 +74,13 @@ SoClim = 30;          #--------------SoC limit[Wh]
 
 #########################
 FirstMode   = MODE2;    #
-SecondMode  = MODE1;    #
+SecondMode  = MODE6;    #
 ThirdMode   = MODE2;    #
 FourthMode  = MODE1;    #
 FifthMode   = MODE2;    #
 SixthMode   = MODE1;    #------------Modes continuation
 SeventhMode = MODE2;    #
-EightMode   = MODE1;    #
+EightMode   = MODE6;    #
 NinethMode  = MODE2;    #
 TenthMode   = MODE1;    #
 #########################
@@ -148,7 +148,7 @@ grad = 0:Tz-1;
           
 #functions
 Wh_end = charge(grad, day1end,Char1, Char2, Char3, Char4, Char5, Char6, Char7, Char8, Char9, Char10, dt, day2beg, Tz);
-soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthMode, FifthMode, SixthMode, SeventhMode, EightMode, NinethMode, TenthMode, dt, Tz, Tm1, Tm2, Tm3, Tm4, Tm5, Tm6, Tm7, Tm8, Tm9, Tm10, StartPoint, SoClim, MODE1, MODE2);      
+soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthMode, FifthMode, SixthMode, SeventhMode, EightMode, NinethMode, TenthMode, dt, Tz, Tm1, Tm2, Tm3, Tm4, Tm5, Tm6, Tm7, Tm8, Tm9, Tm10, StartPoint, SoClim, MODE1, MODE2, MODE3, MODE4, MODE5, MODE6, MODE7, MODE8, MODE9, MODE10);      
 
 
 
