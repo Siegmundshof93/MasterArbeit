@@ -8,20 +8,20 @@ h = 600e3;  # ------------------- Hohe [m]                                      
 #############                                                                     #
                                                                                   #
 ############                                                                      #
-T = 5800;  #----------------------Time of the orbit [s]                           # ----Orbital parameters
+T = 5801;  #----------------------Time of the orbit [s]                           # ----Orbital parameters
 ############                                                                      #
                                                                                   #
 ##################                                                                #
-eclipse = 132.13;#---------------eclipse angle [deg]                              #
+eclipse = 18;    #---------------eclipse angle [deg]                              #
 ##################                                                                #
                                                                                   #
 ################################################################################### 
      
 ###################                                                               
-Char1 = 25;       #
-Char2 = 10;       #   
-Char3 = 10;       # 
-Char4 = 9;        #                         [BOL]
+Char1 = 28.63;       #
+Char2 = 28.63;       #   
+Char3 = 28.63;       # 
+Char4 = 28.63;        #                         [BOL]
 Char5 = 9.23;     #----------------- LadeLeistung for different modes[W]
 Char6 = 9.23;     #
 Char7 = 9.23;     #
@@ -31,10 +31,10 @@ Char10 = 9.23;    #
 ################### 
 
 ###################                                                               
-CharE1 = 24;       #
-CharE2 = 9;        #   
-CharE3 = 9;        # 
-CharE4 = 8;        #                         [EOL]
+CharE1 = 28.2;       #
+CharE2 = 28.2;        #   
+CharE3 = 28.2;        # 
+CharE4 = 28.2;        #                         [EOL]
 CharE5 = 8.23;     #----------------- LadeLeistung for different modes[W]
 CharE6 = 8.23;     #
 CharE7 = 8.23;     #
@@ -44,10 +44,10 @@ CharE10 = 8.23;    #
 ################### 
 
 ########################
-MODE1 = 6;             #
-MODE2 = 10;            #------------Power consumption per Mode [W]
-MODE3 = 2;             #
-MODE4 = 5;             #
+MODE1 = 161.47;             #
+MODE2 = 97.59;            #------------Power consumption per Mode [W]
+MODE3 = 6.94;             #
+MODE4 = 39.37;             #
 MODE5 = 6;             #
 MODE6 = 15;            #
 MODE7 = 8;             #
@@ -57,44 +57,44 @@ MODE10 = 3;            #
 ########################                                                             
                                                                                   
 ####################                                                               
-Tm1  =  50;        #                                                                
-Tm2  =  60;        # ------------- Modus time [min]
-Tm3  =  30;        #
-Tm4  =  50;        #
-Tm5  =  40;        # 
-Tm6  =  50;        #
-Tm7  =  60;        #
-Tm8  =  50;         #
-Tm9  =  60;         #
-Tm10 =  50;         #
+Tm1  =  5;        #                                                                
+Tm2  =  120;      # ------------- Modus time [min]
+Tm3  =  7*60;    #
+Tm4  =  5;        #
+Tm5  =  60;        # 
+Tm6  =  0;        #
+Tm7  =  0;        #
+Tm8  =  0;         #
+Tm9  =  0;         #
+Tm10 =  0;         #
 ####################
 
 
 
 
 ########################
-BattCapBol = 217.56;   #
-BattCapEol = 213.12;   #
+BattCapBol = 435.12;   # -------Batterien capacity [Wh]
+BattCapEol = 426.24;   #
 ########################
 
 
 
 #########################
- SocInit = 80;          # ---------- start point of SoC [%] 
+ SocInit = 95;          # ---------- start point of SoC [%] # change to DOD
 #########################
 
 #######################
-SoClim = 20;          #--------------- DoD limit[%]
+SoClim = 60;          #--------------- DoD limit[%] # change to DOD
 #######################
 
 
 
 #########################
-FirstMode   = MODE2;    #
-SecondMode  = MODE6;    #
+FirstMode   = MODE1;    #
+SecondMode  = MODE2;    #
 ThirdMode   = MODE3;    #
 FourthMode  = MODE4;    #
-FifthMode   = MODE10;    #
+FifthMode   = MODE3;    #
 SixthMode   = MODE6;    #------------Modes continuation
 SeventhMode = MODE4;    #
 EightMode   = MODE1;    #
