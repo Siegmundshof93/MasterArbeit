@@ -1,4 +1,4 @@
-function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthMode, FifthMode, SixthMode, SeventhMode, EightMode, NinethMode, TenthMode, dt, Tz, Tm1, Tm2, Tm3, Tm4, Tm5, Tm6, Tm7, Tm8, Tm9, Tm10, StartPointBol, StartPointEol, SoClim, MODE1, MODE2, MODE3, MODE4, MODE5, MODE6, MODE7, MODE8, MODE9, MODE10, BattCapEol);
+function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthMode, FifthMode, SixthMode, SeventhMode, EightMode, NinethMode, TenthMode, dt, Tz, Tm1, Tm2, Tm3, Tm4, Tm5, Tm6, Tm7, Tm8, Tm9, Tm10, StartPointBol, StartPointEol, SoClim, MODE1, MODE2, MODE3, MODE4, MODE5, MODE6, MODE7, MODE8, MODE9, MODE10, BattCapEol, BattCapBol);
  
   Wh_1end = Wh_end(1,:);
   Wh_2end = Wh_end(2,:);
@@ -786,10 +786,14 @@ function soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthM
             end
         end    
         
-        if Wh_OUTPUT(i) > BattCapEol
-            Wh_OUTPUT(i) = Wh_OUTPUT(i-1);
+        if Wh_OUTPUT(1,i) > BattCapBol
+            Wh_OUTPUT(1,i) = Wh_OUTPUT(1,i-1);
+        elseif Wh_OUTPUT(2,i) > BattCapEol
+            Wh_OUTPUT(2,i) = Wh_OUTPUT(2,i-1);
+           
         end
 endfor
-soC = 100 * (Wh_OUTPUT) / BattCapEol;
+soC(1,:) = 100 * (Wh_OUTPUT(1,:)) / BattCapBol;
+soC(2,:) = 100 * (Wh_OUTPUT(2,:)) / BattCapEol;
 endfunction
 

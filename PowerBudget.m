@@ -2,17 +2,13 @@ clear all
 clc
 
 ###################################################################################
-                                                                                  #
-#############                                                                     #
-h = 600e3;  # ------------------- Hohe [m]                                        #
-#############                                                                     #
-                                                                                  #
+                                                                                  #                                                                                  #
 ############                                                                      #
 T = 5801;  #----------------------Time of the orbit [s]                           # ----Orbital parameters
 ############                                                                      #
                                                                                   #
 ##################                                                                #
-eclipse = 18;    #---------------eclipse angle [deg]                              #
+eclipse = 1900;    #---------------eclipse angle [deg]                              #
 ##################                                                                #
                                                                                   #
 ################################################################################### 
@@ -22,7 +18,7 @@ Char1 = 28.63;       #
 Char2 = 28.63;       #   
 Char3 = 28.63;       # 
 Char4 = 28.63;        #                         [BOL]
-Char5 = 9.23;     #----------------- LadeLeistung for different modes[W]
+Char5 = 9.23;     #----------------- Power of Charge for different modes[W]
 Char6 = 9.23;     #
 Char7 = 9.23;     #
 Char8 = 9.23;     #
@@ -35,7 +31,7 @@ CharE1 = 28.2;       #
 CharE2 = 28.2;        #   
 CharE3 = 28.2;        # 
 CharE4 = 28.2;        #                         [EOL]
-CharE5 = 8.23;     #----------------- LadeLeistung for different modes[W]
+CharE5 = 8.23;     #----------------- Power of Charge for different modes[W]
 CharE6 = 8.23;     #
 CharE7 = 8.23;     #
 CharE8 = 8.23;     #
@@ -84,7 +80,7 @@ BattCapEol = 426.24;   #
 #########################
 
 #######################
-SoClim = 60;          #--------------- DoD limit[%] # change to DOD
+SoClim = 60;          #--------------- SoC limit[%] # change to DOD
 #######################
 
 
@@ -124,14 +120,14 @@ Tm10 = Tm9 + Tm10 * 60;
 
 Tz = round(T); 
 dt = round(T/360); # time pro 1 grad seconds
-day1end = round((180 - eclipse / 2) * dt); # start of eclipse in secods
-day2beg = round((day1end/dt + eclipse) * dt); # end of eclipse in seconds
+day1end = round((T-eclipse)/2); # start of eclipse in secods
+day2beg = round(day1end+eclipse); # end of eclipse in seconds
 grad = 0:Tz-1; # array (time of 1 orbit) 
 
           
 #functions
 Wh_end = charge(grad, day1end,Char1, Char2, Char3, Char4, Char5, Char6, Char7, Char8, Char9, Char10, CharE1, CharE2, CharE3, CharE4, CharE5, CharE6, CharE7, CharE8, CharE9, CharE10,dt, day2beg, Tz);
-soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthMode, FifthMode, SixthMode, SeventhMode, EightMode, NinethMode, TenthMode, dt, Tz, Tm1, Tm2, Tm3, Tm4, Tm5, Tm6, Tm7, Tm8, Tm9, Tm10, StartPointBol, StartPointEol, SoClim, MODE1, MODE2, MODE3, MODE4, MODE5, MODE6, MODE7, MODE8, MODE9, MODE10, BattCapEol);      
+soC = discharge(Time, Wh_end, FirstMode, SecondMode, ThirdMode, FourthMode, FifthMode, SixthMode, SeventhMode, EightMode, NinethMode, TenthMode, dt, Tz, Tm1, Tm2, Tm3, Tm4, Tm5, Tm6, Tm7, Tm8, Tm9, Tm10, StartPointBol, StartPointEol, SoClim, MODE1, MODE2, MODE3, MODE4, MODE5, MODE6, MODE7, MODE8, MODE9, MODE10, BattCapEol, BattCapBol);      
 
 
 

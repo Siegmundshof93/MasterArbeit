@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.16)  15 OCT 2019 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.16)  20 NOV 2019 17:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1008,12 +1008,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--1
 ] [2 <./img/intro_example.pdf>]
 chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--22
+Underfull \hbox (badness 10000) in paragraph at lines 14--23
 
  []
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
 [3
 
 ]) (./chapters/chapter3.tex [4]
@@ -1321,7 +1321,7 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on DiplomarbeitLaTex.pdf (36 pages, 374522 bytes).
+Output written on DiplomarbeitLaTex.pdf (36 pages, 374602 bytes).
 PDF statistics:
  636 PDF objects out of 1000 (max. 8388607)
  564 compressed objects within 6 object streams
