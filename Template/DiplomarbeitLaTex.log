@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.16)  20 NOV 2019 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.16)  28 JAN 2020 19:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1008,37 +1008,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--1
 ] [2 <./img/intro_example.pdf>]
 chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--23
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--25
+
+ []
+
 [3
 
-]) (./chapters/chapter3.tex [4]
+]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+ [4]) (./chapters/chapter3.tex [5] [6
+
+]
 chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--28
 
  []
 
-) (./chapters/chapter4.tex [5
-
-] [6
+) (./chapters/chapter4.tex [7] [8
 
 ]
 chapter 4.
-<./img/uml_seq_example.png, id=401, 376.40625pt x 248.93pt>
+<./img/uml_seq_example.png, id=409, 376.40625pt x 248.93pt>
 File: ./img/uml_seq_example.png Graphic file (type png)
 
 <use ./img/uml_seq_example.png>
 Package pdftex.def Info: ./img/uml_seq_example.png used on input line 13.
 (pdftex.def)             Requested size: 256.0748pt x 169.36131pt.
- [7 <./img/uml_seq_example.png>])
-(./chapters/chapter5.tex [8]
+ [9 <./img/uml_seq_example.png>])
+(./chapters/chapter5.tex [10]
 chapter 5.
-<./img/screenshot_2_projects.png, id=412, 401.5pt x 172.645pt>
+<./img/screenshot_2_projects.png, id=421, 401.5pt x 172.645pt>
 File: ./img/screenshot_2_projects.png Graphic file (type png)
 
 <use ./img/screenshot_2_projects.png>
@@ -1060,21 +1066,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--46
 
  []
 
-[9
+[11
 
  <./img/screenshot_2_projects.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 52.
-) (./chapters/chapter6.tex [10]
+) (./chapters/chapter6.tex [12]
 chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-) (./chapters/chapter7.tex [11
+) (./chapters/chapter7.tex [13
 
-] [12
+] [14
 
 ]
 chapter 7.
@@ -1083,14 +1089,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
 
  []
 
-) [13] [14
+) [15] [16
 
 
 ] (./misc/acronyms.tex
 chapter without number
-[15
+[17
 
-]) (./DiplomarbeitLaTex.bbl [16]
+]) (./DiplomarbeitLaTex.bbl [18]
 chapter without number
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -1260,9 +1266,9 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
 (scrbook)              by `\normalfont \scshape ' on input line 22.
 
-) (./misc/annex.tex [17
+) (./misc/annex.tex [19
 
-] [18
+] [20
 
 ]
 chapter without number
@@ -1281,9 +1287,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 9.
- [19])
+ [21])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
- [20]
+ [22]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
 
 (./DiplomarbeitLaTex.aux (./misc/titlepage.aux) (./misc/thanx.aux)
@@ -1299,13 +1305,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
  ) 
 Here is how much of TeX's memory you used:
- 11684 strings out of 494901
- 178780 string characters out of 6178617
- 361529 words of memory out of 5000000
+ 11686 strings out of 494901
+ 178794 string characters out of 6178617
+ 361536 words of memory out of 5000000
  14593 multiletter control sequences out of 15000+600000
  12626 words of font info for 44 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
- 50i,10n,66p,760b,1316s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,10n,66p,962b,1316s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist
@@ -1321,10 +1327,10 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on DiplomarbeitLaTex.pdf (36 pages, 374602 bytes).
+Output written on DiplomarbeitLaTex.pdf (38 pages, 376885 bytes).
 PDF statistics:
- 636 PDF objects out of 1000 (max. 8388607)
- 564 compressed objects within 6 object streams
- 174 named destinations out of 1000 (max. 500000)
+ 648 PDF objects out of 1000 (max. 8388607)
+ 574 compressed objects within 6 object streams
+ 176 named destinations out of 1000 (max. 500000)
  426 words of extra memory for PDF output out of 10000 (max. 10000000)
 
