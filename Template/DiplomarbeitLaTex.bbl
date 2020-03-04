@@ -1,6 +1,42 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{RSC{\etalchar{+}}02}
 
+\bibitem[1]{1}
+{\em {Bruce Yost}. Power}.
+\newblock \url{https://sst-soa.arc.nasa.gov/03-power}.
+\newblock Accessed: 2020-02-19.
+
+\bibitem[2]{2}
+{\em {Alia-Novobilsk}. Advanced multi-junction solar cells deliver high
+  efficiency, reduced costs for space}.
+\newblock
+  \url{https://phys.org/news/2018-01-advanced-multi-junction-solar-cells-high.html#jCp}.
+\newblock Accessed: 2020-02-19.
+
+\bibitem[3]{3}
+{\em Conference Record of the Twenty-Ninth IEEE Photovoltaic Specialists
+  Conference, 2002., New Orleans, LA, USA, 2002, pp. 1330-1334. (Third
+  generation photovoltaics: comparative evaluation of advanced solar conversion
+  options,)}.
+
+\bibitem[4]{4}
+{\em 30% Triple Junction GaAs Solar Cell Type: TJ Solar Cell 3G30C}.
+\newblock
+  \url{http://www.azurspace.com/images/products/0004148-00-01_DB_GBK_80%C2%B5m.pdf}.
+\newblock Accessed: 2020-02-20.
+
+\bibitem[5]{5}
+{\em Effect of Temperature}.
+\newblock
+  \url{https://www.pveducation.org/pvcdrom/solar-cell-operation/effect-of-temperature}.
+\newblock Accessed: 2020-02-21.
+
+\bibitem[7]{7}
+{\em What’s the Best Battery}.
+\newblock
+  \url{https://batteryuniversity.com/learn/archive/whats_the_best_battery}.
+\newblock Accessed: 2020-02-22.
+
 \bibitem[BL]{timwww}
 {\sc Berners-Lee, Tim}: {\em WWW Book (no real book, just an example)}.
 
@@ -15,6 +51,10 @@
   Protocol, Second Edition}.
 \newblock Artech House Publishers, 2003.
 \newblock ISBN: 1580536557.
+
+\bibitem[Kla18]{6}
+{\sc Klaus, Briß}: {\em Electrical Power Subsystem}.
+\newblock Satellite Technology, 2018.
 
 \bibitem[RSC{\etalchar{+}}02]{rfcsip}
 {\sc Rosenberg, J.}, {\sc H.~Schulzrinne}, {\sc G.~Camarillo}, {\sc

@@ -7,46 +7,59 @@
 \contentsline {section}{\numberline {1.2}Objective}{1}{section.1.2}
 \contentsline {section}{\numberline {1.3}Scope}{1}{section.1.3}
 \contentsline {section}{\numberline {1.4}Outline}{2}{section.1.4}
-\contentsline {chapter}{\numberline {2}Fundamentals and Related Work}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Technologies }{3}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Technology A}{3}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Technology B}{4}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Comparison of Technologies}{5}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Standardization }{5}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Internet Engineering Task Force}{5}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}International Telecommunication Union}{5}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}3GPP}{5}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Open Mobile Alliance}{5}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Concurrent Approaches }{5}{section.2.3}
-\contentsline {chapter}{\numberline {3}Requirements}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Overview}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Technical Requirements}{7}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Sub-component A}{7}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Sub-component B}{7}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Social Requirements}{7}{section.3.3}
-\contentsline {chapter}{\numberline {4}Concept}{9}{chapter.4}
-\contentsline {section}{\numberline {4.1}Sub-component A}{9}{section.4.1}
-\contentsline {section}{\numberline {4.2}Sub-component B}{9}{section.4.2}
-\contentsline {section}{\numberline {4.3}Proposed API}{9}{section.4.3}
-\contentsline {section}{\numberline {4.4}Layer X}{10}{section.4.4}
-\contentsline {section}{\numberline {4.5}Interworking of X and Y}{10}{section.4.5}
-\contentsline {section}{\numberline {4.6}Interface Specification}{10}{section.4.6}
-\contentsline {chapter}{\numberline {5}Implementation}{11}{chapter.5}
-\contentsline {section}{\numberline {5.1}Environment}{11}{section.5.1}
-\contentsline {section}{\numberline {5.2}Project Structure}{11}{section.5.2}
-\contentsline {section}{\numberline {5.3}Important Implementation Aspects}{12}{section.5.3}
-\contentsline {section}{\numberline {5.4}Graphical User Interface}{12}{section.5.4}
-\contentsline {section}{\numberline {5.5}Documentation}{12}{section.5.5}
-\contentsline {chapter}{\numberline {6}Evaluation}{13}{chapter.6}
-\contentsline {section}{\numberline {6.1}Test Environment}{13}{section.6.1}
-\contentsline {section}{\numberline {6.2}Scalability}{13}{section.6.2}
-\contentsline {section}{\numberline {6.3}Usability}{13}{section.6.3}
-\contentsline {section}{\numberline {6.4}Performance Measurements}{13}{section.6.4}
-\contentsline {chapter}{\numberline {7}Conclusion}{15}{chapter.7}
-\contentsline {section}{\numberline {7.1}Summary}{15}{section.7.1}
-\contentsline {section}{\numberline {7.2}Dissemination}{15}{section.7.2}
-\contentsline {section}{\numberline {7.3}Problems Encountered}{15}{section.7.3}
-\contentsline {section}{\numberline {7.4}Outlook}{15}{section.7.4}
-\contentsline {chapter}{\nonumberline List of Acronyms}{17}{chapter*.8}
-\contentsline {chapter}{\nonumberline Bibliography}{19}{chapter*.9}
-\contentsline {chapter}{\nonumberline Annex}{21}{chapter*.10}
+\contentsline {chapter}{\numberline {2}Background: Electrical Power System Distribution Board }{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Electircal Power System Overview }{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Power generation }{4}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Power storage }{7}{subsection.2.1.2}
+\contentsline {subsubsection}{\nonumberline Nickel Cadmium }{7}{section*.10}
+\contentsline {subsubsection}{\nonumberline Nickel Hydrogen }{8}{section*.12}
+\contentsline {subsubsection}{\nonumberline Lithium Ion }{9}{section*.14}
+\contentsline {subsubsection}{\nonumberline Lithium Polymer }{10}{section*.16}
+\contentsline {subsubsection}{\nonumberline Charging}{11}{section*.18}
+\contentsline {subsubsection}{\nonumberline Protection}{13}{section*.21}
+\contentsline {subsection}{\numberline {2.1.3}Power processing }{14}{subsection.2.1.3}
+\contentsline {subsubsection}{\nonumberline Linear voltage converters }{15}{section*.23}
+\contentsline {subsubsection}{\nonumberline Inductive DC-DC converters }{16}{section*.25}
+\contentsline {section}{\numberline {2.2}PDU Overview }{16}{section.2.2}
+\contentsline {section}{\numberline {2.3}Technologies }{16}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Load research}{17}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Technology B}{22}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Comparison of Technologies}{23}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Standardization }{23}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Internet Engineering Task Force}{23}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}International Telecommunication Union}{23}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}3GPP}{23}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Open Mobile Alliance}{23}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Concurrent Approaches }{23}{section.2.5}
+\contentsline {chapter}{\numberline {3}Requirements}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overview}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}Technical Requirements}{25}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Sub-component A}{25}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Sub-component B}{25}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Social Requirements}{25}{section.3.3}
+\contentsline {chapter}{\numberline {4}Concept}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Sub-component A}{27}{section.4.1}
+\contentsline {section}{\numberline {4.2}Sub-component B}{27}{section.4.2}
+\contentsline {section}{\numberline {4.3}Proposed API}{27}{section.4.3}
+\contentsline {section}{\numberline {4.4}Layer X}{28}{section.4.4}
+\contentsline {section}{\numberline {4.5}Interworking of X and Y}{28}{section.4.5}
+\contentsline {section}{\numberline {4.6}Interface Specification}{28}{section.4.6}
+\contentsline {chapter}{\numberline {5}Implementation}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Environment}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Project Structure}{29}{section.5.2}
+\contentsline {section}{\numberline {5.3}Important Implementation Aspects}{30}{section.5.3}
+\contentsline {section}{\numberline {5.4}Graphical User Interface}{30}{section.5.4}
+\contentsline {section}{\numberline {5.5}Documentation}{30}{section.5.5}
+\contentsline {chapter}{\numberline {6}Evaluation}{31}{chapter.6}
+\contentsline {section}{\numberline {6.1}Test Environment}{31}{section.6.1}
+\contentsline {section}{\numberline {6.2}Scalability}{31}{section.6.2}
+\contentsline {section}{\numberline {6.3}Usability}{31}{section.6.3}
+\contentsline {section}{\numberline {6.4}Performance Measurements}{31}{section.6.4}
+\contentsline {chapter}{\numberline {7}Conclusion}{33}{chapter.7}
+\contentsline {section}{\numberline {7.1}Summary}{33}{section.7.1}
+\contentsline {section}{\numberline {7.2}Dissemination}{33}{section.7.2}
+\contentsline {section}{\numberline {7.3}Problems Encountered}{33}{section.7.3}
+\contentsline {section}{\numberline {7.4}Outlook}{33}{section.7.4}
+\contentsline {chapter}{\nonumberline List of Acronyms}{35}{chapter*.29}
+\contentsline {chapter}{\nonumberline Bibliography}{37}{chapter*.30}
+\contentsline {chapter}{\nonumberline Annex}{39}{chapter*.31}

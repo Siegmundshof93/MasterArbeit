@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: DiplomarbeitLaTex.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: DiplomarbeitLaTex.aux
 A level-1 auxiliary file: ./misc/titlepage.aux
 A level-1 auxiliary file: ./misc/thanx.aux
 A level-1 auxiliary file: ./misc/self-assertion.aux
@@ -8,4 +10,68 @@ The style file: geralpha.bst
 Database file #1: ./bib/references.bib
 Warning--entry type for "rfcsip" isn't style-file defined
 --line 27 of file ./bib/references.bib
-(There was 1 warning)
+I was expecting a `,' or a `}'---line 68 of file ./bib/references.bib
+ :  
+ :  author = {M. A. Green},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "9"
+Warning--I didn't find a database entry for "10"
+Warning--I didn't find a database entry for "11"
+Warning--I didn't find a database entry for "12"
+Warning--I didn't find a database entry for "14"
+Warning--I didn't find a database entry for "15"
+Warning--I didn't find a database entry for "17"
+Warning--I didn't find a database entry for "8"
+Warning--I didn't find a database entry for "13"
+Warning--I didn't find a database entry for "16"
+Warning--I didn't find a database entry for "18"
+Warning--I didn't find a database entry for "19"
+Warning--to sort, need author or key in 4
+Warning--to sort, need author or key in 1
+Warning--to sort, need author or key in 2
+Warning--to sort, need author or key in 3
+Warning--to sort, need author or key in 5
+Warning--to sort, need author or key in 7
+You've used 12 entries,
+            2768 wiz_defined-function locations,
+            667 strings with 6699 characters,
+and the built_in function-call counts, 3427 in all, are:
+= -- 332
+> -- 96
+< -- 5
++ -- 29
+- -- 29
+* -- 215
+:= -- 469
+add.period$ -- 27
+call.type$ -- 12
+change.case$ -- 49
+chr.to.int$ -- 12
+cite$ -- 24
+duplicate$ -- 154
+empty$ -- 349
+format.name$ -- 38
+if$ -- 778
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 2
+newline$ -- 55
+num.names$ -- 18
+pop$ -- 134
+preamble$ -- 1
+purify$ -- 73
+quote$ -- 0
+skip$ -- 140
+stack$ -- 0
+substring$ -- 90
+swap$ -- 36
+text.length$ -- 5
+text.prefix$ -- 4
+top$ -- 0
+type$ -- 92
+warning$ -- 6
+while$ -- 13
+width$ -- 13
+write$ -- 126
+(There was 1 error message)
