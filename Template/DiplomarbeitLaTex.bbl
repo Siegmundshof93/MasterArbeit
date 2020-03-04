@@ -6,6 +6,40 @@
 \newblock \url{https://sst-soa.arc.nasa.gov/03-power}.
 \newblock Accessed: 2020-02-19.
 
+\bibitem[10]{10}
+{\em Batteries in Space}.
+\newblock \url{https://www.upsbatterycenter.com/blog/batteries-space/}.
+\newblock Accessed: 2020-02-25.
+
+\bibitem[11]{11}
+{\em 18650 battery 3.7 Li-ion}.
+\newblock
+  \url{https://www.ebay.de/itm/18650-Battery-3-7V-3000mAh-Li-ion-Rechargeable-Cell-For-Headlamp-Torch-Radio-D8-/254352951966}.
+\newblock Accessed: 2020-02-25.
+
+\bibitem[12]{12}
+{\em Renata ICP303450PA LiPo}.
+\newblock
+  \url{https://www.conrad.de/de/p/renata-icp303450pa-spezial-akku-prismatisch-kabel-lipo-3-7-v-500-mah-1214020.html?WT.mc_id=google_pla&WT.srch=1&ef_id=Cj0KCQiAwP3yBRCkARIsAABGiPp-kEbfaUMu4N7Z-01Uy28KpGE9v4nHiCX5T7MrBQiYGYc0SRUbBRwaAh88EALw_wcB:G:s&gclid=Cj0KCQiAwP3yBRCkARIsAABGiPp-kEbfaUMu4N7Z-01Uy28KpGE9v4nHiCX5T7MrBQiYGYc0SRUbBRwaAh88EALw_wcB&hk=SEM&s_kwcid=AL!222!3!326955887699!!!g!!}
+\newblock Accessed: 2020-02-25.
+
+\bibitem[14]{14}
+{\em Charging Lithium-ion}.
+\newblock
+  \url{https://batteryuniversity.com/learn/article/charging_lithium_ion_batteries}.
+\newblock Accessed: 2020-02-25.
+
+\bibitem[15]{15}
+{\em MAX745}.
+\newblock \url{https://datasheets.maximintegrated.com/en/ds/MAX745.pdf}.
+\newblock Accessed: 2020-02-26.
+
+\bibitem[16]{16}
+{\em Li-ion cell protection}.
+\newblock
+  \url{https://www.digikey.com/en/maker/blogs/lithium-ion-cell-protection}.
+\newblock Accessed: 2020-02-30.
+
 \bibitem[2]{2}
 {\em {Alia-Novobilsk}. Advanced multi-junction solar cells deliver high
   efficiency, reduced costs for space}.
@@ -20,7 +54,7 @@
   options,)}.
 
 \bibitem[4]{4}
-{\em 30% Triple Junction GaAs Solar Cell Type: TJ Solar Cell 3G30C}.
+{\em 30 Triple Junction GaAs Solar Cell Type: TJ Solar Cell 3G30C}.
 \newblock
   \url{http://www.azurspace.com/images/products/0004148-00-01_DB_GBK_80%C2%B5m.pdf}.
 \newblock Accessed: 2020-02-20.
@@ -37,11 +71,32 @@
   \url{https://batteryuniversity.com/learn/archive/whats_the_best_battery}.
 \newblock Accessed: 2020-02-22.
 
+\bibitem[8]{8}
+{\em POWER STORAGE FOR SMALL SATELLITES: COMPARISON OF NIH2 AND LIION
+  BATTERIES}.
+\newblock
+  \url{https://www.dlr.de/iaa.symp/Portaldata/49/Resources/dokumente/archiv5/1103_Wenige.pdf}.
+\newblock Accessed: 2020-02-23.
+
+\bibitem[9]{9}
+{\em Saft VT D NiCd}.
+\newblock
+  \url{https://www.akkushop.de/de/saft-vt-d-nicd-mono-akku-hochtemperatur-ca.-603mm-x-323mm/}.
+\newblock Accessed: 2020-02-24.
+
 \bibitem[BL]{timwww}
 {\sc Berners-Lee, Tim}: {\em WWW Book (no real book, just an example)}.
 
+\bibitem[Ch.90]{18}
+{\sc Ch.Schenk, U.Tietze.}: {\em Halbleiter-Schaltungstechnik}.
+\newblock Springer-Verlag, 1990.
+
 \bibitem[Gat]{billgates}
 {\sc Gates, Bill}: {\em no real citate}.
+
+\bibitem[Hem13]{17}
+{\sc Hemmo, Jussi}: {\em Electrical Power Systems for Finnish Nanosatellites}.
+\newblock 100:95, 11 2013.
 
 \bibitem[Job]{stevejobs}
 {\sc Jobs, Steve}: {\em no real citate}.
@@ -53,7 +108,7 @@
 \newblock ISBN: 1580536557.
 
 \bibitem[Kla18]{6}
-{\sc Klaus, Briß}: {\em Electrical Power Subsystem}.
+{\sc Klaus, Brieß}: {\em Electrical Power Subsystem}.
 \newblock Satellite Technology, 2018.
 
 \bibitem[RSC{\etalchar{+}}02]{rfcsip}
@@ -62,5 +117,11 @@
   \btxandlong{}\ {\sc E.~Schooler}: {\em SIP: Session Initiation Protocol}.
 \newblock RFC 3261 (Proposed Standard), \btxmonjunlong{} 2002.
 \newblock Updated by RFCs 3265, 3853, 4320, 4916, 5393.
+
+\bibitem[STAP02]{13}
+{\sc Santoni, Fabio}, {\sc Paolo Tortora}, {\sc F.~Alessandrini} \btxandlong{}\
+  {\sc Stefano Passerini}: {\em Commercial Li-Ion Batteries for Nanosatellite
+  Applications - a Flight Experiment}.
+\newblock 502:653, 04 2002.
 
 \end{thebibliography}

@@ -247,7 +247,7 @@ In 1970, when the original design of lithium polymer batteries was invented, dry
 
 \subsubsection{Charging}
 
-Santoni\cite{13}The hight capacity and low weight make Li-ion batteries very well suited for a nano satellite space applications. Nonetheless performance and safety charging issues must be taking into account. Insidor\cite{14} The chargie of a LI-ion batteries is very strict on the correct settings, mostly due to a high sensitivity to a overcharge. Typical Li-ion battery voltage per cell can vary from 4.1 to 4.3, which is defined in the datasheet. However, typical and most common value is 4.2V. Exceed of a battery voltage limit will increase capacity, but will also stress a battery, which can seriously harm a cell and and significantly reduce battery performances.\\ \\
+Santoni\cite{13}The hight capacity and low weight make Li-ion batteries very well suited for a nano satellite space applications. Nonetheless performance and safety charging issues should be taking into account. Insidor\cite{14} The chargie of a LI-ion batteries is very strict on the correct settings, mostly due to a high sensitivity to a overcharge. Typical Li-ion battery voltage per cell can vary from 4.1 to 4.3, which is defined in the datasheet. However, typical and most common value is 4.2V. Exceed of a battery voltage limit will increase capacity, but will also stress a battery, which can seriously harm a cell and and significantly reduce battery performances.\\ \\
 Li-ion/Po battery charge process can be divided into 2 main stages:\\
 $\bullet$ constant current charge\\
 $\bullet$ constant voltage charge\\
@@ -272,7 +272,7 @@ This IC is able to set a charge up to 4 cells in series, as well as set a curren
 	\label{fig: EPS}
 \end{figure}
 
-The figure \ref{fig: EPS} shows an example of a standard MAX745 application circuit. On the left side of the schematics pins SETI and VADJ are used to adjust a charge voltage and charge current. External resistors R16,R12 are connected to a reference voltage to adjust a charge current and resistors R3,R11  used to adjust charge voltage. On the right side of the schematics MAX745 use two external N-channel MOSFETs which control power from the input source which controlled by current mode, PWM controller. \cite{14}"The  heart  of  the  PWM  controller  is  a  multi-input  com-parator.  This  comparator  sums  three  input  signals  to  determine  the  switched  signal’s  pulse  width,  setting  the  battery  voltage  or  current.  The  three  signals  are  the  current-sense  amplifier’s  output,  the  GMV  or  GMI  error  amplifier’s  output,  and  a  slope-compensation  signal  that  ensures that the current-control loop is stable.The   PWM   comparator   compares   the   current-sense   amplifier’s output to the lower output voltage of either the GMV  or  GMI  amplifiers  (the  error  voltage).  This  current-mode feedback reduces the effect of the inductor on the output filter LC formed by the output inductor (L1) and C1 figure \ref{fig: EPS}. This makes stabilizing the circuit much easier, since the output filter changes to a first-order RC from a complex, second-order RLC."
+The figure \ref{fig: EPS} shows an example of a standard MAX745 application circuit. On the left side of the schematics pins SETI and VADJ are used to adjust a charge voltage and charge current. External resistors R16,R12 are connected to a reference voltage to adjust a charge current and resistors R3,R11  used to adjust charge voltage. On the right side of the schematics MAX745 use two external N-channel MOSFETs which control power from the input source which controlled by current mode, PWM controller. \cite{15}"The  heart  of  the  PWM  controller  is  a  multi-input  com-parator.  This  comparator  sums  three  input  signals  to  determine  the  switched  signal’s  pulse  width,  setting  the  battery  voltage  or  current.  The  three  signals  are  the  current-sense  amplifier’s  output,  the  GMV  or  GMI  error  amplifier’s  output,  and  a  slope-compensation  signal  that  ensures that the current-control loop is stable.The   PWM   comparator   compares   the   current-sense   amplifier’s output to the lower output voltage of either the GMV  or  GMI  amplifiers  (the  error  voltage).  This  current-mode feedback reduces the effect of the inductor on the output filter LC formed by the output inductor (L1) and C1 figure \ref{fig: EPS}. This makes stabilizing the circuit much easier, since the output filter changes to a first-order RC from a complex, second-order RLC."
 
 \subsubsection{Protection}
 
@@ -306,7 +306,7 @@ P_{diss}=U_{drop} \times I
 where:\\
 $U_{drop}$ - resistor voltage drop\\
 $I$ - current through a resisor\\ \\
- Linear voltage conversion is a simple method, which does not require many additional passive components, relatively cheap and easy to use. Nonetheless due to a power dissipation linear voltage converters are getting hot, which make them ineffective while current through a resistor is large or difference between $V_{in}$ and $V_{out}$ is high according to \eqref{eq:2}. For that reason Linear voltage converters used only in cause of low current and low voltage drop for example to convert power into a micro controller or to provide a voltage reference.\\
+ Tietze \cite{18} Linear voltage conversion is a simple method, which does not require many additional passive components, relatively cheap and easy to use. Nonetheless due to a power dissipation linear voltage converters are getting hot, which make them ineffective while current through a resistor is large or difference between $V_{in}$ and $V_{out}$ is high according to \eqref{eq:2}. For that reason Linear voltage converters used only in cause of low current and low voltage drop for example to convert power into a micro controller or to provide a voltage reference.\\
  \\
  There are two types of linear voltage voltage converters, the shunt converter and the series converter. The simple example of a linear voltage converter is a linear series regulator with a negative feedback. This type of a linear voltage converter based on reference voltage. Reference voltage can be proceed via z-diode from unregulated source voltage.    
  
@@ -334,7 +334,7 @@ $I$ - current through a resisor\\ \\
  
 \subsubsection{Inductive DC-DC converters \label{sec:tech}}
 
-Hemmo\cite{18} Each inductive DC-DC converter consist of three passive components: inductor $L$, power switch $S$ and capacitor $C$. The use of these components in various topologies, allow to create various types of DC / DC converters such as a step-down converter where output voltage $U_{a}$  , step-up (step-up) or step-down step-up converter. 
+Tietze\cite{18} Each inductive DC-DC converter consist of three passive components: inductor $L$, power switch $S$ and capacitor $C$. The use of these components in various topologies, allow to create various types of DC / DC converters such as a step-down converter where output voltage $U_{a}$  , step-up (step-up) or step-down step-up converter. 
 
 
 
