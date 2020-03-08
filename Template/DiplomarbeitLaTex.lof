@@ -11,16 +11,18 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces NiCd battery\cite {9}\relax }}{8}{figure.caption.11}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces NiH2 battery \cite {10}\relax }}{9}{figure.caption.13}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Li-ion battery \cite {11}\relax }}{10}{figure.caption.15}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces LiPo battery \cite {12}\relax }}{11}{figure.caption.17}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Charge stages \cite {14}\relax }}{12}{figure.caption.19}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Li-ion/Po charger MAX745 \cite {15}\relax }}{13}{figure.caption.20}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces BQ29700D protection IC \cite {17}\relax }}{14}{figure.caption.22}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Voltage stabilization with emitter follower\relax }}{15}{figure.caption.24}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces LiPo battery \cite {12}\relax }}{10}{figure.caption.17}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Charge stages \cite {14}\relax }}{11}{figure.caption.19}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Li-ion/Po charger MAX745 \cite {15}\relax }}{12}{figure.caption.20}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces BQ29700D protection IC \cite {17}\relax }}{13}{figure.caption.22}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Inductive DC-DC converter \cite {19}\relax }}{15}{figure.caption.25}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces block diagram of microcontroller communication\relax }}{16}{figure.caption.26}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Power distribution with power switch and current sensor\relax }}{16}{figure.caption.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Alice and Bob\relax }}{27}{figure.caption.27}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Alice and Bob\relax }}{27}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Project Structure\relax }}{29}{figure.caption.28}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Project Structure\relax }}{29}{figure.caption.31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

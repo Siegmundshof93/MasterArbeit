@@ -15,11 +15,6 @@ I was expecting a `,' or a `}'---line 68 of file ./bib/references.bib
  :  author = {M. A. Green},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Illegal end of database file---line 192 of file ./bib/references.bib
- : 
- : 
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in 4
 Warning--to sort, need author or key in 9
 Warning--to sort, need author or key in 10
@@ -27,6 +22,7 @@ Warning--to sort, need author or key in 11
 Warning--to sort, need author or key in 12
 Warning--to sort, need author or key in 14
 Warning--to sort, need author or key in 15
+Warning--to sort, need author or key in 19
 Warning--to sort, need author or key in 1
 Warning--to sort, need author or key in 2
 Warning--to sort, need author or key in 3
@@ -34,47 +30,49 @@ Warning--to sort, need author or key in 5
 Warning--to sort, need author or key in 7
 Warning--to sort, need author or key in 8
 Warning--to sort, need author or key in 16
+Warning--to sort, need author or key in 21
 Warning--empty journal in 17
+Warning--empty journal in 20
 Warning--empty journal in 13
-You've used 23 entries,
+You've used 26 entries,
             2768 wiz_defined-function locations,
-            701 strings with 8267 characters,
-and the built_in function-call counts, 6395 in all, are:
-= -- 636
-> -- 151
-< -- 7
-+ -- 45
-- -- 45
-* -- 400
-:= -- 854
-add.period$ -- 57
-call.type$ -- 23
-change.case$ -- 88
-chr.to.int$ -- 23
-cite$ -- 53
-duplicate$ -- 293
-empty$ -- 664
-format.name$ -- 59
-if$ -- 1467
+            716 strings with 8542 characters,
+and the built_in function-call counts, 7200 in all, are:
+= -- 721
+> -- 161
+< -- 8
++ -- 47
+- -- 47
+* -- 450
+:= -- 959
+add.period$ -- 66
+call.type$ -- 26
+change.case$ -- 98
+chr.to.int$ -- 26
+cite$ -- 61
+duplicate$ -- 331
+empty$ -- 749
+format.name$ -- 63
+if$ -- 1654
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 107
-num.names$ -- 27
-pop$ -- 249
+missing$ -- 10
+newline$ -- 122
+num.names$ -- 30
+pop$ -- 276
 preamble$ -- 1
-purify$ -- 134
+purify$ -- 150
 quote$ -- 0
-skip$ -- 253
+skip$ -- 285
 stack$ -- 0
-substring$ -- 190
-swap$ -- 61
-text.length$ -- 7
-text.prefix$ -- 6
+substring$ -- 222
+swap$ -- 67
+text.length$ -- 8
+text.prefix$ -- 7
 top$ -- 0
-type$ -- 176
-warning$ -- 16
-while$ -- 22
-width$ -- 25
-write$ -- 247
-(There were 2 error messages)
+type$ -- 200
+warning$ -- 19
+while$ -- 25
+width$ -- 28
+write$ -- 282
+(There was 1 error message)

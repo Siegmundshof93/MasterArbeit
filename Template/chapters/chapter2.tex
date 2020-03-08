@@ -25,7 +25,7 @@ Green\cite{3} In the space industry, triple-junction solar cells are the most co
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.8]{azur.png}
+	\includegraphics[scale=0.4]{azur.png}
 	\caption{ 30\% Triple Junction GaAs Solar Cell \cite{4}}
 	\label{fig: EPS}
 \end{figure}
@@ -78,10 +78,14 @@ where:\\
 		\centering
 		\includegraphics[scale=0.5]{temperatureDependancy.png}
 		\caption{ Solar cell characteristics at different temperatures\cite{6} }
-		\label{fig: EPS}
+		\label{fig: EPS11}
 	\end{figure}
+	
+According to a figure \ref{fig: EPS11} a maximum power point shifts as a solar array getting hotter or colder. To keep power at the maximum point used Maximum Power Point Tracker (MPPT). The purpose of MPPT is to keep voltage on a particular level while solar panels are affected by a temperature or the orientation of the solar panels.\\
+\cite{20} MPPT might be separated into two parts: power control, logic control. Power control is usually a step-up step-down DC-DC  converter which responsible for a voltage adjustment according to the input from the logic control. Logic control is responsible for a solar array parameters measurements and maximum power point adjustment according to the software algorithm.\\  
 
-During the circuit design of the solar panels, it is important to consider the redundancy and a cause in which one of the cells will be damaged. For that reason diodes are used. The diodes ensure the power can bypass a damage solar cell. On the fig 2.5 shown that the diodes D1 and D2 are placed in th parallel with the solar cells. Diode D3 which also observed on the figure 2.3 is used to prevent the reverse current. Reverse current has a negative effect on the solar panel efficiency. When reverse current occurs, one effect is that current it's drawn from the batteries, therefore, discharging them. Secondly, reversed current adds additional current to the affected solar cell which shifts the maximum power point.
+During the circuit design of the solar panels, it is important to consider the redundancy and a cause in which one of the cells will be damaged. For that reason diodes are used. The diodes ensure the power can bypass a damage solar cell. On the fig 2.5 shown that the diodes D1 and D2 are placed in th parallel with the solar cells. Diode D3 which also observed on the figure 2.3 is used to prevent the reverse current. Reverse current has a negative effect on the solar panel efficiency. When reverse current occurs, one effect is that current it's drawn from the batteries, therefore, discharging them. Secondly, reversed current adds additional current to the affected solar cell which shifts the maximum power point.\\
+
 
 \begin{figure}[h]
 	\centering
@@ -127,7 +131,7 @@ Secondary-type batteries are rechargeable and provide an energy on demand. Secon
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.3]{NiCd.jpg}
+	\includegraphics[scale=0.1]{NiCd.jpg}
 	\caption{NiCd battery\cite{9}}
 	\label{fig: EPS}
 \end{figure}
@@ -167,7 +171,7 @@ Wenige\cite{8} Despite the fact that memory effect on NiH2 is undoubtedly less t
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.6]{NiH2.jpg}
+	\includegraphics[scale=0.3]{NiH2.jpg}
 	\caption{ NiH2 battery \cite{10}}
 	\label{fig: EPS}
 \end{figure}
@@ -203,7 +207,7 @@ Buchmann\cite{7}Today lithium ion batteries is the most progressive and most pro
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.3]{Li-ion.jpg}
+	\includegraphics[scale=0.15 ]{Li-ion.jpg}
 	\caption{ Li-ion battery \cite{11}}
 	\label{fig: EPS}
 \end{figure}
@@ -238,7 +242,7 @@ In 1970, when the original design of lithium polymer batteries was invented, dry
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.3]{LiPo.jpg}
+	\includegraphics[scale=0.2]{LiPo.jpg}
 	\caption{ LiPo battery \cite{12}}
 	\label{fig: EPS}
 \end{figure}
@@ -263,7 +267,7 @@ $\bullet$ constant voltage charge\\
  In most cases, IC chargers are used to provide constant current and constant voltage for lithium-ion / Po batteries. \cite{14} One of those IC chargers is a MAX745. 
 This IC is able to set a charge up to 4 cells in series, as well as set a current and charging voltage. This IC use PWM signal to control a charge voltage which does not allowed IC to get too hot.\\ This IC is an example of a charger microchip which has all necessary  tools to charge a Li-ion/Po batteries. 
 
-\newpage
+
 
 \begin{figure}[h]
 	\centering
@@ -272,7 +276,9 @@ This IC is able to set a charge up to 4 cells in series, as well as set a curren
 	\label{fig: EPS}
 \end{figure}
 
-The figure \ref{fig: EPS} shows an example of a standard MAX745 application circuit. On the left side of the schematics pins SETI and VADJ are used to adjust a charge voltage and charge current. External resistors R16,R12 are connected to a reference voltage to adjust a charge current and resistors R3,R11  used to adjust charge voltage. On the right side of the schematics MAX745 use two external N-channel MOSFETs which control power from the input source which controlled by current mode, PWM controller. \cite{15}"The  heart  of  the  PWM  controller  is  a  multi-input  com-parator.  This  comparator  sums  three  input  signals  to  determine  the  switched  signal’s  pulse  width,  setting  the  battery  voltage  or  current.  The  three  signals  are  the  current-sense  amplifier’s  output,  the  GMV  or  GMI  error  amplifier’s  output,  and  a  slope-compensation  signal  that  ensures that the current-control loop is stable.The   PWM   comparator   compares   the   current-sense   amplifier’s output to the lower output voltage of either the GMV  or  GMI  amplifiers  (the  error  voltage).  This  current-mode feedback reduces the effect of the inductor on the output filter LC formed by the output inductor (L1) and C1 figure \ref{fig: EPS}. This makes stabilizing the circuit much easier, since the output filter changes to a first-order RC from a complex, second-order RLC."
+The figure \ref{fig: EPS} shows an example of a standard MAX745 application circuit. On the left side of the schematics pins SETI and VADJ are used to adjust a charge voltage and charge current. External resistors R16,R12 are connected to a reference voltage to adjust a charge current and resistors R3,R11  used to adjust charge voltage. On the right side of the schematics MAX745 use two external N-channel MOSFETs which control power from the input source which controlled by current mode, PWM controller. 
+
+
 
 \subsubsection{Protection}
 
@@ -308,38 +314,59 @@ $U_{drop}$ - resistor voltage drop\\
 $I$ - current through a resisor\\ \\
  Tietze \cite{18} Linear voltage conversion is a simple method, which does not require many additional passive components, relatively cheap and easy to use. Nonetheless due to a power dissipation linear voltage converters are getting hot, which make them ineffective while current through a resistor is large or difference between $V_{in}$ and $V_{out}$ is high according to \eqref{eq:2}. For that reason Linear voltage converters used only in cause of low current and low voltage drop for example to convert power into a micro controller or to provide a voltage reference.\\
  \\
- There are two types of linear voltage voltage converters, the shunt converter and the series converter. The simple example of a linear voltage converter is a linear series regulator with a negative feedback. This type of a linear voltage converter based on reference voltage. Reference voltage can be proceed via z-diode from unregulated source voltage.    
  
- 
- \begin{figure}[h]
- 	\centering
- 	\includegraphics[scale=0.5]{spannungsteiler.png}
- 	\caption{Voltage stabilization with emitter follower}
- 	\label{fig: EPS1}
- \end{figure}
- 
- Z-diode sets a constant voltage to a base of a NPN transistor. The output voltage can be defined by :
- 
- \begin{equation}\label{eq:3}
- U_{a} = U_{ref} - U_{BE} 
- \end{equation}
- \begin{equation}\label{eq:4}
- I_{R1} = I_{ref}  + I_{b} 
- \end{equation}
- \begin{equation}\label{eq:5}
- I_{a} = (\beta +1)I_{B} 
- \end{equation}
- 
- Z-diode is influenced by the base current of the NPN transistor which load is divided by a $\beta$ parameter of a NPN transistor. Formula \eqref{eq:4} illustrate that current flowing through R1 resistor equal to the sum of transistor base current and z-diode current. The output current of emitter  $I_{a}$ will be equal \eqref{eq:5} according to a current of the base and its $\beta$ parameter. There are other types of series voltage regulator exists, such as series voltage regulator with feedback.
  
 \subsubsection{Inductive DC-DC converters \label{sec:tech}}
 
-Tietze\cite{18} Each inductive DC-DC converter consist of three passive components: inductor $L$, power switch $S$ and capacitor $C$. The use of these components in various topologies, allow to create various types of DC / DC converters such as a step-down converter where output voltage $U_{a}$  , step-up (step-up) or step-down step-up converter. 
+Tietze\cite{18} Each inductive DC-DC converter consist of three passive components: inductor $L$, power switch $S$ and capacitor $C$. The use of these components in various topologies, allow to create various types of DC-DC converters such as a step-down converter where output voltage $0 \leq U_{a} \leq U_{e} $ , step-up converter where output voltage $U_{a} \geq U_{e} $  and   step-down step-up converter which is able to decrease and increase output voltage, for this type of a converter $ U_{a} > 0$. Use of inductive DC-DC converters offer better efficiency due to switching power supply, which gives an advantage over the linear voltage regulator. Hemmo\cite{17} High efficiency is extremely required parameter for a space application due to the limited power generation. In addition, inductive DC-DC converters are able to produce  voltage output $U_{a}$ which is higher then voltage input $U_{e}$. Inductive DC-DC converters used in most causes in the aerospace industry due to high efficiency and capability to manage high voltages and high current.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{lmz.png}
+	\caption{ Inductive DC-DC converter \cite{19}}
+	\label{fig: EPS4}
+\end{figure}
+
+Figure \ref{fig: EPS4} illustrates an example of the simple Inductive DC-DC converter LMZ14202EXT which has an inner inductor. The output voltage of converter can be programmed by choosing a value for the resistors $R_{FBT}$ and $R_{FBB}$ according to a formula from the datasheet \cite{19}. 
+\\
+\\
+
+\subsection{Microcontroller \label{sec:tech}}
+The EPS microcontroller is the vital part of the satellite. Main responsibility of the EPS microcontroller is to manage a power distribution for a hole satellite by sending an enable signals to a commutating components, in most of the cases integrated switches. In addition, microcontroller provide a housekeepeng telemetry by reading the values of sensors, such as temperature sensors, current sensors and others. For this task EPS microcontroller uses protocol lines as $I^{2}C$ or $SPI$. Furthermore, EPS microcontroller needs to communicate to an OBC microcontroller to share the housekeeping information or for reason to receive a commands from OBC. Communication between EPS and OBC as well as with other microcontrollers implemented via CAN bus. Moreover, EPS microcontroller can be used to handle MMPT algorithm to obtain the maximum power from the solar energy.
+\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{uC.png}
+	\caption{block diagram of microcontroller communication}
+	\label{fig: EPS4}
+\end{figure}
+\\
+EPS Data signals:\\ \\
+$\bullet$ CAN\\
+$\bullet$ UART\\
+$\bullet$ I$^{2}$C\\
+$\bullet$  SPI\\
+$\bullet$  EN\\
+\\
+Regarding a power consumption, microcontrollers of a satellite consume very few energy around 1 µA while it's "ON" and around hundred while it's "OFF".\\
+To prevent the microcontroller of getting stuck, external watchdog is used. Watchdog receives the signal from the microcontroller which restart the timer. If case that watchdog did not receive a signal, he will send a signal to a load switch, which will restart the microcontroller by turning the supply power "OFF" and "ON".
+
+\subsection{Power distribution \label{sec:tech}}
+
+Power distribution is a vital part of the EPS, needed to \cite{21} "supply electrical power to the subsystems and payloads of the satellite" as well as prevent an overload of the main power bus. Power distribution usually consist of load switches which distribute power with help of microcontroller by sending the enable signal to an appropriate pin of the switch. In addition, to monitor the payload or subsystem power consumptions, current sensors are used. This combination allowed to fully control the process of power distribution.
 
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{distrib.png}
+	\caption{Power distribution with power switch and current sensor}
+	\label{fig: EPS}
+\end{figure}
 
+\newpage
 
-
+\subsubsection{Switches}
+Power distribution include load switches which responsible for a power commutation of a satellite. Power switches are integrated chips which designed for specific cases and scenarios. One of the important parameters is a power load. Switches have to be chosen according to a load of a power lines considering voltage and maximum current. Otherwise, if the input power exceeds the power that the switch can operate with, this might lead to destruction of the switch and the entire power line.  Another aspect which has to be considered is the inrush current. Inrush current is a maximal instantaneous current draw by an electrical device, appeared for few microseconds when first turn on. 
 
 \section{PDU Overview \label{sec:tech}}
 Nowadays most of the companies designing their Electrical Power System boards for a nano cubesats as whole unit, consisted of all important devices for power management. This configuration is common and allowed to create space for a hardware in the tiny cubesat which is essential for a nano satellites due to its limited size and mass. 

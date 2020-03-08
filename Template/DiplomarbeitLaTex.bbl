@@ -40,12 +40,22 @@
   \url{https://www.digikey.com/en/maker/blogs/lithium-ion-cell-protection}.
 \newblock Accessed: 2020-02-30.
 
+\bibitem[19]{19}
+{\em LMZ14202EXT}.
+\newblock \url{http://www.ti.com/lit/ds/symlink/lmz14202ext.pdf}.
+\newblock Accessed: 2020-03-6.
+
 \bibitem[2]{2}
 {\em {Alia-Novobilsk}. Advanced multi-junction solar cells deliver high
   efficiency, reduced costs for space}.
 \newblock
   \url{https://phys.org/news/2018-01-advanced-multi-junction-solar-cells-high.html#jCp}.
 \newblock Accessed: 2020-02-19.
+
+\bibitem[21]{21}
+{\em Power Distribution Unit}.
+\newblock \url{https://www.esa.int/Education/ESEO/Power_Distribution_Unit}.
+\newblock Accessed: 2020-03-6.
 
 \bibitem[3]{3}
 {\em Conference Record of the Twenty-Ninth IEEE Photovoltaic Specialists
@@ -90,6 +100,7 @@
 \bibitem[Ch.90]{18}
 {\sc Ch.Schenk, U.Tietze.}: {\em Halbleiter-Schaltungstechnik}.
 \newblock Springer-Verlag, 1990.
+\newblock ISBN: 3-540-19475-4.
 
 \bibitem[Gat]{billgates}
 {\sc Gates, Bill}: {\em no real citate}.
@@ -110,6 +121,11 @@
 \bibitem[Kla18]{6}
 {\sc Klaus, Brieß}: {\em Electrical Power Subsystem}.
 \newblock Satellite Technology, 2018.
+
+\bibitem[Ore10]{20}
+{\sc Oredsson, Martin}: {\em Electrical Power Systemfor theCubeSTAR
+  Nanosatellite}.
+\newblock 254:187, 09 2010.
 
 \bibitem[RSC{\etalchar{+}}02]{rfcsip}
 {\sc Rosenberg, J.}, {\sc H.~Schulzrinne}, {\sc G.~Camarillo}, {\sc
