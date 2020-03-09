@@ -134,6 +134,12 @@
 \newblock RFC 3261 (Proposed Standard), \btxmonjunlong{} 2002.
 \newblock Updated by RFCs 3265, 3853, 4320, 4916, 5393.
 
+\bibitem[SSSI15]{22}
+{\sc Shafique, Armughan}, {\sc Arslan Shabir}, {\sc Noman Shabbir}
+  \btxandlong{}\ {\sc Muhammad~Naveed Iqbal}: {\em Power Distribution System
+  for PNSS-1 Cubical Satellite}.
+\newblock 11 2015.
+
 \bibitem[STAP02]{13}
 {\sc Santoni, Fabio}, {\sc Paolo Tortora}, {\sc F.~Alessandrini} \btxandlong{}\
   {\sc Stefano Passerini}: {\em Commercial Li-Ion Batteries for Nanosatellite

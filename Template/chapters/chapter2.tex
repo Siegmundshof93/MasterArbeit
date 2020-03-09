@@ -366,7 +366,28 @@ Power distribution is a vital part of the EPS, needed to \cite{21} "supply elect
 \newpage
 
 \subsubsection{Switches}
-Power distribution include load switches which responsible for a power commutation of a satellite. Power switches are integrated chips which designed for specific cases and scenarios. One of the important parameters is a power load. Switches have to be chosen according to a load of a power lines considering voltage and maximum current. Otherwise, if the input power exceeds the power that the switch can operate with, this might lead to destruction of the switch and the entire power line.  Another aspect which has to be considered is the inrush current. Inrush current is a maximal instantaneous current draw by an electrical device, appeared for few microseconds when first turn on. 
+Power distribution include load switches which responsible for a power commutation of a satellite. Power switches are integrated chips which designed for specific cases and scenarios. One of the important parameters is a power load. Switches have to be chosen according to a load of a power lines considering voltage and maximum current. Otherwise, if the input power exceeds the power that the switch can operate with, this might lead to destruction of the switch and the entire power line.  Another aspect which has to be considered is the inrush current. Inrush current is a maximal instantaneous current draw by an electrical device, appeared for few microseconds when first turn on. Inrush current caused a voltage drop for the supplied subsystems, which might harm device or cause incorrect device performance.
+
+ Capacitors might be used to prevent inrush current. The value of capacitor has to be calculated by equation \ref{eq:3}:
+ 
+ \begin{equation}\label{eq:3}
+ I_{INRUSH} = C_{L} \times \dfrac{dV_{out}}{dt}
+ \end{equation}
+ 
+ Where:\\ \\
+ $I_{INRUSH}$ - amount of inrush current\\
+ $C_{L}$ - Value of capacitor \\
+ $dV_{out}$ - change of V when device is enabled\\
+ $dt$ - rise time\\
+
+Another important ability of the switcher is the fault detection. Fault detection appear while current on the power line exceed the programmed current of the switch. Whilst Overcurrent was detected, switch sends a signal to a microcontroller to disable the switch. Fault detection often used to detect Lautch-up of the satellite.\\
+
+\subsubsection{Power Monitoring}
+
+Power monitoring is the necessary part of the EPS, which allowed to observe the current status of each subsystem and payloads of the satellite. \cite{22} "Power monitoring is implemented by measuring the 
+voltage drop across a shunt resistor.  The voltage across the shunt  is  usually  amplified  using  a  differential amplifier" and produce the analog output. Nowadays Current sensor ICs used to monitor a current on the power lines. Modern current sensors have ability to output measured information as I$^{2}$C or SPI data by converting an analog output signal to the digital via integrated analog to digital converter. 
+
+\newpage   
 
 \section{PDU Overview \label{sec:tech}}
 Nowadays most of the companies designing their Electrical Power System boards for a nano cubesats as whole unit, consisted of all important devices for power management. This configuration is common and allowed to create space for a hardware in the tiny cubesat which is essential for a nano satellites due to its limited size and mass. 

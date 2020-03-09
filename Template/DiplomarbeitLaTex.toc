@@ -23,9 +23,10 @@
 \contentsline {subsection}{\numberline {2.1.4}Microcontroller }{15}{subsection.2.1.4}
 \contentsline {subsection}{\numberline {2.1.5}Power distribution }{16}{subsection.2.1.5}
 \contentsline {subsubsection}{\nonumberline Switches}{17}{section*.28}
-\contentsline {section}{\numberline {2.2}PDU Overview }{17}{section.2.2}
-\contentsline {section}{\numberline {2.3}Technologies }{17}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Load research}{17}{subsection.2.3.1}
+\contentsline {subsubsection}{\nonumberline Power Monitoring}{17}{section*.29}
+\contentsline {section}{\numberline {2.2}PDU Overview }{18}{section.2.2}
+\contentsline {section}{\numberline {2.3}Technologies }{18}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Load research}{18}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Technology B}{23}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Comparison of Technologies}{24}{subsection.2.3.3}
 \contentsline {section}{\numberline {2.4}Standardization }{24}{section.2.4}
@@ -63,6 +64,6 @@
 \contentsline {section}{\numberline {7.2}Dissemination}{33}{section.7.2}
 \contentsline {section}{\numberline {7.3}Problems Encountered}{33}{section.7.3}
 \contentsline {section}{\numberline {7.4}Outlook}{33}{section.7.4}
-\contentsline {chapter}{\nonumberline List of Acronyms}{35}{chapter*.32}
-\contentsline {chapter}{\nonumberline Bibliography}{37}{chapter*.33}
-\contentsline {chapter}{\nonumberline Annex}{39}{chapter*.34}
+\contentsline {chapter}{\nonumberline List of Acronyms}{35}{chapter*.33}
+\contentsline {chapter}{\nonumberline Bibliography}{37}{chapter*.34}
+\contentsline {chapter}{\nonumberline Annex}{41}{chapter*.35}
