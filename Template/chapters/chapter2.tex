@@ -1,6 +1,6 @@
-\chapter{Background: Electrical Power System Distribution Board \label{cha:chapter2}}
+\chapter{Background: Electrical Power System  \label{cha:chapter2}}
 This section is intended to provide essential knowledge on Electrical Power System that will help to explain the development of Power Distribution Unit.
-Therefore, an overview of the EPS will be presented. The EPS power and data lines include protocols will be explained as well. Another subsection of this chapter provides a power consumption according to a modern space components. Also power budget of the satellite will be developed based on the power consumption of the modern space components.
+Therefore, an overview of the EPS will be presented. 
 
 \section{Electircal Power System Overview \label{sec:tech}}
 The Electrical Power Subsystem is a vital part of a CubeSat-Bus. It is responsible for generation and storage of energy, the processing of electrical power to a defined state and the distribution of power to all satellite subsystems. The EPS is a main, essential and frequently form the third of total spacecraft mass. Power generation technology combine a solar cells, charger. Power storage typically includes a batteries; primary batteries (non-rechargeable), or secondary batteries (rechargable). Power distribution consist of power switchers, which facilitate power control to a subsystems of the spacecraft.
@@ -97,7 +97,7 @@ During the circuit design of the solar panels, it is important to consider the r
 \newpage
 
 
-\subsection{Power storage \label{sec:tech}}
+\subsection{Power storage \label{sec:tech1}}
 
 
 
@@ -388,6 +388,109 @@ Power monitoring is the necessary part of the EPS, which allowed to observe the 
 voltage drop across a shunt resistor.  The voltage across the shunt  is  usually  amplified  using  a  differential amplifier" and produce the analog output. Nowadays Current sensor ICs used to monitor a current on the power lines. Modern current sensors have ability to output measured information as I$^{2}$C or SPI data by converting an analog output signal to the digital via integrated analog to digital converter. 
 
 \newpage   
+\section {6 Unit satellite development}
+This section will provide a short essential knowledge about Descartes mission with the main purposes of the mission, satellite characteristics and the satellite  abilities. Then topic will go deeper into the EPS architecture design of the 6U satellite. After introduction in the EPS architecture load research of the satellite will be provided. The load research information will be used as an input for a power budget, which will be shown at the end of the section. \\
+\subsection{introduction into the Descartes mission}
+
+German Orbital System (GOS) plays a major role in the satellite development since 2014, providing reliable engineering support, uncompromising quality and affordable prices. GOS has accomplished nine successful 3U satellites launches into space since their realize as a company. Although 3U satellites are relatively cheap to build and their characteristics enough have a simple payload, GOS is keeping up with the time. At the moment GOS is developing the 6U nano-satellite (Descartes), which can be used for a wide range of tasks such as:\\ \\
+$\bullet$ Earth exploration\\ 
+$\bullet$ Student projects\\ 
+$\bullet$ Science projects\\ 
+$\bullet$ Orbit calibration and control\\ 
+$\bullet$ Auto Dependent Surveillance Broadcast\\ 
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.2, angle =90]{descart.png}
+	\caption{6U satellite Descartes}
+	\label{fig: EPS}
+\end{figure}
+
+
+  Descartes is a 6U satellite with dimensions 360$\times$240$\times$120 and mass less than 8kg. 6U satellite has 3.5U of payload free space, which is reserved for the four different payloads. Descartes developed for a 2 years of lifetime on the Low Earth Orbit. For his orbital lifetime satellite will measure the space weather, observe the aircrafts, monitor the ultraviolet radiation on the Earth atmosphere  and provide remote sensing of Earth. The Space weather measurements implemented by DeCor payload. DeCor is a detector of gamma radiation and charged particles in the range of 0.3-3 MeV.This device allowed to study the fast variations of electron fluxes in the gap zone between radiation belts and dynamics of particle fluxes and gamma radiation in low orbits depending on geomagnetic conditions. Aircraft data are monitored using a payload called AMUR. AMUR is designed to collect, process and filter aircraft data. 
+  In addition to having a four different payloads, Descartes is using 3-axis attitude control which consist of reaction wheels, magnetorquers and sets of magnetic and solar sensors. To transmit the telemetry and commands Descartes use 2 UHF modules which were designed ba GOS. In addition to 2 UHF modules, 6U satellite operate with a 2.4 GHz HISPICO S-band transceiver.\\ \\
+ 
+  \subsection{EPS architecture of the 6U satellite}
+  According to an introduction into the mission it is noticeable that design of the 6U satellite highly improved in comparison with the previous 3U satellites which were designed by GOS. The biggest divergence is a size and availability of the satellite to work with more payloads as well as to perform 3-axis stabilization. Due to that fact, the EPS of the satellite has also undergone changes.
+  
+  Due to the energy requirements based on Appendix A, 6U satellite has to provide a 16 Ah of energy and  distribute it to 23 channels. To accomplish this requirements, considering the available space of the 6U satellite, EPS was devided into 3 parts which connectrd between each other via PC104 connector:\\ \\
+  $\bullet$ Power Proccessing Unit\\
+  $\bullet$ Power Distribution Unit\\
+  $\bullet$ Battery Pack\\
+  
+   \subsubsection{Power Processing Unit}
+   Power Processing Unit (PPU) is a part of EPS which responsible for a battery charge, power distribution control and a power processing. 
+   Power converted from the solar flux come first into a Power Processing Unit from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panels gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsiable for a battery charge, illustrated on the figure \ref{fig: ltc4015}. Integrated chip LTC4015 provide a constant voltage and current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak. This allowed to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip draws power from the solar input to the system, while batteries are charging and switch power source to a battery pack while eclipse or overcharge condition.
+   
+  \begin{figure}[h]
+  	\centering
+  	\includegraphics[scale=0.2]{ltc4015.png}
+  	\caption{Battery charger}
+  	\label{fig: ltc4015}
+  \end{figure}
+  
+ After the power has been distributed from the charger, is separates in two power lines, one power line goes through the LDO converter to feed the microcontroller and second distributes the power into five DC-DC converters for the subsystems and payloads.
+ 
+ LDO converts input power from the charger into 3.3V to supply a power for microcontroller. After surpassing the LDO, power goes through the load switch, controlled by watchdog. Watchdog provide a constant output signal to the load switch, that alloud him to commutate and transfer power further to the microcontroller. 
+  
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[scale=0.4]{Watch.png}
+    	\caption{microcontroler power supply}
+    	\label{fig: ltc4015}
+    \end{figure}
+  Microcontroller sends a reset signal to the watchdog, to to reset the counter. As long as counter reset, watchdog keep the enable output pin "HIGH". However, when watchdog does not receive the reset signal from the microcontroller due to some system problems, watchdog restart himself and enable output pin getting low and high, which restart microcontroller.
+  
+  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger. Power processing can be divided into 2 blocks power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 8,4V. Common 8,4 V converter used to convert unregulated voltage from the solar panels. For this task LTC3119 used, this microchip has a big current tolerance which allowed him to transfer huge amount of power.To produce 5V and 3.3V, used LM43603 and TPS62111 converters. This converters were successfully used on the previous EPS models. In order to keep a flight heritage, were made decision to keep the converters as it is. 
+  
+   \begin{figure}[h]
+   	\centering
+   	\includegraphics[scale=0.4]{dcdc.png}
+   	\caption{Power processing}
+   	\label{fig: ltc4015}
+   \end{figure}
+  
+  One of important tasks of the EPS and PPU is to deploy 2 UHF antennas. To accomplish this task and provide a battery voltage to deployment mechanism, used 2 power lines for each UHF antenna with two TPS1H200A load switches in series for each line. To activate antenna release, two signals must be send from the microcontroller which enable the load switch to commutate and provide a power to accomplish antenna release. 
+  
+  In addition, PPU provide a current and voltage sensing of 16 analog lines,  which get converted via ADC MAX1231 that provide an SPI signal. 
+  
+  Figure \ref{fig: PPU} Illustrate the simple PPU architecture block diagram. 
+  
+  \begin{figure}[h]
+  	\centering
+  	\includegraphics[scale=0.15]{PPU.png}
+  	\caption{Power Processing Unit}
+  	\label{fig: PPU}
+  \end{figure}
+  
+     \subsubsection{Battery Pack}
+  
+ Battery pack board used to provide a power storage for the EPS by using 4 li-ion batteries with a 2 series 2 parallel configuration. According to the Appendix A, one of the EPS requirements is to provide capacity of 16 Ah which can be made by using 4 LI-ion batteries INR21700 with a capacity of 4000mAh.
+ 
+  As was discussed in the background section \ref{sec:tech1} Li-ion batteries required a protection circuit to prevent overcharge, over-discharge and a fast discharge(short). For the battery pack board every cell has its own protection integrated chip BQ29700D which has an overcharge, over-discharge and short protection. Due to 2S2P configuration, batteries which located in parallel have to be balance. BQ29209 is a fine battery balancer from Texas Instruments which \cite{23}"performs automatic cell-balance correction where the two cells are automatically corrected for voltage imbalance by loading the cell with the higher voltage with a small balancing current."  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 \section{PDU Overview \label{sec:tech}}
 Nowadays most of the companies designing their Electrical Power System boards for a nano cubesats as whole unit, consisted of all important devices for power management. This configuration is common and allowed to create space for a hardware in the tiny cubesat which is essential for a nano satellites due to its limited size and mass. 

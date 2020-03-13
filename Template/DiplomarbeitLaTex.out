@@ -5,53 +5,56 @@
 \BOOKMARK [1][-]{section.1.2}{Objective}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.3}{Scope}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.4}{Outline}{chapter.1}% 7
-\BOOKMARK [0][-]{chapter.2}{Background: Electrical Power System Distribution Board }{}% 8
+\BOOKMARK [0][-]{chapter.2}{Background: Electrical Power System }{}% 8
 \BOOKMARK [1][-]{section.2.1}{Electircal Power System Overview }{chapter.2}% 9
 \BOOKMARK [2][-]{subsection.2.1.1}{Power generation }{section.2.1}% 10
 \BOOKMARK [2][-]{subsection.2.1.2}{Power storage }{section.2.1}% 11
 \BOOKMARK [2][-]{subsection.2.1.3}{Power processing }{section.2.1}% 12
 \BOOKMARK [2][-]{subsection.2.1.4}{Microcontroller }{section.2.1}% 13
 \BOOKMARK [2][-]{subsection.2.1.5}{Power distribution }{section.2.1}% 14
-\BOOKMARK [1][-]{section.2.2}{PDU Overview }{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.3}{Technologies }{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.3.1}{Load research}{section.2.3}% 17
-\BOOKMARK [2][-]{subsection.2.3.2}{Technology B}{section.2.3}% 18
-\BOOKMARK [2][-]{subsection.2.3.3}{Comparison of Technologies}{section.2.3}% 19
-\BOOKMARK [1][-]{section.2.4}{Standardization }{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.4.1}{Internet Engineering Task Force}{section.2.4}% 21
-\BOOKMARK [2][-]{subsection.2.4.2}{International Telecommunication Union}{section.2.4}% 22
-\BOOKMARK [2][-]{subsection.2.4.3}{3GPP}{section.2.4}% 23
-\BOOKMARK [2][-]{subsection.2.4.4}{Open Mobile Alliance}{section.2.4}% 24
-\BOOKMARK [1][-]{section.2.5}{Concurrent Approaches }{chapter.2}% 25
-\BOOKMARK [0][-]{chapter.3}{Requirements}{}% 26
-\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.2}{Technical Requirements}{chapter.3}% 28
-\BOOKMARK [2][-]{subsection.3.2.1}{Sub-component A}{section.3.2}% 29
-\BOOKMARK [2][-]{subsection.3.2.2}{Sub-component B}{section.3.2}% 30
-\BOOKMARK [1][-]{section.3.3}{Social Requirements}{chapter.3}% 31
-\BOOKMARK [0][-]{chapter.4}{Concept}{}% 32
-\BOOKMARK [1][-]{section.4.1}{Sub-component A}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.2}{Sub-component B}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.3}{Proposed API}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.4}{Layer X}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.5}{Interworking of X and Y}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.6}{Interface Specification}{chapter.4}% 38
-\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 39
-\BOOKMARK [1][-]{section.5.1}{Environment}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.2}{Project Structure}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.3}{Important Implementation Aspects}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.4}{Graphical User Interface}{chapter.5}% 43
-\BOOKMARK [1][-]{section.5.5}{Documentation}{chapter.5}% 44
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 45
-\BOOKMARK [1][-]{section.6.1}{Test Environment}{chapter.6}% 46
-\BOOKMARK [1][-]{section.6.2}{Scalability}{chapter.6}% 47
-\BOOKMARK [1][-]{section.6.3}{Usability}{chapter.6}% 48
-\BOOKMARK [1][-]{section.6.4}{Performance Measurements}{chapter.6}% 49
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 50
-\BOOKMARK [1][-]{section.7.1}{Summary}{chapter.7}% 51
-\BOOKMARK [1][-]{section.7.2}{Dissemination}{chapter.7}% 52
-\BOOKMARK [1][-]{section.7.3}{Problems Encountered}{chapter.7}% 53
-\BOOKMARK [1][-]{section.7.4}{Outlook}{chapter.7}% 54
-\BOOKMARK [0][-]{chapter*.33}{List of Acronyms}{}% 55
-\BOOKMARK [0][-]{chapter*.34}{Bibliography}{}% 56
-\BOOKMARK [0][-]{chapter*.35}{Annex}{}% 57
+\BOOKMARK [1][-]{section.2.2}{6 Unit satellite development}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{introduction into the Descartes mission}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{EPS architecture of the 6U satellite}{section.2.2}% 17
+\BOOKMARK [1][-]{section.2.3}{PDU Overview }{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.4}{Technologies }{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.4.1}{Load research}{section.2.4}% 20
+\BOOKMARK [2][-]{subsection.2.4.2}{Technology B}{section.2.4}% 21
+\BOOKMARK [2][-]{subsection.2.4.3}{Comparison of Technologies}{section.2.4}% 22
+\BOOKMARK [1][-]{section.2.5}{Standardization }{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.5.1}{Internet Engineering Task Force}{section.2.5}% 24
+\BOOKMARK [2][-]{subsection.2.5.2}{International Telecommunication Union}{section.2.5}% 25
+\BOOKMARK [2][-]{subsection.2.5.3}{3GPP}{section.2.5}% 26
+\BOOKMARK [2][-]{subsection.2.5.4}{Open Mobile Alliance}{section.2.5}% 27
+\BOOKMARK [1][-]{section.2.6}{Concurrent Approaches }{chapter.2}% 28
+\BOOKMARK [0][-]{chapter.3}{Requirements}{}% 29
+\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.2}{Technical Requirements}{chapter.3}% 31
+\BOOKMARK [2][-]{subsection.3.2.1}{Sub-component A}{section.3.2}% 32
+\BOOKMARK [2][-]{subsection.3.2.2}{Sub-component B}{section.3.2}% 33
+\BOOKMARK [1][-]{section.3.3}{Social Requirements}{chapter.3}% 34
+\BOOKMARK [0][-]{chapter.4}{Concept}{}% 35
+\BOOKMARK [1][-]{section.4.1}{Sub-component A}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.2}{Sub-component B}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.3}{Proposed API}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.4}{Layer X}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.5}{Interworking of X and Y}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.6}{Interface Specification}{chapter.4}% 41
+\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 42
+\BOOKMARK [1][-]{section.5.1}{Environment}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.2}{Project Structure}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.3}{Important Implementation Aspects}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.4}{Graphical User Interface}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.5}{Documentation}{chapter.5}% 47
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 48
+\BOOKMARK [1][-]{section.6.1}{Test Environment}{chapter.6}% 49
+\BOOKMARK [1][-]{section.6.2}{Scalability}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.3}{Usability}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.4}{Performance Measurements}{chapter.6}% 52
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 53
+\BOOKMARK [1][-]{section.7.1}{Summary}{chapter.7}% 54
+\BOOKMARK [1][-]{section.7.2}{Dissemination}{chapter.7}% 55
+\BOOKMARK [1][-]{section.7.3}{Problems Encountered}{chapter.7}% 56
+\BOOKMARK [1][-]{section.7.4}{Outlook}{chapter.7}% 57
+\BOOKMARK [0][-]{chapter*.40}{List of Acronyms}{}% 58
+\BOOKMARK [0][-]{chapter*.41}{Bibliography}{}% 59
+\BOOKMARK [0][-]{chapter*.42}{Annex}{}% 60
