@@ -30,7 +30,7 @@ Green\cite{3} In the space industry, triple-junction solar cells are the most co
 	\label{fig: EPS}
 \end{figure}
 
-Solar cells are usually interconnected to a solar array to get the desired power. Configuration of the solar array is flexible, such that it allowed adjustment of the cells connection. To achieve the desired voltage, solar cells get interconnected in series (strings). To achieve the desired current, solar cells get interconnected in parallel.\\
+Solar cells are usually interconnected to a solar array to get the desired power. Configuration of the solar array is flexible, such that it allows adjustment of the cells connection. To achieve the desired voltage, solar cells get interconnected in series (strings). To achieve the desired current, solar cells get interconnected in parallel.\\
 
 \newpage
 
@@ -105,7 +105,7 @@ Yost\cite{1} During the the mission duration, solar energy is not always availab
 \\
 Secondary-type batteries are rechargeable and provide an energy on demand. Secondary-type batteries are connected to a primary energy source of the satellite (usually solar panels) via battery charger. This type include: nickel-cadmium (NiCd), nickel-hydrogen (NiH2), lithium-ion polymer(LiPo), lithium-ion(Li-ion).
 \subsubsection{Nickel Cadmium \label{sec:tech}}
- Buchmann\cite{7} Nickel Cadmium is a type of rechargable batteries using nickel oxide hydroxide and metallic cadmium. This chemical connection allowed battery to well perform by working in the savage conditions such as low or hot temperature. NiCd battery is the type which prefer to be charge fast instead of slow as types of secondary batteries. Full periodic discharge of a NiCd is an important process and necessary for battery performance. In case of absence  Buchmann\cite{7} " large crystals will form on the cell plates (also referred to as memory) and the NiCd will gradually lose its performance."
+ Buchmann\cite{7} Nickel Cadmium is a type of rechargable batteries using nickel oxide hydroxide and metallic cadmium. This chemical connection allows battery to well perform by working in the savage conditions such as low or hot temperature. NiCd battery is the type which prefer to be charge fast instead of slow as types of secondary batteries. Full periodic discharge of a NiCd is an important process and necessary for battery performance. In case of absence  Buchmann\cite{7} " large crystals will form on the cell plates (also referred to as memory) and the NiCd will gradually lose its performance."
  
  \newpage
 
@@ -214,7 +214,7 @@ Buchmann\cite{7}Today lithium ion batteries is the most progressive and most pro
 
 \subsubsection{Lithium Polymer \label{sec:tech}}
 
-In 1970, when the original design of lithium polymer batteries was invented, dry solid polymer electrolyte was used instead of  porous separator. Dry polymer design, allowed to simplify manufacture process and the most important - to have a thin thickness geometry. However Dry solid polymer electrolyte experienced poor conductivity due to internal resistance of a the battery. Thereby, gelled electrolyte has been added to enhance ion conductivity. LiPo batteries have a slightly lower energy density and amount of charge/discharge cycles compare to Li-ion batteries. Nonetheless LiPo batteries have a bigger overcharge tolerance, which making them more robust to overcharge conditions.
+In 1970, when the original design of lithium polymer batteries was invented, dry solid polymer electrolyte was used instead of  porous separator. Dry polymer design, allows to simplify manufacture process and the most important - to have a thin thickness geometry. However Dry solid polymer electrolyte experienced poor conductivity due to internal resistance of a the battery. Thereby, gelled electrolyte has been added to enhance ion conductivity. LiPo batteries have a slightly lower energy density and amount of charge/discharge cycles compare to Li-ion batteries. Nonetheless LiPo batteries have a bigger overcharge tolerance, which making them more robust to overcharge conditions.
 
 
 \begin{multicols}{2}
@@ -265,7 +265,7 @@ $\bullet$ constant voltage charge\\
  Charging rate of a battery measures in C. In cause of 1000mAh battery cell 1C charging rate will be 1000mA and 500mA for 0.5C. Usually, recommended charging given in the datasheet.\\
  Charging process starts with a 100\%  constant current (according to a charging rate) process. During the time while battery voltage reaching the upper voltage threshold, its pushing a constant current into a battery. Once voltage reaches threshold point, charging process changes from the constant current mode into a constant voltage mode. In a constant voltage mode, voltage keeps its maximum level while current starts to slightly drop until it gets down to a threshold level, which usually written in a datasheet (around 3\%). After current drops below the threshold battery is fully charged. \\ \\
  In most cases, IC chargers are used to provide constant current and constant voltage for lithium-ion / Po batteries. \cite{14} One of those IC chargers is a MAX745. 
-This IC is able to set a charge up to 4 cells in series, as well as set a current and charging voltage. This IC use PWM signal to control a charge voltage which does not allowed IC to get too hot.\\ This IC is an example of a charger microchip which has all necessary  tools to charge a Li-ion/Po batteries. 
+This IC is able to set a charge up to 4 cells in series, as well as set a current and charging voltage. This IC use PWM signal to control a charge voltage which does not allow IC to get too hot.\\ This IC is an example of a charger microchip which has all necessary  tools to charge a Li-ion/Po batteries. 
 
 
 
@@ -353,7 +353,7 @@ To prevent the microcontroller of getting stuck, external watchdog is used. Watc
 
 \subsection{Power distribution \label{sec:tech}}
 
-Power distribution is a vital part of the EPS, needed to \cite{21} "supply electrical power to the subsystems and payloads of the satellite" as well as prevent an overload of the main power bus. Power distribution usually consist of load switches which distribute power with help of microcontroller by sending the enable signal to an appropriate pin of the switch. In addition, to monitor the payload or subsystem power consumptions, current sensors are used. This combination allowed to fully control the process of power distribution.
+Power distribution is a vital part of the EPS, needed to \cite{21} "supply electrical power to the subsystems and payloads of the satellite" as well as prevent an overload of the main power bus. Power distribution usually consist of load switches which distribute power with help of microcontroller by sending the enable signal to an appropriate pin of the switch. In addition, to monitor the payload or subsystem power consumptions, current sensors are used. This combination allows to fully control the process of power distribution.
 
 
 \begin{figure}[h]
@@ -384,7 +384,7 @@ Another important ability of the switcher is the fault detection. Fault detectio
 
 \subsubsection{Power Monitoring}
 
-Power monitoring is the necessary part of the EPS, which allowed to observe the current status of each subsystem and payloads of the satellite. \cite{22} "Power monitoring is implemented by measuring the 
+Power monitoring is the necessary part of the EPS, which allows to observe the current status of each subsystem and payloads of the satellite. \cite{22} "Power monitoring is implemented by measuring the 
 voltage drop across a shunt resistor.  The voltage across the shunt  is  usually  amplified  using  a  differential amplifier" and produce the analog output. Nowadays Current sensor ICs used to monitor a current on the power lines. Modern current sensors have ability to output measured information as I$^{2}$C or SPI data by converting an analog output signal to the digital via integrated analog to digital converter. 
 
 \newpage   
@@ -409,7 +409,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
 \end{figure}
 
 
-  Descartes is a 6U satellite with dimensions 360$\times$240$\times$120 and mass less than 8kg. 6U satellite has 3.5U of payload free space, which is reserved for the four different payloads. Descartes developed for a 2 years of lifetime on the Low Earth Orbit. For his orbital lifetime satellite will measure the space weather, observe the aircrafts, monitor the ultraviolet radiation on the Earth atmosphere  and provide remote sensing of Earth. The Space weather measurements implemented by DeCor payload. DeCor is a detector of gamma radiation and charged particles in the range of 0.3-3 MeV.This device allowed to study the fast variations of electron fluxes in the gap zone between radiation belts and dynamics of particle fluxes and gamma radiation in low orbits depending on geomagnetic conditions. Aircraft data are monitored using a payload called AMUR. AMUR is designed to collect, process and filter aircraft data. 
+  Descartes is a 6U satellite with dimensions 360$\times$240$\times$120 and mass less than 8kg. 6U satellite has 3.5U of payload free space, which is reserved for the four different payloads. Descartes developed for a 2 years of lifetime on the Low Earth Orbit. For his orbital lifetime satellite will measure the space weather, observe the aircrafts, monitor the ultraviolet radiation on the Earth atmosphere  and provide remote sensing of Earth. The Space weather measurements implemented by DeCor payload. DeCor is a detector of gamma radiation and charged particles in the range of 0.3-3 MeV.This device allows to study the fast variations of electron fluxes in the gap zone between radiation belts and dynamics of particle fluxes and gamma radiation in low orbits depending on geomagnetic conditions. Aircraft data are monitored using a payload called AMUR. AMUR is designed to collect, process and filter aircraft data. 
   In addition to having a four different payloads, Descartes is using 3-axis attitude control which consist of reaction wheels, magnetorquers and sets of magnetic and solar sensors. To transmit the telemetry and commands Descartes use 2 UHF modules which were designed ba GOS. In addition to 2 UHF modules, 6U satellite operate with a 2.4 GHz HISPICO S-band transceiver.\\ \\
  
   \subsection{EPS architecture of the 6U satellite}
@@ -422,7 +422,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   
    \subsubsection{Power Processing Unit}
    Power Processing Unit (PPU) is a part of EPS which responsible for a battery charge, power distribution control and a power processing. 
-   Power converted from the solar flux come first into a Power Processing Unit from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panels gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsiable for a battery charge, illustrated on the figure \ref{fig: ltc4015}. Integrated chip LTC4015 provide a constant voltage and current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak. This allowed to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip draws power from the solar input to the system, while batteries are charging and switch power source to a battery pack while eclipse or overcharge condition.
+   Power converted from the solar flux come first into a Power Processing Unit from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panels gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsiable for a battery charge, illustrated on the figure \ref{fig: ltc4015}. Integrated chip LTC4015 provide a constant voltage and current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip draws power from the solar input to the system, while batteries are charging and switch power source to a battery pack while eclipse or overcharge condition.
    
   \begin{figure}[h]
   	\centering
@@ -443,7 +443,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
     \end{figure}
   Microcontroller sends a reset signal to the watchdog, to to reset the counter. As long as counter reset, watchdog keep the enable output pin "HIGH". However, when watchdog does not receive the reset signal from the microcontroller due to some system problems, watchdog restart himself and enable output pin getting low and high, which restart microcontroller.
   
-  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger. Power processing can be divided into 2 blocks power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 8,4V. Common 8,4 V converter used to convert unregulated voltage from the solar panels. For this task LTC3119 used, this microchip has a big current tolerance which allowed him to transfer huge amount of power.To produce 5V and 3.3V, used LM43603 and TPS62111 converters. This converters were successfully used on the previous EPS models. In order to keep a flight heritage, were made decision to keep the converters as it is. 
+  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger. Power processing can be divided into 2 blocks power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 8,4V. Common 8,4 V converter used to convert unregulated voltage from the solar panels. For this task LTC3119 used, this microchip has a big current tolerance which allows him to transfer huge amount of power.To produce 5V and 3.3V, used LM43603 and TPS62111 converters. This converters were successfully used on the previous EPS models. In order to keep a flight heritage, were made decision to keep the converters as it is. 
   
    \begin{figure}[h]
    	\centering
@@ -469,18 +469,30 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   
  Battery pack board used to provide a power storage for the EPS by using 4 li-ion batteries with a 2 series 2 parallel configuration. According to the Appendix A, one of the EPS requirements is to provide capacity of 16 Ah which can be made by using 4 LI-ion batteries INR21700 with a capacity of 4000mAh.
  
-  As was discussed in the background section \ref{sec:tech1} Li-ion batteries required a protection circuit to prevent overcharge, over-discharge and a fast discharge(short). For the battery pack board every cell has its own protection integrated chip BQ29700D which has an overcharge, over-discharge and short protection. Due to 2S2P configuration, batteries which located in parallel have to be balance. BQ29209 is a fine battery balancer from Texas Instruments which \cite{23}"performs automatic cell-balance correction where the two cells are automatically corrected for voltage imbalance by loading the cell with the higher voltage with a small balancing current."  
+  As was discussed in the background section \ref{sec:tech1} Li-ion batteries required a protection circuit to prevent overcharge, over-discharge and a fast discharge(short). For the battery pack board every two cells in the series have their own protection integrated chip BQ29700D which has an overcharge, over-discharge and short protection. Due to 2S2P configuration, batteries which located in parallel have to be balance. BQ29209 is a fine battery balancer from Texas Instruments which \cite{23}"performs automatic cell-balance correction where the two cells are automatically corrected for voltage imbalance by loading the cell with the higher voltage with a small balancing current."  
+  
+  \begin{figure}[h]
+  	\centering
+  	\includegraphics[scale=0.2]{2s2pMasterarbeit.png}
+  	\caption{Battery protection-balancing}
+  	\label{fig: Bat_prot_bal}
+  \end{figure}
+  
+  The configuration \ref{fig: Bat_prot_bal} allows batteries to provide and collect the power at the same time keeping cells balanced and safe.
+  
+  Due to the space environment, temperature of the batteries can decrease bellow the temperature threshold. To avoid the battery temperature drop bellow the limit, was decided to use resistor heaters. Battery pack board has 2 temperature sensors that located under the batteries, which allow to measure the temperature close to the temperature of the batteries. The temperature sensors provide an I$^{2}$C to the PC104 connector that transfer the data signal to the microcontroller of the PPU. Microcontroller reads the signal and decide whether it need to provide a heat to the batteries or not. Heat is implemented by sending a enable signal from the microcontroller to the load switch TPS1H200A that has a function to transfer a power from the batteries to the low value resisters.  
   
   
+  \begin{figure}[h]
+  	\centering
+  	\includegraphics[scale=0.2]{BP.png}
+  	\caption{Battery pack board}
+  	\label{fig: BP}
+  \end{figure}
   
+   Figure \ref{fig: BP} Illustrate the simple Battery pack board architecture block diagram. 
   
-  
-  
-  
-  
-  
-  
-  
+  \subsubsection{Power Distribution Unit}
   
   
   
