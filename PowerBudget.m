@@ -40,10 +40,10 @@ CharE10 = 8.23;    #
 ################### 
 
 ########################
-MODE1 = 161.47;             #
-MODE2 = 97.59;            #------------Power consumption per Mode [W]
-MODE3 = 6.94;             #
-MODE4 = 39.37;             #
+MODE1 = 9.07;        #
+MODE2 = 27.97;         #------------Power consumption per Mode [W]
+MODE3 = 0.81;          #
+MODE4 = 16.21;         #
 MODE5 = 6;             #
 MODE6 = 15;            #
 MODE7 = 8;             #
@@ -54,11 +54,11 @@ MODE10 = 3;            #
                                                                                   
 ####################                                                               
 Tm1  =  5;        #                                                                
-Tm2  =  120;      # ------------- Modus time [min]
-Tm3  =  7*60;    #
-Tm4  =  5;        #
-Tm5  =  60;        # 
-Tm6  =  0;        #
+Tm2  =  60;      # ------------- Modus time [min]
+Tm3  =  4*60;    #
+Tm4  =  60;        #
+Tm5  =  4*60;        # 
+Tm6  =  60;        #
 Tm7  =  0;        #
 Tm8  =  0;         #
 Tm9  =  0;         #
@@ -69,8 +69,8 @@ Tm10 =  0;         #
 
 
 ########################
-BattCapBol = 435.12;   # -------Batterien capacity [Wh]
-BattCapEol = 426.24;   #
+BattCapBol = 160;   # -------Batterien capacity [Wh]
+BattCapEol = 155;   #
 ########################
 
 
@@ -88,10 +88,10 @@ SoClim = 60;          #--------------- SoC limit[%] # change to DOD
 #########################
 FirstMode   = MODE1;    #
 SecondMode  = MODE2;    #
-ThirdMode   = MODE3;    #
-FourthMode  = MODE4;    #
-FifthMode   = MODE3;    #
-SixthMode   = MODE6;    #------------Modes continuation
+ThirdMode   = MODE4;    #
+FourthMode  = MODE2;    #
+FifthMode   = MODE4;    #
+SixthMode   = MODE2;    #------------Modes continuation
 SeventhMode = MODE4;    #
 EightMode   = MODE1;    #
 NinethMode  = MODE7;    #
@@ -155,4 +155,4 @@ ylim([0,100])
 xlabel('Time[h]');
 ylabel('State of Charge[%]');
 grid on
-legend ("state of charge BoL", "state of charge EoL", "Orbital period", "DoD limit", "location", "NorthEastOutside");
+legend ("State of charge BoL", "State of charge EoL", "Orbital period", "DoD limit", "location", "NorthEastOutside");

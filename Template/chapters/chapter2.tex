@@ -388,9 +388,9 @@ Power monitoring is the necessary part of the EPS, which allows to observe the c
 voltage drop across a shunt resistor.  The voltage across the shunt  is  usually  amplified  using  a  differential amplifier" and produce the analog output. Nowadays Current sensor ICs used to monitor a current on the power lines. Modern current sensors have ability to output measured information as I$^{2}$C or SPI data by converting an analog output signal to the digital via integrated analog to digital converter. 
 
 \newpage   
-\section {6 Unit satellite development}
-This section will provide a short essential knowledge about Descartes mission with the main purposes of the mission, satellite characteristics and the satellite  abilities. Then topic will go deeper into the EPS architecture design of the 6U satellite. After introduction in the EPS architecture load research of the satellite will be provided. The load research information will be used as an input for a power budget, which will be shown at the end of the section. \\
-\subsection{introduction into the Descartes mission}
+\chapter{6 Unit satellite design}
+This chapter will provide a short essential knowledge about Descartes mission with the main purposes of the mission, satellite characteristics and the satellite  abilities. Then topic will go deeper into the EPS architecture design of the 6U satellite. \\
+\section{introduction into the Descartes mission}
 
 German Orbital System (GOS) plays a major role in the satellite development since 2014, providing reliable engineering support, uncompromising quality and affordable prices. GOS has accomplished nine successful 3U satellites launches into space since their realize as a company. Although 3U satellites are relatively cheap to build and their characteristics enough have a simple payload, GOS is keeping up with the time. At the moment GOS is developing the 6U nano-satellite (Descartes), which can be used for a wide range of tasks such as:\\ \\
 $\bullet$ Earth exploration\\ 
@@ -412,15 +412,80 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   Descartes is a 6U satellite with dimensions 360$\times$240$\times$120 and mass less than 8kg. 6U satellite has 3.5U of payload free space, which is reserved for the four different payloads. Descartes developed for a 2 years of lifetime on the Low Earth Orbit. For his orbital lifetime satellite will measure the space weather, observe the aircrafts, monitor the ultraviolet radiation on the Earth atmosphere  and provide remote sensing of Earth. The Space weather measurements implemented by DeCor payload. DeCor is a detector of gamma radiation and charged particles in the range of 0.3-3 MeV.This device allows to study the fast variations of electron fluxes in the gap zone between radiation belts and dynamics of particle fluxes and gamma radiation in low orbits depending on geomagnetic conditions. Aircraft data are monitored using a payload called AMUR. AMUR is designed to collect, process and filter aircraft data. 
   In addition to having a four different payloads, Descartes is using 3-axis attitude control which consist of reaction wheels, magnetorquers and sets of magnetic and solar sensors. To transmit the telemetry and commands Descartes use 2 UHF modules which were designed ba GOS. In addition to 2 UHF modules, 6U satellite operate with a 2.4 GHz HISPICO S-band transceiver.\\ \\
  
-  \subsection{EPS architecture of the 6U satellite}
+ \section{Battery capacity calculation}
+ \label{sec:batcap}
+ 
+ 6U satellite is a new step forward with an availability of payloads and different subsystems. However, use of the new payloads and subsystems require a huge amount of power which should be stored in the batteries. Batteries must be able to provide a power to the subsystem which will be enough to accomplish the mission requirements. In order to understand the required capacity of the batteries for the 6U satellite mission, it is important to do a battery capacity calculation. 
+ 
+ The detailed code of the battery capacity calculation is described in Annex A. 
+ 
+Despite the fact that satellite is working on the LEO orbit, high of the orbit is 600km
+
+Due to the fact that high of the orbit is known, time of one orbital circle could be found:
+
+ \begin{equation}\label{eq:time}
+T = 2\pi\sqrt{\frac{R_{LEO}^{3}}{\mu}}
+ \end{equation}
+
+ 
+ \begin{equation}\label{eq:R}
+R_{LEO} = R_{e} + h
+ \end{equation}
+
+ 
+  With\\ $ R_{e}$ = Earth radius\\
+        $     h$ = Orbit high\\
+         $\mu$ - gravitational constant
+ 
+Despite the fact that satellite fly on the LEO orbit, orbital eclipse has to be taken in to account.
+
+\begin{equation}\label{eq:ec}
+eclipse = 2sin(\frac{R_{e}}{R_{LEO}})
+\end{equation}
+
+Now it is possible to determine a light time of orbit
+ \begin{equation}\label{eq:day}
+ T_{day} = T - eclipse
+ \end{equation}
+ During the day, satellite will gain an energy from the sun\\
+ 
+ \begin{equation}\label{eq:ec}
+ charge = P \times K \times T_{day}
+ \end{equation}
+Where P is a power and K is the coefficient which might differ according to the type of batteries. For the  described cause coefficient is 1.3 according to the datasheet.
+ 
+ During the flight satellite consume some amount of energy due to working payload and subsystems. Discharge of the satellite batteries can be described as: \\
+ \begin{equation}\label{eq:ec}
+ discharge = P \times K \times dt
+ \end{equation}
+ Where $dt$ is the time of discharge. According to the different modes and their timelines discharge value may vary. 
+ 
+ For each orbit difference between charge and discharge will define the battery capacity and from battery capacity to state of charge. According to the power budget of the satellite, 6U cubesat will have 4 modes:\\ \\
+ $\bullet$ Mode 1 - 161.47 A on which the satellite ...\\ 
+ $\bullet$ Mode 2 - 97.59 A on which the satellite ...\\
+ $\bullet$ Mode 3 - 6.94 A on which the satellite ...\\
+ $\bullet$ Mode 4 - 39.37 A on which the satellite ...\\
+ 
+Each mode involves the inclusion of different subsystems or payloads, which was calculated by a system engineer according to the datasheets of the subsystems and payloads used for the 6U satellite. 
+
+Figure \ref{fig: PB} represents the state of charge of the 6U satellite with the actual current and actual time of modes. Plot shows state of charge of beginning of life and the end of life. Little stars on the plot illustrate the orbit intervals, where time of 1 orbit is 1h 61min. At the beginning satellite perform .... Second mode .... Third mode... Fourth mode... Important requirement of the state of charge of the 6U satellite is that its state of charge should not decrease bellow the threshold of the 60\% which is in the tolerance frame on the figure \ref{fig: PB}. The proper battery capacity should be picked up to fulfill upper mentioned requirements. As a result of the energy simulation on the figure \ref{fig: PB} conclusion can be made, that battery with capacity of 160 Wh can accomplish this requirement. 
+ 
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[scale=0.7]{PB.png}
+ 	\caption{State of charge of 160 Wh battery }
+ 	\label{fig: PB}
+ \end{figure}
+ 
+  \section{EPS architecture of the 6U satellite}
   According to an introduction into the mission it is noticeable that design of the 6U satellite highly improved in comparison with the previous 3U satellites which were designed by GOS. The biggest divergence is a size and availability of the satellite to work with more payloads as well as to perform 3-axis stabilization. Due to that fact, the EPS of the satellite has also undergone changes.
   
-  Due to the energy requirements based on Appendix A, 6U satellite has to provide a 16 Ah of energy and  distribute it to 23 channels. To accomplish this requirements, considering the available space of the 6U satellite, EPS was devided into 3 parts which connectrd between each other via PC104 connector:\\ \\
+  Due to the energy requirements based on section \ref{sec:batcap}, 6U satellite has to provide a 160 Wh of energy and  distribute it to 23 channels. To accomplish this requirements, considering the available space of the 6U satellite, EPS was devided into 3 main parts which connectrd between each other via PC104 connector:\\ \\
   $\bullet$ Power Proccessing Unit\\
   $\bullet$ Power Distribution Unit\\
-  $\bullet$ Battery Pack\\
+  $\bullet$ 2 Battery Packs\\
   
-   \subsubsection{Power Processing Unit}
+   \subsection{Power Processing Unit}
    Power Processing Unit (PPU) is a part of EPS which responsible for a battery charge, power distribution control and a power processing. 
    Power converted from the solar flux come first into a Power Processing Unit from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panels gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsiable for a battery charge, illustrated on the figure \ref{fig: ltc4015}. Integrated chip LTC4015 provide a constant voltage and current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip draws power from the solar input to the system, while batteries are charging and switch power source to a battery pack while eclipse or overcharge condition.
    
@@ -465,9 +530,9 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   	\label{fig: PPU}
   \end{figure}
   
-     \subsubsection{Battery Pack}
+     \subsection{Battery Pack}
   
- Battery pack board used to provide a power storage for the EPS by using 4 li-ion batteries with a 2 series 2 parallel configuration. According to the Appendix A, one of the EPS requirements is to provide capacity of 16 Ah which can be made by using 4 LI-ion batteries INR21700 with a capacity of 4000mAh.
+ Battery pack board used to provide a power storage for the EPS by using of 4 li-ion batteries with a 2 series 2 parallel configuration. According to the Appendix \ref{sec:batcap}, one of the EPS requirements is to provide capacity of 160 Wh which can be made by using 2 battery packs with LI-ion batteries samsung INR21700 with a capacity of 4900mAh.
  
   As was discussed in the background section \ref{sec:tech1} Li-ion batteries required a protection circuit to prevent overcharge, over-discharge and a fast discharge(short). For the battery pack board every two cells in the series have their own protection integrated chip BQ29700D which has an overcharge, over-discharge and short protection. Due to 2S2P configuration, batteries which located in parallel have to be balance. BQ29209 is a fine battery balancer from Texas Instruments which \cite{23}"performs automatic cell-balance correction where the two cells are automatically corrected for voltage imbalance by loading the cell with the higher voltage with a small balancing current."  
   
@@ -480,29 +545,44 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   
   The configuration \ref{fig: Bat_prot_bal} allows batteries to provide and collect the power at the same time keeping cells balanced and safe.
   
-  Due to the space environment, temperature of the batteries can decrease bellow the temperature threshold. To avoid the battery temperature drop bellow the limit, was decided to use resistor heaters. Battery pack board has 2 temperature sensors that located under the batteries, which allow to measure the temperature close to the temperature of the batteries. The temperature sensors provide an I$^{2}$C to the PC104 connector that transfer the data signal to the microcontroller of the PPU. Microcontroller reads the signal and decide whether it need to provide a heat to the batteries or not. Heat is implemented by sending a enable signal from the microcontroller to the load switch TPS1H200A that has a function to transfer a power from the batteries to the low value resisters.  
+  Due to the space environment, temperature of the batteries can decrease bellow the temperature threshold. To avoid the battery temperature drop bellow the limit, was decided to use resistor heaters. Battery pack board has 2 temperature sensors that located under the batteries, which allow to measure the temperature close to the temperature of the batteries. The temperature sensors provide an I$^{2}$C to the PC104 connector that transfer the data signal to the microcontroller of the PPU. Microcontroller reads the signal and decide whether it need to provide a heat to the batteries or not. Heat is implemented by sending a enable signal from the microcontroller to the load switch TPS1H200A that has a function to transfer a power from the batteries to the low value resisters.  \\ \\ \\ \\
   
   
   \begin{figure}[h]
   	\centering
-  	\includegraphics[scale=0.2]{BP.png}
+  	\includegraphics[scale=0.20]{BP.png}
   	\caption{Battery pack board}
   	\label{fig: BP}
-  \end{figure}
+  \end{figure} 
+   
   
-   Figure \ref{fig: BP} Illustrate the simple Battery pack board architecture block diagram. 
+  \subsection{Power Distribution Unit}
+  Power Distribution Unit (PDU) is a part of the EPS that responsible for a power distribution and power monitoring. The main feature of PDU is the flexibility, that allows the PDU to fit every power requirement of the subsystem or payload.     To provide a power to the subsystems and payloads PDU uses 23 load switches of 3 different types TPS203x, TPS1H200A and FPF2701. The power distribution is controlled via EPS microcontroller by providing an enable signal to the pinhead connectors and partly by transmitting an I$^2$C signal to shift register that spread an array signal into the switches. 
   
-  \subsubsection{Power Distribution Unit}
+  In order to measure a current of the power lines to observe a power consumptions of the subsystems and payloads, MAX4372 is used. Current sensors located one for each power line, which allows to measure the current of each line. MAX4372 has an analog output, which requires to use an ADC converter to convert an analog into a digital signal. To convert analog into a digital signal was decided to use MAX1231 ADC converter that provides an SPI output signal to the EPS microcontroller. 
+  
+     Figure \ref{fig: PDU} Illustrate the simple Power Distribution Unit architecture block diagram.\\ \\
+  The detailed review, calculations and all explanations of the Power Distribution board will be given in chapter \ref{sec:tech77}
+  
+    
+  
+    
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[scale=0.18]{PDU.png}
+    	\caption{Power Distribution Unit}
+    	\label{fig: PDU}
+    \end{figure}
+    
+  
+
   
   
   
+  \newpage
   
-  
-  
-  
-  
-  
-  
+
+\chapter{System design\label{sec:tech77}}
 
 \section{PDU Overview \label{sec:tech}}
 Nowadays most of the companies designing their Electrical Power System boards for a nano cubesats as whole unit, consisted of all important devices for power management. This configuration is common and allowed to create space for a hardware in the tiny cubesat which is essential for a nano satellites due to its limited size and mass. 
@@ -513,229 +593,7 @@ Nowadays most of the companies designing their Electrical Power System boards fo
 One unit configuration is a common type of an EPS design, which is mostly used by nano cubesat developers. This type of EPS design allowed to combine all components of the EPS in one unit to save mechanical space for the rest of the bus hardware and a payload of a nano cubesat. Second type of technology is a separated type of the EPS which is divided in to Power Processing Unit (PPU) which is responsible for a power generation from a solar panels, battery charging and balancing as well as power processing and power convertation and Power Distribution Unit (PDU) which has a function of the power distribution. PDU consist mostly of switchers and current sensors, this architecture allowed to place significant amount of switchers and connectors for a payloads, which are necessary for a missions requiring amount of payload connections which will not be enough for a standard one unit EPS board type. \\
 \\
 
-
-\subsection{Load research\label{sec:aaa}}
-
-Due to the one of the requirements, to make PDU universal for all types of buses and payloads, development of the PDU require to have a detailed research of the newest bus and payload components and devices which are more likely to be used on the future satellites.\\
-\\
- Considering that PDU distribute power to the bus and payload, one of the main requirements is to set a PDU to be able to handle different loads of a bus and payload. To accomplish this requirements it is necessary to know how much power each subsystem consume. Taking in to account that nano satallites produce usually from 2 to 22 W of power, depending on the satellite configuration, amount of payloads and subsystems are limited. \\
- \\
- Here is a list of possible components for a subsystems with a power consumption, which can be considered as relevant. \\ \\ \\ \\
- 
- $\textbf{Sun Sensors}$\\
-
- 
- \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{2cm}} \toprule
- 	Product & Manufacturer & Mass [kg] & Power [W]& Dimensions [mm$^{3}$]\\ \midrule
- 	
- 		Fine Sun Sensor & New Space Systems & 0.035 & 0.01 & 33x11x6 \\
- 		
- 		BiSon64-ET-B & LR \& D & 0.0217 & 0.00175 & 49x49x17 \\
- 		
- 		BiSon74-ET & LR \& D  & 0.0245 & 0.00175 & 49x49x17  \\
- 		
- 		SS-411 & Sinclair Int. & 0.034 & 0.0375 & 34x32x21 \\
- 	
- 		MAI-KE & Maryland aerospace & 0.0055 & 0.005 & 50x19x2 \\
- 		
- 		Nano-SSOC-A60 & SolarMEMS & 0.004 & 0.001 & 27x14x5.9 \\
- 		
- 		NSS CubeSat & New Space Systems & 0.005 & 0.0033 & 33x11x6  \\ \bottomrule
- 		
- \end{tabular}\\ \\ \\ \\
-       
-       
-      
-  $\textbf{Magnetometers}$\\
-     
-      
-      
-      \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{2cm}} \toprule
-      	Product & Manufacturer & Mass [kg] & Power [W]& Dimensions [mm$^{3}$]\\ \midrule
-      	
-      			Magnetometer & New Space Systems & 0.085 & 0.75 & 96x43x17 \\
-      	
-      			MicroMag3 & PNI Corp  & 0.2 & 0.0005 & 25x25x19 \\
-      			
-      			MAG-3 & SpaceQuest  & 0.1 & 0.03 & 35x32x82  \\
-      		
-      			HMC2003 & Honeywell & 0.055 & 0.1 & 27x19x11 \\
-      			
-      			BMM150 & Bosch & 0.01 & 0.0005 & 1.56x1.56x0.6 \\
-      		
-      			LIS3MDL & ST & 0.078 & 0.0002 & 2x2x1 \\
-      			
-      			Troyka Module & amperka & 0.002 & 0.001 & 25.4x25.4x1  \\ \bottomrule
-      \end{tabular}\\ \\ \\ \\ \\ \\ 
-      
-       $\textbf{GPS Receivers}$\\ \\
-	      \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{2cm}} \toprule
-       	Product & Manufacturer & Mass [kg] & Power [W]& Dimensions [mm$^{3}$]\\ \midrule
-       	
-		       SGR-05U & Surrey & 0.04 & 1 & 105x65x12 \\
-		       
-		       OEM615 & Novatel & 0.021 & 1 & 46x71x11 \\
-		       
-		       piNAV-NG  & SkyFox Labs & 0.024 & 0.5 & 67x40x10 \\ \bottomrule
-       \end{tabular}\\ \\ \\ \\
- 
-  
-		   $\textbf{Horison Sensors}$\\ \\
-		   \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{2cm}} \toprule
-		   	Product & Manufacturer & Mass [kg] & Power [W]& Dimensions [mm$^{3}$]\\ \midrule
-		   	
-		   		MAI-SES & Adcole Maryland Aerospace & 0.033 & 0.132 & 43.3x31.8x31.8 \\
-		   		Mini Digital HCI & Servo & 0.050 & 0.024 & 25.4x35x31.75 \\ \bottomrule
-		   \end{tabular}\\ \\ \\ \\
-		   
-		      $\textbf{COMMS}$\\ 
-		     
-		      
-		      \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{2cm}} \toprule
-		      	Product & Manufacturer & Mass [kg] & Power [W]& Dimensions [mm$^{3}$]\\ \midrule
-		      	
-		      	HISPICO & Iqspaceco & 0.1 & 5 & 95x46x15 \\
-		      	
-		      	Slink & Iqspaceco & 0.46 & 13 & 65x65x13 \\
-		      	
-		      	Xlink & Iqspaceco & 0.2 & 15 & 90x65x28 \\ \bottomrule
-		      \end{tabular}\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
-		      
-		      
-		      $\textbf{Startrakers}$\\ \\
-		      \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{2cm}} \toprule
-		      	Product & Manufacturer & Mass [kg] & Power [W]& Dimensions [mm$^{3}$]\\ \midrule
-		      	
-		      	MAI-SS Space Sextant & AMA & 0.282 & 1.5 & 50x50x47 \\
-		      	
-		      	ST200 & BST & 0.04 & 0.65 & 30x30x38 \\
-		      	
-		      	Standart NST & BCT & 0.04 & 1.5 & 100x55x50 \\
-		      	
-		      	ST400 & Hyperion & 0.28 & 0.7 & 53.8x53.8x90.5\\
-		      	
-		      NST-3 & TY-Space & 0.165 & 0.65 & 50x50x50 \\
-		      	
-		      	AZDK-1 & AZMERIT & 0.19 & 0.5 & 56x60x93 \\
-		      	
-		      	ST & KU LEUVEN & 0.025 & 1 & 95x50x45 \\
-		      	
-		      	STAR-T3 & SPACE-INVENTOR & 0.35 & 1 & 60x60x88 \\
-		      	
-		      	SBST-01 & SATbyoul & 0.175 & 0.3 & 56x60x92.8\\  \bottomrule
-		      \end{tabular}\\ \\ \\ \\
-		      
-		      $\textbf{Payloads}$\\ \\
-		      \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{2cm}} \toprule
-		      	Product & Manufacturer & Mass [kg] & Power [W]& Dimensions [mm$^{3}$]\\ \midrule
-		      	
-		      	Argus 1000 & Thorth & 0.23 & 1.26 & 45x50x80 \\
-		      	
-		      	Gecko imager & SCS Space & 0.48 & 3.5 & 97x96x60\\
-		      	
-		      	DeCor & MSU & 0.1 & 0.8 & PC104\\
-		      	
-		      	Aura & MSU & 0.12 & 0.2 & PC104\\
-		      	
-		      	Linear transponder & GOS & 0.1 & 2.6 & PC104\\
-		      	
-		      	MPS & Cosine & 0.7 & 1.5 & 80x70x70\\
-		      	
-		      	ECAM-C30 & MSSS & 0.25 & 0.25 & 78x58x45\\
-		      	
-		      	ECAM-C50 & MSSS & 0.25 & 2.5 & 78x58x45\\
-		      	
-		      	Monitoring cam & Cristal Space & 0.27 & 0.5 & 82x88x39\\
-		      	
-		      	CAM1U & Cristal Space & 0.05 & 0.24 & 45x25x45\\
-		      	
-		      	xScape100 & Simera & 1.2 & 4.5 & 100x100x200\\
-		      	
-		      	TriScape & Simera & 1.2 & 4.5 & 100x100x200\\
-		      	
-		      	
-		      	OS90 & SatByl & 1.4 & 4.2 & 98x98x243\\ \bottomrule
-		      	
-		     
-		      \end{tabular}\\ \\ \\ \\ \\ \\
-		      
-		      $\textbf{Gyros}$\\ \\
-		      \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{2cm}} \toprule
-		      	Product & Manufacturer & Mass [kg] & Power [W]& Dimensions [mm$^{3}$]\\ \midrule
-		      	
-		      	MASIMU01 & Micro-AS & 0.06 & 0.6 & 63.5x55.8x35.5 \\
-		      	
-		      	MASIMU02 & Micro-AS & 0.02 & 0.6 & 50x50x38\\
-		      	
-		      	MASIMU03 & Micro-AS & 0.1 & 1.3 &  100x75x38\\
-		      	
-		      	STIM202 & Sensonor & 0.05 & 1.5 & 35x38x20\\
-		      	
-		      	STIM210 & Sensonor & 0.05 & 1.5 & 44.8x38.6x21.1\\
-		      	
-		      	STIM300 & Sensonor & 0.05 & 1.5 & 44.8x38.6x21.1\\
-		      	
-		      	M-G370 & Epson & 0.01 & 0.05 & 24x24x10\\
-		      	
-		      	M-G362 & Epson & 0.01 & 0.05 & 24x24x10\\
-		      	
-		      	M-V340 & Epson & 0.01 & 0.05 & 10x12x4\\
-		      	
-		      	VN100 & VectorNav & 0.015 & 0.2 & 36x33x9\\
-		      	
-		      	ADIS16334 & Analog Devices & 0.012 & 0.235 & 24x33x11\\
-		      	
-		      	ADIS16350 &  Analog Devices & 0.016 & 0.165 & 23.5x21x31\\
-		      	
-		      	ADIS16365 & Analog Devices & 0.016 & 0.25 & 23.5x21x21\\
-		      	
-		      	 \bottomrule
-		      \end{tabular}\\ \\ \\ \\
-		      
-		      	      $\textbf{Magnetorquers}$\\ \\
-		      	      \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{2cm}} \toprule
-		      	      	Product & Manufacturer & Mass [kg] & Power [W]& Dimensions [mm$^{3}$]\\ \midrule
-		      	      	
-		      	      NCTR-M002 & New Space & 0.03 & 0.2 & 70x9x9\\
-		      	      ISIS board & ISIS & 0.2 & 1.2 & 95x90x17\\
-		      	      MTQ board & Nanoavionics & 0.2 & 0.55 & pc104 \\
-		      	      GST-600 & GomSpace & 0.2 & 0.4 & 90.5x97x17\\
-		      	      CubeRod & CubeSpace & 0.03 &  0.2 & 60x10x10\\
-		      	      MT01 & EXA & 0.007 & 0.25 & 50x50x3\\ 
-		      	      MTQ200 & Hyperion & 0.04 & 0.225 & 80x10x10\\ 
-		      	      CubeCoil  & CubeSpace & 0.05 & 0.2 & 96x90x6\\
-		      	      NCTR-MO12 & New Space & 0.05 & 0.8 & 94x15x13\\
-		      	      nanoMR & StarSpace & 0.23 & 0.45 & 135x47x27\\
-		      	      nanoMR2 & StarSpace & 0.06 & 0.18 & 70x14x14\\ 
-		      	      nanoMTCoil & StarSpcae & 0.04 & 0.1 & 80x80x3.2\\ \bottomrule
-		      	      \end{tabular}\\ \\ \\ \\ \\ \\ 
-		      	      
-		      	      
-		      	      
-		      	      $\textbf{Reaction wheels}$\\ \\
-		      	      \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{2cm}} \toprule
-		      	      	Product & Manufacturer & Mass [kg] & Power [W]& Dimensions [mm$^{3}$]\\ \midrule
-		      	      	RW-0.03 &	Sinclair Interp.&   185	 &	1.8	 & 50x50x40\\
-		      	      	RW-0.003&	Sinclair Interp. &	0.05 &	 0.3 & 33.5x33.5x17\\
-		      	      	RW-0.01	&   Sinclair Interp. &	0.12 &	1	 & 	50x50x30\\
-		      	      	RW210 &	Hyperion &	21-48 &	0.8 & 25x25x15\\
-		      	      	RW1 &	Astrofein &	0,024 &	0.625 &	21x21x12\\
-		      	      	4RWO &	Nanoavionics & 0.137 & 0.1 & 43.5x43.5x24\\
-		      	      	Small &	Cubespace &	0.06	&	0.15 &	28x28x26.2\\
-		      	      	Small+ &	Cubespace &	0.09 &		0.19 &	33.4x46x31.5\\
-		      	      	Medium &	Cubespace &	0.15	 &	0.19 &	46x46x31.5\\
-		      	      	Cybermotor & Wittenstein & 0.02 &	0.15 & 20x20x20\\
-		      	      	GSW600 & GOMspace &	0.18	&	0.5 &	44x44x27\\
-		      	      	RW 	 & KU Leuven & 0.05	&	0.6	& 40x40x28.9\\
-		      	      	REWL-30	 & Space inventor &	0.055& - & 	30x30x18\\
-		      	      	RW40 &	Comat	 & 0.26 &	0.5 &	65x65x40\\ \bottomrule
-		      	      	
-		      	   
-		      	      \end{tabular}\\ \\ \\ \\
-		      
-		      
-		      
-		      
+\newpage
 
 Exmple: Tim-Berners-Lee describes the ''WorldWideWeb'' as follows:
 \\
