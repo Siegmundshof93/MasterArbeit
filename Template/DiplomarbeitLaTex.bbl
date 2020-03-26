@@ -1,5 +1,4 @@
-\newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{RSC{\etalchar{+}}02}
+\begin{thebibliography}{STAP02}
 
 \bibitem[1]{1}
 {\em {Bruce Yost}. Power}.
@@ -99,29 +98,14 @@
   \url{https://www.akkushop.de/de/saft-vt-d-nicd-mono-akku-hochtemperatur-ca.-603mm-x-323mm/}.
 \newblock Accessed: 2020-02-24.
 
-\bibitem[BL]{timwww}
-{\sc Berners-Lee, Tim}: {\em WWW Book (no real book, just an example)}.
-
 \bibitem[Ch.90]{18}
 {\sc Ch.Schenk, U.Tietze.}: {\em Halbleiter-Schaltungstechnik}.
 \newblock Springer-Verlag, 1990.
 \newblock ISBN: 3-540-19475-4.
 
-\bibitem[Gat]{billgates}
-{\sc Gates, Bill}: {\em no real citate}.
-
 \bibitem[Hem13]{17}
 {\sc Hemmo, Jussi}: {\em Electrical Power Systems for Finnish Nanosatellites}.
 \newblock 100:95, 11 2013.
-
-\bibitem[Job]{stevejobs}
-{\sc Jobs, Steve}: {\em no real citate}.
-
-\bibitem[Joh03]{SIPBook}
-{\sc Johnston, Alan~B.}: {\em SIP, understanding the Session Initiation
-  Protocol, Second Edition}.
-\newblock Artech House Publishers, 2003.
-\newblock ISBN: 1580536557.
 
 \bibitem[Kla18]{6}
 {\sc Klaus, Brieß}: {\em Electrical Power Subsystem}.
@@ -131,13 +115,6 @@
 {\sc Oredsson, Martin}: {\em Electrical Power Systemfor theCubeSTAR
   Nanosatellite}.
 \newblock 254:187, 09 2010.
-
-\bibitem[RSC{\etalchar{+}}02]{rfcsip}
-{\sc Rosenberg, J.}, {\sc H.~Schulzrinne}, {\sc G.~Camarillo}, {\sc
-  A.~Johnston}, {\sc J.~Peterson}, {\sc R.~Sparks}, {\sc M.~Handley}
-  \btxandlong{}\ {\sc E.~Schooler}: {\em SIP: Session Initiation Protocol}.
-\newblock RFC 3261 (Proposed Standard), \btxmonjunlong{} 2002.
-\newblock Updated by RFCs 3265, 3853, 4320, 4916, 5393.
 
 \bibitem[SSSI15]{22}
 {\sc Shafique, Armughan}, {\sc Arslan Shabir}, {\sc Noman Shabbir}

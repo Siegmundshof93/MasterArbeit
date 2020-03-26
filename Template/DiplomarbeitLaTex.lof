@@ -3,37 +3,35 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Component X\relax }}{2}{figure.caption.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces EPS Block Diagram\relax }}{3}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces 30\% Triple Junction GaAs Solar Cell \cite {4}\relax }}{4}{figure.caption.6}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Solar array\relax }}{5}{figure.caption.7}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Solar cell characteristics at different temperatures\cite {6} \relax }}{6}{figure.caption.8}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Solar cell characteristics at different temperatures\relax }}{7}{figure.caption.9}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces NiCd battery\cite {9}\relax }}{8}{figure.caption.11}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces NiH2 battery \cite {10}\relax }}{9}{figure.caption.13}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Li-ion battery \cite {11}\relax }}{10}{figure.caption.15}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces LiPo battery \cite {12}\relax }}{10}{figure.caption.17}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Charge stages \cite {14}\relax }}{11}{figure.caption.19}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Li-ion/Po charger MAX745 \cite {15}\relax }}{12}{figure.caption.20}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces BQ29700D protection IC \cite {17}\relax }}{13}{figure.caption.22}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Inductive DC-DC converter \cite {19}\relax }}{15}{figure.caption.25}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces block diagram of microcontroller communication\relax }}{16}{figure.caption.26}
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Power distribution with power switch and current sensor\relax }}{16}{figure.caption.27}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces EPS Block Diagram\relax }}{5}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 30\% Triple Junction GaAs Solar Cell \cite {4}\relax }}{6}{figure.caption.6}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Solar array\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Solar cell characteristics at different temperatures\cite {6} \relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Solar cell characteristics at different temperatures\relax }}{9}{figure.caption.9}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces NiCd battery\cite {9}\relax }}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces NiH2 battery \cite {10}\relax }}{11}{figure.caption.13}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Li-ion battery \cite {11}\relax }}{12}{figure.caption.15}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces LiPo battery \cite {12}\relax }}{12}{figure.caption.17}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Charge stages \cite {14}\relax }}{13}{figure.caption.19}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Li-ion/Po charger MAX745 \cite {15}\relax }}{14}{figure.caption.20}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces BQ29700D protection IC \cite {17}\relax }}{15}{figure.caption.22}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Inductive DC-DC converter \cite {19}\relax }}{17}{figure.caption.25}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces block diagram of microcontroller communication\relax }}{18}{figure.caption.26}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Power distribution with power switch and current sensor\relax }}{18}{figure.caption.27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 6U satellite Descartes\relax }}{20}{figure.caption.30}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces State of charge of 160 Wh battery \relax }}{22}{figure.caption.31}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Battery charger\relax }}{23}{figure.caption.32}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces microcontroler power supply\relax }}{23}{figure.caption.33}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Power processing\relax }}{24}{figure.caption.34}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Power Processing Unit\relax }}{25}{figure.caption.35}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Battery protection-balancing\relax }}{25}{figure.caption.36}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Battery pack board\relax }}{26}{figure.caption.37}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Power Distribution Unit\relax }}{27}{figure.caption.38}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 6U satellite Descartes\relax }}{22}{figure.caption.30}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Battery charger\relax }}{23}{figure.caption.31}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces microcontroler power supply\relax }}{23}{figure.caption.32}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Power processing\relax }}{24}{figure.caption.33}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Power Processing Unit\relax }}{24}{figure.caption.34}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Battery protection-balancing\relax }}{25}{figure.caption.35}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Battery pack board\relax }}{26}{figure.caption.36}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces PDU board\relax }}{29}{figure.caption.37}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces MAX4372T \cite {23}\relax }}{30}{figure.caption.38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Alice and Bob\relax }}{35}{figure.caption.40}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Project Structure\relax }}{37}{figure.caption.41}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Project Structure\relax }}{33}{figure.caption.39}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

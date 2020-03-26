@@ -8,8 +8,6 @@ A level-1 auxiliary file: ./misc/abstract.aux
 A level-1 auxiliary file: ./misc/abstract_de.aux
 The style file: geralpha.bst
 Database file #1: ./bib/references.bib
-Warning--entry type for "rfcsip" isn't style-file defined
---line 27 of file ./bib/references.bib
 I was expecting a `,' or a `}'---line 68 of file ./bib/references.bib
  :  
  :  author = {M. A. Green},
@@ -36,45 +34,45 @@ Warning--empty journal in 17
 Warning--empty journal in 20
 Warning--empty booktitle in 22
 Warning--empty journal in 13
-You've used 28 entries,
+You've used 23 entries,
             2768 wiz_defined-function locations,
-            724 strings with 8767 characters,
-and the built_in function-call counts, 7913 in all, are:
-= -- 789
-> -- 193
-< -- 8
-+ -- 59
-- -- 59
-* -- 504
-:= -- 1061
-add.period$ -- 71
-call.type$ -- 28
-change.case$ -- 108
-chr.to.int$ -- 28
-cite$ -- 66
-duplicate$ -- 363
-empty$ -- 813
-format.name$ -- 76
-if$ -- 1811
+            701 strings with 8252 characters,
+and the built_in function-call counts, 6193 in all, are:
+= -- 632
+> -- 111
+< -- 4
++ -- 32
+- -- 32
+* -- 379
+:= -- 798
+add.period$ -- 62
+call.type$ -- 23
+change.case$ -- 81
+chr.to.int$ -- 23
+cite$ -- 61
+duplicate$ -- 288
+empty$ -- 667
+format.name$ -- 42
+if$ -- 1444
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 11
-newline$ -- 131
-num.names$ -- 33
-pop$ -- 300
+missing$ -- 9
+newline$ -- 111
+num.names$ -- 18
+pop$ -- 245
 preamble$ -- 1
-purify$ -- 164
+purify$ -- 127
 quote$ -- 0
-skip$ -- 310
+skip$ -- 244
 stack$ -- 0
-substring$ -- 237
-swap$ -- 75
-text.length$ -- 8
-text.prefix$ -- 7
+substring$ -- 202
+swap$ -- 54
+text.length$ -- 4
+text.prefix$ -- 4
 top$ -- 0
-type$ -- 216
+type$ -- 180
 warning$ -- 21
-while$ -- 28
-width$ -- 30
-write$ -- 303
+while$ -- 17
+width$ -- 24
+write$ -- 252
 (There was 1 error message)
