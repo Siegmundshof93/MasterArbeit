@@ -20,18 +20,29 @@
 \contentsline {figure}{\numberline {2.15}{\ignorespaces Power distribution with power switch and current sensor\relax }}{18}{figure.caption.27}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces 6U satellite Descartes\relax }}{22}{figure.caption.30}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Battery charger\relax }}{23}{figure.caption.31}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces microcontroler power supply\relax }}{23}{figure.caption.32}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Power processing\relax }}{24}{figure.caption.33}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Power Processing Unit\relax }}{24}{figure.caption.34}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Battery protection-balancing\relax }}{25}{figure.caption.35}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces PPU\relax }}{23}{figure.caption.31}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Battery charger\relax }}{23}{figure.caption.32}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces microcontroler power supply\relax }}{24}{figure.caption.33}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Power processing\relax }}{24}{figure.caption.34}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Power Processing Unit\relax }}{25}{figure.caption.35}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Battery pack board\relax }}{26}{figure.caption.36}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Battery protection-balancing\relax }}{26}{figure.caption.37}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Battery pack board\relax }}{27}{figure.caption.38}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces PDU board\relax }}{29}{figure.caption.37}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces MAX4372T \cite {23}\relax }}{30}{figure.caption.38}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces PDU board\relax }}{31}{figure.caption.39}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces tps203x \cite {26}\relax }}{33}{figure.caption.40}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces TPS2030 on the VCC0 channel\relax }}{34}{figure.caption.41}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces FPF2701 \cite {27}\relax }}{34}{figure.caption.42}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces FPF2701 on the COM0 power line\relax }}{35}{figure.caption.43}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Latch-off mode\relax }}{36}{figure.caption.44}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Typical inrush current at startup (0.001 s) in A over time in s\relax }}{36}{figure.caption.45}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces TPS1H200A on the HISP power line\relax }}{37}{figure.caption.46}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces MAX4372T \cite {24}\relax }}{38}{figure.caption.47}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces MAX1231 for Descartes application\relax }}{40}{figure.caption.48}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Clock mode of the MAX1231 \cite {25}\relax }}{41}{figure.caption.49}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Project Structure\relax }}{33}{figure.caption.39}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Project Structure\relax }}{43}{figure.caption.50}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

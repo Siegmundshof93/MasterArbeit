@@ -4,8 +4,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces PDU top level requirements\relax }}{29}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces PDU functional requirements\relax }}{30}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces PDU design requirements\relax }}{30}{table.4.3}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Shunt resistor choosing\relax }}{31}{table.5.1}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Switches and power lines of the PDU\relax }}{32}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Types of TPS203x and their curret limits\relax }}{33}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Shunt resistor choosing\relax }}{39}{table.5.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

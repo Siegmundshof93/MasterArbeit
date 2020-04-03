@@ -17,12 +17,164 @@ Power Processing Unit is vital and extremely important part of the satellite.
  \end{figure} 
 
 \section{Load switches}
+PDU board has the 23 power load switches which provide commutation of the power lines. In order to fulfill the demanded requirements from the chapter \ref{cha:chapter3}, three types of load switches were chosen: TPS203x, TPS1H200A and FPF2701. 
+\captionof{table}{Switches and power lines of the PDU}
+\begin{tabular}{p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}} \toprule
+	Channel & Switch  & Voltage [V] & Type & Output\\ \midrule
+	VCC0 & TPS203x & 3.3, 5 & BUS & PC104\\
+	VCC1 & TPS203x & 3.3, 5 & BUS & PC104\\
+	VCC2 & TPS203x & 3.3, 5 & BUS & PC104\\
+	VCC3 & TPS203x & 3.3, 5 & BUS & PC104\\
+	VCC4 & TPS203x & 3.3, 5 & BUS & PC104\\
+    VCC5 & TPS203x & 3.3, 5 & BUS & PC104\\
+    VCC6 & TPS1H200A & 5, Vbat & BUS & PC104\\
+    VCC7 & TPS1H200A & 5, Vbat & BUS & PC104\\
+    VCC8 & TPS203x & 3.3, 5 & Payload & Side con.\\
+    VCC9 & TPS203x & 3.3, 5 & Payload & Side con.\\
+    VCC10 & TPS1H200A & 5, Vbat & Payload & Side con.\\
+    VCC11 & TPS1H200A & 5, Vbat & Payload & Side con.\\
+    VCC12 & TPS1H200A & 5, Vbat & Payload & Side con.\\
+    VCC13 & TPS1H200A & 5, Vbat & Payload & Side con.\\
+    VCC14 & TPS1H200A & 5, Vbat & Payload & Side con.\\
+    VCC15 & TPS1H200A & 5, Vbat & Payload & Side con.\\
+    VCC16 & TPS203x & 3.3, 5 & Payload & Side con.\\
+    VCC17 & TPS203x & 3.3, 5 & Payload & Side con.\\
+    VCC18 & TPS1H200A & 5, Vbat & Payload & Side con.\\
+    VCC19 & TPS203x & 3.3, 5 & Payload & Side con.\\
+    COM0 & FPF2701 & 7.4 & BUS & PC104\\
+    COM1 & FPF2701 & 7.4 & BUS & PC104\\
+    HISP & TPS1H200A & 5, Vbat & BUS & PC104\\ \\
+	\bottomrule
+	
+\end{tabular}\\ \\ \\ \\
+
+Every switch has an ability to determine over current of his power line and provide a signal to the microcontroller which will open all switches for a determined time and close them again in order to prevent latch up of the power lines. All $\overline{OC}$ of the PDU switches connected to the one connector pin with a star type, which prevent the system collapse in cause of the failure of one node. 
+
+In addition, each switch of the PDU board can adjust the required current limit on the line by configuring the current limit resistors or changing the type of chips that fit to the IC's footprint.    
+  \\ \\
+
+The TPS203x switch has an operating voltage of 2.7 V to 5.5 V, which can be used for both 3.3 V power line and 5 V power line. TPS203x is a easy to use 8 pin micro chip. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{tps203x.png}
+	\caption{tps203x \cite{26}}
+	\label{fig: PDU}
+\end{figure} 
+
+TPS203x has  two power input pins 2,3 and three output pins 6, 7, 8. Load switch control provided by a microcomtroller which communicates with TPS203x via EN pin 4. TPS203x also has a required opportunity to provide an over current signal by pin number 5 $\overline{OC}$. \cite{26} When the output load exceeds the current, $\overline{OC}$ getting LOW and the switch limits the output current to a safe level by switching into a constant current mode. TPS203x has 4 different types of chips: TPS2030, TPS2031, TPS2032, TPS2033, TPS2034. All of these chips have a different current threshold. Current limit of five TPS203x types shown on the table \ref{Tab:curr}.\\
+
+\captionof{table}{Types of TPS203x and their curret limits}
+\begin{tabular}{p{4cm}p{5cm}p{4cm}} \toprule
+	Switch type & Recommended Current [A] & Current Limit [A]\\ \midrule
+	TPS2030 & 0.2 & 0.3\\
+	TPS2031 & 0.6 & 0.9\\
+	TPS2032 & 1 & 1.5\\
+	TPS2033 & 1.5 & 2.2 \\
+	TPS2034 & 2 & 3 \\
+	
+	\bottomrule
+	
+\end{tabular}\\ \\ \\ \\
+\label{Tab:curr}
+
+Each type of TPS203x switch has been selected to meet the requirements of the power line according to table \ref{Tab:curr}. Switch TPS2030 used on the lines: VCC0, VCC1, VCC3, VCC4, VCC5, VCC9 and VCC19  where supplied voltage is not beyond the tolerance of 5.5V and load current does not exceed the limit of 0.2A. Switch TPS2031 used on the line VCC17 for the LORA payload where supplied voltage is not beyond the tolerance of 5.5V and load current does not exceed the limit of 0.6A. Switch TPS2032 used on the line VCC8 for the AURA payload where supplied voltage is not beyond the tolerance of 5.5V and load current does not exceed the limit of 1A. Switch TPS2033  used on the line VCC2 for the ADCS where supplied voltage is not beyond the tolerance of 5.5V and load current does not exceed the limit of 1.5A. Switch TPS2034  used on the line VCC16 for the antenna release mechanism where supplied voltage is not beyond the tolerance of 5.5V and load current does not exceed the limit of 3A. 
+
+Figure \ref{fig: vcc0} illustrates the switch TPS2030 on the power line VCC0, which is used to supply power to the OBC.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{tps203x_.png}
+	\caption{TPS2030 on the VCC0 channel}
+	\label{fig: vcc0}
+\end{figure} 
+
+From the figure \ref{fig: vcc0}, two bypass capacitors C9 and C10 used to filter the signal and to improve the immunity of the device to short-circuit transients.   Additionally, 10k pull up resistor connected to the $\overline{OC}$. \\ \\
+
+FPF2701 has an operating voltage 2.8 to 36V and 0.4 to 2A adjustable current limit. FPF2701 has an SO8 footprint package.\\
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.3]{fpf2701.png}
+	\caption{FPF2701 \cite{27}}
+	\label{fig: fpf27}
+\end{figure} 
+
+FPF2701 is the 8 pin load switch which is used for the UHF power line commutation. FPF2701 completely fulfill requirements TL13, TL14 from the chapter \ref{cha:chapter3} regarding the UHF power supply. It can handle required voltage of 7.4V and adjust the current to needed 690mA. The most important feature of FPF2701 load switch is the inverted enable input(active LOW). In addition, FPF27001 was used on previous 3U satellite missions. Pin 1 is a power input pin which can handle the voltage between 2.8 and 36V. Pin 3 ISET used to adjust the current limit of the load switch. \cite{27} "The  current  limit  ensures  that  the  current  through  the switch  doesn't  exceed  a  maximum  value  while  not limiting  at  less  than  a  minimum  value.  The current-limit level    is    adjustable    through    an    external    resistor connected between the ISET pin and GND. " The formula \ref{eq:fpf} shows the calculation of the resistor value for intended current limit value.
+
+\begin{equation}\label{eq:fpf}
+R_{set}(K\Omega) = \frac{277.5}{I_{lim}(A)}
+\end{equation}
+
+For the Descartes mission current limit was defined to 2A to prevent an inrush current pike influence, which was achieved by setting the resistor to 140K.
+
+Pin 4 of the FPF2701 is an inverted enable pin, which was required according to FR7 the chapter \ref{cha:chapter3}. FLAGB is the open drain pin that provide a signal to notify the microcontroller when adjusted current of the ISET pin was exceeded. FLAGB provide a 3.3V output to the microcontroller, in cause current limit was exceeded the control logic of the chip sends signal to the inner MOSFET that connect ground with the pin. All fault pins such as $\overline{OC}$, FLAGB  are connected to the one connector pin with a star type, which prevent the system collapse in cause of the failure of one node.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.3]{fpf2701_pic.png}
+	\caption{FPF2701 on the COM0 power line}
+	\label{fig: fpf27_schema}
+\end{figure} 
 
 
+TPS1H200A \cite{28} has an operating voltage 3.4V to 40V and adjustable current up to 6A. TPS1H200A has a 8-pin HVSSOP footprint package. Descartes mission and PDU design, according to top level requirements, few of which are TL1 and TL3, require a switch capable of switching the voltage of 5V and 7.4V which is inside the tolerance of the TPS1H200A chip. Second reason of choosing TPS1H200A chip has an ability to configure the current limit by external resister adjustment which fulfill requirement FR5. Third reason is an ability to determine over-current on the line and notify the microcontroller. Moreover, the chip was used for previous satellites missions.
+
+Descartes mission require eight Vbat power lines, where Vbat equal 7.4V. However, PDU design consist of ten power lines which used TPS1H200A switch. One of the reasons for this - opportunity to work on 5V and handle a big loads up to 6A. Switch TPS1H200A used for on lines VCC10, VCC11, VCC12, VCC13, VCC14, VCC15 which used to supply power to DeCor payload. Also switch TPS1H200A used on empty lines VCC6, VCC7 and VCC18. Finally TPS1H200A used on HISP power line, which provide power to Hispico transceiver. 
+
+TPS1H200A has 8 pins and thermal pad which is connected to GND. Pin 1 is enable pin which activates the power transmission of the switch. Signal to the switch comes from the GPIO pin of microcontroller. Pin 2 enables diagnostic function of the TPS1H200A chip. While diagnostic function is activated TPS1H200A is able to set up current limit, adjust delay and provide a current limit signal to a microcontroller. Pin 3 provide an output signal to microcontroller when current limit was surpassed. Pin 4 allowed to adjust current limit. Current limit threshold can be set by placing an external resistor. Equation \ref{eq: res} shows the resistor value calculation.
+
+\begin{equation}\label{eq: res}
+R = \frac{0.8 \times 2500}{I}
+\end{equation}
+
+
+Pin 5 is a DELAY pin which configure the behavior of the chip while over current. When current limit occurs TPS1H200A supports 3 modes: holding, latch-off and auto retry. For most of the causes TPS1H200A configured as a latch-off. \cite{28} "When hitting a current limit,the output current holds at the setting current,but latches off after a preset DELAY time ($t_{dl1}$+ $t_{dl2}$). $t_{dl1}$ is the default delay time,and $t_{dl2}$ is a capacitor-configurable delay time." To adjust TPS1H200A as a latch-off external capacitor has to be placed. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{tpscl.png}
+	\caption{Latch-off mode}
+	\label{fig: tpscl}
+\end{figure} 
+
+The time $t_{dl2}$ can be configured by external capacitor by equation \ref{eq: t2}.  \\
+
+\begin{equation} \label{eq: t2}
+C_{delay} = \frac{4.5\mu A \times t_{dl2}}{1.45V} 
+\end{equation}
+
+
+
+ HISP power line, which needed to supply power to S-band transceiver Hispico, required 5V and load of 1.5A, during the first 0.001s of inclusion Inrush current of the Hispico may reach 4A. The typical inrush current distribution is shown in figure \ref{fig: hisp_inr}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{hisp_diag.png}
+	\caption{Typical inrush current at startup (0.001 s) in A over time in s}
+	\label{fig: hisp_inr}
+\end{figure} 
+
+To prevent a critical voltage drop while inrush current, two capacitors with value of 200µF in parallel were placed at output of the load switch, which is illustrated on the figure \ref{fig: hispico}. The value of capacitors was calculated by using formula \ref{eq:3}.
+
+For the TPS1H200A on the HISP channel CL pin adjusted to 2A and DELAY pin configured as holding mode. In holding mode \cite{28}"when hitting a current limit,the output current holds at the setting current." This combination was made in order to prevent switch shutdown while 4A inrush current during the inclusion and keep the threshold at 2A for the required 1.5A load of s-band transceiver. 
+ 
+ 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{hispico.png}
+	\caption{TPS1H200A on the HISP power line}
+	\label{fig: hispico}
+\end{figure}
+
+
+
+ 
 \section{Shift register}
 
 
-\section{Current sensors}
+\section{Current measurement and conversion}
 
 Due to the fact that PDU require to have 23 current sensors for each power line, was made a decision to use 23 analog current sensors in combination with an ADC. The main reason for that choice is to keep the flight heritage which was used for previous missions. Second reason is a relatively huge amount of sensors. Current sensors that give an output directly to I$^2$C or SPI have a limited amount of slaves which make them unsuitable to use for the current application.\\
 
@@ -31,7 +183,7 @@ For the Descartes mission used MAX4372T current sensor. MAX4372 is a current-sen
  \begin{figure}[h]
  	\centering
  	\includegraphics[scale=0.4]{max4372inside.png}
- 	\caption{MAX4372T \cite{23}}
+ 	\caption{MAX4372T \cite{24}}
  	\label{fig: max4372t_inside}
  \end{figure} 
 
@@ -111,7 +263,30 @@ The gain of the device equals:
    \end{tabular}\\ \\ \\ \\
   \label{Tab:res}
  Another important aspect to consider is the resistance of the power line. The resistance of the power line should be as low as possible to avoid voltage drop in the presence of high current. In the system design stage, voltage drop can be avoided by providing a low shunt resistor value. In accordance with current requirements, the HISP and VCC16 power channels must provide $ \ geq $ 1500mA, with a resistance of 1 Ohm the system will have a voltage drop of $ \ geq $ 1.5V, which will significantly affect the functionality of the output connected device.
- For this reason resistor values for HISPICO and ARM(antenna release mechanism) were chosen with minimal resistance.
+ For this reason resistor values for HISPICO and ARM(antenna release mechanism) were chosen with minimal resistance.\\ \\ 
+ 
+ 6U satellite contain 23 analog outputs from the current sensors which have to be converted into a digital signals. To fulfill this requirement, two analog-to-digital converters MAX1231 are used. MAX1231 has already been used for previous 3U mission, in order to preserve the heritage of the flight, it was decided to keep this component for the 6U satellite.
+ 
+  \cite{25}MAX1231 is a serial 12 bit  analog-to-digital converter with an internal reference and maximum sampling rate of 300ksps. MAX1231 has a 24 pin configuration with 15 available analog inputs and. The device operates at 3.3 V and contains 10 MHz SPI protocol for communication.
+  
+   \begin{figure}[h]
+   	\centering
+   	\includegraphics[scale=0.4]{ADC.png}
+   	\caption{MAX1231 for Descartes application}
+   	\label{fig: adc}
+   \end{figure} 
+ 
+  Figure \ref{fig: adc} illustrates the MAX1231 for the Descartes application. This figure shows external connections of the ADC chip. Pins 1 to 12 used for the analog inputs. Each analog input has a 1K resistor, which is used to protect the ADC and prevent high current input from the sensor. In addition, decoupling capacitors with a capacity of 0.01µF are located in parallel, which are used to filter the input signal. Pins 22, 23, 20 and 21 are used for the SPI communication where pin 21 is a slave select. Pin 24 is the $\overline{EOC}$ End of Conversion output pin used to notify the microcontroller about the end of conversion. Pin 19 is a power supply pin for the ADC chip, supplied with a 3.3V. To minimize the noise effect, the VDD input bypassed the 0.1 µF capacitor to GND. In addition, 2.2K ferrit chip connected in series with the supply to improve power-supply filtering. 
+ 
+  \begin{figure}[h]
+  	\centering
+  	\includegraphics[scale=0.4]{ADC_clock.png}
+  	\caption{Clock mode of the MAX1231 \cite{25}}
+  	\label{fig: adc}
+  \end{figure} 
+ 
+ The MAX1231 has 4 different clock modes. However, the Descartes mission uses an external clock mode from the microcontroller.  To begin communication with the MAX1231, chip select pin has to be latched up in order to define the slave. Then microcontroller sends a conversion register address with the channel information. After the Register address transmission, slave will send 12 bytes of data separated in two bytes. First receiving byte contain first 4 empty bits which has to be ignored and following 4 bits which are MSB. The second following byte contain the left 8 bits. After the second byte has been sent to the microcontroller, the $ \ overline {EOC} $ pin gets HIGH to notify the microcontroller that the conversion is complete, and the $ \ overline {CS} $ pin becomes LOW.
+
  
   
   

@@ -21,6 +21,10 @@ Warning--to sort, need author or key in 12
 Warning--to sort, need author or key in 14
 Warning--to sort, need author or key in 15
 Warning--to sort, need author or key in 19
+Warning--to sort, need author or key in 26
+Warning--to sort, need author or key in 27
+Warning--to sort, need author or key in 24
+Warning--to sort, need author or key in 25
 Warning--to sort, need author or key in 1
 Warning--to sort, need author or key in 2
 Warning--to sort, need author or key in 3
@@ -30,49 +34,50 @@ Warning--to sort, need author or key in 8
 Warning--to sort, need author or key in 16
 Warning--to sort, need author or key in 21
 Warning--to sort, need author or key in 23
+Warning--to sort, need author or key in 28
 Warning--empty journal in 17
 Warning--empty journal in 20
 Warning--empty booktitle in 22
 Warning--empty journal in 13
-You've used 23 entries,
+You've used 28 entries,
             2768 wiz_defined-function locations,
-            701 strings with 8252 characters,
-and the built_in function-call counts, 6193 in all, are:
-= -- 632
-> -- 111
+            721 strings with 8708 characters,
+and the built_in function-call counts, 7368 in all, are:
+= -- 757
+> -- 116
 < -- 4
 + -- 32
 - -- 32
-* -- 379
-:= -- 798
-add.period$ -- 62
-call.type$ -- 23
-change.case$ -- 81
-chr.to.int$ -- 23
-cite$ -- 61
-duplicate$ -- 288
-empty$ -- 667
+* -- 439
+:= -- 928
+add.period$ -- 77
+call.type$ -- 28
+change.case$ -- 96
+chr.to.int$ -- 28
+cite$ -- 76
+duplicate$ -- 343
+empty$ -- 812
 format.name$ -- 42
-if$ -- 1444
+if$ -- 1734
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 9
-newline$ -- 111
+newline$ -- 136
 num.names$ -- 18
-pop$ -- 245
+pop$ -- 305
 preamble$ -- 1
-purify$ -- 127
+purify$ -- 152
 quote$ -- 0
-skip$ -- 244
+skip$ -- 289
 stack$ -- 0
-substring$ -- 202
-swap$ -- 54
+substring$ -- 242
+swap$ -- 64
 text.length$ -- 4
 text.prefix$ -- 4
 top$ -- 0
-type$ -- 180
-warning$ -- 21
+type$ -- 220
+warning$ -- 26
 while$ -- 17
-width$ -- 24
-write$ -- 252
+width$ -- 29
+write$ -- 307
 (There was 1 error message)

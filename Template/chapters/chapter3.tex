@@ -1,35 +1,69 @@
 \chapter{Requirements\label{cha:chapter3}}
-This section determines the requirements necessary for X. This includes the functional aspects, namely Y and Z, and the non functional aspects such as A and B.
 
-\section{Overview\label{sec:reqoverview}}
+\section{Top level requirements}
+The PDU shall be able to provide sufficient power to fulfill requirements of subsystems and payloads using common regulated voltages 3.3 V, 5 V and regulated battery voltage 7.4V.   \\ \\
 
-In this chapter you will describe the requirements for your component. Try to group the requirements into subsections such as 'technical requirements', 'functional requirements', 'social requirements' or something like this. If your component consist of different partial components you can also group the requirements for the corresponding parts. 
+\captionof{table}{PDU top level requirements}
+\begin{tabular}{p{1cm}p{15cm}} \toprule
+	ID & Description \\ \midrule
+	
 
-Explain the source of the requirements. 
+	
 
-Example: The requirements for an X have been widely investigated by Organization Y. 
+TL1 & PDU shall provide the AURA experiment a 5V line\\
+TL2 & PDU shall provide the AURA experiment up to 3W during operations\\
+TL3 & PDU shall provide the Decor experiment a 7.4V line\\
+TL4 & PDU shall provide the Decor experiment up to 0.2W and 0.8W respectively\\
+TL5 & PDU shall provide the AMUR experiment a 5V line\\
+TL6 & PDU shall provide the AMUR experiment up to 0.2W during operations\\
+TL7 & PDU shall provide the OBC a 3.3V line\\
+TL8 & PDU shall provide the OBC up to 0.42W during operations\\
+TL9 & PDU shall provide the LoRa a 5V line\\
+TL10 & PDU shall provide the LoRa a 1W during operations\\
+TL11 & PDU shall provide the ADCS 5V and 3.3V respectively\\
+TL12 & PDU shall provide the ADCS up to 2.3W and 0.2W respectively\\
+TL13 & PDU shall provide the UHF 7.4V line\\
+TL14 & PDU shall provide the UHF up to 5.2W during operation\\
+TL15 & PDU shall provide the HISP 5V line\\
+TL16 & PDU shall provide the HISP up to 7.5W during opertaion\\
+TL17 & PDU shall provide the ARM a 5V line\\
+TL18 & PDU shall provide the ARM up to 10W during the release\\ 
+TL19 & PDU shall provide CAN line to the AURA experiment\\
+TL20 & PDU shall provide UART line to the AMUR experiment\\
+TL21 & PDU shall proTypes of TPS203x and their curret limitsvide CAN line to the Decor experiment\\
+TL22 & PDU shall provide CAN line to the LoRa\\
+\bottomrule
+\end{tabular}\\ \\ \\ \\
+\label{Tab:req1}
 
-In his paper about Z, Mister X outlines the following requirements for a Component X.
 
-\section{Technical Requirements\label{sec:techreq}}
 
-The following subsection outlines the technical requirements to Component X.
+\section{Functional requirements}
 
-\subsection{Sub-component A\label{sec:reqsuba}}
+\captionof{table}{PDU functional requirements}
+\begin{tabular}{p{1cm}p{15cm}} \toprule
+	ID & Description \\ \midrule
+FR1 & PDU shall have eight payload connectors with adjustable power line input\\
+FR2 & PDU shall have 23 adjustable switching power lines\\
+FR3 & PDU shall measure the current and provide digital output of every power line\\
+FR4 & PDU shall have the isolation IC for every payoad I$^2$C or/and SIP node\\
+FR5 &  all 23 switches shall be able to adjust current limit\\
+FR6 & all 23 switches shall be able to determine an over current and provide a signal to the microcontroller\\
+FR7 & Enable pins of the UHF load switches shall be inverted\\
+\bottomrule
+\end{tabular}\\ \\ \\ \\
+\label{Tab:req2}
 
-\textbf{Interoperability}
-\\
-Lorem Ipsum...
-\\
-\\
-\textbf{Scalability}
-\\
-Lorem Ipsum...
+\section{Design requirements}
 
-\subsection{Sub-component B\label{sec:reqsubb}}
+\captionof{table}{PDU design requirements}
+\begin{tabular}{p{1cm}p{15cm}} \toprule
+	ID & Description \\ \midrule
+DR1 & The size of PDU shall not exceed 90.16x95.9mm\\
+DR2 & PDU shall withstand the temperature between -5 to 25 for a duration of flight\\  
+\bottomrule
+\end{tabular}\\ \\ \\ \\
+\label{Tab:req3}
 
-Lorem Ipsum...
 
-\section{Social Requirements\label{sec:socreq}}
 
-Component X must compete with Y. Hence, it is required to provide an excellent usability. This includes ...

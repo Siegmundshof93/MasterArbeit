@@ -423,6 +423,14 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   
    \subsection{Power Processing Unit}
    Power Processing Unit (PPU) is a part of EPS which responsible for a battery charge, power distribution control and a power processing. 
+   
+   \begin{figure}[h]
+   	\centering
+   	\includegraphics[scale=0.4]{ppu.png}
+   	\caption{PPU}
+   	\label{fig: psu}
+   \end{figure}
+   
    Power converted from the solar flux come first into a Power Processing Unit from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panels gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsiable for a battery charge, illustrated on the figure \ref{fig: ltc4015}. Integrated chip LTC4015 provide a constant voltage and current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip draws power from the solar input to the system, while batteries are charging and switch power source to a battery pack while eclipse or overcharge condition.
    
   \begin{figure}[h]
@@ -438,13 +446,13 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   
     \begin{figure}[h]
     	\centering
-    	\includegraphics[scale=0.4]{Watch.png}
+    	\includegraphics[scale=0.7]{Watch.png}
     	\caption{microcontroler power supply}
     	\label{fig: ltc4015}
     \end{figure}
   Microcontroller sends a reset signal to the watchdog, to to reset the counter. As long as counter reset, watchdog keep the enable output pin "HIGH". However, when watchdog does not receive the reset signal from the microcontroller due to some system problems, watchdog restart himself and enable output pin getting low and high, which restart microcontroller.
   
-  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger. Power processing can be divided into 2 blocks power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 8,4V. Common 8,4 V converter used to convert unregulated voltage from the solar panels. For this task LTC3119 used, this microchip has a big current tolerance which allows him to transfer huge amount of power.To produce 5V and 3.3V, used LM43603 and TPS62111 converters. This converters were successfully used on the previous EPS models. In order to keep a flight heritage, were made decision to keep the converters as it is. 
+  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger. Power processing can be divided into 2 blocks power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 7.4V. Common 7.4 V converter used to convert unregulated voltage from the solar panels. For this task LTC3119 used, this microchip has a big current tolerance which allows him to transfer huge amount of power.To produce 5V and 3.3V, used LM43603 and TPS62111 converters. This converters were successfully used on the previous EPS models. In order to keep a flight heritage, were made decision to keep the converters as it is. 
   
    \begin{figure}[h]
    	\centering
@@ -461,7 +469,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   
   \begin{figure}[h]
   	\centering
-  	\includegraphics[scale=0.15]{PPU.png}
+  	\includegraphics[scale=0.3]{PPU.png}
   	\caption{Power Processing Unit}
   	\label{fig: PPU}
   \end{figure}
@@ -469,6 +477,13 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
      \subsection{Battery Pack}
   
  Battery pack board used to provide a power storage for the EPS by using of 4 li-ion batteries with a 2 series 2 parallel configuration. One of the EPS requirements is to provide capacity of 160 Wh which can be made by using 2 battery packs with LI-ion batteries samsung INR21700 with a capacity of 4900mAh.
+ 
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[scale=0.37]{bat.png}
+ 	\caption{Battery pack board}
+ 	\label{fig: bat}
+ \end{figure}
  
   As was discussed in the background section \ref{sec:tech1} Li-ion batteries required a protection circuit to prevent overcharge, over-discharge and a fast discharge(short). For the battery pack board every two cells in the series have their own protection integrated chip BQ29700D which has an overcharge, over-discharge and short protection. Due to 2S2P configuration, batteries which located in parallel have to be balance. BQ29209 is a fine battery balancer from Texas Instruments which \cite{23}"performs automatic cell-balance correction where the two cells are automatically corrected for voltage imbalance by loading the cell with the higher voltage with a small balancing current."  
   
@@ -486,7 +501,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   
   \begin{figure}[h]
   	\centering
-  	\includegraphics[scale=0.20]{BP.png}
+  	\includegraphics[scale=0.3]{BP.png}
   	\caption{Battery pack board}
   	\label{fig: BP}
   \end{figure} 

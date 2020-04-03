@@ -61,6 +61,33 @@
 \newblock \url{http://www.ti.com/lit/ds/symlink/bq29209-q1.pdf}.
 \newblock Accessed: 2020-03-13.
 
+\bibitem[24]{24}
+{\em MAX4372}.
+\newblock
+  \url{https://datasheets.maximintegrated.com/en/ds/MAX4372-MAX4372T.pdf}.
+\newblock Accessed: 2020-03-22.
+
+\bibitem[25]{25}
+{\em MAX1231}.
+\newblock
+  \url{https://datasheets.maximintegrated.com/en/ds/MAX1227-MAX1231.pdf}.
+\newblock Accessed: 2020-03-28.
+
+\bibitem[26]{26}
+{\em TPS203x}.
+\newblock \url{http://www.ti.com/lit/ds/symlink/tps2030.pdf}.
+\newblock Accessed: 2020-03-29.
+
+\bibitem[27]{27}
+{\em FPF2700}.
+\newblock \url{https://www.mouser.com/datasheet/2/149/FPF2700-1009146.pdf}.
+\newblock Accessed: 2020-03-31.
+
+\bibitem[28]{28}
+{\em TPS1H200A}.
+\newblock \url{http://www.ti.com/lit/ds/symlink/tps1h200a-q1.pdf}.
+\newblock Accessed: 2020-04-4.
+
 \bibitem[3]{3}
 {\em Conference Record of the Twenty-Ninth IEEE Photovoltaic Specialists
   Conference, 2002., New Orleans, LA, USA, 2002, pp. 1330-1334. (Third
