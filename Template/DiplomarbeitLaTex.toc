@@ -31,30 +31,24 @@
 \contentsline {subsection}{\numberline {3.2.2}Battery Pack}{25}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Power Distribution Unit}{28}{subsection.3.2.3}
 \contentsline {chapter}{\numberline {4}Requirements}{29}{chapter.4}
-\contentsline {section}{\numberline {4.1}Top level requirements}{29}{section.4.1}
-\contentsline {section}{\numberline {4.2}Functional requirements}{30}{section.4.2}
-\contentsline {section}{\numberline {4.3}Design requirements}{30}{section.4.3}
-\contentsline {chapter}{\numberline {5}System design}{31}{chapter.5}
-\contentsline {section}{\numberline {5.1}System overview}{31}{section.5.1}
-\contentsline {section}{\numberline {5.2}Load switches}{32}{section.5.2}
+\contentsline {section}{\numberline {4.1}Top Level Requirements}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}Functional Requirements}{30}{section.4.2}
+\contentsline {section}{\numberline {4.3}Design Requirements}{30}{section.4.3}
+\contentsline {chapter}{\numberline {5}System Design}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}System Overview}{31}{section.5.1}
+\contentsline {section}{\numberline {5.2}Load Switches}{31}{section.5.2}
 \contentsline {section}{\numberline {5.3}Shift register}{37}{section.5.3}
-\contentsline {section}{\numberline {5.4}Current measurement and conversion}{37}{section.5.4}
-\contentsline {chapter}{\numberline {6}Implementation}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}Environment}{43}{section.6.1}
-\contentsline {section}{\numberline {6.2}Project Structure}{43}{section.6.2}
-\contentsline {section}{\numberline {6.3}Important Implementation Aspects}{44}{section.6.3}
-\contentsline {section}{\numberline {6.4}Graphical User Interface}{44}{section.6.4}
-\contentsline {section}{\numberline {6.5}Documentation}{44}{section.6.5}
-\contentsline {chapter}{\numberline {7}Evaluation}{45}{chapter.7}
-\contentsline {section}{\numberline {7.1}Test Environment}{45}{section.7.1}
-\contentsline {section}{\numberline {7.2}Scalability}{45}{section.7.2}
-\contentsline {section}{\numberline {7.3}Usability}{45}{section.7.3}
-\contentsline {section}{\numberline {7.4}Performance Measurements}{45}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{47}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{47}{section.8.1}
-\contentsline {section}{\numberline {8.2}Dissemination}{47}{section.8.2}
-\contentsline {section}{\numberline {8.3}Problems Encountered}{47}{section.8.3}
-\contentsline {section}{\numberline {8.4}Outlook}{47}{section.8.4}
-\contentsline {chapter}{\nonumberline List of Acronyms}{49}{chapter*.51}
-\contentsline {chapter}{\nonumberline Bibliography}{51}{chapter*.52}
-\contentsline {chapter}{\nonumberline Annex}{55}{chapter*.53}
+\contentsline {section}{\numberline {5.4}Current measurement and conversion}{38}{section.5.4}
+\contentsline {section}{\numberline {5.5}Isolators}{43}{section.5.5}
+\contentsline {section}{\numberline {5.6}Connectors design}{44}{section.5.6}
+\contentsline {chapter}{\numberline {6}PCB realization}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Physical Dimensions}{47}{section.6.1}
+\contentsline {section}{\numberline {6.2}Layout design}{48}{section.6.2}
+\contentsline {chapter}{\numberline {7}Test Results }{53}{chapter.7}
+\contentsline {section}{\numberline {7.1}Resistance check}{53}{section.7.1}
+\contentsline {section}{\numberline {7.2}Switches}{53}{section.7.2}
+\contentsline {section}{\numberline {7.3}Power monitoring}{59}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion}{61}{chapter.8}
+\contentsline {chapter}{\nonumberline List of Acronyms}{63}{chapter*.69}
+\contentsline {chapter}{\nonumberline Bibliography}{65}{chapter*.70}
+\contentsline {chapter}{\nonumberline Annex}{69}{chapter*.71}

@@ -1,10 +1,10 @@
 \chapter{Requirements\label{cha:chapter3}}
 
-\section{Top level requirements}
-The PDU shall be able to provide sufficient power to fulfill requirements of subsystems and payloads using common regulated voltages 3.3 V, 5 V and regulated battery voltage 7.4V.   \\ \\
+\section{Top Level Requirements}
+The PDU shall be able to provide sufficient power to fulfill requirements of subsystems and payloads using common regulated voltages 3.3 V, 5 V and regulated battery voltage 7.4V. Top level requirements are given by GOS specially for the Descartes mission. There are 22 top level requirements which are shown in table \ref{Tab:req1}.  \\ \\
 
-\captionof{table}{PDU top level requirements}
-\begin{tabular}{p{1cm}p{15cm}} \toprule
+\captionof{table}{PDU Top Level Requirements}
+\begin{tabular}{p{1cm}p{13cm}} \toprule
 	ID & Description \\ \midrule
 	
 
@@ -38,15 +38,15 @@ TL22 & PDU shall provide CAN line to the LoRa\\
 
 
 
-\section{Functional requirements}
-
-\captionof{table}{PDU functional requirements}
-\begin{tabular}{p{1cm}p{15cm}} \toprule
+\section{Functional Requirements}
+Functional requirements of were given by GOS in order to design flexible board which can fulfill requirements for the upcoming missions without redesigning the layout. There are 7 functional requirements which are shown in table \ref{Tab:req2}. 
+\captionof{table}{PDU Functional Requirements}
+\begin{tabular}{p{1cm}p{13cm}} \toprule
 	ID & Description \\ \midrule
 FR1 & PDU shall have eight payload connectors with adjustable power line input\\
 FR2 & PDU shall have 23 adjustable switching power lines\\
 FR3 & PDU shall measure the current and provide digital output of every power line\\
-FR4 & PDU shall have the isolation IC for every payoad I$^2$C or/and SIP node\\
+FR4 & PDU shall have the isolation IC for every payload I$^2$C or/and SIP node\\
 FR5 &  all 23 switches shall be able to adjust current limit\\
 FR6 & all 23 switches shall be able to determine an over current and provide a signal to the microcontroller\\
 FR7 & Enable pins of the UHF load switches shall be inverted\\
@@ -54,13 +54,15 @@ FR7 & Enable pins of the UHF load switches shall be inverted\\
 \end{tabular}\\ \\ \\ \\
 \label{Tab:req2}
 
-\section{Design requirements}
+\section{Design Requirements}
+Design requirements are given by developing engineers who work on the 6U satellite development.There are 3 design requirements which are shown in table \ref{Tab:req3}. 
 
 \captionof{table}{PDU design requirements}
-\begin{tabular}{p{1cm}p{15cm}} \toprule
+\begin{tabular}{p{1cm}p{13cm}} \toprule
 	ID & Description \\ \midrule
 DR1 & The size of PDU shall not exceed 90.16x95.9mm\\
 DR2 & PDU shall withstand the temperature between -5 to 25 for a duration of flight\\  
+DR3 & The molex connectors shall be right angle\\
 \bottomrule
 \end{tabular}\\ \\ \\ \\
 \label{Tab:req3}

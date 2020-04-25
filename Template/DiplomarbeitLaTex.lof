@@ -30,21 +30,39 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Battery pack board\relax }}{27}{figure.caption.38}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces PDU board\relax }}{31}{figure.caption.39}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces PDU board\relax }}{32}{figure.caption.39}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces tps203x \cite {26}\relax }}{33}{figure.caption.40}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces TPS2030 on the VCC0 channel\relax }}{34}{figure.caption.41}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces FPF2701 \cite {27}\relax }}{34}{figure.caption.42}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces FPF2701 \cite {27}\relax }}{35}{figure.caption.42}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces FPF2701 on the COM0 power line\relax }}{35}{figure.caption.43}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Latch-off mode\relax }}{36}{figure.caption.44}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Typical inrush current at startup (0.001 s) in A over time in s\relax }}{36}{figure.caption.45}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Typical inrush current at startup (0.001 s) in A over time in s\relax }}{37}{figure.caption.45}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces TPS1H200A on the HISP power line\relax }}{37}{figure.caption.46}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces MAX4372T \cite {24}\relax }}{38}{figure.caption.47}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces MAX1231 for Descartes application\relax }}{40}{figure.caption.48}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Clock mode of the MAX1231 \cite {25}\relax }}{41}{figure.caption.49}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Schematics of the shift register MAX7328\relax }}{38}{figure.caption.47}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces MAX7328 operation principle\relax }}{39}{figure.caption.48}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces MAX4372T \cite {24}\relax }}{39}{figure.caption.49}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces MAX1231 for Descartes application\relax }}{42}{figure.caption.50}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Clock mode of the MAX1231 \cite {25}\relax }}{42}{figure.caption.51}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces ADUM1250\relax }}{43}{figure.caption.52}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces MAX14850\relax }}{44}{figure.caption.53}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces EPS connector P2\relax }}{44}{figure.caption.54}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Payload connector K10\relax }}{45}{figure.caption.55}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Project Structure\relax }}{43}{figure.caption.50}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Power Distribution Board PCB\relax }}{47}{figure.caption.56}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Layer stack\relax }}{48}{figure.caption.57}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Zero ohm resistors to payload connector network\relax }}{49}{figure.caption.58}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Top view of the PDU\relax }}{50}{figure.caption.59}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Power polygons of the PDU\relax }}{51}{figure.caption.60}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Types of components on top view of the PDU \relax }}{52}{figure.caption.61}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Types of components on bottom view of the PDU\relax }}{52}{figure.caption.62}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Top view of the switch control\relax }}{54}{figure.caption.63}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Bottom view of the switch control\relax }}{55}{figure.caption.64}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Load switches testbed\relax }}{56}{figure.caption.65}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Voltage drop of on the HISP power line in comparison with the 5V BUS voltage line\relax }}{57}{figure.caption.66}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Testbed of the Power monitoring test\relax }}{59}{figure.caption.67}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces EPS assembly (PPU, Battery board, PDU)\relax }}{61}{figure.caption.68}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

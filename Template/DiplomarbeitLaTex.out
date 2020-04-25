@@ -19,30 +19,24 @@
 \BOOKMARK [2][-]{subsection.3.2.2}{Battery Pack}{section.3.2}% 19
 \BOOKMARK [2][-]{subsection.3.2.3}{Power Distribution Unit}{section.3.2}% 20
 \BOOKMARK [0][-]{chapter.4}{Requirements}{}% 21
-\BOOKMARK [1][-]{section.4.1}{Top level requirements}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{Functional requirements}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.3}{Design requirements}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{System design}{}% 25
-\BOOKMARK [1][-]{section.5.1}{System overview}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{Load switches}{chapter.5}% 27
+\BOOKMARK [1][-]{section.4.1}{Top Level Requirements}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Functional Requirements}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.3}{Design Requirements}{chapter.4}% 24
+\BOOKMARK [0][-]{chapter.5}{System Design}{}% 25
+\BOOKMARK [1][-]{section.5.1}{System Overview}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.2}{Load Switches}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.3}{Shift register}{chapter.5}% 28
 \BOOKMARK [1][-]{section.5.4}{Current measurement and conversion}{chapter.5}% 29
-\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 30
-\BOOKMARK [1][-]{section.6.1}{Environment}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.2}{Project Structure}{chapter.6}% 32
-\BOOKMARK [1][-]{section.6.3}{Important Implementation Aspects}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.4}{Graphical User Interface}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.5}{Documentation}{chapter.6}% 35
-\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 36
-\BOOKMARK [1][-]{section.7.1}{Test Environment}{chapter.7}% 37
-\BOOKMARK [1][-]{section.7.2}{Scalability}{chapter.7}% 38
-\BOOKMARK [1][-]{section.7.3}{Usability}{chapter.7}% 39
-\BOOKMARK [1][-]{section.7.4}{Performance Measurements}{chapter.7}% 40
-\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 41
-\BOOKMARK [1][-]{section.8.1}{Summary}{chapter.8}% 42
-\BOOKMARK [1][-]{section.8.2}{Dissemination}{chapter.8}% 43
-\BOOKMARK [1][-]{section.8.3}{Problems Encountered}{chapter.8}% 44
-\BOOKMARK [1][-]{section.8.4}{Outlook}{chapter.8}% 45
-\BOOKMARK [0][-]{chapter*.51}{List of Acronyms}{}% 46
-\BOOKMARK [0][-]{chapter*.52}{Bibliography}{}% 47
-\BOOKMARK [0][-]{chapter*.53}{Annex}{}% 48
+\BOOKMARK [1][-]{section.5.5}{Isolators}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.6}{Connectors design}{chapter.5}% 31
+\BOOKMARK [0][-]{chapter.6}{PCB realization}{}% 32
+\BOOKMARK [1][-]{section.6.1}{Physical Dimensions}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.2}{Layout design}{chapter.6}% 34
+\BOOKMARK [0][-]{chapter.7}{Test Results }{}% 35
+\BOOKMARK [1][-]{section.7.1}{Resistance check}{chapter.7}% 36
+\BOOKMARK [1][-]{section.7.2}{Switches}{chapter.7}% 37
+\BOOKMARK [1][-]{section.7.3}{Power monitoring}{chapter.7}% 38
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 39
+\BOOKMARK [0][-]{chapter*.69}{List of Acronyms}{}% 40
+\BOOKMARK [0][-]{chapter*.70}{Bibliography}{}% 41
+\BOOKMARK [0][-]{chapter*.71}{Annex}{}% 42

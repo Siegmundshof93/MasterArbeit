@@ -88,11 +88,28 @@
 \newblock \url{http://www.ti.com/lit/ds/symlink/tps1h200a-q1.pdf}.
 \newblock Accessed: 2020-04-4.
 
+\bibitem[29]{29}
+{\em MAX7328}.
+\newblock
+  \url{https://datasheets.maximintegrated.com/en/ds/MAX7328-MAX7329.pdf}.
+\newblock Accessed: 2020-04-5.
+
 \bibitem[3]{3}
 {\em Conference Record of the Twenty-Ninth IEEE Photovoltaic Specialists
   Conference, 2002., New Orleans, LA, USA, 2002, pp. 1330-1334. (Third
   generation photovoltaics: comparative evaluation of advanced solar conversion
   options,)}.
+
+\bibitem[30]{30}
+{\em ADUM1250}.
+\newblock
+  \url{https://www.analog.com/media/en/technical-documentation/data-sheets/ADUM1250_1251.pdf}.
+\newblock Accessed: 2020-04-5.
+
+\bibitem[31]{31}
+{\em MAX14850}.
+\newblock \url{https://datasheets.maximintegrated.com/en/ds/MAX14850.pdf}.
+\newblock Accessed: 2020-04-5.
 
 \bibitem[4]{4}
 {\em 30 Triple Junction GaAs Solar Cell Type: TJ Solar Cell 3G30C}.

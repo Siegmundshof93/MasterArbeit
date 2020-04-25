@@ -1,12 +1,12 @@
-\chapter{System design\label{sec:tech77}}
+\chapter{System Design\label{sec:tech77}}
 
-\section{System overview}
-Power Processing Unit is vital and extremely important part of the satellite.  
+\section{System Overview}
+The PDU is responsible for transferring energy to subsystems and payloads, which makes him vital and extremely important part of the satellite. 
 
- According to the chapter \ref*{cha:chapter3} main requirement of the PDU is  be able to distribute a power into subsystems and payloads, which is accomplish by having a 23 power lines. Each power line controlled by a load switches which enabled by the signals from the microcontroller. Every power line measured by analog current sensors that amplify signal to the ADC that convert analog input into a digital output and communicate to the microcontroller via SPI protocol. Due to GPIO pins limitation of the microcontroller, was made a disicion to use a shift register to control additional load switches by using an I$^2$C protocol. 
+ According to the Chapter \ref*{cha:chapter3}, main requirement of the PDU is to be able to distribute a power into subsystems and payloads, which is accomplish by having a 23 power lines. Each power line is controlled by load switch, which is enabled by the signal from the microcontroller. Every power line is measured by analog current sensor that amplify its signal to the ADC. The ADC converts analog input into a digital output and communicate to the microcontroller via SPI protocol. Due to GPIO pins limitation of the microcontroller, it was decided to use a shift register to control additional load switches by using an I$^2$C protocol. 
  
  
-  Figure \ref{fig: PDU} Illustrate the simple Power Distribution Unit architecture block diagram.\\ \\
+  Figure \ref{fig: PDU} Illustrates the simple Power Distribution Unit architecture block diagram.\\ \\
 
 
  \begin{figure}[h]
@@ -16,7 +16,7 @@ Power Processing Unit is vital and extremely important part of the satellite.
  	\label{fig: PDU}
  \end{figure} 
 
-\section{Load switches}
+\section{Load Switches}
 PDU board has the 23 power load switches which provide commutation of the power lines. In order to fulfill the demanded requirements from the chapter \ref{cha:chapter3}, three types of load switches were chosen: TPS203x, TPS1H200A and FPF2701. 
 \captionof{table}{Switches and power lines of the PDU}
 \begin{tabular}{p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}} \toprule
@@ -122,7 +122,7 @@ TPS1H200A \cite{28} has an operating voltage 3.4V to 40V and adjustable current 
 
 Descartes mission require eight Vbat power lines, where Vbat equal 7.4V. However, PDU design consist of ten power lines which used TPS1H200A switch. One of the reasons for this - opportunity to work on 5V and handle a big loads up to 6A. Switch TPS1H200A used for on lines VCC10, VCC11, VCC12, VCC13, VCC14, VCC15 which used to supply power to DeCor payload. Also switch TPS1H200A used on empty lines VCC6, VCC7 and VCC18. Finally TPS1H200A used on HISP power line, which provide power to Hispico transceiver. 
 
-TPS1H200A has 8 pins and thermal pad which is connected to GND. Pin 1 is enable pin which activates the power transmission of the switch. Signal to the switch comes from the GPIO pin of microcontroller. Pin 2 enables diagnostic function of the TPS1H200A chip. While diagnostic function is activated TPS1H200A is able to set up current limit, adjust delay and provide a current limit signal to a microcontroller. Pin 3 provide an output signal to microcontroller when current limit was surpassed. Pin 4 allowed to adjust current limit. Current limit threshold can be set by placing an external resistor. Equation \ref{eq: res} shows the resistor value calculation.
+TPS1H200A has 8 pins and thermal pad which is connected to GND. Pin 1 is enable pin which activates the power transmission of the switch. Signal to the switch comes from the GPIO pin of microcontroller. Pin 2 enables diagnostic function of the TPS1H200A chip. While diagnostic function is activated TPS1H200A is able to set up current limit, adjust delay and provide a current limit signal to a microcontroller. Pin 3 provide an output signal to microcontroller when current limit was surpassed. Pin 4 allow to adjust current limit. Current limit threshold can be set by placing an external resistor. Equation \ref{eq: res} shows the resistor value calculation.
 
 \begin{equation}\label{eq: res}
 R = \frac{0.8 \times 2500}{I}
@@ -155,7 +155,7 @@ C_{delay} = \frac{4.5\mu A \times t_{dl2}}{1.45V}
 	\label{fig: hisp_inr}
 \end{figure} 
 
-To prevent a critical voltage drop while inrush current, two capacitors with value of 200µF in parallel were placed at output of the load switch, which is illustrated on the figure \ref{fig: hispico}. The value of capacitors was calculated by using formula \ref{eq:3}.
+To prevent a critical voltage drop while inrush current, two capacitors with value of 22µF in parallel were placed at output of the load switch, which is illustrated on the figure \ref{fig: hispico}. The value of capacitors was calculated by using formula \ref{eq:3}.
 
 For the TPS1H200A on the HISP channel CL pin adjusted to 2A and DELAY pin configured as holding mode. In holding mode \cite{28}"when hitting a current limit,the output current holds at the setting current." This combination was made in order to prevent switch shutdown while 4A inrush current during the inclusion and keep the threshold at 2A for the required 1.5A load of s-band transceiver. 
  
@@ -163,7 +163,7 @@ For the TPS1H200A on the HISP channel CL pin adjusted to 2A and DELAY pin config
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{hispico.png}
+	\includegraphics[scale=0.5]{Hispy.png}
 	\caption{TPS1H200A on the HISP power line}
 	\label{fig: hispico}
 \end{figure}
@@ -171,9 +171,30 @@ For the TPS1H200A on the HISP channel CL pin adjusted to 2A and DELAY pin config
 
 
  
-\section{Shift register}
+\section{Shift register}\label{shiftty}
+
+Due to the lack of free GPIO pins on the microcontroller, EPS can only provide 17 GPIO channels for PDU. Based on this, it was decided to include a shift register in the design of PDU. PDU in it's design has 5 empty power lines VCC4, VCC5, VCC6, VCC7, VCC18 which is not going to be used for Descartes mission. All this power lines are enabled via shift register as well as VCC19 which is responsible for triggering the power line, that supply power to the thermo-sensors. The design idea of having empty power channels and thermo-sensors channel on the shift register, is to include less important power lines under shift register control thereby exclude the risk of the pin control via additional device. 
 
 
+ MAX7328 is a two wire  serial-interfaced peripherals with eight I/O ports. MAX7328 has 16 pin SO wide footprint package. \cite{29} MAX7328 is general-purpose port expanders operating from a 2.5V to 5.5V supply that provide eight open-drain output ports with a 20mA sink capability.  MAX7328 has a 3 address inputs A0, A1 and A2. Those address inputs can be configured by soldering the external zero ohm resistors to the appropriate input pins.  
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.3]{sr.png}
+	\caption{ Schematics of the shift register MAX7328}
+	\label{fig: sr}
+\end{figure}
+
+The MAX7328 shift register has easy operation principle. The control of the shift register implemented via I$^2$C protocol. The microcontroller must communicate with the slave device (MAX7328) by sending the address of the slave device to the I $ ^ 2 $ C bus, which must be accompanied by a confirmation bit, then port data can be sent to enable or disable the port. The operation principle of MAX7328 is shown on the figure 
+\ref{fig: sr_op}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{sr_op.png}
+	\caption{ MAX7328 operation principle}
+	\label{fig: sr_op}
+\end{figure}
+ 
 \section{Current measurement and conversion}
 
 Due to the fact that PDU require to have 23 current sensors for each power line, was made a decision to use 23 analog current sensors in combination with an ADC. The main reason for that choice is to keep the flight heritage which was used for previous missions. Second reason is a relatively huge amount of sensors. Current sensors that give an output directly to I$^2$C or SPI have a limited amount of slaves which make them unsuitable to use for the current application.\\
@@ -286,6 +307,68 @@ The gain of the device equals:
   \end{figure} 
  
  The MAX1231 has 4 different clock modes. However, the Descartes mission uses an external clock mode from the microcontroller.  To begin communication with the MAX1231, chip select pin has to be latched up in order to define the slave. Then microcontroller sends a conversion register address with the channel information. After the Register address transmission, slave will send 12 bytes of data separated in two bytes. First receiving byte contain first 4 empty bits which has to be ignored and following 4 bits which are MSB. The second following byte contain the left 8 bits. After the second byte has been sent to the microcontroller, the $ \ overline {EOC} $ pin gets HIGH to notify the microcontroller that the conversion is complete, and the $ \ overline {CS} $ pin becomes LOW.
+ 
+ \section{Isolators}
+ 
+The principle of operation of electrical isolators is the partial separation of electricity from the system for safety reasons during maintenance work. PDU include two payload connectors that carry I$^2$C and SPI signals from the payloads. Due to the functional requirement FR4 from chapter \ref{eq:3} every payload I$^2$C and SPI nodes shall have the isolation. For that reason was made a decision to include well known from the previous missions two types of isolators:\\ \\
+
+$\bullet$ ADUM1250\\
+$\bullet$ MAX1485\\ \\
+
+ADUM1250 \cite{30} is a "hot swappable digital isolators with nonlatching, bidirectional communication channels that are compatible with I2C interfaces. This eliminates the need for splitting I2C signals into separate transmit and receive signals for use with standalone optocouplers."
+
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[scale=0.4]{ADUM1250.png}
+ 	\caption{ADUM1250}
+ 	\label{fig: adum}
+ \end{figure} 
+
+\cite{31} "The  MAX14850  is  a  six-channel  digital  isolator  utilizing  Maxim’s  proprietary  process  technology,  whose  mono-lithic  design  provides  a  compact  and  low-cost  transfer  of  digital  signals  between  circuits  with  different  power  domains.  The  technology  enables  low  power  consump-tion and stable high-temperature performance. The MAX14850 can be used for isolating SPI buses, I2C buses, RS-232, RS-485/RS-422 buses, and general-pur-pose isolation."
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{max14850.png}
+	\caption{MAX14850}
+	\label{fig: adum}
+\end{figure} 
+
+\section{Connectors design}
+
+Power Distribution Unit has 12 connectors on it's design. \\
+
+$\bullet$ eight payload connectors\\
+$\bullet$ two EPS connectors\\
+$\bullet$ one EGSE connector\\
+$\bullet$ one PC104 connector\\
+
+PC104 is a main connector which used to bridge main pcb boards such as PPU, PDU, OBC, OBC-PH, UHF module and Hispico transceiver.
+EGSE connector used to program the EPS and OBC microcontrollers, that located on the PPU and OBC boards by using JTAG pins.
+
+EPS connectors P1 and P2 were added into design due to the lack of free pins on the PC104 connector. These connectors provide a signal and power junction between PPU and PDU. EPS connectors provide a enable signals from the EPS microcontroller directly to the PDU via P2 connector and bus power lines 3.3V and 5V via P1 connector.
+
+  \begin{figure}[h]
+  	\centering
+  	\includegraphics[scale=0.4]{EPSCON.png}
+  	\caption{EPS connector P2}
+  	\label{fig: EPSCON}
+  \end{figure} 
+
+Payload connectors have a primary function to transfer the signal and power to the payload. Eight payload connectors divided into 8-pin connectors and 9-pin connectors. 8-pin connectors designed to carry payloads that require UART and CAN protocols. 9th pin required for the payloads that transfer I$^2$C and SPI protocols in order to give a power feedback into the ADUM1250 or MAX14850 isolators.  
+
+Two payload connectors K10 and K11 were made to include a possible opportunity to handle a payload that require a I$^2$C or SPI protocols.
+The connection design of connector K10 is illustrated on the figure \ref{fig: iso1}. To adjust the signal input between I$^2$C and SPI simple zero ohm resistors are used.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{iso1.png}
+	\caption{Payload connector K10}
+	\label{fig: iso1}
+\end{figure} 
+ 
+PDU designed in the way that all payload connectors have an opportunity to be supplied from different sources and with different voltages. The reason for this is the functional requirement FR1 in the chapter \ref{eq:3}. This design allow PDU to be compatible with every payload requirement. Every payload connector has ability to transfer at least 3.3V, 5V and 7.4V to the payload. This requirement was accomplished with zero ohm  resistors that adjust the input of the power supply to the payload connector.
+
+All connectors and their pin descriptions shown in the Annex. 
 
  
   

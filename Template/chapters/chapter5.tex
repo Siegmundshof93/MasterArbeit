@@ -1,80 +1,118 @@
-\chapter{Implementation\label{cha:chapter5}}
+\chapter{PCB realization\label{cha:chapter5}}
 
-This chapter describes the implementation of component X. Three systems were chosen as reference implementations: a desktop version for Windows and Linux PCs, a Windows Mobile version for Pocket PCs and a mobile version based on Android. 
+The PCB of PDU was designed and realized. All PCB work from schematics to net list wiring board layout design and finally post processing, was done via Computer Assisted Design Altium Designer. 
 
-\section{Environment\label{sec:env}}
-The following software, respectively operating systems, were used for the implementation:
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.2]{PDU_PCB.jpeg}
+	\caption{Power Distribution Board PCB}
+	\label{fig: PCB_PDU}
+\end{figure} 
 
-\begin{itemize}
-		\item Windows XP and Ubuntu 6
-		\vspace{-0.1in} 
-		\item Java Development Kit (JDK) 6 Update 10 
-		\vspace{-0.1in} 
-		\item Eclipse Ganymede 3.4
-		\vspace{-0.1in} 
-		\item Standard Widget Toolkit 3.4
-\end{itemize}
+\section{Physical Dimensions}
 
-\section{Project Structure\label{sec:projectstructure}}
+PCB design rules such as board dimensions, max trace width, component-to-component distance, max vias size pad-to-pad distance are all contained within the German Orbital Systems templates and requirements, as well as the manufacturer requirements. 
 
-The implementation is seperated into 2 distinguished eclipse projects as depicted in figure \ref{fig:projects}.
+The total thickness of the PCB is 1.7 mm. The PCB of the PDU has eight copper layers with 0.036 mm each. Every copper layer separated with dielectric material FR-4 with thickness of 0.254 mm. FR-4 is a typical composite material composed of woven fiberglass with epoxy resin binder. 
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=10cm]{screenshot_2_projects}
-  \caption{Project Structure}
-  \label{fig:projects}
-\end{figure}
 
-\noindent
-The following listing briefly describes the single packages of both projects in alphabetical order to give an overview of the implementation:
-\\
-\\
-\textbf{config} 
-\\
-Lorem Ipsum...
-\\
-\\
-\textbf{server} 
-\\
-Lorem Ipsum...
-\\
-\\
-\textbf{utils} 
-\\
-Lorem Ipsum...
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.8]{layer1.png}
+	\caption{Layer stack}
+	\label{fig: layerstack}
+\end{figure} 
 
-\section{Important Implementation Aspects\label{sec:gui}}
 
-Do not explain every class in detail. Give a short introduction about the modules or the eclipse projects. If you want to explain relevant code snippets use the 'lstlisting' tag of LaTeX. Put only short snippets into your thesis. Long listing should be part of the annex.
+The required PDU dimensions for the length and width are 90.16mm x 95.90mm. These dimensions are standardized by German Orbital Systems.
 
-\lstset{caption=JSON String Code Snippet,label=jsonstring,showstringspaces=false}
-\begin{lstlisting}
-{
-	id: 1,
-	method: "myInstance.getGroup",
-	params: ["Teammates", 2, true]
-}
+\section{Layout design}
 
-{
-	id: 2,
-	result: [
-		  "groupDesc":"These are my teammates",
-		  {
-			"javaClass":"src.package.MemberClass",
-			"memberName": "Bob",      
-		  }
-		]
-}\end{lstlisting}
+The layout design was started with the power trace width calculation.
+According to the power requirements, maximum supplied current of the on the PDU for the Descartes mission is 1.5A which has to be supplied to Hispico S-band transceiver. The minimal width of the power lines on the PDU is not less than 0.8 mm.
 
-You can also compare different approaches. Example: Since the implementation based on X failed I choosed to implement the same aspect based on Y. The new approach resulted in a much faster ...
+The maximum current can be calculated by equation \ref{eq: amp}
 
-\section{Graphical User Interface\label{sec:gui}}
+\begin{equation}\label{eq: amp}
+I = K \times dT^{0.44} \times (W \times H)^{0.725}
+\end{equation}
 
-Lorem Ipsum...
+Where\\
 
-\section{Documentation\label{sec:docu}}
+I - Max current\\
+K - Coefficient for external traces (0.048)\\
+W - Width in mils(0.8)\\
+H - Thickness in mils(0.036) \\
+dT - Temperature rise above ambient in $^\circ$C(10)\\
 
-Lorem Ipsum...
+As a result, maximum current that can be transfered through the track is 2.07631 $\approx$ 2A.\\ 
+
+Power Distribution Unit PCB has eight copper layers. Top and bottom layers used for power transmission, partially as a signal transmission and as a ground polygon. Second and the seventh layers used for a signal transmission. The design of the second and seventh layers is designed so that the signal lines having a track width of 0.4 mm are as straight as possible to reduce noise. The third and sixth layers are ground layers they are used for decoupling the signal layers as well as for a thermal dissipation reasons, which is an important function considering the fact that PDU  transfer power. Fourth and fifth layers are power layers, they consist of the power polygons which transfer power from the source to the integrated chips and to the connectors.   
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{resist_con.png}
+	\caption{Zero ohm resistors to payload connector network}
+	\label{fig: res}
+\end{figure} 
+
+
+Figure \ref{fig: res} shows only top, middle power layers and top silk overlay of the PCB.
+
+  
+The main feature of the Power Distribution Board layout design is a flexibility of a choice of a connector, power line and required voltage. PDU has an ability to set up the connector with the different switch power outputs. PDU as it was explained in the chapter \ref{sec:tech77} used two types of connectors 9-pin connector and 8-pin connector. Each of those two types has a two input power pins for a power transmission.  Some connectors in the Descartes mission required 2 inputs from two different switches such as connectors: K5, K6, K7 which have to transfer power to the DeCor payload. The connector designations are given in Appendix. The zero ohm resistors allows to select the power channels that will supply power to the payload connector, and then to the payload. Each payload connectors can be adjusted to receive power from one of the four load switches. Figure \ref{fig: res} shows example of the connection layout design between zero ohm resistors and the payload connector. Zero ohm resistors placed maximum close to the payload connector in order to make more space on the PCB. All zero ohm resistors that used for a power transfer are 0805 inch due to the high power.
+
+The load switches are located on the top and bottom side of the PCB. Each switch must supply power to a specific connector in order to reduce the length of the power path between the switch and  corresponding connector, the switches were located as close to their respective connectors as possible to reduce path loss and resistance, which directly affects the voltage drop. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{pdu_top_3d_new.png}
+	\caption{Top view of the PDU}
+	\label{fig: toppducon}
+\end{figure} 
+
+Figure \ref{fig: toppducon} shows a the placement of the switches on the top layer of the PDU. Switches, responsible for a bus power line commutation are emphasized with a red frame. In order to decrease the distance between the load switches and PC104 connector, which is used to transfer bus power to oder boards in the stack, switches were located on the top side of the the PCB in the row. The payload switches, that emphasized with green frames, located on the left and right sides of the PCB. This allow them to transfer power without extra losses on the shortest distance to the relative payload connectors.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{polygons.png}
+	\caption{Power polygons of the PDU}
+	\label{fig: poly}
+\end{figure} 
+
+Fourth and fifth copper layers of the PCB used to transfer a high power. One of the main tasks of the middle power layers is to transfer current from the source pads to the relative IC via polygons. There are 5 main power source pads on the PCB: 7.4V, 3.3V BUS, 3.3V PAYL, 5V BUS, 5V PAYL. Figure \ref{fig: poly} illustrates the main power sources on the PCB, where:\\ \\
+ 1 - 5V PAYL\\
+ 2 - 3.3V PAYL\\
+ 3 - 7.4V\\
+ 4 - 5V BUS\\
+ 5  - 3.3V BUS\\
+
+The minimum width of the polygons was calculated according to the formula \ref{eq: amp} and the maximum current with the coefficient of internal traces.
+
+\begin{equation}
+W = \frac{\sqrt[0.725]{\frac{1.5}{0.024 \times 10^{0.44}}}}{0.036}
+\end{equation} 
+
+According to the upper mention calculation, minimal required inner width of the trace should be not smaller then 1.36 mm. The minimal width of the Power distribution board inner traces is 1.5 mm which within the required tolerance. 
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.38]{pdu_top_component.png}
+	\caption{Types of components on  top view of the PDU }
+	\label{fig: pdu_comp_top}
+\end{figure} 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.38]{pdu_bot_component.png}
+	\caption{Types of components on  bottom view of the PDU}
+	\label{fig: pdu_comp_bot}
+\end{figure} 
+
+
+Figures \ref{fig: pdu_comp_top} and \ref{fig: pdu_comp_bot} show placement of components on the PCB.
+ 
 
 
