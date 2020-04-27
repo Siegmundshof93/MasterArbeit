@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.16)  25 APR 2020 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.16)  27 APR 2020 20:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1588,7 +1588,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout2 = `./misc/titlepage.aux'.
 
 
-(./misc/titlepage.tex <./img/tu_logo.jpg, id=172, 21.07875pt x 15.77895pt>
+(./misc/titlepage.tex <./img/tu_logo.jpg, id=184, 21.07875pt x 15.77895pt>
 File: ./img/tu_logo.jpg Graphic file (type jpg)
 
 <use ./img/tu_logo.jpg>
@@ -1607,7 +1607,7 @@ Package pdftex.def Info: ./img/tu_logo.jpg used on input line 19.
 \openout2 = `./misc/thanx.aux'.
 
  (./misc/thanx.tex
-<logo.png, id=186, 324.21124pt x 127.47626pt>
+<logo.png, id=198, 324.21124pt x 127.47626pt>
 File: logo.png Graphic file (type png)
  <use logo.png>
 Package pdftex.def Info: logo.png used on input line 6.
@@ -1720,72 +1720,107 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              deprecated \float@addtolist interface .
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 6--10
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-[1
 
-] <./img/intro_example.pdf, id=480, 601.64778pt x 290.28452pt>
-File: ./img/intro_example.pdf Graphic file (type pdf)
+Underfull \vbox (badness 2735) has occurred while \output is active []
 
-<use ./img/intro_example.pdf>
-Package pdftex.def Info: ./img/intro_example.pdf used on input line 24.
-(pdftex.def)             Requested size: 256.0748pt x 123.5531pt.
+ [1
 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
-LaTeX Warning: Reference `cha:chapter4' on page 2 undefined on input line 42.
+ []
 
 
-LaTeX Warning: Reference `cha:chapter6' on page 2 undefined on input line 48.
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
+
+ []
 
 ) (./chapters/chapter2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 30--1
+Underfull \hbox (badness 10000) in paragraph at lines 29--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--1
+Underfull \hbox (badness 10000) in paragraph at lines 29--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--1
+Underfull \hbox (badness 10000) in paragraph at lines 29--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--1
+Underfull \hbox (badness 10000) in paragraph at lines 29--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--1
+Underfull \hbox (badness 10000) in paragraph at lines 29--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--1
+Underfull \hbox (badness 10000) in paragraph at lines 29--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--1
+Underfull \hbox (badness 10000) in paragraph at lines 29--1
 
  []
 
-[2 <./img/intro_example.pdf>] [3] [4
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--1
+
+ []
+
+[2] [3] [4
 
 ]
 chapter 2.
-<./img/EPS_basic.png, id=509, 832.10875pt x 526.96875pt>
+<./img/EPS_basic.png, id=515, 832.10875pt x 526.96875pt>
 File: ./img/EPS_basic.png Graphic file (type png)
 
 <use ./img/EPS_basic.png>
 Package pdftex.def Info: ./img/EPS_basic.png used on input line 12.
 (pdftex.def)             Requested size: 332.8376pt x 210.78375pt.
  [5 <./img/EPS_basic.png>]
-<./img/azur.png, id=521, 349.305pt x 261.97874pt>
+<./img/azur.png, id=526, 349.305pt x 261.97874pt>
 File: ./img/azur.png Graphic file (type png)
  <use ./img/azur.png>
 Package pdftex.def Info: ./img/azur.png used on input line 28.
@@ -1795,7 +1830,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[6 <./img/azur.png>] <./img/Cellen.png, id=530, 663.47874pt x 654.445pt>
+[6 <./img/azur.png>] <./img/Cellen.png, id=535, 663.47874pt x 654.445pt>
 File: ./img/Cellen.png Graphic file (type png)
 
 <use ./img/Cellen.png>
@@ -1861,7 +1896,7 @@ Overfull \vbox (12.50496pt too high) has occurred while \output is active []
 
 
 [7 <./img/Cellen.png>]
-<./img/temperatureDependancy.png, id=546, 564.1075pt x 456.70625pt>
+<./img/temperatureDependancy.png, id=550, 564.1075pt x 456.70625pt>
 File: ./img/temperatureDependancy.png Graphic file (type png)
 
 <use ./img/temperatureDependancy.png>
@@ -1878,7 +1913,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
-<./img/DiodenSS.png, id=551, 743.77875pt x 351.3125pt>
+<./img/DiodenSS.png, id=555, 743.77875pt x 351.3125pt>
 File: ./img/DiodenSS.png Graphic file (type png)
 
 <use ./img/DiodenSS.png>
@@ -1913,7 +1948,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--129
 
  []
 
-<./img/NiCd.jpg, id=569, 803.0pt x 803.0pt>
+<./img/NiCd.jpg, id=573, 803.0pt x 803.0pt>
 File: ./img/NiCd.jpg Graphic file (type jpg)
  <use ./img/NiCd.jpg>
 Package pdftex.def Info: ./img/NiCd.jpg used on input line 134.
@@ -1933,7 +1968,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--168
 
  []
 
-[10 <./img/NiCd.jpg>] <./img/NiH2.jpg, id=582, 401.5pt x 311.1625pt>
+[10 <./img/NiCd.jpg>] <./img/NiH2.jpg, id=586, 401.5pt x 311.1625pt>
 File: ./img/NiH2.jpg Graphic file (type jpg)
 
 <use ./img/NiH2.jpg>
@@ -1954,7 +1989,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--202
 
  []
 
-<./img/Li-ion.jpg, id=587, 933.4875pt x 933.4875pt>
+<./img/Li-ion.jpg, id=591, 933.4875pt x 933.4875pt>
 File: ./img/Li-ion.jpg Graphic file (type jpg)
  <use ./img/Li-ion.jpg>
 Package pdftex.def Info: ./img/Li-ion.jpg used on input line 210.
@@ -1978,7 +2013,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 233--238
 
  []
 
-<./img/LiPo.jpg, id=596, 642.4pt x 642.4pt>
+<./img/LiPo.jpg, id=600, 642.4pt x 642.4pt>
 File: ./img/LiPo.jpg Graphic file (type jpg)
  <use ./img/LiPo.jpg>
 Package pdftex.def Info: ./img/LiPo.jpg used on input line 245.
@@ -1997,7 +2032,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--258
 Underfull \vbox (badness 1728) has occurred while \output is active []
 
  [12 <./img/Li-ion.jpg> <./img/LiPo.jpg>]
-<./img/LiCharge.jpg, id=605, 108.405pt x 67.2111pt>
+<./img/LiCharge.jpg, id=609, 108.405pt x 67.2111pt>
 File: ./img/LiCharge.jpg Graphic file (type jpg)
  <use ./img/LiCharge.jpg>
 Package pdftex.def Info: ./img/LiCharge.jpg used on input line 261.
@@ -2008,13 +2043,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 265--269
  []
 
 [13 <./img/LiCharge.jpg>]
-<./img/MAX745.png, id=615, 743.77875pt x 398.48875pt>
+<./img/MAX745.png, id=619, 743.77875pt x 398.48875pt>
 File: ./img/MAX745.png Graphic file (type png)
  <use ./img/MAX745.png>
 Package pdftex.def Info: ./img/MAX745.png used on input line 274.
 (pdftex.def)             Requested size: 371.88846pt x 199.24388pt.
 
-[14 <./img/MAX745.png>] <./img/protect.png, id=626, 938.50626pt x 430.60875pt>
+[14 <./img/MAX745.png>] <./img/protect.png, id=630, 938.50626pt x 430.60875pt>
 File: ./img/protect.png Graphic file (type png)
 
 <use ./img/protect.png>
@@ -2053,7 +2088,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 312--317
 
  []
 
-<./img/lmz.png, id=642, 615.29875pt x 517.935pt>
+<./img/lmz.png, id=646, 615.29875pt x 517.935pt>
 File: ./img/lmz.png Graphic file (type png)
  <use ./img/lmz.png>
 Package pdftex.def Info: ./img/lmz.png used on input line 325.
@@ -2078,7 +2113,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 330--333
 
  []
 
-<./img/uC.png, id=647, 583.17876pt x 515.9275pt>
+<./img/uC.png, id=651, 583.17876pt x 515.9275pt>
 File: ./img/uC.png Graphic file (type png)
  <use ./img/uC.png>
 Package pdftex.def Info: ./img/uC.png used on input line 339.
@@ -2100,7 +2135,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 1571) has occurred while \output is active []
 
- [17 <./img/lmz.png>] <./img/distrib.png, id=661, 894.34125pt x 375.4025pt>
+ [17 <./img/lmz.png>] <./img/distrib.png, id=665, 894.34125pt x 375.4025pt>
 File: ./img/distrib.png Graphic file (type png)
 
 <use ./img/distrib.png>
@@ -2140,7 +2175,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 395--401
 
  []
 
-<./img/descart.png, id=683, 963.6pt x 770.88pt>
+<./img/descart.png, id=687, 963.6pt x 770.88pt>
 File: ./img/descart.png Graphic file (type png)
  <use ./img/descart.png>
 Package pdftex.def Info: ./img/descart.png used on input line 406.
@@ -2169,7 +2204,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 419--423
 
  []
 
-<./img/ppu.png, id=689, 456.70625pt x 449.68pt>
+<./img/ppu.png, id=693, 456.70625pt x 449.68pt>
 File: ./img/ppu.png Graphic file (type png)
  <use ./img/ppu.png>
 Package pdftex.def Info: ./img/ppu.png used on input line 429.
@@ -2178,13 +2213,13 @@ Package pdftex.def Info: ./img/ppu.png used on input line 429.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <./img/descart.png>] <./img/ltc4015.png, id=696, 798.985pt x 457.71pt>
+[22 <./img/descart.png>] <./img/ltc4015.png, id=700, 798.985pt x 457.71pt>
 File: ./img/ltc4015.png Graphic file (type png)
 
 <use ./img/ltc4015.png>
 Package pdftex.def Info: ./img/ltc4015.png used on input line 438.
 (pdftex.def)             Requested size: 159.79416pt x 91.54037pt.
- <./img/Watch.png, id=697, 318.18875pt x 197.73875pt>
+ <./img/Watch.png, id=701, 318.18875pt x 197.73875pt>
 File: ./img/Watch.png Graphic file (type png)
 
 <use ./img/Watch.png>
@@ -2195,20 +2230,20 @@ Package pdftex.def Info: ./img/Watch.png used on input line 449.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23 <./img/ppu.png> <./img/ltc4015.png>]
-<./img/dcdc.png, id=703, 841.1425pt x 306.14375pt>
+<./img/dcdc.png, id=707, 841.1425pt x 306.14375pt>
 File: ./img/dcdc.png Graphic file (type png)
  <use ./img/dcdc.png>
 Package pdftex.def Info: ./img/dcdc.png used on input line 459.
 (pdftex.def)             Requested size: 336.45103pt x 122.45532pt.
 
 [24 <./img/Watch.png> <./img/dcdc.png>]
-<./img/PPU.png, id=711, 1329.96875pt x 1297.84875pt>
+<./img/PPU.png, id=715, 1329.96875pt x 1297.84875pt>
 File: ./img/PPU.png Graphic file (type png)
  <use ./img/PPU.png>
 Package pdftex.def Info: ./img/PPU.png used on input line 472.
 (pdftex.def)             Requested size: 398.9937pt x 389.35764pt.
 
-<./img/bat.png, id=712, 608.2725pt x 526.96875pt>
+<./img/bat.png, id=716, 608.2725pt x 526.96875pt>
 File: ./img/bat.png Graphic file (type png)
  <use ./img/bat.png>
 Package pdftex.def Info: ./img/bat.png used on input line 483.
@@ -2218,7 +2253,7 @@ Package pdftex.def Info: ./img/bat.png used on input line 483.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [25 <./img/PPU.png>]
-<./img/2s2pMasterarbeit.png, id=720, 1456.44125pt x 837.1275pt>
+<./img/2s2pMasterarbeit.png, id=724, 1456.44125pt x 837.1275pt>
 File: ./img/2s2pMasterarbeit.png Graphic file (type png)
 
 <use ./img/2s2pMasterarbeit.png>
@@ -2245,7 +2280,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 499--500
  []
 
 [26 <./img/bat.png> <./img/2s2pMasterarbeit.png>]
-<./img/BP.png, id=728, 1451.4225pt x 1002.74625pt>
+<./img/BP.png, id=732, 1451.4225pt x 1002.74625pt>
 File: ./img/BP.png Graphic file (type png)
  <use ./img/BP.png>
 Package pdftex.def Info: ./img/BP.png used on input line 504.
@@ -2365,21 +2400,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-<./img/PDU.png, id=752, 1478.52374pt x 1314.9125pt>
+<./img/PDU.png, id=756, 1478.52374pt x 1314.9125pt>
 File: ./img/PDU.png Graphic file (type png)
  <use ./img/PDU.png>
 Package pdftex.def Info: ./img/PDU.png used on input line 14.
-(pdftex.def)             Requested size: 295.69951pt x 262.97784pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+(pdftex.def)             Requested size: 280.92242pt x 249.83597pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 21.
 See the caption package documentation for explanation.
 
+[31
 
+ <./img/PDU.png>]
 Overfull \hbox (2.86331pt too wide) in paragraph at lines 30--30
 []|\OT1/cmr/m/n/10.95 TPS1H200A| 
  []
@@ -2450,25 +2484,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--50
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31
-
-]
-Overfull \vbox (64.2474pt too high) has occurred while \output is active []
-
-
-[32 <./img/PDU.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
-
- []
-
-<./img/tps203x.png, id=763, 184.69pt x 116.435pt>
+ [32]
+<./img/tps203x.png, id=768, 184.69pt x 116.435pt>
 File: ./img/tps203x.png Graphic file (type png)
  <use ./img/tps203x.png>
 Package pdftex.def Info: ./img/tps203x.png used on input line 60.
@@ -2498,7 +2527,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--80
 
  []
 
-[33 <./img/tps203x.png>] <./img/tps203x_.png, id=776, 889.3225pt x 329.23pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
+[33 <./img/tps203x.png>] <./img/tps203x_.png, id=780, 889.3225pt x 329.23pt>
 File: ./img/tps203x_.png Graphic file (type png)
 
 <use ./img/tps203x_.png>
@@ -2515,215 +2549,223 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-<./img/fpf2701.png, id=778, 342.27875pt x 240.9pt>
+<./img/fpf2701.png, id=782, 342.27875pt x 240.9pt>
 File: ./img/fpf2701.png Graphic file (type png)
  <use ./img/fpf2701.png>
-Package pdftex.def Info: ./img/fpf2701.png used on input line 98.
+Package pdftex.def Info: ./img/fpf2701.png used on input line 100.
 (pdftex.def)             Requested size: 102.6844pt x 72.27055pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+ []
 
-[34 <./img/tps203x_.png>]
-<./img/fpf2701_pic.png, id=789, 692.5875pt x 370.38374pt>
+[34 <./img/tps203x_.png> <./img/fpf2701.png>]
+<./img/fpf2701_pic.png, id=793, 692.5875pt x 370.38374pt>
 File: ./img/fpf2701_pic.png Graphic file (type png)
 
 <use ./img/fpf2701_pic.png>
-Package pdftex.def Info: ./img/fpf2701_pic.png used on input line 115.
+Package pdftex.def Info: ./img/fpf2701_pic.png used on input line 119.
 (pdftex.def)             Requested size: 207.77785pt x 111.11597pt.
- [35 <./img/fpf2701.png> <./img/fpf2701_pic.png>]
-<./img/tpscl.png, id=799, 401.5pt x 162.6075pt>
-File: ./img/tpscl.png Graphic file (type png)
- <use ./img/tpscl.png>
-Package pdftex.def Info: ./img/tpscl.png used on input line 136.
-(pdftex.def)             Requested size: 200.7495pt x 81.30354pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-<./img/hisp_diag.png, id=802, 766.865pt x 221.82875pt>
+[35 <./img/fpf2701_pic.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+
+ []
+
+<./img/tpscl.png, id=803, 401.5pt x 162.6075pt>
+File: ./img/tpscl.png Graphic file (type png)
+ <use ./img/tpscl.png>
+Package pdftex.def Info: ./img/tpscl.png used on input line 143.
+(pdftex.def)             Requested size: 200.7495pt x 81.30354pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+[36 <./img/tpscl.png>] <./img/hisp_diag.png, id=812, 766.865pt x 221.82875pt>
 File: ./img/hisp_diag.png Graphic file (type png)
 
 <use ./img/hisp_diag.png>
-Package pdftex.def Info: ./img/hisp_diag.png used on input line 153.
+Package pdftex.def Info: ./img/hisp_diag.png used on input line 160.
 (pdftex.def)             Requested size: 383.43156pt x 110.9141pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[36 <./img/tpscl.png>] <./img/Hispy.png, id=812, 927.465pt x 403.5075pt>
+ <./img/Hispy.png, id=816, 927.465pt x 403.5075pt>
 File: ./img/Hispy.png Graphic file (type png)
 
 <use ./img/Hispy.png>
-Package pdftex.def Info: ./img/Hispy.png used on input line 166.
+Package pdftex.def Info: ./img/Hispy.png used on input line 173.
 (pdftex.def)             Requested size: 463.73137pt x 201.75325pt.
 
-Overfull \hbox (45.47769pt too wide) in paragraph at lines 166--167
+Overfull \hbox (45.47769pt too wide) in paragraph at lines 173--174
  [][] 
  []
 
-[37 <./img/hisp_diag.png> <./img/Hispy.png>]
-<./img/sr.png, id=818, 698.61pt x 588.1975pt>
+
+Underfull \vbox (badness 2393) has occurred while \output is active []
+
+ [37 <./img/hisp_diag.png> <./img/Hispy.png>]
+<./img/sr.png, id=822, 698.61pt x 588.1975pt>
 File: ./img/sr.png Graphic file (type png)
  <use ./img/sr.png>
-Package pdftex.def Info: ./img/sr.png used on input line 184.
+Package pdftex.def Info: ./img/sr.png used on input line 191.
 (pdftex.def)             Requested size: 209.58461pt x 176.4606pt.
-
-<./img/sr_op.png, id=820, 755.82375pt x 250.9375pt>
+ [38 <./img/sr.png>] <./img/sr_op.png, id=829, 755.82375pt x 250.9375pt>
 File: ./img/sr_op.png Graphic file (type png)
- <use ./img/sr_op.png>
-Package pdftex.def Info: ./img/sr_op.png used on input line 193.
+
+<use ./img/sr_op.png>
+Package pdftex.def Info: ./img/sr_op.png used on input line 200.
 (pdftex.def)             Requested size: 377.91095pt x 125.46843pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
-[38 <./img/sr.png>] <./img/max4372inside.png, id=827, 399.4925pt x 399.4925pt>
+<./img/max4372inside.png, id=831, 399.4925pt x 399.4925pt>
 File: ./img/max4372inside.png Graphic file (type png)
 
 <use ./img/max4372inside.png>
-Package pdftex.def Info: ./img/max4372inside.png used on input line 206.
+Package pdftex.def Info: ./img/max4372inside.png used on input line 213.
 (pdftex.def)             Requested size: 159.79416pt x 159.79416pt.
  [39 <./img/sr_op.png> <./img/max4372inside.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 249--252
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
 
  []
 
+[40]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 256.
+(caption)                particular \caption on input line 263.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (11.63211pt too wide) in paragraph at lines 257--288
+Overfull \hbox (11.63211pt too wide) in paragraph at lines 264--295
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--288
+Underfull \hbox (badness 10000) in paragraph at lines 264--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--288
+Underfull \hbox (badness 10000) in paragraph at lines 264--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--288
+Underfull \hbox (badness 10000) in paragraph at lines 264--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--288
+Underfull \hbox (badness 10000) in paragraph at lines 264--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--288
+Underfull \hbox (badness 10000) in paragraph at lines 264--295
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41]
-<./img/ADC.png, id=851, 1102.1175pt x 344.28625pt>
+<./img/ADC.png, id=855, 1102.1175pt x 344.28625pt>
 File: ./img/ADC.png Graphic file (type png)
  <use ./img/ADC.png>
-Package pdftex.def Info: ./img/ADC.png used on input line 295.
+Package pdftex.def Info: ./img/ADC.png used on input line 302.
 (pdftex.def)             Requested size: 440.83919pt x 137.71205pt.
 
-Overfull \hbox (22.58551pt too wide) in paragraph at lines 295--296
+Overfull \hbox (22.58551pt too wide) in paragraph at lines 302--303
  [][] 
  []
 
-<./img/ADC_clock.png, id=853, 1025.8325pt x 311.1625pt>
+<./img/ADC_clock.png, id=857, 1025.8325pt x 311.1625pt>
 File: ./img/ADC_clock.png Graphic file (type png)
 
 <use ./img/ADC_clock.png>
-Package pdftex.def Info: ./img/ADC_clock.png used on input line 304.
+Package pdftex.def Info: ./img/ADC_clock.png used on input line 311.
 (pdftex.def)             Requested size: 410.32574pt x 124.46278pt.
+
+Underfull \vbox (badness 1694) has occurred while \output is active []
+
  [42 <./img/ADC.png> <./img/ADC_clock.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--317
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--317
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
 
  []
 
-<./img/ADUM1250.png, id=862, 663.47874pt x 316.18124pt>
+<./img/ADUM1250.png, id=866, 663.47874pt x 316.18124pt>
 File: ./img/ADUM1250.png Graphic file (type png)
 
 <use ./img/ADUM1250.png>
-Package pdftex.def Info: ./img/ADUM1250.png used on input line 322.
+Package pdftex.def Info: ./img/ADUM1250.png used on input line 329.
 (pdftex.def)             Requested size: 265.3868pt x 126.47025pt.
  [43 <./img/ADUM1250.png>]
-<./img/max14850.png, id=870, 1010.77625pt x 342.27875pt>
+<./img/max14850.png, id=874, 1010.77625pt x 342.27875pt>
 File: ./img/max14850.png Graphic file (type png)
 
 <use ./img/max14850.png>
-Package pdftex.def Info: ./img/max14850.png used on input line 331.
+Package pdftex.def Info: ./img/max14850.png used on input line 338.
 (pdftex.def)             Requested size: 404.30333pt x 136.90906pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--344
+Underfull \hbox (badness 10000) in paragraph at lines 347--351
 
  []
 
-<./img/EPSCON.png, id=871, 692.5875pt x 160.6pt>
+<./img/EPSCON.png, id=875, 692.5875pt x 160.6pt>
 File: ./img/EPSCON.png Graphic file (type png)
  <use ./img/EPSCON.png>
-Package pdftex.def Info: ./img/EPSCON.png used on input line 352.
+Package pdftex.def Info: ./img/EPSCON.png used on input line 359.
 (pdftex.def)             Requested size: 277.03009pt x 64.23885pt.
 
-[44 <./img/max14850.png> <./img/EPSCON.png>]
-<./img/iso1.png, id=877, 686.565pt x 443.6575pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[44 <./img/max14850.png>] <./img/iso1.png, id=882, 686.565pt x 443.6575pt>
 File: ./img/iso1.png Graphic file (type png)
- <use ./img/iso1.png>
-Package pdftex.def Info: ./img/iso1.png used on input line 364.
+
+<use ./img/iso1.png>
+Package pdftex.def Info: ./img/iso1.png used on input line 371.
 (pdftex.def)             Requested size: 274.62112pt x 177.45984pt.
-)
-(./chapters/chapter5.tex [45 <./img/iso1.png>] [46
+) (./chapters/chapter5.tex [45 <./img/EPSCON.png> <./img/iso1.png>] [46
 
 ]
 chapter 6.
-<./img/PDU_PCB.jpeg, id=889, 1204.5pt x 1606.0pt>
+<./img/PDU_PCB.jpeg, id=893, 1204.5pt x 1606.0pt>
 File: ./img/PDU_PCB.jpeg Graphic file (type jpg)
  <use ./img/PDU_PCB.jpeg>
 Package pdftex.def Info: ./img/PDU_PCB.jpeg used on input line 7.
 (pdftex.def)             Requested size: 240.89574pt x 321.19432pt.
 
-[47 <./img/PDU_PCB.jpeg>] <./img/layer1.png, id=894, 167.62625pt x 321.2pt>
+[47 <./img/PDU_PCB.jpeg>] <./img/layer1.png, id=898, 167.62625pt x 321.2pt>
 File: ./img/layer1.png Graphic file (type png)
 
 <use ./img/layer1.png>
@@ -2744,21 +2786,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-<./img/resist_con.png, id=901, 405.515pt x 524.96124pt>
+<./img/resist_con.png, id=905, 405.515pt x 524.96124pt>
 File: ./img/resist_con.png Graphic file (type png)
 
 <use ./img/resist_con.png>
 Package pdftex.def Info: ./img/resist_con.png used on input line 54.
 (pdftex.def)             Requested size: 162.20311pt x 209.98077pt.
  [49 <./img/resist_con.png>]
-<./img/pdu_top_3d_new.png, id=909, 557.08125pt x 591.20876pt>
+<./img/pdu_top_3d_new.png, id=913, 557.08125pt x 591.20876pt>
 File: ./img/pdu_top_3d_new.png Graphic file (type png)
 
 <use ./img/pdu_top_3d_new.png>
 Package pdftex.def Info: ./img/pdu_top_3d_new.png used on input line 69.
 (pdftex.def)             Requested size: 278.53995pt x 295.60365pt.
 
-<./img/polygons.png, id=911, 570.13pt x 603.25375pt>
+<./img/polygons.png, id=915, 570.13pt x 603.25375pt>
 File: ./img/polygons.png Graphic file (type png)
  <use ./img/polygons.png>
 Package pdftex.def Info: ./img/polygons.png used on input line 78.
@@ -2780,7 +2822,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--89
 [50 <./img/pdu_top_3d_new.png>]
 Underfull \vbox (badness 4254) has occurred while \output is active []
 
- [51 <./img/polygons.png>] <./img/pdu_top_component.png, id=929, 717.68124pt x 
+ [51 <./img/polygons.png>] <./img/pdu_top_component.png, id=933, 717.68124pt x 
 513.92pt>
 File: ./img/pdu_top_component.png Graphic file (type png)
 
@@ -2788,7 +2830,7 @@ File: ./img/pdu_top_component.png Graphic file (type png)
 Package pdftex.def Info: ./img/pdu_top_component.png used on input line 102.
 (pdftex.def)             Requested size: 272.7217pt x 195.29163pt.
 
-<./img/pdu_bot_component.png, id=930, 756.8275pt x 477.785pt>
+<./img/pdu_bot_component.png, id=934, 756.8275pt x 477.785pt>
 File: ./img/pdu_bot_component.png Graphic file (type png)
 
 <use ./img/pdu_bot_component.png>
@@ -2835,14 +2877,14 @@ lly by pro-vid-ing a
 
 [53
 
-] <./img/pdu_front_test.png, id=943, 652.4375pt x 687.56876pt>
+] <./img/pdu_front_test.png, id=947, 652.4375pt x 687.56876pt>
 File: ./img/pdu_front_test.png Graphic file (type png)
 
 <use ./img/pdu_front_test.png>
 Package pdftex.def Info: ./img/pdu_front_test.png used on input line 47.
 (pdftex.def)             Requested size: 326.21794pt x 343.78354pt.
 
-<./img/pdu_bot_test.png, id=944, 576.1525pt x 604.2575pt>
+<./img/pdu_bot_test.png, id=948, 576.1525pt x 604.2575pt>
 File: ./img/pdu_bot_test.png Graphic file (type png)
 
 <use ./img/pdu_bot_test.png>
@@ -2883,7 +2925,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--74
  []
 
 [54 <./img/pdu_front_test.png>] [55 <./img/pdu_bot_test.png>]
-<./img/pdu_test_tisch.png, id=958, 1608.0075pt x 1205.50375pt>
+<./img/pdu_test_tisch.png, id=962, 1608.0075pt x 1205.50375pt>
 File: ./img/pdu_test_tisch.png Graphic file (type png)
 
 <use ./img/pdu_test_tisch.png>
@@ -2903,7 +2945,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [56 <./img/pdu_test_tisch.png>]
-<./img/hispico_plot.png, id=966, 320.19624pt x 239.89626pt>
+<./img/hispico_plot.png, id=970, 320.19624pt x 239.89626pt>
 File: ./img/hispico_plot.png Graphic file (type png)
 
 <use ./img/hispico_plot.png>
@@ -2973,7 +3015,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--155
 
  []
 
-<./img/adctest.png, id=985, 813.0375pt x 556.0775pt>
+<./img/adctest.png, id=989, 813.0375pt x 556.0775pt>
 File: ./img/adctest.png Graphic file (type png)
  <use ./img/adctest.png>
 Package pdftex.def Info: ./img/adctest.png used on input line 158.
@@ -2981,7 +3023,7 @@ Package pdftex.def Info: ./img/adctest.png used on input line 158.
 
 [59 <./img/adctest.png>]) (./chapters/chapter7.tex [60]
 chapter 8.
-<./img/EPS!.png, id=1026, 355.3275pt x 391.4625pt>
+<./img/EPS!.png, id=1030, 355.3275pt x 391.4625pt>
 File: ./img/EPS!.png Graphic file (type png)
  <use ./img/EPS!.png>
 Package pdftex.def Info: ./img/EPS!.png used on input line 5.
@@ -3450,7 +3492,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 330.
 See the caption package documentation for explanation.
 
-[74] <Job1.PDF, id=1140, 1611.01875pt x 1135.24126pt>
+[74] <Job1.PDF, id=1144, 1611.01875pt x 1135.24126pt>
 File: Job1.PDF Graphic file (type pdf)
  <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 370.
@@ -3460,7 +3502,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 370.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1143, page=2, 2275.50125pt x 1612.0225pt>
+ <Job1.PDF, id=1147, page=2, 2275.50125pt x 1612.0225pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 2>
@@ -3494,7 +3536,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 371.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1176, page=6, 2275.50125pt x 1612.0225pt>
+ <Job1.PDF, id=1180, page=6, 2275.50125pt x 1612.0225pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 6>
@@ -3527,7 +3569,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 372.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1190, page=1, 1611.01875pt x 1135.24126pt>
+ <Job1.PDF, id=1195, page=1, 1611.01875pt x 1135.24126pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 1>
@@ -3560,7 +3602,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 373.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1205, page=3, 686.565pt x 542.025pt>
+ <Job1.PDF, id=1209, page=3, 686.565pt x 542.025pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 3>
@@ -3593,7 +3635,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 374.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1219, page=4, 686.565pt x 542.025pt>
+ <Job1.PDF, id=1223, page=4, 686.565pt x 542.025pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 4>
@@ -3626,7 +3668,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 375.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1233, page=5, 1611.01875pt x 1135.24126pt>
+ <Job1.PDF, id=1237, page=5, 1611.01875pt x 1135.24126pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 5>
@@ -3659,7 +3701,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 376.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1248, page=7, 1119.18124pt x 801.99625pt>
+ <Job1.PDF, id=1252, page=7, 1119.18124pt x 801.99625pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 7>
@@ -3683,7 +3725,7 @@ File: Job1.PDF Graphic file (type pdf)
 Package pdftex.def Info: Job1.PDF, page7 used on input line 376.
 (pdftex.def)             Requested size: 783.42154pt x 561.39354pt.
  [82 <./Job1.PDF>]
-<pcb2.PDF, id=1260, 865.2325pt x 912.40875pt>
+<pcb2.PDF, id=1264, 865.2325pt x 912.40875pt>
 File: pcb2.PDF Graphic file (type pdf)
  <use pcb2.PDF>
 Package pdftex.def Info: pcb2.PDF used on input line 378.
@@ -3693,7 +3735,7 @@ File: pcb2.PDF Graphic file (type pdf)
 Package pdftex.def Info: pcb2.PDF used on input line 378.
 (pdftex.def)             Requested size: 865.2304pt x 912.40652pt.
 
-<pcb2.PDF, id=1263, page=1, 865.2325pt x 912.40875pt>
+<pcb2.PDF, id=1267, page=1, 865.2325pt x 912.40875pt>
 File: pcb2.PDF Graphic file (type pdf)
  <use pcb2.PDF, page 1>
 Package pdftex.def Info: pcb2.PDF, page1 used on input line 378.
@@ -3726,7 +3768,7 @@ File: pcb2.PDF Graphic file (type pdf)
 Package pdftex.def Info: pcb2.PDF used on input line 379.
 (pdftex.def)             Requested size: 865.2304pt x 912.40652pt.
 
-<pcb2.PDF, id=1280, page=2, 857.2025pt x 912.40875pt>
+<pcb2.PDF, id=1284, page=2, 857.2025pt x 912.40875pt>
 File: pcb2.PDF Graphic file (type pdf)
  <use pcb2.PDF, page 2>
 Package pdftex.def Info: pcb2.PDF, page2 used on input line 379.
@@ -3750,7 +3792,7 @@ File: pcb2.PDF Graphic file (type pdf)
 Package pdftex.def Info: pcb2.PDF, page2 used on input line 379.
 (pdftex.def)             Requested size: 600.03766pt x 638.68178pt.
  [84 <./pcb2.PDF>]
-<pcb1.PDF, id=1292, 857.2025pt x 912.40875pt>
+<pcb1.PDF, id=1296, 857.2025pt x 912.40875pt>
 File: pcb1.PDF Graphic file (type pdf)
  <use pcb1.PDF>
 Package pdftex.def Info: pcb1.PDF used on input line 380.
@@ -3760,7 +3802,7 @@ File: pcb1.PDF Graphic file (type pdf)
 Package pdftex.def Info: pcb1.PDF used on input line 380.
 (pdftex.def)             Requested size: 857.20041pt x 912.40652pt.
 
-<pcb1.PDF, id=1295, page=1, 857.2025pt x 912.40875pt>
+<pcb1.PDF, id=1299, page=1, 857.2025pt x 912.40875pt>
 File: pcb1.PDF Graphic file (type pdf)
  <use pcb1.PDF, page 1>
 Package pdftex.def Info: pcb1.PDF, page1 used on input line 380.
@@ -3791,17 +3833,8 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
 (./misc/abstract.aux) (./misc/abstract_de.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
-
-
-Package rerunfilecheck Warning: File `DiplomarbeitLaTex.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `DiplomarbeitLaTex.out':
-(rerunfilecheck)             Before: 84A87F01674AD33F93DDAABD93C80B37;2598
-(rerunfilecheck)             After:  7C93DC137A836966344F1B0D4E1782B1;2598.
-
-LaTeX Warning: There were undefined references.
+Package rerunfilecheck Info: File `DiplomarbeitLaTex.out' has not changed.
+(rerunfilecheck)             Checksum: 6C03BE4C39C725DC974B5E9218C1F0F6;2806.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3809,10 +3842,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 24087 strings out of 494901
- 433659 string characters out of 6178617
- 601989 words of memory out of 5000000
- 26677 multiletter control sequences out of 15000+600000
+ 24084 strings out of 494901
+ 433570 string characters out of 6178617
+ 601877 words of memory out of 5000000
+ 26673 multiletter control sequences out of 15000+600000
  14883 words of font info for 55 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
  43i,21n,66p,10388b,1090s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3837,10 +3870,10 @@ c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
 9.pfb>
-Output written on DiplomarbeitLaTex.pdf (101 pages, 31125931 bytes).
+Output written on DiplomarbeitLaTex.pdf (101 pages, 31104358 bytes).
 PDF statistics:
- 1453 PDF objects out of 1728 (max. 8388607)
- 1176 compressed objects within 12 object streams
- 313 named destinations out of 1000 (max. 500000)
- 787 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1457 PDF objects out of 1728 (max. 8388607)
+ 1186 compressed objects within 12 object streams
+ 315 named destinations out of 1000 (max. 500000)
+ 806 words of extra memory for PDF output out of 10000 (max. 10000000)
 

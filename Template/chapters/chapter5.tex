@@ -1,4 +1,4 @@
-\chapter{PCB realization\label{cha:chapter5}}
+\chapter{PCB Realization\label{cha:chapter5}}
 
 The PCB of PDU was designed and realized. All PCB work from schematics to net list wiring board layout design and finally post processing, was done via Computer Assisted Design Altium Designer. 
 
@@ -26,10 +26,10 @@ The total thickness of the PCB is 1.7 mm. The PCB of the PDU has eight copper la
 
 The required PDU dimensions for the length and width are 90.16mm x 95.90mm. These dimensions are standardized by German Orbital Systems.
 
-\section{Layout design}
+\section{Layout Design}
 
 The layout design was started with the power trace width calculation.
-According to the power requirements, maximum supplied current of the on the PDU for the Descartes mission is 1.5A which has to be supplied to Hispico S-band transceiver. The minimal width of the power lines on the PDU is not less than 0.8 mm.
+According to the power requirements, maximum supplied current of the on the PDU for the Descartes Mission is 1.5A which has to be supplied to Hispico S-band transceiver. The minimal width of the power lines on the PDU is not less than 0.8 mm.
 
 The maximum current can be calculated by equation \ref{eq: amp}
 
@@ -60,7 +60,7 @@ Power Distribution Unit PCB has eight copper layers. Top and bottom layers used 
 Figure \ref{fig: res} shows only top, middle power layers and top silk overlay of the PCB.
 
   
-The main feature of the Power Distribution Board layout design is a flexibility of a choice of a connector, power line and required voltage. PDU has an ability to set up the connector with the different switch power outputs. PDU as it was explained in the chapter \ref{sec:tech77} used two types of connectors 9-pin connector and 8-pin connector. Each of those two types has a two input power pins for a power transmission.  Some connectors in the Descartes mission required 2 inputs from two different switches such as connectors: K5, K6, K7 which have to transfer power to the DeCor payload. The connector designations are given in Appendix. The zero ohm resistors allows to select the power channels that will supply power to the payload connector, and then to the payload. Each payload connectors can be adjusted to receive power from one of the four load switches. Figure \ref{fig: res} shows example of the connection layout design between zero ohm resistors and the payload connector. Zero ohm resistors placed maximum close to the payload connector in order to make more space on the PCB. All zero ohm resistors that used for a power transfer are 0805 inch due to the high power.
+The main feature of the Power Distribution Board layout design is a flexibility of a choice of a connector, power line and required voltage. PDU has an ability to set up the connector with the different switch power outputs. PDU as it was explained in the chapter \ref{sec:tech77} used two types of connectors 9-pin connector and 8-pin connector. Each of those two types has a two input power pins for a power transmission.  Some connectors in the Descartes Mission required 2 inputs from two different switches such as connectors: K5, K6, K7 which have to transfer power to the DeCor payload. The connector designations are given in Appendix. The zero ohm resistors allows to select the power channels that will supply power to the payload connector, and then to the payload. Each payload connectors can be adjusted to receive power from one of the four load switches. Figure \ref{fig: res} shows example of the connection layout design between zero ohm resistors and the payload connector. Zero ohm resistors placed maximum close to the payload connector in order to make more space on the PCB. All zero ohm resistors that used for a power transfer are 0805 inch due to the high power.
 
 The load switches are located on the top and bottom side of the PCB. Each switch must supply power to a specific connector in order to reduce the length of the power path between the switch and  corresponding connector, the switches were located as close to their respective connectors as possible to reduce path loss and resistance, which directly affects the voltage drop. 
 

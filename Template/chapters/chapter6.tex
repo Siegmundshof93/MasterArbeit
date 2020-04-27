@@ -18,7 +18,7 @@ $\bullet$ Electrical Load\\
 
 
 
-\section{Resistance check}
+\section{Resistance Check}
 
 
 Resistance check is the first test for the PCB. This test needed to detect the shorts on the PCB before applying the power.
@@ -59,7 +59,7 @@ On the figure \ref{fig: pdu_test_front}  and \ref{fig: pdu_test_front} illustrat
 STEPS:\\
 \textbf{1.}  First of all, PDU has to be connected to the power source (PSU) which is adjusted to needed voltage.\\ \\
 \textbf{2.} After power was supplied to the PDU, input voltage has to be checked. Figure \ref{fig: pdu_test_front} and Figure \ref{fig: pdu_test_front} illustrate the zero ohm resistors which connect the power line into the load switch. Voltage measure of the resistor can be done via multimeter. \\ \\
-\textbf{3.} Shift register is initially turned on by default. To check shift register functionality it is necessary to provide an I$^2$C signal with a bit array to a shift register, which might be possible by using microcontroller (in my cause STM32 L073Rz was used). Section \ref{shiftty} describes the work principles of the shift register in detail. In addition, test code for the sift register is given in the appendix. \\ \\
+\textbf{3.} Shift register is initially turned on by default. To check shift register functionality it is necessary to provide an I$^2$C signal with a bit array to a shift register, which might be possible by using microcontroller (in my case STM32 L073Rz was used). Section \ref{shiftty} describes the work principles of the shift register in detail. In addition, test code for the sift register is given in the appendix. \\ \\
 \textbf{4.} Check every output power line by providing enable signal according test file. This step can be done in two ways: providing a 3.3v from the PSU to enable connector or providing
 enable signals to the PDU by using STM32 L073Rz, providing an enable signal using push button interrupt). As a result, switch has to transfer the power of the channel.\\ \\
 \textbf{5.} Next step is to use the electrical load to simulate the subsystem an the payload load for the required channels.\\ \\
@@ -141,7 +141,7 @@ Figure \ref{fig: oscilloscope} illustrates the voltage drop on the HISP line due
 	Upper mentioned code allows to enable the port P0 which sends the EN signal to the switch of VCC4 channel.\\ \\
 	
 	
-	\section{Power monitoring}
+	\section{Power Monitoring}
 	
 	To test the power monitoring of the PDU, the combination of ADC and Current sensors has to be tested. 
 	

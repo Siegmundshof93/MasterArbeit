@@ -14,7 +14,7 @@ The Electrical Power Subsystem is a vital part of a CubeSat-Bus. It is responsib
 			\label{fig: EPS}
 	\end{figure}
 
-\subsection{Power generation \label{sec:tech}}
+\subsection{Power Generation \label{sec:tech}}
 
 
 
@@ -84,7 +84,7 @@ where:\\
 According to a figure \ref{fig: EPS11} a maximum power point shifts as a solar array getting hotter or colder. To keep power at the maximum point used Maximum Power Point Tracker (MPPT). The purpose of MPPT is to keep voltage on a particular level while solar panels are affected by a temperature or the orientation of the solar panels.\\
 \cite{20} MPPT might be separated into two parts: power control, logic control. Power control is usually a step-up step-down DC-DC  converter which responsible for a voltage adjustment according to the input from the logic control. Logic control is responsible for a solar array parameters measurements and maximum power point adjustment according to the software algorithm.\\  
 
-During the circuit design of the solar panels, it is important to consider the redundancy and a cause in which one of the cells will be damaged. For that reason diodes are used. The diodes ensure the power can bypass a damage solar cell. On the fig 2.5 shown that the diodes D1 and D2 are placed in th parallel with the solar cells. Diode D3 which also observed on the figure 2.3 is used to prevent the reverse current. Reverse current has a negative effect on the solar panel efficiency. When reverse current occurs, one effect is that current it's drawn from the batteries, therefore, discharging them. Secondly, reversed current adds additional current to the affected solar cell which shifts the maximum power point.\\
+During the circuit design of the solar panels, it is important to consider the redundancy and a case in which one of the cells will be damaged. For that reason diodes are used. The diodes ensure the power can bypass a damage solar cell. On the fig 2.5 shown that the diodes D1 and D2 are placed in th parallel with the solar cells. Diode D3 which also observed on the figure 2.3 is used to prevent the reverse current. Reverse current has a negative effect on the solar panel efficiency. When reverse current occurs, one effect is that current it's drawn from the batteries, therefore, discharging them. Secondly, reversed current adds additional current to the affected solar cell which shifts the maximum power point.\\
 
 
 \begin{figure}[h]
@@ -97,11 +97,11 @@ During the circuit design of the solar panels, it is important to consider the r
 \newpage
 
 
-\subsection{Power storage \label{sec:tech1}}
+\subsection{Power Storage \label{sec:tech1}}
 
 
 
-Yost\cite{1} During the the mission duration, solar energy is not always available due to eclipse. For this cause primary and secondary batteries used to store power. All batteries are classified according to their chemical characteristics. For a short mission duration (up to one week) usually used primary type of batteries due to it's lack of recharge opportunity. the common chemical type of a primary battery is a silver-zinc, which is easier to handle, Yost\cite{1} "however there is also a variety of lithium-based primary batteries that have a higher energy density including: lithium sulphur dioxide (LiSO2), lithium carbon monofluoride (LiCFx) and lithium thionyl chloride (LiSOCl2) 20."\\
+Yost\cite{1} During the the mission duration, solar energy is not always available due to eclipse. For this case primary and secondary batteries used to store power. All batteries are classified according to their chemical characteristics. For a short mission duration (up to one week) usually used primary type of batteries due to it's lack of recharge opportunity. the common chemical type of a primary battery is a silver-zinc, which is easier to handle, Yost\cite{1} "however there is also a variety of lithium-based primary batteries that have a higher energy density including: lithium sulphur dioxide (LiSO2), lithium carbon monofluoride (LiCFx) and lithium thionyl chloride (LiSOCl2) 20."\\
 \\
 Secondary-type batteries are rechargeable and provide an energy on demand. Secondary-type batteries are connected to a primary energy source of the satellite (usually solar panels) via battery charger. This type include: nickel-cadmium (NiCd), nickel-hydrogen (NiH2), lithium-ion polymer(LiPo), lithium-ion(Li-ion).
 \subsubsection{Nickel Cadmium \label{sec:tech}}
@@ -139,7 +139,7 @@ Secondary-type batteries are rechargeable and provide an energy on demand. Secon
 
 \subsubsection{Nickel Hydrogen \label{sec:tech}}
 Buchmann\cite{7} Nowadays Nickel Hydrogen batteries are mostly used in the satellite applications where long time operation needed. The development of the NiH2 battery started in early 1970 year. In that time metal hybrid alloy was unstable, what slowed down development of the NiH2. In 1980 new alloy was established and stable enough to use it in the cell. 
-\cite{10}"The replacement of cadmium with hydrogen electrodes has double the energy of Ni-Cd, but the specific energy of Ni- H2 is similar to Ni-Cd because of the cylindrical configuration of the pressure. The first Ni- H2 battery was used in a GEO (geostationary mission) Intelsat V in 1983.  Almost all GEO spacecrafts now use Ni-H2 batteries. The first NASA LEO spacecraft to use Ni-H2 was in 1990."
+\cite{10}"The replacement of cadmium with hydrogen electrodes has double the energy of Ni-Cd, but the specific energy of Ni- H2 is similar to Ni-Cd be case of the cylindrical configuration of the pressure. The first Ni- H2 battery was used in a GEO (geostationary mission) Intelsat V in 1983.  Almost all GEO spacecrafts now use Ni-H2 batteries. The first NASA LEO spacecraft to use Ni-H2 was in 1990."
 
 
 Wenige\cite{8} Despite the fact that memory effect on NiH2 is undoubtedly less than on a NiCd batteries, it still exist and needs a special treatment in order to accommodate the normal level of the battery. Wenige\cite{8} "Typical calendar life of more than 20 years can be reached by NiH2, i.e. five years ground storage plus 15  years  orbital  life  in  GEO." 
@@ -262,7 +262,7 @@ $\bullet$ constant voltage charge\\
 	\caption{ Charge stages \cite{14}}
 	\label{fig: EPS}
 \end{figure}
- Charging rate of a battery measures in C. In cause of 1000mAh battery cell 1C charging rate will be 1000mA and 500mA for 0.5C. Usually, recommended charging given in the datasheet.\\
+ Charging rate of a battery measures in C. In case of 1000mAh battery cell 1C charging rate will be 1000mA and 500mA for 0.5C. Usually, recommended charging given in the datasheet.\\
  Charging process starts with a 100\%  constant current (according to a charging rate) process. During the time while battery voltage reaching the upper voltage threshold, its pushing a constant current into a battery. Once voltage reaches threshold point, charging process changes from the constant current mode into a constant voltage mode. In a constant voltage mode, voltage keeps its maximum level while current starts to slightly drop until it gets down to a threshold level, which usually written in a datasheet (around 3\%). After current drops below the threshold battery is fully charged. \\ \\
  In most cases, IC chargers are used to provide constant current and constant voltage for lithium-ion / Po batteries. \cite{14} One of those IC chargers is a MAX745. 
 This IC is able to set a charge up to 4 cells in series, as well as set a current and charging voltage. This IC use PWM signal to control a charge voltage which does not allow IC to get too hot.\\ This IC is an example of a charger microchip which has all necessary  tools to charge a Li-ion/Po batteries. 
@@ -283,8 +283,8 @@ The figure \ref{fig: EPS} shows an example of a standard MAX745 application circ
 \subsubsection{Protection}
 
 Despite the fact that, Lithium-ion/Po batteries have a high density, they also require a careful handling. For that reason important to use safety protection circuits which prevent Li-ion/Po batteries from: overcharge, over-discharge and quick discharge.\\
-\cite{16} Overcharge of a Li-ion/Po batteries cause an immense battery stress which creates a safety hazard with a possibility of fire. Li-ion batteries have a less tolerance to an overcharge and require a protection circuit.\\
-The over-discharge of a Lithium batteries is also harmful. The consequence of over-discharge is a reduced battery life, due to the dissolution of copper from the anode into the electrolyte, which can cause a short circuit during a battery charge.\\
+\cite{16} Overcharge of a Li-ion/Po batteries case an immense battery stress which creates a safety hazard with a possibility of fire. Li-ion batteries have a less tolerance to an overcharge and require a protection circuit.\\
+The over-discharge of a Lithium batteries is also harmful. The consequence of over-discharge is a reduced battery life, due to the dissolution of copper from the anode into the electrolyte, which can case a short circuit during a battery charge.\\
 Protection ICs used to comply all upper mention conditions. A main principal of a protection IC is to switch on and off a power line usually by using external MOSFETs to keep a batteries safe and not exceed a voltage threshold. The simple example of a protection IC is a BQ29700D which is a one cell protection device. 
 
 \begin{figure}[h]
@@ -294,15 +294,15 @@ Protection ICs used to comply all upper mention conditions. A main principal of 
 	\label{fig: EPS1}
 \end{figure}
 
-Figure \ref{fig: EPS1} illustrate a typical schematics of a protection circuit where BQ29700 connected with two MOSFETs defined as CHG and DSG, and a battery cell. In cause of overcharge detection, COUT pin pulls a CHG MOSFET which disconnect ground line and stops charging process. In cause ocer-discharge detection, DOUT pin pulls a DSG MOSFET which dissconect ground line and stops discharging process of a battery.
+Figure \ref{fig: EPS1} illustrate a typical schematics of a protection circuit where BQ29700 connected with two MOSFETs defined as CHG and DSG, and a battery cell. In case of overcharge detection, COUT pin pulls a CHG MOSFET which disconnect ground line and stops charging process. In case ocer-discharge detection, DOUT pin pulls a DSG MOSFET which dissconect ground line and stops discharging process of a battery.
 
 \subsection{Power processing \label{sec:tech}}
 
 Power processing is an important part of an EPS which is responsible for transforming voltages to be suitable for satellite subsystems and payloads. Nowadays there are many converters available; each type has it's own advantages and disadvantages. Hemmo\cite{18} A converter has to be chosen according to subsystem requirements such as voltage range, maximum power output, output voltage tolerance, efficiency and footprint. The power efficiency of a converter is a very important criterion of stored energy due to the fact that battery energy is limited. High efficiency of  power conversion reduces the power dissipation of  components, thereby decreasing the power consumption if batteries. Furthermore, the need for any heat sinks is reduced or altogether eliminated. 
 
-\subsubsection{Linear voltage converters \label{sec:tech}}
+\subsubsection{Linear Voltage Converters \label{sec:tech}}
 
-Hemmo\cite{18} One of the oldest methods to convert a power is a linear voltage conversion. This method based on power dissipation into a resistor, which cause a voltage drop. Power dissipation of a linear voltage converter can be calculated by using formula:\\ \\
+Hemmo\cite{18} One of the oldest methods to convert a power is a linear voltage conversion. This method based on power dissipation into a resistor, which case a voltage drop. Power dissipation of a linear voltage converter can be calculated by using formula:\\ \\
 
 \begin{equation}\label{eq:2}
 P_{diss}=U_{drop} \times I
@@ -312,13 +312,13 @@ P_{diss}=U_{drop} \times I
 where:\\
 $U_{drop}$ - resistor voltage drop\\
 $I$ - current through a resisor\\ \\
- Tietze \cite{18} Linear voltage conversion is a simple method, which does not require many additional passive components, relatively cheap and easy to use. Nonetheless due to a power dissipation linear voltage converters are getting hot, which make them ineffective while current through a resistor is large or difference between $V_{in}$ and $V_{out}$ is high according to \eqref{eq:2}. For that reason Linear voltage converters used only in cause of low current and low voltage drop for example to convert power into a micro controller or to provide a voltage reference.\\
+ Tietze \cite{18} Linear voltage conversion is a simple method, which does not require many additional passive components, relatively cheap and easy to use. Nonetheless due to a power dissipation linear voltage converters are getting hot, which make them ineffective while current through a resistor is large or difference between $V_{in}$ and $V_{out}$ is high according to \eqref{eq:2}. For that reason Linear voltage converters used only in case of low current and low voltage drop for example to convert power into a micro controller or to provide a voltage reference.\\
  \\
  
  
-\subsubsection{Inductive DC-DC converters \label{sec:tech}}
+\subsubsection{Inductive DC-DC Converters \label{sec:tech}}
 
-Tietze\cite{18} Each inductive DC-DC converter consist of three passive components: inductor $L$, power switch $S$ and capacitor $C$. The use of these components in various topologies, allow to create various types of DC-DC converters such as a step-down converter where output voltage $0 \leq U_{a} \leq U_{e} $ , step-up converter where output voltage $U_{a} \geq U_{e} $  and   step-down step-up converter which is able to decrease and increase output voltage, for this type of a converter $ U_{a} > 0$. Use of inductive DC-DC converters offer better efficiency due to switching power supply, which gives an advantage over the linear voltage regulator. Hemmo\cite{17} High efficiency is extremely required parameter for a space application due to the limited power generation. In addition, inductive DC-DC converters are able to produce  voltage output $U_{a}$ which is higher then voltage input $U_{e}$. Inductive DC-DC converters used in most causes in the aerospace industry due to high efficiency and capability to manage high voltages and high current.
+Tietze\cite{18} Each inductive DC-DC converter consist of three passive components: inductor $L$, power switch $S$ and capacitor $C$. The use of these components in various topologies, allow to create various types of DC-DC converters such as a step-down converter where output voltage $0 \leq U_{a} \leq U_{e} $ , step-up converter where output voltage $U_{a} \geq U_{e} $  and   step-down step-up converter which is able to decrease and increase output voltage, for this type of a converter $ U_{a} > 0$. Use of inductive DC-DC converters offer better efficiency due to switching power supply, which gives an advantage over the linear voltage regulator. Hemmo\cite{17} High efficiency is extremely required parameter for a space application due to the limited power generation. In addition, inductive DC-DC converters are able to produce  voltage output $U_{a}$ which is higher then voltage input $U_{e}$. Inductive DC-DC converters used in most cases in the aerospace industry due to high efficiency and capability to manage high voltages and high current.
 
 \begin{figure}[h]
 	\centering
@@ -351,7 +351,7 @@ $\bullet$  EN\\
 Regarding a power consumption, microcontrollers of a satellite consume very few energy around 1 µA while it's "ON" and around hundred while it's "OFF".\\
 To prevent the microcontroller of getting stuck, external watchdog is used. Watchdog receives the signal from the microcontroller which restart the timer. If case that watchdog did not receive a signal, he will send a signal to a load switch, which will restart the microcontroller by turning the supply power "OFF" and "ON".
 
-\subsection{Power distribution \label{sec:tech}}
+\subsection{Power Distribution \label{sec:tech}}
 
 Power distribution is a vital part of the EPS, needed to \cite{21} "supply electrical power to the subsystems and payloads of the satellite" as well as prevent an overload of the main power bus. Power distribution usually consist of load switches which distribute power with help of microcontroller by sending the enable signal to an appropriate pin of the switch. In addition, to monitor the payload or subsystem power consumptions, current sensors are used. This combination allows to fully control the process of power distribution.
 
@@ -366,7 +366,7 @@ Power distribution is a vital part of the EPS, needed to \cite{21} "supply elect
 \newpage
 
 \subsubsection{Switches}
-Power distribution include load switches which responsible for a power commutation of a satellite. Power switches are integrated chips which designed for specific cases and scenarios. One of the important parameters is a power load. Switches have to be chosen according to a load of a power lines considering voltage and maximum current. Otherwise, if the input power exceeds the power that the switch can operate with, this might lead to destruction of the switch and the entire power line.  Another aspect which has to be considered is the inrush current. Inrush current is a maximal instantaneous current draw by an electrical device, appeared for few microseconds when first turn on. Inrush current caused a voltage drop for the supplied subsystems, which might harm device or cause incorrect device performance.
+Power distribution include load switches which responsible for a power commutation of a satellite. Power switches are integrated chips which designed for specific cases and scenarios. One of the important parameters is a power load. Switches have to be chosen according to a load of a power lines considering voltage and maximum current. Otherwise, if the input power exceeds the power that the switch can operate with, this might lead to destruction of the switch and the entire power line.  Another aspect which has to be considered is the inrush current. Inrush current is a maximal instantaneous current draw by an electrical device, appeared for few microseconds when first turn on. Inrush current cased a voltage drop for the supplied subsystems, which might harm device or case incorrect device performance.
 
  Capacitors might be used to prevent inrush current. The value of capacitor has to be calculated by equation \ref{eq:3}:
  
@@ -388,9 +388,9 @@ Power monitoring is the necessary part of the EPS, which allows to observe the c
 voltage drop across a shunt resistor.  The voltage across the shunt  is  usually  amplified  using  a  differential amplifier" and produce the analog output. Nowadays Current sensor ICs used to monitor a current on the power lines. Modern current sensors have ability to output measured information as I$^{2}$C or SPI data by converting an analog output signal to the digital via integrated analog to digital converter. 
 
 \newpage   
-\chapter{6 Unit satellite design}
+\chapter{6 Unit Satellite Design \label{chapter3}}
 This chapter will provide a short essential knowledge about Descartes mission with the main purposes of the mission, satellite characteristics and the satellite  abilities. Then topic will go deeper into the EPS architecture design of the 6U satellite. \\
-\section{introduction into the Descartes mission}
+\section{Introduction into the Descartes Mission}
 
 German Orbital System (GOS) plays a major role in the satellite development since 2014, providing reliable engineering support, uncompromising quality and affordable prices. GOS has accomplished nine successful 3U satellites launches into space since their realize as a company. Although 3U satellites are relatively cheap to build and their characteristics enough have a simple payload, GOS is keeping up with the time. At the moment GOS is developing the 6U nano-satellite (Descartes), which can be used for a wide range of tasks such as:\\ \\
 $\bullet$ Earth exploration\\ 
@@ -413,7 +413,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   In addition to having a four different payloads, Descartes is using 3-axis attitude control which consist of reaction wheels, magnetorquers and sets of magnetic and solar sensors. To transmit the telemetry and commands Descartes use 2 UHF modules which were designed ba GOS. In addition to 2 UHF modules, 6U satellite operate with a 2.4 GHz HISPICO S-band transceiver.\\ \\
  
  
-  \section{EPS architecture of the 6U satellite}
+  \section{EPS Architecture of the 6U Satellite}
   According to an introduction into the mission it is noticeable that design of the 6U satellite highly improved in comparison with the previous 3U satellites which were designed by GOS. The biggest divergence is a size and availability of the satellite to work with more payloads as well as to perform 3-axis stabilization. Due to that fact, the EPS of the satellite has also undergone changes.
   
   Due to the energy requirements, 6U satellite has to provide a 160 Wh of energy and  distribute it to 23 channels. To accomplish this requirements, considering the available space of the 6U satellite, EPS was devided into 3 main parts which connectrd between each other via PC104 connector:\\ \\
