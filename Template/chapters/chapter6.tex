@@ -10,7 +10,6 @@ $\bullet$ Oscilloscope\\
 $\bullet$ Multimeter\\
 $\bullet$ CubeMX\\
 $\bullet$ Ac6 (Firmware to program STM32)\\
-$\bullet$ Minicom\\
 $\bullet$ Logic analyzer\\
 $\bullet$ Test results excel sheet\\
 $\bullet$ Bread board\\
@@ -18,17 +17,35 @@ $\bullet$ Electrical Load\\
 
 
 
-\section{Resistance Check}
+\section{Resistance and Connectivity Check }
 
 
 Resistance check is the first test for the PCB. This test needed to detect the shorts on the PCB before applying the power.
 Every connectors pin of the PCB shall be measured with respect to the GND by using multimeter. As an expected result, multimeter shall show the constant measurement value.
 
-Resistance check was completed flawlessly without any shorts. The test results is not shown in Master Thesis. \\
+Resistance check was completed flawlessly without any shorts. The test results is not shown in Master Thesis. 
+
+Connectivity check needed to verify the top level requirements: TL19, TL20, TL21, TL22 from Chapter \ref{cha:chapter3}, Tab.\ref{Tab:req1} which required to provide a data signals to the payloads.
 
 
+\captionof{table}{Connectivity check of the payload data lines}
+\begin{center}
+	
 
-\section{Switches}Resistance check was completed flawlessly. The test results of the resistance check is shown in Appendix B.\\
+	\begin{tabular}{p{3cm}p{3cm}p{2cm}} \toprule
+		
+	Payload & Type of signal & Result \\ \midrule
+	AURA & CAN & Pass\\
+	AMUR & UART & Pass\\  
+	DeCor & CAN & Pass\\
+	LoRa & CAN & Pass\\
+	\bottomrule
+\end{tabular}\\ 
+
+\end{center}
+\label{Tab:connectivity}
+Tab.\ref{Tab:connectivity} verifies the uppermention requirements.
+\section{Switches}
 This is a big section which includes the switches functionality such as enable/disable power output check, over-current feedback from the fault pins for every load switch  and the shift register control. \\
 \\
 Power switches work on 5 power lines:\\ \\
@@ -39,11 +56,13 @@ $\bullet$ 5V PAYL\\
 $\bullet$ 7.4V\\ \\
 Enable pins of a power switches might be activated manually by providing a 3.3V to an appropriate enable pin or applying a enable signal from a microcontroller.  Six enable signals VCC 4, VCC 5, VCC 6, VCC 7, VCC 18 and VCC 19 have to be triggered by I$^2$C protocol via shift register.
 
-On the figure \ref{fig: pdu_test_front}  and \ref{fig: pdu_test_front} illustrated switches and their pins, which needed to test power switches.
+On the Fig.\ref{fig: pdu_test_front}  and \ref{fig: pdu_test_back} illustrated switches and their pins, which needed to test power switches.
+
+
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5]{pdu_front_test.png}
+	\includegraphics[scale=0.37]{pdu_front_test.png}
 	\caption{Top view of the switch control}
 	\label{fig: pdu_test_front}
 \end{figure} 
@@ -69,7 +88,7 @@ It is also important to know, that $\overline{OC}$ pin will show LOW if switch T
 \textbf{7.} The next test is a maximum current check, the point of this test is to check the maximum current limit of all microchips, that were programmed for a
 specific current limit, maximum current draw has to be simulated by electrical load. When current surpasses the expected
 limit, $\overline{OC}$ pin will become LOW.
-Figure \ref{fig: pdu_test_front} and \ref{fig: pdu_test_front} illustrates the switches and its signals such as Vout (blue), Overcurrent (yellow), Enable (red).
+Fig.\ref{fig: pdu_test_front} and \ref{fig: pdu_test_back} illustrates the switches and its signals such as Vout (blue), Overcurrent (yellow), Enable (red).
 
  \begin{figure}[h]
  	\centering
@@ -78,7 +97,7 @@ Figure \ref{fig: pdu_test_front} and \ref{fig: pdu_test_front} illustrates the s
  	\label{fig: pdu_test_tisch}
  \end{figure}
 
-Figure \ref{fig: pdu_test_tisch} illustrates the switch test equipment used on the PDU. PSU supply 3.3V to the 3.3V BUS channel and 7.4V (the second PSU channel is not calibrated properly, to get 7.4V output it has to be adjusted for 8V). Testbed on the figure \ref{fig: pdu_test_tisch} is used to test DeCor payload of the VCC10 channel. In order to get all 7 steps done, shift register has to be switched off by sending a signal byte via microcontroller STM32. At the same time microcontroller used to provide an enable signal to the relative EN input pin of the PDU to activate the channel. Electical load is programed for 200$\mu$A to simulate the real load of DeCor. Multimeter on the picture connected to the $\overline{OC}$ pin with respect to the GND. With this configuration it is relatively easy to see the over-current condition of the PDU. Finally, the oscilloscope shows the output voltage of the VCC10 power channel.\\ \\
+Figure \ref{fig: pdu_test_tisch} illustrates the switch test equipment used on the PDU. PSU supply 3.3V to the 3.3V BUS channel and 7.4V (the second PSU channel is not calibrated properly, to get 7.4V output it has to be adjusted for 8V). Testbed on the figure \ref{fig: pdu_test_tisch} is used to test DeCor payload of the VCC10 channel. In order to get all 7 steps done, shift register has to be switched off by sending a signal byte via microcontroller STM32. At the same time microcontroller used to provide an enable signal to the relative EN input pin of the PDU to activate the channel. Electical load is programed for 200$\mu$A to simulate the real load of DeCor. Multimeter on the picture connected to the $\overline{OC}$ pin with respect to the GND. With this configuration it is relatively easy to see the over-current condition of the PDU.\\ \\
 
 
  \begin{figure}[h]
@@ -135,9 +154,9 @@ Figure \ref{fig: oscilloscope} illustrates the voltage drop on the HISP line due
 			VCC19 & pass & 5V & pass & 0.32A & 0.01A \\ 
 			\bottomrule
 		\end{tabular}
-		\label{switchtest}
+		\label{switchtest}\\
 	
-	
+	Tab. \ref{switchtest} verifies top level requirements TL1-TL18.
 	\section{Power Monitoring}
 	
 	To test the power monitoring of the PDU, the combination of ADC and Current sensors has to be tested. To accomplish this test, every power channel has to be tested separately by applying electrical load to each channel. \\
@@ -181,7 +200,7 @@ Figure \ref{fig: oscilloscope} illustrates the voltage drop on the HISP line due
 	  uint8_t lsb = RxBuf[2];
 	  uint16_t VAL = ((uint16_t)msb << 8 | lsb) & 0x0FFF;
 	  
-	   int length = sprintf((char*)buffer, "Our value = %u (%X) \r\n",VAL);
+	   int length = sprintf((char*)buffer, "Our value = %X \r\n",VAL);
 	   
 	   HAL_UART_Transmit(&huart2, buffer, length, 1000);
 	   HAL_Delay(1000);
@@ -193,7 +212,8 @@ Figure \ref{fig: oscilloscope} illustrates the voltage drop on the HISP line due
 	 
 	 2nd to 4th line creating a buffers to store the data. According to the MAX1231 datasheet, to start converting process slave select pin (GPIO A5) has to be latched which is done on the 12th line.
 	 Than to transmit the data via SPI master has to send 3 bytes, first should contain the information about the readable port and next two should be zeros, lines 9-11. This data is contained in the TxBuf buffer. To transmit and receive the data "HAL$\_$SPI$\_$TransmitReceive" command is used, line 14. After the transfer and receipt have been completed, RxBuf will contain two data bytes in RxBuf[1] - most significant byte and RxBuf[2] - less significant byte, lines 19, 20. GPIO pin has to latch down the slave select in order to finish the communication with the slave, line 17. After that, two bytes have to be merged into 16-bit variable, line 21. then the final value can be sent via UART to the computer, line 25.\\
-	 After completing the test, for each power line, all 23 lines provided acceptable data.
+	 After completing the test, for each power line, all 23 lines provided acceptable data which verifies the functional requirement FR3. Other requirements that shall be verified by the inspection have been successfully verified.
+	 
 	 
 	 
 		

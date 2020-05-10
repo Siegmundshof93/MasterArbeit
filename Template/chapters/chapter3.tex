@@ -1,39 +1,39 @@
 \chapter{Requirements\label{cha:chapter3}}
 
 \section{Top Level Requirements}
-The PDU shall be able to provide sufficient power to fulfill requirements of subsystems and payloads using common regulated voltages 3.3 V, 5 V and regulated battery voltage 7.4V. Top level requirements are given by GOS specially for the Descartes Mission. There are 22 top level requirements which are shown in table \ref{Tab:req1}.  \\ \\
+The PDU shall be able to provide sufficient power to fulfill requirements of subsystems and payloads using common regulated voltages 3.3 V, 5 V and regulated battery voltage 7.4V. Top level requirements are given by GOS specially for the Descartes Mission. There are 22 top level requirements which are shown in the Tab. \ref{Tab:req1}. 
 
 \captionof{table}{PDU Top Level Requirements}
-\begin{tabular}{p{1cm}p{13cm}} \toprule
-	ID & Description \\ \midrule
+\begin{longtable}{p{1cm}p{11cm}p{2cm}} \toprule
+	ID & Description & Verification \\ \midrule
 	
 
 	
 
-TL1 & PDU shall provide the AURA experiment a 5V line\\
-TL2 & PDU shall provide the AURA experiment up to 3W during operations\\
-TL3 & PDU shall provide the Decor experiment a 7.4V line\\
-TL4 & PDU shall provide the Decor experiment up to 0.2W and 0.8W respectively\\
-TL5 & PDU shall provide the AMUR experiment a 5V line\\
-TL6 & PDU shall provide the AMUR experiment up to 0.2W during operations\\
-TL7 & PDU shall provide the OBC a 3.3V line\\
-TL8 & PDU shall provide the OBC up to 0.42W during operations\\
-TL9 & PDU shall provide the LoRa a 5V line\\
-TL10 & PDU shall provide the LoRa a 1W during operations\\
-TL11 & PDU shall provide the ADCS 5V and 3.3V respectively\\
-TL12 & PDU shall provide the ADCS up to 2.3W and 0.2W respectively\\
-TL13 & PDU shall provide the UHF 7.4V line\\
-TL14 & PDU shall provide the UHF up to 5.2W during operation\\
-TL15 & PDU shall provide the HISP 5V line\\
-TL16 & PDU shall provide the HISP up to 7.5W during opertaion\\
-TL17 & PDU shall provide the ARM a 5V line\\
-TL18 & PDU shall provide the ARM up to 10W during the release\\ 
-TL19 & PDU shall provide CAN line to the AURA experiment\\
-TL20 & PDU shall provide UART line to the AMUR experiment\\
-TL21 & PDU shall proTypes of TPS203x and their curret limitsvide CAN line to the Decor experiment\\
-TL22 & PDU shall provide CAN line to the LoRa\\
+TL1 & PDU shall provide the AURA experiment a 5V line & Test\\
+TL2 & PDU shall provide the AURA experiment up to 3W during operations & Test\\
+TL3 & PDU shall provide the Decor experiment a 7.4V line & Test\\
+TL4 & PDU shall provide the Decor experiment up to 0.2W and 0.8W respectively & Test\\
+TL5 & PDU shall provide the AMUR experiment a 5V line & Test\\
+TL6 & PDU shall provide the AMUR experiment up to 0.2W during operations & Test\\
+TL7 & PDU shall provide the OBC a 3.3V line & Test\\
+TL8 & PDU shall provide the OBC up to 0.42W during operations & Test\\
+TL9 & PDU shall provide the LoRa a 5V line & Test\\
+TL10 & PDU shall provide the LoRa a 1W during operations & Test\\
+TL11 & PDU shall provide the ADCS 5V and 3.3V respectively & Test\\
+TL12 & PDU shall provide the ADCS up to 2.3W and 0.2W respectively & Test\\
+TL13 & PDU shall provide the UHF 7.4V line & Test\\
+TL14 & PDU shall provide the UHF up to 5.2W during operation & Test\\
+TL15 & PDU shall provide the HISP 5V line & Test\\
+TL16 & PDU shall provide the HISP up to 7.5W during opertaion & Test\\
+TL17 & PDU shall provide the ARM a 5V line & Test\\
+TL18 & PDU shall provide the ARM up to 10W during the release & Test\\ 
+TL19 & PDU shall provide CAN line to the AURA experiment & Test\\
+TL20 & PDU shall provide UART line to the AMUR experiment & Test\\
+TL21 & PDU shall provide CAN line to the Decor experiment & Test\\
+TL22 & PDU shall provide CAN line to the LoRa & Test\\
 \bottomrule
-\end{tabular}\\ \\ \\ \\
+\end{longtable}
 \label{Tab:req1}
 
 
@@ -41,15 +41,15 @@ TL22 & PDU shall provide CAN line to the LoRa\\
 \section{Functional Requirements}
 Functional requirements of were given by GOS in order to design flexible board which can fulfill requirements for the upcoming missions without redesigning the layout. There are 7 functional requirements which are shown in table \ref{Tab:req2}. 
 \captionof{table}{PDU Functional Requirements}
-\begin{tabular}{p{1cm}p{13cm}} \toprule
-	ID & Description \\ \midrule
-FR1 & PDU shall have eight payload connectors with adjustable power line input\\
-FR2 & PDU shall have 23 adjustable switching power lines\\
-FR3 & PDU shall measure the current and provide digital output of every power line\\
-FR4 & PDU shall have the isolation IC for every payload I$^2$C or/and SIP node\\
-FR5 &  all 23 switches shall be able to adjust current limit\\
-FR6 & all 23 switches shall be able to determine an over current and provide a signal to the microcontroller\\
-FR7 & Enable pins of the UHF load switches shall be inverted\\
+\begin{tabular}{p{1cm}p{11cm}p{2cm}} \toprule
+	ID & Description & Verification\\ \midrule
+FR1 & PDU shall have eight payload connectors with adjustable power line input & Inspection\\
+FR2 & PDU shall have 23 adjustable switching power lines & Inspection\\
+FR3 & PDU shall measure the current and provide digital output of every power line & Test\\
+FR4 & PDU shall have the isolation IC for every payload I$^2$C or/and SIP node & Inspection\\
+FR5 &  all 23 switches shall be able to adjust current limit & Inspection\\
+FR6 & all 23 switches shall be able to determine an over current and provide a signal to the microcontroller & Inspection\\
+FR7 & Enable pins of the UHF load switches shall be inverted & Inspection\\
 \bottomrule
 \end{tabular}\\ \\ \\ \\
 \label{Tab:req2}
@@ -58,13 +58,13 @@ FR7 & Enable pins of the UHF load switches shall be inverted\\
 Design requirements are given by developing engineers who work on the 6U satellite development.There are 3 design requirements which are shown in table \ref{Tab:req3}. 
 
 \captionof{table}{PDU design requirements}
-\begin{tabular}{p{1cm}p{13cm}} \toprule
-	ID & Description \\ \midrule
-DR1 & The size of PDU shall not exceed 90.16x95.9mm\\
-DR2 & PDU shall withstand the temperature between -5 to 25 for a duration of flight\\  
-DR3 & The molex connectors shall be right angle\\
+\begin{tabular}{p{1cm}p{11cm}p{2cm}} \toprule
+	ID & Description & Verification \\ \midrule
+DR1 & The size of PDU shall not exceed 90.16x95.9mm & Inspection\\
+  
+DR2 & The molex connectors shall be right angle & Inspection\\
 \bottomrule
-\end{tabular}\\ \\ \\ \\
+\end{tabular}\\ 
 \label{Tab:req3}
 
 
