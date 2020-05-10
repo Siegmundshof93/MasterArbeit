@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.16)  27 APR 2020 20:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2020.5.1)  10 MAY 2020 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **DiplomarbeitLaTex.tex
 (./DiplomarbeitLaTex.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 8 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 26 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2015/10/03 v3.19a KOMA-Script document class (book)
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -1365,9 +1365,6 @@ LaTeX Warning: Label `fig: EPS' multiply defined.
 LaTeX Warning: Label `fig: EPS' multiply defined.
 
 
-LaTeX Warning: Label `fig: EPS' multiply defined.
-
-
 LaTeX Warning: Label `sec:tech' multiply defined.
 
 
@@ -1395,9 +1392,6 @@ LaTeX Warning: Label `fig: EPS' multiply defined.
 LaTeX Warning: Label `fig: EPS' multiply defined.
 
 
-LaTeX Warning: Label `fig: EPS' multiply defined.
-
-
 LaTeX Warning: Label `sec:tech' multiply defined.
 
 
@@ -1410,34 +1404,16 @@ LaTeX Warning: Label `sec:tech' multiply defined.
 LaTeX Warning: Label `sec:tech' multiply defined.
 
 
-LaTeX Warning: Label `fig: EPS4' multiply defined.
-
-
 LaTeX Warning: Label `sec:tech' multiply defined.
-
-
-LaTeX Warning: Label `fig: EPS' multiply defined.
-
-
-LaTeX Warning: Label `fig: EPS' multiply defined.
 
 
 LaTeX Warning: Label `fig: ltc4015' multiply defined.
-
-
-LaTeX Warning: Label `fig: ltc4015' multiply defined.
-
-
-LaTeX Warning: Label `fig: PDU' multiply defined.
 
 
 LaTeX Warning: Label `fig: adc' multiply defined.
 
 
 LaTeX Warning: Label `fig: adum' multiply defined.
-
-
-LaTeX Warning: Label `fig: pdu_test_front' multiply defined.
 
 )
 \openout1 = `DiplomarbeitLaTex.aux'.
@@ -1671,13 +1647,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
-)
-Overfull \hbox (14.39348pt too wide) in paragraph at lines 17--96
-\OT1/cmr/m/n/10.95 der En-twurf-s-seite wer-den die elek-trische Schal-tung und
- die Leit-er-platte der Stromverteilung-
- []
-
-[9
+) [9
 
 ] [10
 
@@ -1686,14 +1656,14 @@ Overfull \hbox (14.39348pt too wide) in paragraph at lines 17--96
 \tf@toc=\write4
 \openout4 = `DiplomarbeitLaTex.toc'.
 
- [12] (./DiplomarbeitLaTex.lof [13
+ [12] (./DiplomarbeitLaTex.lof
+[13
 
 ])
 \tf@lof=\write5
 \openout5 = `DiplomarbeitLaTex.lof'.
 
-
-[14] (./DiplomarbeitLaTex.lot)
+ [14] (./DiplomarbeitLaTex.lot)
 \tf@lot=\write6
 \openout6 = `DiplomarbeitLaTex.lot'.
 
@@ -1729,10 +1699,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-
-Underfull \vbox (badness 2735) has occurred while \output is active []
-
- [1
+[1
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
@@ -1813,14 +1780,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--1
 
 ]
 chapter 2.
-<./img/EPS_basic.png, id=515, 832.10875pt x 526.96875pt>
+<./img/EPS_basic.png, id=521, 832.10875pt x 526.96875pt>
 File: ./img/EPS_basic.png Graphic file (type png)
 
 <use ./img/EPS_basic.png>
 Package pdftex.def Info: ./img/EPS_basic.png used on input line 12.
 (pdftex.def)             Requested size: 332.8376pt x 210.78375pt.
  [5 <./img/EPS_basic.png>]
-<./img/azur.png, id=526, 349.305pt x 261.97874pt>
+<./img/azur.png, id=532, 349.305pt x 261.97874pt>
 File: ./img/azur.png Graphic file (type png)
  <use ./img/azur.png>
 Package pdftex.def Info: ./img/azur.png used on input line 28.
@@ -1830,7 +1797,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[6 <./img/azur.png>] <./img/Cellen.png, id=535, 663.47874pt x 654.445pt>
+[6 <./img/azur.png>] <./img/Cellen.png, id=541, 663.47874pt x 654.445pt>
 File: ./img/Cellen.png Graphic file (type png)
 
 <use ./img/Cellen.png>
@@ -1896,7 +1863,7 @@ Overfull \vbox (12.50496pt too high) has occurred while \output is active []
 
 
 [7 <./img/Cellen.png>]
-<./img/temperatureDependancy.png, id=550, 564.1075pt x 456.70625pt>
+<./img/temperatureDependancy.png, id=555, 564.1075pt x 456.70625pt>
 File: ./img/temperatureDependancy.png Graphic file (type png)
 
 <use ./img/temperatureDependancy.png>
@@ -1913,7 +1880,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
-<./img/DiodenSS.png, id=555, 743.77875pt x 351.3125pt>
+<./img/DiodenSS.png, id=560, 743.77875pt x 351.3125pt>
 File: ./img/DiodenSS.png Graphic file (type png)
 
 <use ./img/DiodenSS.png>
@@ -1924,107 +1891,107 @@ Package pdftex.def Info: ./img/DiodenSS.png used on input line 92.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8 <./img/temperatureDependancy.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 104--107
+Underfull \hbox (badness 10000) in paragraph at lines 105--108
 
  []
 
 [9 <./img/DiodenSS.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 114--121
+Underfull \hbox (badness 10000) in paragraph at lines 115--122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--121
+Underfull \hbox (badness 10000) in paragraph at lines 115--122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--129
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--129
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
 
  []
 
-<./img/NiCd.jpg, id=573, 803.0pt x 803.0pt>
+<./img/NiCd.jpg, id=578, 803.0pt x 803.0pt>
 File: ./img/NiCd.jpg Graphic file (type jpg)
  <use ./img/NiCd.jpg>
-Package pdftex.def Info: ./img/NiCd.jpg used on input line 134.
+Package pdftex.def Info: ./img/NiCd.jpg used on input line 135.
 (pdftex.def)             Requested size: 80.3047pt x 80.3047pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--156
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--156
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--168
+Underfull \hbox (badness 10000) in paragraph at lines 163--169
 
  []
 
-[10 <./img/NiCd.jpg>] <./img/NiH2.jpg, id=586, 401.5pt x 311.1625pt>
+[10 <./img/NiCd.jpg>] <./img/NiH2.jpg, id=591, 401.5pt x 311.1625pt>
 File: ./img/NiH2.jpg Graphic file (type jpg)
 
 <use ./img/NiH2.jpg>
-Package pdftex.def Info: ./img/NiH2.jpg used on input line 174.
+Package pdftex.def Info: ./img/NiH2.jpg used on input line 175.
 (pdftex.def)             Requested size: 120.45091pt x 93.34947pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
+Underfull \hbox (badness 10000) in paragraph at lines 187--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
+Underfull \hbox (badness 10000) in paragraph at lines 187--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--202
+Underfull \hbox (badness 10000) in paragraph at lines 198--203
 
  []
 
-<./img/Li-ion.jpg, id=591, 933.4875pt x 933.4875pt>
+<./img/Li-ion.jpg, id=596, 933.4875pt x 933.4875pt>
 File: ./img/Li-ion.jpg Graphic file (type jpg)
  <use ./img/Li-ion.jpg>
-Package pdftex.def Info: ./img/Li-ion.jpg used on input line 210.
+Package pdftex.def Info: ./img/Li-ion.jpg used on input line 211.
 (pdftex.def)             Requested size: 140.01707pt x 140.01707pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [11 <./img/NiH2.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 222--227
+Underfull \hbox (badness 10000) in paragraph at lines 223--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--227
+Underfull \hbox (badness 10000) in paragraph at lines 223--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--238
+Underfull \hbox (badness 10000) in paragraph at lines 234--239
 
  []
 
-<./img/LiPo.jpg, id=600, 642.4pt x 642.4pt>
+<./img/LiPo.jpg, id=605, 642.4pt x 642.4pt>
 File: ./img/LiPo.jpg Graphic file (type jpg)
  <use ./img/LiPo.jpg>
-Package pdftex.def Info: ./img/LiPo.jpg used on input line 245.
+Package pdftex.def Info: ./img/LiPo.jpg used on input line 246.
 (pdftex.def)             Requested size: 128.47772pt x 128.47772pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--258
+Underfull \hbox (badness 10000) in paragraph at lines 255--259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--258
+Underfull \hbox (badness 10000) in paragraph at lines 255--259
 
  []
 
@@ -2032,41 +1999,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--258
 Underfull \vbox (badness 1728) has occurred while \output is active []
 
  [12 <./img/Li-ion.jpg> <./img/LiPo.jpg>]
-<./img/LiCharge.jpg, id=609, 108.405pt x 67.2111pt>
+<./img/LiCharge.jpg, id=614, 108.405pt x 67.2111pt>
 File: ./img/LiCharge.jpg Graphic file (type jpg)
  <use ./img/LiCharge.jpg>
-Package pdftex.def Info: ./img/LiCharge.jpg used on input line 261.
+Package pdftex.def Info: ./img/LiCharge.jpg used on input line 262.
 (pdftex.def)             Requested size: 379.41653pt x 235.23828pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--269
+Underfull \hbox (badness 10000) in paragraph at lines 266--270
 
  []
 
 [13 <./img/LiCharge.jpg>]
-<./img/MAX745.png, id=619, 743.77875pt x 398.48875pt>
+<./img/MAX745.png, id=624, 743.77875pt x 398.48875pt>
 File: ./img/MAX745.png Graphic file (type png)
  <use ./img/MAX745.png>
-Package pdftex.def Info: ./img/MAX745.png used on input line 274.
+Package pdftex.def Info: ./img/MAX745.png used on input line 275.
 (pdftex.def)             Requested size: 371.88846pt x 199.24388pt.
 
-[14 <./img/MAX745.png>] <./img/protect.png, id=630, 938.50626pt x 430.60875pt>
+[14 <./img/MAX745.png>] <./img/protect.png, id=635, 938.50626pt x 430.60875pt>
 File: ./img/protect.png Graphic file (type png)
 
 <use ./img/protect.png>
-Package pdftex.def Info: ./img/protect.png used on input line 292.
+Package pdftex.def Info: ./img/protect.png used on input line 293.
 (pdftex.def)             Requested size: 469.25198pt x 215.30383pt.
 
-Overfull \hbox (50.9983pt too wide) in paragraph at lines 292--293
+Overfull \hbox (50.9983pt too wide) in paragraph at lines 293--294
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 306--307
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 306--307
 
  []
 
@@ -2074,85 +2041,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 305--306
 Underfull \vbox (badness 3049) has occurred while \output is active []
 
  [15 <./img/protect.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 312--317
+Underfull \hbox (badness 10000) in paragraph at lines 313--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--317
+Underfull \hbox (badness 10000) in paragraph at lines 313--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--317
+Underfull \hbox (badness 10000) in paragraph at lines 313--318
 
  []
 
-<./img/lmz.png, id=646, 615.29875pt x 517.935pt>
-File: ./img/lmz.png Graphic file (type png)
- <use ./img/lmz.png>
-Package pdftex.def Info: ./img/lmz.png used on input line 325.
-(pdftex.def)             Requested size: 246.11513pt x 207.17032pt.
+<./img/ltc1616.png, id=651, 667.49374pt x 324.21124pt>
+File: ./img/ltc1616.png Graphic file (type png)
+ <use ./img/ltc1616.png>
+Package pdftex.def Info: ./img/ltc1616.png used on input line 326.
+(pdftex.def)             Requested size: 266.99277pt x 129.68219pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (21.72276pt too wide) in paragraph at lines 330--333
-[]\OT1/cmr/m/n/10.95 Figure []2.14[] il-lus-trates an ex-am-ple of the sim-ple 
-In-duc-tive DC-DC con-verter LMZ14202EXT
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--333
+Underfull \hbox (badness 10000) in paragraph at lines 331--334
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--333
+Underfull \hbox (badness 10000) in paragraph at lines 331--334
 
  []
 
-<./img/uC.png, id=651, 583.17876pt x 515.9275pt>
+[16] <./img/uC.png, id=665, 583.17876pt x 515.9275pt>
 File: ./img/uC.png Graphic file (type png)
  <use ./img/uC.png>
-Package pdftex.def Info: ./img/uC.png used on input line 339.
+Package pdftex.def Info: ./img/uC.png used on input line 340.
 (pdftex.def)             Requested size: 233.26736pt x 206.36734pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--353
+Underfull \hbox (badness 10000) in paragraph at lines 336--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--353
+Underfull \hbox (badness 10000) in paragraph at lines 336--354
 
  []
 
-[16]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 1571) has occurred while \output is active []
-
- [17 <./img/lmz.png>] <./img/distrib.png, id=665, 894.34125pt x 375.4025pt>
+[17 <./img/ltc1616.png>] <./img/distrib.png, id=672, 894.34125pt x 375.4025pt>
 File: ./img/distrib.png Graphic file (type png)
 
 <use ./img/distrib.png>
-Package pdftex.def Info: ./img/distrib.png used on input line 361.
+Package pdftex.def Info: ./img/distrib.png used on input line 362.
 (pdftex.def)             Requested size: 313.02412pt x 131.39284pt.
  [18 <./img/uC.png> <./img/distrib.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 377--382
+Underfull \hbox (badness 10000) in paragraph at lines 378--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--382
+Underfull \hbox (badness 10000) in paragraph at lines 378--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
@@ -2161,139 +2118,131 @@ Underfull \hbox (badness 10000) in paragraph at lines 383--384
 ]
 chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--401
+Underfull \hbox (badness 10000) in paragraph at lines 396--402
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--401
+Underfull \hbox (badness 10000) in paragraph at lines 396--402
 
  []
 
-<./img/descart.png, id=687, 963.6pt x 770.88pt>
+<./img/descart.png, id=697, 963.6pt x 770.88pt>
 File: ./img/descart.png Graphic file (type png)
  <use ./img/descart.png>
-Package pdftex.def Info: ./img/descart.png used on input line 406.
-(pdftex.def)             Requested size: 192.71658pt x 154.17326pt.
+Package pdftex.def Info: ./img/descart.png used on input line 407.
+(pdftex.def)             Requested size: 183.0859pt x 146.46872pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--414
+Underfull \hbox (badness 10000) in paragraph at lines 413--415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--414
+Underfull \hbox (badness 10000) in paragraph at lines 413--415
 
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 419--423
+[21 <./img/descart.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 420--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--423
+Underfull \hbox (badness 10000) in paragraph at lines 420--424
 
  []
 
-<./img/ppu.png, id=693, 456.70625pt x 449.68pt>
+<./img/ppu.png, id=705, 456.70625pt x 449.68pt>
 File: ./img/ppu.png Graphic file (type png)
  <use ./img/ppu.png>
-Package pdftex.def Info: ./img/ppu.png used on input line 429.
+Package pdftex.def Info: ./img/ppu.png used on input line 430.
 (pdftex.def)             Requested size: 182.67926pt x 179.8688pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <./img/descart.png>] <./img/ltc4015.png, id=700, 798.985pt x 457.71pt>
+[22] <./img/ltc4015.png, id=711, 798.985pt x 457.71pt>
 File: ./img/ltc4015.png Graphic file (type png)
-
-<use ./img/ltc4015.png>
-Package pdftex.def Info: ./img/ltc4015.png used on input line 438.
+ <use ./img/ltc4015.png>
+Package pdftex.def Info: ./img/ltc4015.png used on input line 439.
 (pdftex.def)             Requested size: 159.79416pt x 91.54037pt.
- <./img/Watch.png, id=701, 318.18875pt x 197.73875pt>
-File: ./img/Watch.png Graphic file (type png)
 
-<use ./img/Watch.png>
-Package pdftex.def Info: ./img/Watch.png used on input line 449.
+<./img/Watch.png, id=712, 318.18875pt x 197.73875pt>
+File: ./img/Watch.png Graphic file (type png)
+ <use ./img/Watch.png>
+Package pdftex.def Info: ./img/Watch.png used on input line 450.
 (pdftex.def)             Requested size: 222.73059pt x 138.41617pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23 <./img/ppu.png> <./img/ltc4015.png>]
-<./img/dcdc.png, id=707, 841.1425pt x 306.14375pt>
+<./img/dcdc.png, id=718, 841.1425pt x 306.14375pt>
 File: ./img/dcdc.png Graphic file (type png)
  <use ./img/dcdc.png>
-Package pdftex.def Info: ./img/dcdc.png used on input line 459.
+Package pdftex.def Info: ./img/dcdc.png used on input line 460.
 (pdftex.def)             Requested size: 336.45103pt x 122.45532pt.
 
 [24 <./img/Watch.png> <./img/dcdc.png>]
-<./img/PPU.png, id=715, 1329.96875pt x 1297.84875pt>
+<./img/PPU.png, id=727, 1329.96875pt x 1297.84875pt>
 File: ./img/PPU.png Graphic file (type png)
  <use ./img/PPU.png>
-Package pdftex.def Info: ./img/PPU.png used on input line 472.
+Package pdftex.def Info: ./img/PPU.png used on input line 473.
 (pdftex.def)             Requested size: 398.9937pt x 389.35764pt.
 
-<./img/bat.png, id=716, 608.2725pt x 526.96875pt>
+<./img/bat.png, id=728, 608.2725pt x 526.96875pt>
 File: ./img/bat.png Graphic file (type png)
  <use ./img/bat.png>
-Package pdftex.def Info: ./img/bat.png used on input line 483.
+Package pdftex.def Info: ./img/bat.png used on input line 484.
 (pdftex.def)             Requested size: 225.0573pt x 194.97537pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [25 <./img/PPU.png>]
-<./img/2s2pMasterarbeit.png, id=724, 1456.44125pt x 837.1275pt>
+<./img/2s2pMasterarbeit.png, id=736, 1456.44125pt x 837.1275pt>
 File: ./img/2s2pMasterarbeit.png Graphic file (type png)
 
 <use ./img/2s2pMasterarbeit.png>
-Package pdftex.def Info: ./img/2s2pMasterarbeit.png used on input line 492.
+Package pdftex.def Info: ./img/2s2pMasterarbeit.png used on input line 493.
 (pdftex.def)             Requested size: 291.28308pt x 167.42253pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--500
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--500
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--500
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--500
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
 
  []
 
 [26 <./img/bat.png> <./img/2s2pMasterarbeit.png>]
-<./img/BP.png, id=732, 1451.4225pt x 1002.74625pt>
+<./img/BP.png, id=744, 1451.4225pt x 1002.74625pt>
 File: ./img/BP.png Graphic file (type png)
  <use ./img/BP.png>
-Package pdftex.def Info: ./img/BP.png used on input line 504.
+Package pdftex.def Info: ./img/BP.png used on input line 505.
 (pdftex.def)             Requested size: 435.43011pt x 300.82619pt.
 
-Overfull \hbox (17.17644pt too wide) in paragraph at lines 504--505
+Overfull \hbox (17.17644pt too wide) in paragraph at lines 505--506
  [][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27 <./img/BP.png>]) (./chapters/chapter3.tex [28]
+[27 <./img/BP.png>]) (./chapters/chapter3.tex [28]
 chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
@@ -2400,7 +2349,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-<./img/PDU.png, id=756, 1478.52374pt x 1314.9125pt>
+<./img/PDU.png, id=768, 1478.52374pt x 1314.9125pt>
 File: ./img/PDU.png Graphic file (type png)
  <use ./img/PDU.png>
 Package pdftex.def Info: ./img/PDU.png used on input line 14.
@@ -2497,7 +2446,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--55
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32]
-<./img/tps203x.png, id=768, 184.69pt x 116.435pt>
+<./img/tps203x.png, id=781, 184.69pt x 116.435pt>
 File: ./img/tps203x.png Graphic file (type png)
  <use ./img/tps203x.png>
 Package pdftex.def Info: ./img/tps203x.png used on input line 60.
@@ -2532,7 +2481,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-[33 <./img/tps203x.png>] <./img/tps203x_.png, id=780, 889.3225pt x 329.23pt>
+[33 <./img/tps203x.png>] <./img/tps203x_.png, id=795, 889.3225pt x 329.23pt>
 File: ./img/tps203x_.png Graphic file (type png)
 
 <use ./img/tps203x_.png>
@@ -2553,18 +2502,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-<./img/fpf2701.png, id=782, 342.27875pt x 240.9pt>
+<./img/fpf2701.png, id=797, 342.27875pt x 240.9pt>
 File: ./img/fpf2701.png Graphic file (type png)
  <use ./img/fpf2701.png>
 Package pdftex.def Info: ./img/fpf2701.png used on input line 100.
 (pdftex.def)             Requested size: 102.6844pt x 72.27055pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[34 <./img/tps203x_.png> <./img/fpf2701.png>]
-<./img/fpf2701_pic.png, id=793, 692.5875pt x 370.38374pt>
+[34 <./img/tps203x_.png>]
+<./img/fpf2701_pic.png, id=808, 692.5875pt x 370.38374pt>
 File: ./img/fpf2701_pic.png Graphic file (type png)
 
 <use ./img/fpf2701_pic.png>
@@ -2575,12 +2528,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-[35 <./img/fpf2701_pic.png>]
+[35 <./img/fpf2701.png> <./img/fpf2701_pic.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-<./img/tpscl.png, id=803, 401.5pt x 162.6075pt>
+<./img/tpscl.png, id=817, 401.5pt x 162.6075pt>
 File: ./img/tpscl.png Graphic file (type png)
  <use ./img/tpscl.png>
 Package pdftex.def Info: ./img/tpscl.png used on input line 143.
@@ -2590,13 +2543,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
-[36 <./img/tpscl.png>] <./img/hisp_diag.png, id=812, 766.865pt x 221.82875pt>
+[36 <./img/tpscl.png>] <./img/hisp_diag.png, id=828, 766.865pt x 221.82875pt>
 File: ./img/hisp_diag.png Graphic file (type png)
 
 <use ./img/hisp_diag.png>
 Package pdftex.def Info: ./img/hisp_diag.png used on input line 160.
 (pdftex.def)             Requested size: 383.43156pt x 110.9141pt.
- <./img/Hispy.png, id=816, 927.465pt x 403.5075pt>
+ <./img/Hispy.png, id=832, 927.465pt x 403.5075pt>
 File: ./img/Hispy.png Graphic file (type png)
 
 <use ./img/Hispy.png>
@@ -2611,12 +2564,12 @@ Overfull \hbox (45.47769pt too wide) in paragraph at lines 173--174
 Underfull \vbox (badness 2393) has occurred while \output is active []
 
  [37 <./img/hisp_diag.png> <./img/Hispy.png>]
-<./img/sr.png, id=822, 698.61pt x 588.1975pt>
+<./img/sr.png, id=839, 698.61pt x 588.1975pt>
 File: ./img/sr.png Graphic file (type png)
  <use ./img/sr.png>
 Package pdftex.def Info: ./img/sr.png used on input line 191.
 (pdftex.def)             Requested size: 209.58461pt x 176.4606pt.
- [38 <./img/sr.png>] <./img/sr_op.png, id=829, 755.82375pt x 250.9375pt>
+ [38 <./img/sr.png>] <./img/sr_op.png, id=845, 755.82375pt x 250.9375pt>
 File: ./img/sr_op.png Graphic file (type png)
 
 <use ./img/sr_op.png>
@@ -2627,7 +2580,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
-<./img/max4372inside.png, id=831, 399.4925pt x 399.4925pt>
+<./img/max4372inside.png, id=849, 399.4925pt x 399.4925pt>
 File: ./img/max4372inside.png Graphic file (type png)
 
 <use ./img/max4372inside.png>
@@ -2678,7 +2631,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 264--295
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41]
-<./img/ADC.png, id=855, 1102.1175pt x 344.28625pt>
+<./img/ADC.png, id=873, 1102.1175pt x 344.28625pt>
 File: ./img/ADC.png Graphic file (type png)
  <use ./img/ADC.png>
 Package pdftex.def Info: ./img/ADC.png used on input line 302.
@@ -2688,15 +2641,12 @@ Overfull \hbox (22.58551pt too wide) in paragraph at lines 302--303
  [][] 
  []
 
-<./img/ADC_clock.png, id=857, 1025.8325pt x 311.1625pt>
+<./img/ADC_clock.png, id=875, 1025.8325pt x 311.1625pt>
 File: ./img/ADC_clock.png Graphic file (type png)
 
 <use ./img/ADC_clock.png>
 Package pdftex.def Info: ./img/ADC_clock.png used on input line 311.
 (pdftex.def)             Requested size: 410.32574pt x 124.46278pt.
-
-Underfull \vbox (badness 1694) has occurred while \output is active []
-
  [42 <./img/ADC.png> <./img/ADC_clock.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
@@ -2717,14 +2667,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 322--324
 
  []
 
-<./img/ADUM1250.png, id=866, 663.47874pt x 316.18124pt>
+<./img/ADUM1250.png, id=885, 663.47874pt x 316.18124pt>
 File: ./img/ADUM1250.png Graphic file (type png)
 
 <use ./img/ADUM1250.png>
 Package pdftex.def Info: ./img/ADUM1250.png used on input line 329.
 (pdftex.def)             Requested size: 265.3868pt x 126.47025pt.
  [43 <./img/ADUM1250.png>]
-<./img/max14850.png, id=874, 1010.77625pt x 342.27875pt>
+<./img/max14850.png, id=893, 1010.77625pt x 342.27875pt>
 File: ./img/max14850.png Graphic file (type png)
 
 <use ./img/max14850.png>
@@ -2740,32 +2690,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 347--351
 
  []
 
-<./img/EPSCON.png, id=875, 692.5875pt x 160.6pt>
+<./img/EPSCON.png, id=894, 692.5875pt x 160.6pt>
 File: ./img/EPSCON.png Graphic file (type png)
  <use ./img/EPSCON.png>
 Package pdftex.def Info: ./img/EPSCON.png used on input line 359.
 (pdftex.def)             Requested size: 277.03009pt x 64.23885pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[44 <./img/max14850.png>] <./img/iso1.png, id=882, 686.565pt x 443.6575pt>
+[44 <./img/max14850.png> <./img/EPSCON.png>]
+<./img/iso1.png, id=900, 686.565pt x 443.6575pt>
 File: ./img/iso1.png Graphic file (type png)
-
-<use ./img/iso1.png>
+ <use ./img/iso1.png>
 Package pdftex.def Info: ./img/iso1.png used on input line 371.
 (pdftex.def)             Requested size: 274.62112pt x 177.45984pt.
-) (./chapters/chapter5.tex [45 <./img/EPSCON.png> <./img/iso1.png>] [46
+)
+(./chapters/chapter5.tex [45 <./img/iso1.png>] [46
 
 ]
 chapter 6.
-<./img/PDU_PCB.jpeg, id=893, 1204.5pt x 1606.0pt>
+<./img/PDU_PCB.jpeg, id=911, 1204.5pt x 1606.0pt>
 File: ./img/PDU_PCB.jpeg Graphic file (type jpg)
  <use ./img/PDU_PCB.jpeg>
 Package pdftex.def Info: ./img/PDU_PCB.jpeg used on input line 7.
 (pdftex.def)             Requested size: 240.89574pt x 321.19432pt.
 
-[47 <./img/PDU_PCB.jpeg>] <./img/layer1.png, id=898, 167.62625pt x 321.2pt>
+[47 <./img/PDU_PCB.jpeg>] <./img/layer1.png, id=916, 167.62625pt x 321.2pt>
 File: ./img/layer1.png Graphic file (type png)
 
 <use ./img/layer1.png>
@@ -2786,21 +2734,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-<./img/resist_con.png, id=905, 405.515pt x 524.96124pt>
+<./img/resist_con.png, id=923, 405.515pt x 524.96124pt>
 File: ./img/resist_con.png Graphic file (type png)
 
 <use ./img/resist_con.png>
 Package pdftex.def Info: ./img/resist_con.png used on input line 54.
 (pdftex.def)             Requested size: 162.20311pt x 209.98077pt.
  [49 <./img/resist_con.png>]
-<./img/pdu_top_3d_new.png, id=913, 557.08125pt x 591.20876pt>
+<./img/pdu_top_3d_new.png, id=931, 557.08125pt x 591.20876pt>
 File: ./img/pdu_top_3d_new.png Graphic file (type png)
 
 <use ./img/pdu_top_3d_new.png>
 Package pdftex.def Info: ./img/pdu_top_3d_new.png used on input line 69.
 (pdftex.def)             Requested size: 278.53995pt x 295.60365pt.
 
-<./img/polygons.png, id=915, 570.13pt x 603.25375pt>
+<./img/polygons.png, id=933, 570.13pt x 603.25375pt>
 File: ./img/polygons.png Graphic file (type png)
  <use ./img/polygons.png>
 Package pdftex.def Info: ./img/polygons.png used on input line 78.
@@ -2820,17 +2768,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--89
  []
 
 [50 <./img/pdu_top_3d_new.png>]
-Underfull \vbox (badness 4254) has occurred while \output is active []
-
- [51 <./img/polygons.png>] <./img/pdu_top_component.png, id=933, 717.68124pt x 
-513.92pt>
+<./img/pdu_top_component.png, id=941, 717.68124pt x 513.92pt>
 File: ./img/pdu_top_component.png Graphic file (type png)
 
 <use ./img/pdu_top_component.png>
 Package pdftex.def Info: ./img/pdu_top_component.png used on input line 102.
 (pdftex.def)             Requested size: 272.7217pt x 195.29163pt.
-
-<./img/pdu_bot_component.png, id=934, 756.8275pt x 477.785pt>
+ [51 <./img/polygons.png>]
+<./img/pdu_bot_component.png, id=952, 756.8275pt x 477.785pt>
 File: ./img/pdu_bot_component.png Graphic file (type png)
 
 <use ./img/pdu_bot_component.png>
@@ -2855,89 +2800,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--42
+Underfull \hbox (badness 10000) in paragraph at lines 31--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--42
+Underfull \hbox (badness 10000) in paragraph at lines 31--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--42
+Underfull \hbox (badness 10000) in paragraph at lines 31--41
 
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 33--42
+Underfull \hbox (badness 1308) in paragraph at lines 31--41
 \OT1/cmr/m/n/10.95 Enable pins of a power switches might be ac-ti-vated man-u-a
 lly by pro-vid-ing a
  []
 
 [53
 
-] <./img/pdu_front_test.png, id=947, 652.4375pt x 687.56876pt>
+] <./img/pdu_front_test.png, id=965, 652.4375pt x 687.56876pt>
 File: ./img/pdu_front_test.png Graphic file (type png)
 
 <use ./img/pdu_front_test.png>
-Package pdftex.def Info: ./img/pdu_front_test.png used on input line 47.
+Package pdftex.def Info: ./img/pdu_front_test.png used on input line 46.
 (pdftex.def)             Requested size: 326.21794pt x 343.78354pt.
 
-<./img/pdu_bot_test.png, id=948, 576.1525pt x 604.2575pt>
+<./img/pdu_bot_test.png, id=966, 576.1525pt x 604.2575pt>
 File: ./img/pdu_bot_test.png Graphic file (type png)
 
 <use ./img/pdu_bot_test.png>
-Package pdftex.def Info: ./img/pdu_bot_test.png used on input line 54.
+Package pdftex.def Info: ./img/pdu_bot_test.png used on input line 53.
 (pdftex.def)             Requested size: 288.07553pt x 302.128pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--74
+Underfull \hbox (badness 10000) in paragraph at lines 58--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--74
+Underfull \hbox (badness 10000) in paragraph at lines 58--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--74
+Underfull \hbox (badness 10000) in paragraph at lines 58--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--74
+Underfull \hbox (badness 10000) in paragraph at lines 58--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--74
+Underfull \hbox (badness 10000) in paragraph at lines 58--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--74
+Underfull \hbox (badness 10000) in paragraph at lines 58--73
 
  []
 
 [54 <./img/pdu_front_test.png>] [55 <./img/pdu_bot_test.png>]
-<./img/pdu_test_tisch.png, id=962, 1608.0075pt x 1205.50375pt>
+<./img/pdu_test_tisch.png, id=980, 1608.0075pt x 1205.50375pt>
 File: ./img/pdu_test_tisch.png Graphic file (type png)
 
 <use ./img/pdu_test_tisch.png>
-Package pdftex.def Info: ./img/pdu_test_tisch.png used on input line 77.
+Package pdftex.def Info: ./img/pdu_test_tisch.png used on input line 76.
 (pdftex.def)             Requested size: 402.0009pt x 301.3752pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
@@ -2945,45 +2890,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [56 <./img/pdu_test_tisch.png>]
-<./img/hispico_plot.png, id=970, 320.19624pt x 239.89626pt>
+<./img/hispico_plot.png, id=988, 320.19624pt x 239.89626pt>
 File: ./img/hispico_plot.png Graphic file (type png)
 
 <use ./img/hispico_plot.png>
-Package pdftex.def Info: ./img/hispico_plot.png used on input line 87.
+Package pdftex.def Info: ./img/hispico_plot.png used on input line 86.
 (pdftex.def)             Requested size: 384.23355pt x 287.87405pt.
+ [57 <./img/hispico_plot.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 97.
+(caption)                particular \caption on input line 104.
 See the caption package documentation for explanation.
 
-[57 <./img/hispico_plot.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 105--105
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
 []|\OT1/cmr/m/n/10.95 Required
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 105--105
-[]|\OT1/cmr/m/n/10.95 Voltage drop on
- []
-
-
-Overfull \hbox (92.5376pt too wide) in paragraph at lines 101--132
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
@@ -2991,39 +2920,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [58]
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 145--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--155
+Underfull \hbox (badness 10000) in paragraph at lines 145--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--155
+Underfull \hbox (badness 10000) in paragraph at lines 145--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--155
+Underfull \hbox (badness 10000) in paragraph at lines 145--150
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--155
-
- []
-
-<./img/adctest.png, id=989, 813.0375pt x 556.0775pt>
+<./img/adctest.png, id=1008, 813.0375pt x 556.0775pt>
 File: ./img/adctest.png Graphic file (type png)
  <use ./img/adctest.png>
-Package pdftex.def Info: ./img/adctest.png used on input line 158.
+Package pdftex.def Info: ./img/adctest.png used on input line 153.
 (pdftex.def)             Requested size: 333.34753pt x 227.99324pt.
 
-[59 <./img/adctest.png>]) (./chapters/chapter7.tex [60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59 <./img/adctest.png>]) (./chapters/chapter7.tex [60]
 chapter 8.
-<./img/EPS!.png, id=1030, 355.3275pt x 391.4625pt>
+<./img/EPS!.png, id=1048, 355.3275pt x 391.4625pt>
 File: ./img/EPS!.png Graphic file (type png)
  <use ./img/EPS!.png>
 Package pdftex.def Info: ./img/EPS!.png used on input line 5.
@@ -3041,7 +2967,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 [61
 
  <./img/EPS!.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 21--24
+Underfull \hbox (badness 10000) in paragraph at lines 21--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--27
 
  []
 
@@ -3116,115 +3047,107 @@ t/m/n/10.95 https : / / www . digikey . com / en / maker / blogs /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--53
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 []\OT1/cmr/m/it/10.95 Alia-Novobilsk. Ad-vanced multi-junction so-lar cells de-
 liver high
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--53
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 \OT1/cmr/m/it/10.95 ef-fi-ciency, re-duced costs for space\OT1/cmr/m/n/10.95 . 
  []$\OT1/cmtt/m/n/10.95 https : / / phys . org / news /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--53
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 \OT1/cmtt/m/n/10.95 2018-[]01-[]advanced-[]multi-[]junction-[]solar-[]cells-[]h
 igh . html # jCp$[]\OT1/cmr/m/n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 []\OT1/cmr/m/it/10.95 MAX4372\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.95 https
  : / / datasheets . maximintegrated . com / en / ds /
  []
 
 [65]
-Underfull \hbox (badness 10000) in paragraph at lines 71--75
+Underfull \hbox (badness 10000) in paragraph at lines 72--76
 []\OT1/cmr/m/it/10.95 MAX1231\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.95 https
  : / / datasheets . maximintegrated . com / en / ds /
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 87--90
+Underfull \hbox (badness 1629) in paragraph at lines 88--91
 []\OT1/cmr/m/it/10.95 TPS1H200A\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.95 htt
 p : / / www . ti . com / lit / ds / symlink / tps1h200a-[]q1 . pdf$[]\OT1/cmr/m
 /n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--96
+Underfull \hbox (badness 10000) in paragraph at lines 93--97
 []\OT1/cmr/m/it/10.95 MAX7328\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.95 https
  : / / datasheets . maximintegrated . com / en / ds /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--108
+Underfull \hbox (badness 10000) in paragraph at lines 105--109
 []\OT1/cmr/m/it/10.95 ADUM1250\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.95 http
 s : / / www . analog . com / media / en /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--113
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
 []\OT1/cmr/m/it/10.95 MAX14850\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.95 http
 s : / / datasheets . maximintegrated . com / en / ds /
  []
 
 
-Underfull \hbox (badness 2753) in paragraph at lines 115--119
+Underfull \hbox (badness 10000) in paragraph at lines 116--120
+[]\OT1/cmr/m/it/10.95 Managing In-rush Cur-rent\OT1/cmr/m/n/10.95 .  []$\OT1/cm
+tt/m/n/10.95 http : / / www . ti . com / lit / an / slva670a /
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 122--126
 []\OT1/cmr/m/it/10.95 30 Triple Junc-tion GaAs So-lar Cell Type: TJ So-lar Cell
  3G30C\OT1/cmr/m/n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--119
+Underfull \hbox (badness 10000) in paragraph at lines 122--126
 []$\OT1/cmtt/m/n/10.95 http : / / www . azurspace . com / images / products / 0
 004148-[]00-[]01 _ DB _ GBK _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--125
+Underfull \hbox (badness 10000) in paragraph at lines 128--132
 []\OT1/cmr/m/it/10.95 Effect of Tem-per-a-ture\OT1/cmr/m/n/10.95 .  []$\OT1/cmt
 t/m/n/10.95 https : / / www . pveducation . org / pvcdrom /
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 121--125
+Underfull \hbox (badness 2126) in paragraph at lines 128--132
 \OT1/cmtt/m/n/10.95 solar-[]cell-[]operation / effect-[]of-[]temperature$[]\OT1
 /cmr/m/n/10.95 .  Ac-cessed: 2020-02-
  []
 
 
-Underfull \hbox (badness 4084) in paragraph at lines 127--131
+Underfull \hbox (badness 4084) in paragraph at lines 134--138
 []\OT1/cmr/m/it/10.95 What's the Best Bat-tery\OT1/cmr/m/n/10.95 .  []$\OT1/cmt
 t/m/n/10.95 https : / / batteryuniversity . com / learn /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--144
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
 []\OT1/cmr/m/it/10.95 Saft VT D NiCd\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.9
 5 https : / / www . akkushop . de / de /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--144
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
 \OT1/cmtt/m/n/10.95 saft-[]vt-[]d-[]nicd-[]mono-[]akku-[]hochtemperatur-[]ca . 
 -[]603mm-[]x-[]323mm/$[]\OT1/cmr/m/n/10.95 .
  []
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 146.
 
 [66]
 
@@ -3239,7 +3162,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 151.
+(scrbook)              by `\normalfont \scshape ' on input line 153.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3253,7 +3176,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 155.
+(scrbook)              by `\normalfont \scshape ' on input line 158.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3267,7 +3190,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 159.
+(scrbook)              by `\normalfont \scshape ' on input line 162.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3281,91 +3204,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 164.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 164.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 164.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 165.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 170.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 170.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 170.
+(scrbook)              by `\normalfont \scshape ' on input line 166.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3382,7 +3221,105 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              by `\normalfont \scshape ' on input line 171.
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 170--174
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 171.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 171.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 172.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 177.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 177.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 177.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 178.
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 177--181
 []\OT1/cmr/m/sc/10.95 Santoni, Fabio\OT1/cmr/m/n/10.95 , \OT1/cmr/m/sc/10.95 Pa
 olo Tor-tora\OT1/cmr/m/n/10.95 , \OT1/cmr/m/sc/10.95 F. Alessan-drini \OT1/cmr/
 m/n/10.95 and \OT1/cmr/m/sc/10.95 Ste-fano
@@ -3492,7 +3429,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 330.
 See the caption package documentation for explanation.
 
-[74] <Job1.PDF, id=1144, 1611.01875pt x 1135.24126pt>
+[74] <Job1.PDF, id=1165, 1611.01875pt x 1135.24126pt>
 File: Job1.PDF Graphic file (type pdf)
  <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 370.
@@ -3502,7 +3439,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 370.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1147, page=2, 2275.50125pt x 1612.0225pt>
+ <Job1.PDF, id=1168, page=2, 2275.50125pt x 1612.0225pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 2>
@@ -3536,7 +3473,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 371.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1180, page=6, 2275.50125pt x 1612.0225pt>
+ <Job1.PDF, id=1202, page=6, 2275.50125pt x 1612.0225pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 6>
@@ -3569,7 +3506,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 372.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1195, page=1, 1611.01875pt x 1135.24126pt>
+ <Job1.PDF, id=1216, page=1, 1611.01875pt x 1135.24126pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 1>
@@ -3602,7 +3539,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 373.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1209, page=3, 686.565pt x 542.025pt>
+ <Job1.PDF, id=1230, page=3, 686.565pt x 542.025pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 3>
@@ -3635,7 +3572,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 374.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1223, page=4, 686.565pt x 542.025pt>
+ <Job1.PDF, id=1244, page=4, 686.565pt x 542.025pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 4>
@@ -3668,7 +3605,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 375.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1237, page=5, 1611.01875pt x 1135.24126pt>
+ <Job1.PDF, id=1258, page=5, 1611.01875pt x 1135.24126pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 5>
@@ -3701,7 +3638,7 @@ File: Job1.PDF Graphic file (type pdf)
 <use Job1.PDF>
 Package pdftex.def Info: Job1.PDF used on input line 376.
 (pdftex.def)             Requested size: 1611.01483pt x 1135.23848pt.
- <Job1.PDF, id=1252, page=7, 1119.18124pt x 801.99625pt>
+ <Job1.PDF, id=1273, page=7, 1119.18124pt x 801.99625pt>
 File: Job1.PDF Graphic file (type pdf)
 
 <use Job1.PDF, page 7>
@@ -3725,7 +3662,7 @@ File: Job1.PDF Graphic file (type pdf)
 Package pdftex.def Info: Job1.PDF, page7 used on input line 376.
 (pdftex.def)             Requested size: 783.42154pt x 561.39354pt.
  [82 <./Job1.PDF>]
-<pcb2.PDF, id=1264, 865.2325pt x 912.40875pt>
+<pcb2.PDF, id=1285, 865.2325pt x 912.40875pt>
 File: pcb2.PDF Graphic file (type pdf)
  <use pcb2.PDF>
 Package pdftex.def Info: pcb2.PDF used on input line 378.
@@ -3735,7 +3672,7 @@ File: pcb2.PDF Graphic file (type pdf)
 Package pdftex.def Info: pcb2.PDF used on input line 378.
 (pdftex.def)             Requested size: 865.2304pt x 912.40652pt.
 
-<pcb2.PDF, id=1267, page=1, 865.2325pt x 912.40875pt>
+<pcb2.PDF, id=1288, page=1, 865.2325pt x 912.40875pt>
 File: pcb2.PDF Graphic file (type pdf)
  <use pcb2.PDF, page 1>
 Package pdftex.def Info: pcb2.PDF, page1 used on input line 378.
@@ -3768,7 +3705,7 @@ File: pcb2.PDF Graphic file (type pdf)
 Package pdftex.def Info: pcb2.PDF used on input line 379.
 (pdftex.def)             Requested size: 865.2304pt x 912.40652pt.
 
-<pcb2.PDF, id=1284, page=2, 857.2025pt x 912.40875pt>
+<pcb2.PDF, id=1305, page=2, 857.2025pt x 912.40875pt>
 File: pcb2.PDF Graphic file (type pdf)
  <use pcb2.PDF, page 2>
 Package pdftex.def Info: pcb2.PDF, page2 used on input line 379.
@@ -3792,7 +3729,7 @@ File: pcb2.PDF Graphic file (type pdf)
 Package pdftex.def Info: pcb2.PDF, page2 used on input line 379.
 (pdftex.def)             Requested size: 600.03766pt x 638.68178pt.
  [84 <./pcb2.PDF>]
-<pcb1.PDF, id=1296, 857.2025pt x 912.40875pt>
+<pcb1.PDF, id=1317, 857.2025pt x 912.40875pt>
 File: pcb1.PDF Graphic file (type pdf)
  <use pcb1.PDF>
 Package pdftex.def Info: pcb1.PDF used on input line 380.
@@ -3802,7 +3739,7 @@ File: pcb1.PDF Graphic file (type pdf)
 Package pdftex.def Info: pcb1.PDF used on input line 380.
 (pdftex.def)             Requested size: 857.20041pt x 912.40652pt.
 
-<pcb1.PDF, id=1299, page=1, 857.2025pt x 912.40875pt>
+<pcb1.PDF, id=1320, page=1, 857.2025pt x 912.40875pt>
 File: pcb1.PDF Graphic file (type pdf)
  <use pcb1.PDF, page 1>
 Package pdftex.def Info: pcb1.PDF, page1 used on input line 380.
@@ -3842,12 +3779,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 24084 strings out of 494901
- 433570 string characters out of 6178617
- 601877 words of memory out of 5000000
- 26673 multiletter control sequences out of 15000+600000
+ 24094 strings out of 493921
+ 433713 string characters out of 6161656
+ 604293 words of memory out of 5000000
+ 26828 multiletter control sequences out of 15000+600000
  14883 words of font info for 55 fonts, out of 8000000 for 9000
- 17 hyphenation exceptions out of 8191
+ 683 hyphenation exceptions out of 8191
  43i,21n,66p,10388b,1090s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/pvl/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/pvl
 /.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/share/texlive/texm
@@ -3870,10 +3807,10 @@ c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
 9.pfb>
-Output written on DiplomarbeitLaTex.pdf (101 pages, 31104358 bytes).
+Output written on DiplomarbeitLaTex.pdf (101 pages, 31157508 bytes).
 PDF statistics:
- 1457 PDF objects out of 1728 (max. 8388607)
- 1186 compressed objects within 12 object streams
- 315 named destinations out of 1000 (max. 500000)
+ 1479 PDF objects out of 1728 (max. 8388607)
+ 1204 compressed objects within 13 object streams
+ 316 named destinations out of 1000 (max. 500000)
  806 words of extra memory for PDF output out of 10000 (max. 10000000)
 

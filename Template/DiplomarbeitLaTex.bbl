@@ -40,9 +40,10 @@
 \newblock Accessed: 2020-02-30.
 
 \bibitem[19]{19}
-{\em LMZ14202EXT}.
-\newblock \url{http://www.ti.com/lit/ds/symlink/lmz14202ext.pdf}.
-\newblock Accessed: 2020-03-6.
+{\em LT1616}.
+\newblock
+  \url{https://www.analog.com/media/en/technical-documentation/data-sheets/lt1616fs.pdf}.
+\newblock Accessed: 2020-05-8.
 
 \bibitem[2]{2}
 {\em {Alia-Novobilsk}. Advanced multi-junction solar cells deliver high
@@ -110,6 +111,12 @@
 {\em MAX14850}.
 \newblock \url{https://datasheets.maximintegrated.com/en/ds/MAX14850.pdf}.
 \newblock Accessed: 2020-04-5.
+
+\bibitem[32]{32}
+{\em Managing Inrush Current}.
+\newblock
+  \url{http://www.ti.com/lit/an/slva670a/slva670a.pdf?&ts=1589049290548}.
+\newblock Accessed: 2020-05-9.
 
 \bibitem[4]{4}
 {\em 30 Triple Junction GaAs Solar Cell Type: TJ Solar Cell 3G30C}.

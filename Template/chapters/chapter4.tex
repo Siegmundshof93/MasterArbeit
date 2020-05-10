@@ -53,20 +53,20 @@ Every switch has the ability to determine over current($\overline{OC}$)of its po
 In addition, each switch of the PDU board can adjust the required current limit on the line by configuring the current limit resistors or changing the type of chips that fit to the IC's footprint.    
   \\ \\
 \subsection{TPS203x }
-The TPS203x switch has an operating voltage of 2.7 V to 5.5 V, which can be used for both 3.3 V power line and 5 V power line. TPS203x is a easy to use 8 pin micro chip. 
+The TPS203x switch has an operating voltage of 2.7 V to 5.5 V, which can be used for both 3.3 V power line and 5 V power line. TPS203x is a easy to use 8 pin micro chip. Fig. \ref{fig: PDU332} illustrates the pinout of the load switch TPS203x.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.6]{tps203x.png}
 	\caption{TPS203x \cite{26}}
-	\label{fig: PDU}
+	\label{fig: PDU332}
 \end{figure} 
 
 TPS203x has  two power input pins 2,3 and three output pins 6, 7, 8. Load switch control, provided by a microcomtroller, communicates with TPS203x via EN pin 4. TPS203x also has a required ability to provide an over current signal by pin number 5 $\overline{OC}$. \cite{26} When the output load exceeds the current, $\overline{OC}$ getting LOW and the switch limits the output current to a safe level by switching into a constant current mode. TPS203x has 4 different types of chips: TPS2030, TPS2031, TPS2032, TPS2033, TPS2034. All of these chips have a different current threshold. Current limit of five TPS203x types shown on the table \ref{Tab:curr}.\\
 
-\captionof{table}{Types of TPS203x and their curret limits}
+\captionof{table}{Types of TPS203x and their curret limits\cite{26}}
 \begin{tabular}{p{4cm}p{5cm}p{4cm}} \toprule
-	Switch type & Recommended Current [A] & Current Limit [A]\\ \midrule
+	Switch type & Recommended max continuous  current [A] & Current Limit [A]\\ \midrule
 	TPS2030 & 0.2 & 0.3\\
 	TPS2031 & 0.6 & 0.9\\
 	TPS2032 & 1 & 1.5\\
@@ -107,7 +107,7 @@ FPF2701 is the 8 pin load switch which is used for the UHF power line commutatio
 Pin 1 is a power input pin which can handle the voltage between 2.8 and 36V. Pin 3 ISET used to adjust the current limit of the load switch. \cite{27} "The  current  limit  ensures  that  the  current  through  the switch  doesn't  exceed  a  maximum  value  while  not limiting  at  less  than  a  minimum  value.  The current-limit level    is    adjustable    through    an    external    resistor connected between the ISET pin and GND. " The formula \ref{eq:fpf} shows the calculation of the resistor value for intended current limit value.
 
 \begin{equation}\label{eq:fpf}
-R_{set}(K\Omega) = \frac{277.5}{I_{lim}(A)}
+R_{set}(k\Omega) = \frac{277.5}{I_{lim}(A)}
 \end{equation}
 
 For the Descartes mission, the current limit $I_{lim}$ was defined to 2A to prevent an inrush current pike influence, which was achieved by setting the resistor to 140K.
@@ -141,7 +141,7 @@ Pin 5 is a DELAY pin which configure the behavior of the chip while over current
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{tpscl.png}
-	\caption{Latch-off mode}
+	\caption{Latch-off mode\cite{28}}
 	\label{fig: tpscl}
 \end{figure} 
 
@@ -183,7 +183,7 @@ For the TPS1H200A on the HISP channel CL pin is adjusted to 2A and DELAY pin is 
 Due to the lack of free GPIO pins on the microcontroller, EPS can only provide 17 GPIO channels for PDU. Based on this, it was decided to include a shift register in the design of PDU. PDU in it's design has 5 empty power lines VCC4, VCC5, VCC6, VCC7, VCC18 which are not going to be used for Descartes Mission. All this power lines are enabled via shift register as well as VCC19 which is responsible for triggering the power line, that supplies power to the thermo-sensors. The design idea of having empty power channels and thermo-sensors channel on the shift register, is to include less important power lines under shift register control, thereby exclude the risk of the pin control via additional device. 
 
 
- MAX7328 is a two wire  serial-interfaced peripherals with eight I/O ports. MAX7328 has 16 pin SO wide footprint package. \cite{29} MAX7328 is general-purpose port expanders operating from a 2.5V to 5.5V supply that provide eight open-drain output ports with a 20mA sink capability.  MAX7328 has a 3 address inputs A0, A1 and A2. Those address inputs can be configured by soldering the external zero ohm resistors to the appropriate input pins.  
+ MAX7328 is a two wire  serial-interfaced peripherals with eight I/O ports. MAX7328 has 16 pin SO wide footprint package. \cite{29} MAX7328 is general-purpose port expanders operating from a 2.5V to 5.5V supply that provide eight open-drain output ports with a 20mA sink capability. In addition, integrated pull up resistors are used for the I$^2$C line, which are not shown on the Fig. \ref{fig: sr1}.       MAX7328 has a 3 address inputs A0, A1 and A2. Those address inputs can be configured by soldering the external zero ohm resistors to the appropriate input pins.  
 
 
 \begin{figure}[h]
@@ -193,12 +193,12 @@ Due to the lack of free GPIO pins on the microcontroller, EPS can only provide 1
 	\label{fig: sr1}
 \end{figure}
 
-The MAX7328 shift register has easy operation principle. The control of the shift register implemented via I$^2$C protocol. The microcontroller must communicate with the slave device (MAX7328) by sending the address of the slave device to the I$^2$C bus, which must be accompanied by a confirmation bit, then port data can be sent to enable or disable the port. The operation principle of MAX7328 is shown on the Figure \ref{fig: sr_op1}. 
+The MAX7328 shift register has easy operation principle. The control of the shift register implemented via I$^2$C protocol. The microcontroller must communicate with the slave device (MAX7328) by sending the address of the slave device to the I$^2$C bus, which must be accompanied by a confirmation bit, then port data can be sent to enable or disable the port. The operation principle of MAX7328 is shown on the Fig. \ref{fig: sr_op1}. 
 \newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{sr_op.png}
-	\caption{ MAX7328 operation principle}
+	\caption{ MAX7328 operation principle\cite{29}}
 	\label{fig: sr_op1}
 \end{figure}
  
@@ -257,16 +257,16 @@ The gain of the device equals:
   I is a current on the power line\\
   V$_{out}$ is an output voltage\\ 
  
- The table \ref{Tab:res} provide a calculated values of the shunt resistors according to the current recuirements of the power lines.
+ The Tab. \ref{Tab:res} provide a calculated values of the shunt resistors according to the current recuirements of the power lines. V$_{out}$ = 0.5V was chosen as a reference output voltage for the shunt resistor selection. This value is in the tolerance and allows to choose shunt resistor with lower value to decrease the voltage drop.
   \newpage
   
   \captionof{table}{Shunt resistor choosing}
    \begin{tabular}{p{3cm}p{3cm}p{2cm}p{2cm}p{3cm}} \toprule
-   	Power channel & Load & I [mA] & $V_{out}$ [V] & $R_{sense}$ [Ohm]\\ \midrule
+   	Power channel & Load & I$_{max}$ [mA] & V$_{out}$ [V] & R$_{sense}$ [Ohm]\\ \midrule
    VCC0 & OBC & 140 & 0.5 & 0.1\\
    VCC1 & OBC PH & 140 & 0.5 & 0.1\\
    VCC2 & ADCS & 460 & 0.5 & 0.05\\
-   VCC3 & ADCS log & 0.06 & 0.6 & 0.5\\
+   VCC3 & ADCS log & 0.06 & 0.5 & 0.5\\
    VCC4 & OBC 5V & 90 & 0.5 & 0.1\\
    VCC5 & OBC 5V & 90 & 0.5 & 0.1\\
    VCC6 & empty & empty & empty & empty\\
@@ -274,15 +274,15 @@ The gain of the device equals:
    VCC8 & AURA & 600 & 0.5 & 0.05\\
    VCC9 & AMUR & 40 & 0.5 & 0.5\\
    VCC10 & DeCor11 & 40 & 0.5 & 0.5\\
-   VCC11 & DeCor12 & 200 & 2 & 0.5\\ 
+   VCC11 & DeCor12 & 200 & 0.5 & 0.1\\ 
    VCC12 & DeCor21 & 40 & 0.5 & 0.5\\ 
-   VCC13 & DeCor22 & 200 & 2 & 0.5\\ 
+   VCC13 & DeCor22 & 200 & 0.5 & 0.1\\ 
    VCC14 & DeCor31 & 40 & 0.5 & 0.5\\ 
-   VCC15 & DeCor32 & 200 & 2 & 0.5\\ 
-   VCC16 & ARM & 2000 & 1 & 0.02\\
+   VCC15 & DeCor32 & 200 & 0.5 & 0.1\\ 
+   VCC16 & ARM & 2000 & 0.5 & 0.01\\
    VCC17 & LORA & 200 &  0.5 & 0.1\\
    VCC18 & empty & empty & empty & empty\\
-   VCC19 & Term. sens. & 10 & 0.2 & 1\\
+   VCC19 & Term. sens. & 10 & 0.5 & 2.5\\
    COM0 & UHF1 & 690 & 0.5 & 0.05\\
    COM1 & UHF2 & 690 & 0.5 & 0.05\\
    	HISP & HISPICO & 1500 & 0.5& 0.01\\ 
@@ -290,7 +290,7 @@ The gain of the device equals:
    	
    \end{tabular}\\ \\ \\ \\
   \label{Tab:res}
- Another important aspect to consider is the resistance of the power line. The resistance of the power line should be as low as possible to avoid voltage drop in the presence of high current. In the system design stage, voltage drop can be avoided by providing a low shunt resistor value. In accordance with current requirements, the HISP and VCC16 power channels must provide $ \ geq $ 1500mA, with a resistance of 1 Ohm the system will have a voltage drop of $ \ geq $ 1.5V, which will significantly affect the functionality of the output connected device.
+ Another important aspect to consider is the resistance of the power line. The resistance of the power line should be as low as possible to avoid voltage drop in the presence of high current. In the system design stage, voltage drop can be avoided by providing a low shunt resistor value. In accordance with current requirements, the HISP and VCC16 power channels must provide $ \ geq $ 1500mA, with a resistance of 1Ohm the system will have a voltage drop of $ \ geq $ 1.5V, which will significantly affect the functionality of the output connected device.
  For this reason resistor values for HISPICO and ARM(antenna release mechanism) were chosen with minimal resistance.\\ \\ 
  
  6U satellite contain 23 analog outputs from the current sensors which have to be converted into a digital signals. To fulfill this requirement, two analog-to-digital converters MAX1231 are used. MAX1231 has already been used for previous 3U mission, in order to preserve the heritage of the flight, it was decided to keep this component for the 6U satellite.
@@ -304,7 +304,7 @@ The gain of the device equals:
    	\label{fig: adc}
    \end{figure} 
  
-  Figure \ref{fig: adc} illustrates the MAX1231 for the Descartes application. This figure shows external connections of the ADC chip. Pins 1 to 12 used for the analog inputs. Each analog input has a 1K resistor, which is used to protect the ADC and prevent high current input from the sensor. In addition, decoupling capacitors with a capacity of 0.01µF are located in parallel, which are used to filter the input signal. Pins 22, 23, 20 and 21 are used for the SPI communication where pin 21 is a slave select. Pin 24 is the $\overline{EOC}$ End of Conversion output pin used to notify the microcontroller about the end of conversion. Pin 19 is a power supply pin for the ADC chip, supplied with a 3.3V. To minimize the noise effect, the VDD input bypassed the 0.1 µF capacitor to GND. In addition, 2.2K ferrit chip connected in series with the supply to improve power-supply filtering. 
+  Figure \ref{fig: adc} illustrates the MAX1231 for the Descartes application. This figure shows external connections of the ADC chip. Pins 1 to 12 used for the analog inputs. Each analog input has a 1k resistor, which is used to protect the ADC and prevent high current input from the sensor. In addition, decoupling capacitors with a capacity of 0.01µF are located in parallel, which are used to filter the input signal. Pins 22, 23, 20 and 21 are used for the SPI communication where pin 21 is a slave select. Pin 24 is the $\overline{EOC}$ End of Conversion output pin used to notify the microcontroller about the end of conversion. Pin 19 is a power supply pin for the ADC chip, supplied with a 3.3V. To minimize the noise effect, the VDD input bypassed the 0.1 µF capacitor to GND. In addition, 2.2K ferrit chip connected in series with the supply to improve power-supply filtering. 
  
   \begin{figure}[h]
   	\centering
@@ -327,11 +327,11 @@ ADUM1250 \cite{30} is a "hot swappable digital isolators with nonlatching, bidir
  \begin{figure}[h]
  	\centering
  	\includegraphics[scale=0.4]{ADUM1250.png}
- 	\caption{ADUM1250}
+ 	\caption{ADUM1250 isolating main I$^2$C from the payload 2 }
  	\label{fig: adum}
  \end{figure} 
 
-\cite{31} "The  MAX14850  is  a  six-channel  digital  isolator  utilizing  Maxim’s  proprietary  process  technology,  whose  mono-lithic  design  provides  a  compact  and  low-cost  transfer  of  digital  signals  between  circuits  with  different  power  domains.  The  technology  enables  low  power  consump-tion and stable high-temperature performance. The MAX14850 can be used for isolating SPI buses, I2C buses, RS-232, RS-485/RS-422 buses, and general-pur-pose isolation."
+\cite{31} The MAX14850 is a six-channel digital isolator that provides low-cost digital signal transfer between circuits with different power supplies. The MAX14850 provides low power consumption and stable operation at high temperatures. The MAX14850 can be used to insulate SPI buses, I2C buses, RS-232, RS-485 / RS-422 buses, and general purpose insulation.
 
 \begin{figure}[h]
 	\centering

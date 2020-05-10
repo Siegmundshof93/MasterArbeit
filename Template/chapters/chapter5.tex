@@ -1,6 +1,6 @@
 \chapter{PCB Realization\label{cha:chapter5}}
 
-The PCB of PDU was designed and realized. All PCB work from schematics to net list wiring board layout design and finally post processing, was done via Computer Assisted Design Altium Designer. 
+The PCB of PDU was designed and realized. All PCB development from schematics to post processing, was done via Computer Assisted Design Altium Designer. 
 
 \begin{figure}[h]
 	\centering
@@ -13,7 +13,7 @@ The PCB of PDU was designed and realized. All PCB work from schematics to net li
 
 PCB design rules such as board dimensions, max trace width, component-to-component distance, max vias size pad-to-pad distance are all contained within the German Orbital Systems templates and requirements, as well as the manufacturer requirements. 
 
-The total thickness of the PCB is 1.7 mm. The PCB of the PDU has eight copper layers with 0.036 mm each. Every copper layer separated with dielectric material FR-4 with thickness of 0.254 mm. FR-4 is a typical composite material composed of woven fiberglass with epoxy resin binder. 
+The total thickness of the PCB is 1.7 mm. The PCB of the PDU has eight copper layers with 0.036 mm each. Every copper layer is separated with dielectric material FR-4 with thickness of 0.254 mm. FR-4 is a composite material typically composed of woven fiberglass with epoxy resin binder. 
 
 
 \begin{figure}[h]
@@ -29,7 +29,7 @@ The required PDU dimensions for the length and width are 90.16mm x 95.90mm. Thes
 \section{Layout Design}
 
 The layout design was started with the power trace width calculation.
-According to the power requirements, maximum supplied current of the on the PDU for the Descartes Mission is 1.5A which has to be supplied to Hispico S-band transceiver. The minimal width of the power lines on the PDU is not less than 0.8 mm.
+According to the power requirements, maximum supplied current on the PDU for the Descartes Mission is 1.5A which has to be supplied to the Hispico S-band transceiver. The minimal width of the power lines on the PDU is no less than 1 mm. Due to the vacuum, the outer layers cannot lose heat during convection. Therefore, the K coefficient of traces is the same for the inner and outer layers.
 
 The maximum current can be calculated by equation \ref{eq: amp}
 
@@ -40,12 +40,12 @@ I = K \times dT^{0.44} \times (W \times H)^{0.725}
 Where\\
 
 I - Max current\\
-K - Coefficient for external traces (0.048)\\
-W - Width in mils(0.8)\\
-H - Thickness in mils(0.036) \\
-dT - Temperature rise above ambient in $^\circ$C(10)\\
+K - Coefficient for traces (0.024)\\
+W - Width in mm(1)\\
+H - Thickness in mm(0.036) \\
+dT - Temperature rise above ambient in $^\circ$C(15)\\
 
-As a result, maximum current that can be transfered through the track is 2.07631 $\approx$ 2A.\\ 
+As a result, maximum current that can be transfered through the track $\approx$ 1.5A.\\ 
 
 Power Distribution Unit PCB has eight copper layers. Top and bottom layers used for power transmission, partially as a signal transmission and as a ground polygon. Second and the seventh layers used for a signal transmission. The design of the second and seventh layers is designed so that the signal lines having a track width of 0.4 mm are as straight as possible to reduce noise. The third and sixth layers are ground layers they are used for decoupling the signal layers as well as for a thermal dissipation reasons, which is an important function considering the fact that PDU  transfer power. Fourth and fifth layers are power layers, they consist of the power polygons which transfer power from the source to the integrated chips and to the connectors.   
 
@@ -60,7 +60,7 @@ Power Distribution Unit PCB has eight copper layers. Top and bottom layers used 
 Figure \ref{fig: res} shows only top, middle power layers and top silk overlay of the PCB.
 
   
-The main feature of the Power Distribution Board layout design is a flexibility of a choice of a connector, power line and required voltage. PDU has an ability to set up the connector with the different switch power outputs. PDU as it was explained in the chapter \ref{sec:tech77} used two types of connectors 9-pin connector and 8-pin connector. Each of those two types has a two input power pins for a power transmission.  Some connectors in the Descartes Mission required 2 inputs from two different switches such as connectors: K5, K6, K7 which have to transfer power to the DeCor payload. The connector designations are given in Appendix. The zero ohm resistors allows to select the power channels that will supply power to the payload connector, and then to the payload. Each payload connectors can be adjusted to receive power from one of the four load switches. Figure \ref{fig: res} shows example of the connection layout design between zero ohm resistors and the payload connector. Zero ohm resistors placed maximum close to the payload connector in order to make more space on the PCB. All zero ohm resistors that used for a power transfer are 0805 inch due to the high power.
+The main feature of the Power Distribution Board layout design is the flexibility of a choosing connector, power line and required voltage. PDU has an ability to set up the connector with the different switch power outputs. PDU as it was explained in the chapter \ref{sec:tech77} uses two types of connector, 9-pin connector and 8-pin connector. Each of those two types has a two input power pins for a power transmission.  Some connectors in the Descartes Mission required 2 inputs from two different switches such as connectors: K5, K6, K7 which have to transfer power to the DeCor payload. The connector designations are given in Appendix. The zero ohm resistors allows to select the power channels that will supply power to the payload. Each payload connectors can be adjusted to receive power from one of the four load switches. Figure \ref{fig: res} shows example of the connection layout design between zero ohm resistors and the payload connector. Zero ohm resistors placed maximum close to the payload connector in allocate to make more space on the PCB. 
 
 The load switches are located on the top and bottom side of the PCB. Each switch must supply power to a specific connector in order to reduce the length of the power path between the switch and  corresponding connector, the switches were located as close to their respective connectors as possible to reduce path loss and resistance, which directly affects the voltage drop. 
 
@@ -71,7 +71,7 @@ The load switches are located on the top and bottom side of the PCB. Each switch
 	\label{fig: toppducon}
 \end{figure} 
 
-Figure \ref{fig: toppducon} shows a the placement of the switches on the top layer of the PDU. Switches, responsible for a bus power line commutation are emphasized with a red frame. In order to decrease the distance between the load switches and PC104 connector, which is used to transfer bus power to oder boards in the stack, switches were located on the top side of the the PCB in the row. The payload switches, that emphasized with green frames, located on the left and right sides of the PCB. This allow them to transfer power without extra losses on the shortest distance to the relative payload connectors.
+Figure \ref{fig: toppducon} shows the placement of the switches on the top layer of the PDU. Switches, responsible for a bus power line commutation are emphasized with a red frame. In order to decrease the distance between the load switches and PC104 connector, which is used to transfer bus power to oder boards in the stack, switches were located on the top side of the the PCB in a row. The payload switches, are emphasized with green frames, located on the left and right sides of the PCB. This allow them to transfer power without extra losses on the shortest distance to the relative payload connectors.
 
 \begin{figure}[h]
 	\centering
@@ -80,7 +80,7 @@ Figure \ref{fig: toppducon} shows a the placement of the switches on the top lay
 	\label{fig: poly}
 \end{figure} 
 
-Fourth and fifth copper layers of the PCB used to transfer a high power. One of the main tasks of the middle power layers is to transfer current from the source pads to the relative IC via polygons. There are 5 main power source pads on the PCB: 7.4V, 3.3V BUS, 3.3V PAYL, 5V BUS, 5V PAYL. Figure \ref{fig: poly} illustrates the main power sources on the PCB, where:\\ \\
+Fourth and fifth copper layers of the PCB are used to transfer a high power. One of the main tasks of the middle power layers is to transfer current from the source pads to the relative IC via polygons. There are 5 main power source pads on the PCB: 7.4V, 3.3V BUS, 3.3V PAYL, 5V BUS, 5V PAYL. Figure \ref{fig: poly} illustrates the main power sources on the PCB, where:\\ \\
  1 - 5V PAYL\\
  2 - 3.3V PAYL\\
  3 - 7.4V\\
@@ -93,7 +93,7 @@ The minimum width of the polygons was calculated according to the formula \ref{e
 W = \frac{\sqrt[0.725]{\frac{1.5}{0.024 \times 10^{0.44}}}}{0.036}
 \end{equation} 
 
-According to the upper mention calculation, minimal required inner width of the trace should be not smaller then 1.36 mm. The minimal width of the Power distribution board inner traces is 1.5 mm which within the required tolerance. 
+According to the upper mention calculation, the minimal required inner width of the trace should be not smaller then 1.36 mm. The minimal width of the Power distribution board inner traces is 1.5 mm which within the required tolerance. 
 
 
 

@@ -33,6 +33,7 @@ Warning--to sort, need author or key in 7
 Warning--to sort, need author or key in 8
 Warning--to sort, need author or key in 16
 Warning--to sort, need author or key in 21
+Warning--to sort, need author or key in 32
 Warning--to sort, need author or key in 23
 Warning--to sort, need author or key in 28
 Warning--to sort, need author or key in 29
@@ -42,45 +43,45 @@ Warning--empty journal in 17
 Warning--empty journal in 20
 Warning--empty booktitle in 22
 Warning--empty journal in 13
-You've used 31 entries,
+You've used 32 entries,
             2768 wiz_defined-function locations,
-            731 strings with 8980 characters,
-and the built_in function-call counts, 8073 in all, are:
-= -- 832
-> -- 119
+            736 strings with 9140 characters,
+and the built_in function-call counts, 8308 in all, are:
+= -- 857
+> -- 120
 < -- 4
 + -- 32
 - -- 32
-* -- 475
-:= -- 1006
-add.period$ -- 86
-call.type$ -- 31
-change.case$ -- 105
-chr.to.int$ -- 31
-cite$ -- 85
-duplicate$ -- 376
-empty$ -- 899
+* -- 487
+:= -- 1032
+add.period$ -- 89
+call.type$ -- 32
+change.case$ -- 108
+chr.to.int$ -- 32
+cite$ -- 88
+duplicate$ -- 387
+empty$ -- 928
 format.name$ -- 42
-if$ -- 1908
+if$ -- 1966
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 9
-newline$ -- 151
+newline$ -- 156
 num.names$ -- 18
-pop$ -- 341
+pop$ -- 353
 preamble$ -- 1
-purify$ -- 167
+purify$ -- 172
 quote$ -- 0
-skip$ -- 316
+skip$ -- 325
 stack$ -- 0
-substring$ -- 266
-swap$ -- 70
+substring$ -- 274
+swap$ -- 72
 text.length$ -- 4
 text.prefix$ -- 4
 top$ -- 0
-type$ -- 244
-warning$ -- 29
+type$ -- 252
+warning$ -- 30
 while$ -- 17
-width$ -- 32
-write$ -- 340
+width$ -- 33
+write$ -- 351
 (There was 1 error message)

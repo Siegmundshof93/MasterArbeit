@@ -43,7 +43,7 @@ Solar cells are usually interconnected to a solar array to get the desired power
 	
 Solar cell is strongly effected by a temperature. Honsberg\cite{5} "Increases in temperature reduce the band gap of a semiconductor, thereby effecting most of the semiconductor material parameters. The decrease in the band gap of a semiconductor with increasing temperature can be viewed as increasing the energy of the electrons in the material."\\
 \\
-Brieß\cite{6} The dependency of a temperature to the electric power can be described as:\\ \\ \\
+Brieß\cite{6} The dependency of a temperature to the electric power of a silicon solar cell can be described as:\\ \\ \\
 
 \begin{equation}
 P = P_{ref} [ 1 - K_{P} ( T - T_{ref}) ]
@@ -52,7 +52,7 @@ P = P_{ref} [ 1 - K_{P} ( T - T_{ref}) ]
 	\\
 where:\\
      $P_{ref}$ - Power at reference temperature\\
-     $K_{P}$ - Correction factor of power losses, 0.005$K^{-1}$\\
+     $K_{P}$ - Correction factor of power losses, 0.005$K^{-1}(for a silicon solar cell)$\\
      $T_{ref}$ - Reference temperature ( e.g. 25\textdegree{}C)\\
      
      
@@ -77,21 +77,22 @@ where:\\
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.5]{temperatureDependancy.png}
-		\caption{ Solar cell characteristics at different temperatures\cite{6} }
+		\caption{ Example of a solar cell characteristics at different temperatures\cite{6} }
 		\label{fig: EPS11}
 	\end{figure}
 	
-According to a figure \ref{fig: EPS11} a maximum power point shifts as a solar array getting hotter or colder. To keep power at the maximum point used Maximum Power Point Tracker (MPPT). The purpose of MPPT is to keep voltage on a particular level while solar panels are affected by a temperature or the orientation of the solar panels.\\
+According to a Figure \ref{fig: EPS11} a maximum power point shifts as a solar array getting hotter or colder. To keep power at the maximum point used Maximum Power Point Tracker (MPPT). The purpose of MPPT is to keep voltage on a particular level while solar panels are affected by a temperature or the orientation of the solar panels.\\
 \cite{20} MPPT might be separated into two parts: power control, logic control. Power control is usually a step-up step-down DC-DC  converter which responsible for a voltage adjustment according to the input from the logic control. Logic control is responsible for a solar array parameters measurements and maximum power point adjustment according to the software algorithm.\\  
 
-During the circuit design of the solar panels, it is important to consider the redundancy and a case in which one of the cells will be damaged. For that reason diodes are used. The diodes ensure the power can bypass a damage solar cell. On the fig 2.5 shown that the diodes D1 and D2 are placed in th parallel with the solar cells. Diode D3 which also observed on the figure 2.3 is used to prevent the reverse current. Reverse current has a negative effect on the solar panel efficiency. When reverse current occurs, one effect is that current it's drawn from the batteries, therefore, discharging them. Secondly, reversed current adds additional current to the affected solar cell which shifts the maximum power point.\\
+During the circuit design of the solar panels, it is important to consider the redundancy and a case in which one of the cells will be damaged. For that reason diodes are used. The diodes ensure the power can bypass a damage solar cell. On the Fig 2.5 shown that the diodes D1 and D2 are placed in th parallel with the solar cells. Diode D3 which also observed on the Figure 2.3 is used to prevent the reverse current. Reverse current has a negative effect on the solar panel efficiency. When reverse current occurs, one effect is that current it's drawn from the batteries, therefore, discharging them. Secondly, reversed current adds additional current to the affected solar cell which shifts the maximum power point.\\
 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.45]{DiodenSS.png}
-	\caption{ Solar cell characteristics at different temperatures}
-	\label{fig: EPS}
+	\caption{ Example of the Solar cell circuit design}
+	\label{
+		: EPS}
 \end{figure}
  
 \newpage
@@ -273,10 +274,10 @@ This IC is able to set a charge up to 4 cells in series, as well as set a curren
 	\centering
 	\includegraphics[scale=0.5]{MAX745.png}
 	\caption{ Li-ion/Po charger MAX745 \cite{15}}
-	\label{fig: EPS}
+	\label{fig: EPS22}
 \end{figure}
 
-The figure \ref{fig: EPS} shows an example of a standard MAX745 application circuit. On the left side of the schematics pins SETI and VADJ are used to adjust a charge voltage and charge current. External resistors R16,R12 are connected to a reference voltage to adjust a charge current and resistors R3,R11  used to adjust charge voltage. On the right side of the schematics MAX745 use two external N-channel MOSFETs which control power from the input source which controlled by current mode, PWM controller. 
+The Figure \ref{fig: EPS22} shows an example of a standard MAX745 application circuit. On the left side of the schematics pins SETI and VADJ are used to adjust a charge voltage and charge current. External resistors R16,R12 are connected to a reference voltage to adjust a charge current and resistors R3,R11  used to adjust charge voltage. On the right side of the schematics MAX745 use two external N-channel MOSFETs which control power from the input source which controlled by current mode, PWM controller. 
 
 
 
@@ -322,23 +323,23 @@ Tietze\cite{18} Each inductive DC-DC converter consist of three passive componen
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{lmz.png}
+	\includegraphics[scale=0.4]{ltc1616.png}
 	\caption{ Inductive DC-DC converter \cite{19}}
-	\label{fig: EPS4}
+	\label{fig: EPS41}
 \end{figure}
 
-Figure \ref{fig: EPS4} illustrates an example of the simple Inductive DC-DC converter LMZ14202EXT which has an inner inductor. The output voltage of converter can be programmed by choosing a value for the resistors $R_{FBT}$ and $R_{FBB}$ according to a formula from the datasheet \cite{19}. 
+Figure \ref{fig: EPS41} illustrates an example of the simple Inductive DC-DC step-down converter LT1616. The inductor L1 allows peak current to be reduced in order to not harm the C2 capacitor and to store the energy while the inner switch is closed. The diode D1 provide a different path for the current while inner switch of the LT1616 is open. The output voltage of converter can be programmed by choosing a value for the resistors $R1$ and $R2$ according to a formula from the datasheet \cite{19} . 
 \\
 \\
 
 \subsection{Microcontroller \label{sec:tech}}
-The EPS microcontroller is the vital part of the satellite. Main responsibility of the EPS microcontroller is to manage a power distribution for a hole satellite by sending an enable signals to a commutating components, in most of the cases integrated switches. In addition, microcontroller provide a housekeepeng telemetry by reading the values of sensors, such as temperature sensors, current sensors and others. For this task EPS microcontroller uses protocol lines as $I^{2}C$ or $SPI$. Furthermore, EPS microcontroller needs to communicate to an OBC microcontroller to share the housekeeping information or for reason to receive a commands from OBC. Communication between EPS and OBC as well as with other microcontrollers implemented via CAN bus. Moreover, EPS microcontroller can be used to handle MMPT algorithm to obtain the maximum power from the solar energy.
+The main responsibility of the EPS microcontroller is to manage a power distribution for a hole satellite by sending an enable signals to a commutating components, in most of the cases integrated switches. In addition, microcontroller provide a housekeepeng telemetry by reading the values of sensors, such as temperature sensors, current sensors and others. For this task EPS microcontroller uses protocol lines as $I^{2}C$ or $SPI$. Furthermore, EPS microcontroller needs to communicate to an OBC microcontroller to share the housekeeping information or for reason to receive a commands from OBC. Communication between EPS and OBC as well as with other microcontrollers implemented via CAN bus. Moreover, EPS microcontroller can be used to handle MMPT algorithm to obtain the maximum power from the solar energy. The example of microcontroller block diagram architecture shown on the Fig \ref{fig: EPS4121}.	
 \\
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.4]{uC.png}
 	\caption{block diagram of microcontroller communication}
-	\label{fig: EPS4}
+	\label{fig: EPS4121}
 \end{figure}
 \\
 EPS Data signals:\\ \\
@@ -348,19 +349,19 @@ $\bullet$ I$^{2}$C\\
 $\bullet$  SPI\\
 $\bullet$  EN\\
 \\
-Regarding a power consumption, microcontrollers of a satellite consume very few energy around 1 µA while it's "ON" and around hundred while it's "OFF".\\
+As for power consumption, microcontrollers consume very little power. Some microcontrollers such as STM32L  can consume  around 10 to 100 $\mu$A.\\
 To prevent the microcontroller of getting stuck, external watchdog is used. Watchdog receives the signal from the microcontroller which restart the timer. If case that watchdog did not receive a signal, he will send a signal to a load switch, which will restart the microcontroller by turning the supply power "OFF" and "ON".
 
 \subsection{Power Distribution \label{sec:tech}}
 
-Power distribution is a vital part of the EPS, needed to \cite{21} "supply electrical power to the subsystems and payloads of the satellite" as well as prevent an overload of the main power bus. Power distribution usually consist of load switches which distribute power with help of microcontroller by sending the enable signal to an appropriate pin of the switch. In addition, to monitor the payload or subsystem power consumptions, current sensors are used. This combination allows to fully control the process of power distribution.
+Power distribution is a vital part of the EPS, needed to \cite{21} "supply electrical power to the subsystems and payloads of the satellite" as well as prevent an overload of the main power bus. Power distribution usually consist of load switches which distribute power with help of microcontroller by sending the enable signal to an appropriate pin of the switch. In addition, current sensors are used to monitor the payload or power consumption of the subsystem. This combination allows to fully control the process of power distribution. Figure \ref{fig: EPS111} illustrates an example of the EPS power distribution where $R_{sense}$ is a shunt resistor for a current sensor. 
 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.35]{distrib.png}
 	\caption{Power distribution with power switch and current sensor}
-	\label{fig: EPS}
+	\label{fig: EPS111}
 \end{figure}
 
 \newpage
@@ -368,16 +369,16 @@ Power distribution is a vital part of the EPS, needed to \cite{21} "supply elect
 \subsubsection{Switches}
 Power distribution include load switches which responsible for a power commutation of a satellite. Power switches are integrated chips which designed for specific cases and scenarios. One of the important parameters is a power load. Switches have to be chosen according to a load of a power lines considering voltage and maximum current. Otherwise, if the input power exceeds the power that the switch can operate with, this might lead to destruction of the switch and the entire power line.  Another aspect which has to be considered is the inrush current. Inrush current is a maximal instantaneous current draw by an electrical device, appeared for few microseconds when first turn on. Inrush current cased a voltage drop for the supplied subsystems, which might harm device or case incorrect device performance.
 
- Capacitors might be used to prevent inrush current. The value of capacitor has to be calculated by equation \ref{eq:3}:
+ Capacitors might be used to prevent inrush current. The value of capacitor has to be calculated by equation \ref{eq:3} \cite{32}:
  
  \begin{equation}\label{eq:3}
- I_{INRUSH} = C_{L} \times \dfrac{dV_{out}}{dt}
+ C_{L} = I_{INRUSH} \times \dfrac{dt}{dV_{out}}
  \end{equation}
  
  Where:\\ \\
  $I_{INRUSH}$ - amount of inrush current\\
  $C_{L}$ - Value of capacitor \\
- $dV_{out}$ - change of V when device is enabled\\
+ $dV_{out}$ - maximum allowable voltage drop\\
  $dt$ - rise time\\
 
 Another important ability of the switcher is the fault detection. Fault detection appear while current on the power line exceed the programmed current of the switch. Whilst Overcurrent was detected, switch sends a signal to a microcontroller to disable the switch. Fault detection often used to detect Lautch-up of the satellite.\\
@@ -392,7 +393,7 @@ voltage drop across a shunt resistor.  The voltage across the shunt  is  usually
 This chapter will provide a short essential knowledge about Descartes mission with the main purposes of the mission, satellite characteristics and the satellite  abilities. Then topic will go deeper into the EPS architecture design of the 6U satellite. \\
 \section{Introduction into the Descartes Mission}
 
-German Orbital System (GOS) plays a major role in the satellite development since 2014, providing reliable engineering support, uncompromising quality and affordable prices. GOS has accomplished nine successful 3U satellites launches into space since their realize as a company. Although 3U satellites are relatively cheap to build and their characteristics enough have a simple payload, GOS is keeping up with the time. At the moment GOS is developing the 6U nano-satellite (Descartes), which can be used for a wide range of tasks such as:\\ \\
+German Orbital System (GOS) plays a major role in the satellite development. GOS has accomplished nine successful 3U satellites launches into space since their realize as a company. Although 3U satellites are relatively cheap to build and their characteristics enough have a simple payload, GOS is keeping up with the time. At the moment GOS is developing the 6U nano-satellite (Descartes), that shown on the Figure \ref{fig: EPS222}. Descartes can be used for a wide range of tasks such as:\\ \\
 $\bullet$ Earth exploration\\ 
 $\bullet$ Student projects\\ 
 $\bullet$ Science projects\\ 
@@ -403,9 +404,9 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.2, angle =90]{descart.png}
-	\caption{6U satellite Descartes}
-	\label{fig: EPS}
+	\includegraphics[scale=0.19, angle =90]{descart.png}
+	\caption{The Descartes satellite}
+	\label{fig: EPS222}
 \end{figure}
 
 
@@ -422,22 +423,22 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   $\bullet$ 2 Battery Packs\\
   
    \subsection{Power Processing Unit}
-   Power Processing Unit (PPU) is a part of EPS which responsible for a battery charge, power distribution control and a power processing. 
+   Power Processing Unit (PPU) is a part of EPS which responsible for a battery charge, power distribution control and a power processing. The PPU is illustrated on the Fig. \ref{fig: psu122}.
    
    \begin{figure}[h]
    	\centering
    	\includegraphics[scale=0.4]{ppu.png}
    	\caption{PPU}
-   	\label{fig: psu}
+   	\label{fig: psu122}
    \end{figure}
    
-   Power converted from the solar flux come first into a Power Processing Unit from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panels gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsiable for a battery charge, illustrated on the figure \ref{fig: ltc4015}. Integrated chip LTC4015 provide a constant voltage and current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip draws power from the solar input to the system, while batteries are charging and switch power source to a battery pack while eclipse or overcharge condition.
+   Power converted from the solar flux come first into a Power Processing Unit from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panels gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsiable for a battery charge, illustrated on the Figure \ref{fig: ltc40151}. Integrated circuit LTC4015 provide a constant voltage and current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip draws power from the solar input to the system, while batteries are charging and switch power source to a battery pack while eclipse or overcharge condition.
    
   \begin{figure}[h]
   	\centering
   	\includegraphics[scale=0.2]{ltc4015.png}
   	\caption{Battery charger}
-  	\label{fig: ltc4015}
+  	\label{fig: ltc40151}
   \end{figure}
   
  After the power has been distributed from the charger, is separates in two power lines, one power line goes through the LDO converter to feed the microcontroller and second distributes the power into five DC-DC converters for the subsystems and payloads.
@@ -461,7 +462,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
    	\label{fig: ltc4015}
    \end{figure}
   
-  One of important tasks of the EPS and PPU is to deploy 2 UHF antennas. To accomplish this task and provide a battery voltage to deployment mechanism, used 2 power lines for each UHF antenna with two TPS1H200A load switches in series for each line. To activate antenna release, two signals must be send from the microcontroller which enable the load switch to commutate and provide a power to accomplish antenna release. 
+  One of important tasks of the EPS and PPU is to deploy 2 UHF antennas. To accomplish this task and provide a battery voltage to deployment mechanism, used 2 power lines for each UHF antenna with two TPS1H200A load switches in series for each line. To activate antenna release, two signals must be send from the microcontroller which enable the load switch to commutate and provide a power to accomplish antenna release on the Fig.\ref{fig: PPU} antenna release mechanism shown as ARM1 and ARM2. 
   
   In addition, PPU provide a current and voltage sensing of 16 analog lines,  which get converted via ADC MAX1231 that provide an SPI signal. 
   
@@ -485,7 +486,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
  	\label{fig: bat}
  \end{figure}
  
-  As was discussed in the background section \ref{sec:tech1} Li-ion batteries required a protection circuit to prevent overcharge, over-discharge and a fast discharge(short). For the battery pack board every two cells in the series have their own protection integrated chip BQ29700D which has an overcharge, over-discharge and short protection. Due to 2S2P configuration, batteries which located in parallel have to be balance. BQ29209 is a fine battery balancer from Texas Instruments which \cite{23}"performs automatic cell-balance correction where the two cells are automatically corrected for voltage imbalance by loading the cell with the higher voltage with a small balancing current."  
+  As was discussed in the background section \ref{sec:tech1} Li-ion batteries required a protection circuit to prevent overcharge, over-discharge and a fast discharge(short). For the battery pack board every two cells in the series have their own protection integrated chip BQ29700D which has an overcharge, over-discharge and short protection. Due to 2S2P configuration, batteries which located in parallel have to be balance. BQ29209 is a battery balancer from Texas Instruments which \cite{23}"performs automatic cell-balance correction where the two cells are automatically corrected for voltage imbalance by loading the cell with the higher voltage with a small balancing current."  
   
   \begin{figure}[h]
   	\centering
