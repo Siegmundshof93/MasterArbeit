@@ -14,7 +14,7 @@
 \contentsline {subsubsection}{\nonumberline Nickel Cadmium }{9}{section*.9}
 \contentsline {subsubsection}{\nonumberline Nickel Hydrogen }{10}{section*.11}
 \contentsline {subsubsection}{\nonumberline Lithium Ion }{11}{section*.13}
-\contentsline {subsubsection}{\nonumberline Lithium Polymer }{11}{section*.15}
+\contentsline {subsubsection}{\nonumberline Lithium Polymer }{12}{section*.15}
 \contentsline {subsubsection}{\nonumberline Charging}{13}{section*.17}
 \contentsline {subsubsection}{\nonumberline Protection}{14}{section*.20}
 \contentsline {subsection}{\numberline {2.1.3}Power processing }{15}{subsection.2.1.3}

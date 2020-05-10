@@ -105,6 +105,7 @@ During the circuit design of the solar panels, it is important to consider the r
 Yost\cite{1} During the the mission duration, solar energy is not always available due to eclipse. For this case primary and secondary batteries used to store power. All batteries are classified according to their chemical characteristics. For a short mission duration (up to one week) usually used primary type of batteries due to it's lack of recharge opportunity. the common chemical type of a primary battery is a silver-zinc, which is easier to handle, Yost\cite{1} "however there is also a variety of lithium-based primary batteries that have a higher energy density including: lithium sulphur dioxide (LiSO2), lithium carbon monofluoride (LiCFx) and lithium thionyl chloride (LiSOCl2) 20."\\
 \\
 Secondary-type batteries are rechargeable and provide an energy on demand. Secondary-type batteries are connected to a primary energy source of the satellite (usually solar panels) via battery charger. This type include: nickel-cadmium (NiCd), nickel-hydrogen (NiH2), lithium-ion polymer(LiPo), lithium-ion(Li-ion).
+
 \subsubsection{Nickel Cadmium \label{sec:tech}}
  Buchmann\cite{7} Nickel Cadmium is a type of rechargable batteries using nickel oxide hydroxide and metallic cadmium. This chemical connection allows battery to well perform by working in the savage conditions such as low or hot temperature. NiCd battery is the type which prefer to be charge fast instead of slow as types of secondary batteries. Full periodic discharge of a NiCd is an important process and necessary for battery performance. In case of absence  Buchmann\cite{7} " large crystals will form on the cell plates (also referred to as memory) and the NiCd will gradually lose its performance."
  
@@ -128,14 +129,19 @@ Secondary-type batteries are rechargeable and provide an energy on demand. Secon
 	$\bullet$ NiCd has to be periodically discharged\\
 	$\bullet$ NiCd contains toxic metals\\ 
 
+
 \end{multicols}
+
+Fig. \ref{fig: nicd} illustrates an example of the NiCd battery. 
+
+
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.1]{NiCd.jpg}
 	\caption{NiCd battery\cite{9}}
-	\label{fig: EPS}
-\end{figure}
+	\label{fig: nicd}
+\end{figure} 
 
 
 \subsubsection{Nickel Hydrogen \label{sec:tech}}
@@ -143,7 +149,7 @@ Buchmann\cite{7} Nowadays Nickel Hydrogen batteries are mostly used in the satel
 \cite{10}"The replacement of cadmium with hydrogen electrodes has double the energy of Ni-Cd, but the specific energy of Ni- H2 is similar to Ni-Cd be case of the cylindrical configuration of the pressure. The first Ni- H2 battery was used in a GEO (geostationary mission) Intelsat V in 1983.  Almost all GEO spacecrafts now use Ni-H2 batteries. The first NASA LEO spacecraft to use Ni-H2 was in 1990."
 
 
-Wenige\cite{8} Despite the fact that memory effect on NiH2 is undoubtedly less than on a NiCd batteries, it still exist and needs a special treatment in order to accommodate the normal level of the battery. Wenige\cite{8} "Typical calendar life of more than 20 years can be reached by NiH2, i.e. five years ground storage plus 15  years  orbital  life  in  GEO." 
+Wenige\cite{8} Despite the fact that memory effect on NiH2 is undoubtedly less than on a NiCd batteries, it still exist and needs a special treatment in order to accommodate the normal level of the battery. Wenige\cite{8} "Typical calendar life of more than 20 years can be reached by NiH2, i.e. five years ground storage plus 15  years  orbital  life  in  GEO." \\ \\
 
 
 \begin{multicols}{2}
@@ -170,11 +176,14 @@ Wenige\cite{8} Despite the fact that memory effect on NiH2 is undoubtedly less t
 	
 \end{multicols}
 
+Fig. \ref{fig: nih2} illustrates an example of the NiH2 battery. 
+
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.3]{NiH2.jpg}
 	\caption{ NiH2 battery \cite{10}}
-	\label{fig: EPS}
+	\label{fig: nih2}
 \end{figure}
 
 \subsubsection{Lithium Ion \label{sec:tech}}
@@ -205,12 +214,13 @@ Buchmann\cite{7}Today lithium ion batteries is the most progressive and most pro
 	
 \end{multicols}
 
+Fig. \ref{fig: lion} illustrates an example of the Li-ion battery. 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.15 ]{Li-ion.jpg}
+	\includegraphics[scale=0.11 ]{Li-ion.jpg}
 	\caption{ Li-ion battery \cite{11}}
-	\label{fig: EPS}
+	\label{fig: lion}
 \end{figure}
 
 \subsubsection{Lithium Polymer \label{sec:tech}}
@@ -241,11 +251,13 @@ In 1970, when the original design of lithium polymer batteries was invented, dry
 	
 \end{multicols}
 
+Fig. \ref{fig: lipo} illustrates an example of the LiPo battery. 
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.2]{LiPo.jpg}
+	\includegraphics[scale=0.16]{LiPo.jpg}
 	\caption{ LiPo battery \cite{12}}
-	\label{fig: EPS}
+	\label{fig: lipo}
 \end{figure}
 
 
@@ -257,11 +269,13 @@ Li-ion/Po battery charge process can be divided into 2 main stages:\\
 $\bullet$ constant current charge\\
 $\bullet$ constant voltage charge\\
 
+Fig. \ref{fig: bcs} illustrates the example of battery charging stages.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=3.5]{LiCharge.jpg}
+	\includegraphics[scale=0.7]{bcs.jpg}
 	\caption{ Charge stages \cite{14}}
-	\label{fig: EPS}
+	\label{fig: bcs}
 \end{figure}
  Charging rate of a battery measures in C. In case of 1000mAh battery cell 1C charging rate will be 1000mA and 500mA for 0.5C. Usually, recommended charging given in the datasheet.\\
  Charging process starts with a 100\%  constant current (according to a charging rate) process. During the time while battery voltage reaching the upper voltage threshold, its pushing a constant current into a battery. Once voltage reaches threshold point, charging process changes from the constant current mode into a constant voltage mode. In a constant voltage mode, voltage keeps its maximum level while current starts to slightly drop until it gets down to a threshold level, which usually written in a datasheet (around 3\%). After current drops below the threshold battery is fully charged. \\ \\

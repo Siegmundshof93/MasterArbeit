@@ -23,6 +23,8 @@ Warning--to sort, need author or key in 15
 Warning--to sort, need author or key in 19
 Warning--to sort, need author or key in 26
 Warning--to sort, need author or key in 27
+Warning--to sort, need author or key in 28
+Warning--to sort, need author or key in 29
 Warning--to sort, need author or key in 24
 Warning--to sort, need author or key in 25
 Warning--to sort, need author or key in 1
@@ -35,8 +37,6 @@ Warning--to sort, need author or key in 16
 Warning--to sort, need author or key in 21
 Warning--to sort, need author or key in 32
 Warning--to sort, need author or key in 23
-Warning--to sort, need author or key in 28
-Warning--to sort, need author or key in 29
 Warning--to sort, need author or key in 30
 Warning--to sort, need author or key in 31
 Warning--empty journal in 17
@@ -45,7 +45,7 @@ Warning--empty booktitle in 22
 Warning--empty journal in 13
 You've used 32 entries,
             2768 wiz_defined-function locations,
-            736 strings with 9140 characters,
+            737 strings with 9154 characters,
 and the built_in function-call counts, 8308 in all, are:
 = -- 857
 > -- 120
