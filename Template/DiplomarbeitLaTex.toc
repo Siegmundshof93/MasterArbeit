@@ -29,7 +29,7 @@
 \contentsline {section}{\numberline {3.2}EPS Architecture of the 6U Satellite}{22}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Power Processing Unit}{22}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Battery Pack}{25}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Power Distribution Unit}{28}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Power Distribution Unit}{27}{subsection.3.2.3}
 \contentsline {chapter}{\numberline {4}Requirements}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}Top Level Requirements}{29}{section.4.1}
 \contentsline {section}{\numberline {4.2}Functional Requirements}{30}{section.4.2}

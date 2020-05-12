@@ -463,50 +463,52 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   
  After the power has been distributed from the charger, is separates in two power lines, one power line goes through the LDO converter to feed the microcontroller and second distributes the power into five DC-DC converters for the subsystems and payloads.
  
- LDO converts input power from the charger into 3.3V to supply a power for the microcontroller. After surpassing the LDO, power goes through the load switch, controlled by watchdog. Watchdog provides a constant output signal to the load switch, that allowed him to commutate and transfer power further to the microcontroller. 
+ LDO converts input power from the charger into 3.3V to supply a power for the microcontroller. After surpassing the LDO, power goes through the load switch, controlled by watchdog. Watchdog provides a constant output signal to the load switch, that allowed him to commutate and transfer power further to the microcontroller. Fig. \ref{fig: mic} shows the block diagram of the watchdog to microcontroller communication.
   
     \begin{figure}[h]
     	\centering
     	\includegraphics[scale=0.7]{Watch.png}
     	\caption{microcontroler power supply}
-    	\label{fig: ltc4015}
+    	\label{fig: mic}
     \end{figure}
-  Microcontroller sends a reset signal to the watchdog to reset the counter. As long as counter reset, watchdog keeps the enable output pin "HIGH". However, when watchdog does not receive the reset signal from the microcontroller due to some system problems, watchdog restarts himself and enable output pin getting low and high, which restarts the microcontroller.
+  Microcontroller sends a reset signal to the watchdog to reset the counter. As long as counter reset, watchdog keeps the enable output pin "HIGH". However, when watchdog does not receive the reset signal from the microcontroller due to some system problems, watchdog restarts himself and enable output pin getting low and high, which restarts the microcontroller. 
   
-  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger. Power processing can be divided into 2 blocks: power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 7.4V. Common 7.4 V converter used to convert unregulated voltage from the solar panels. LTC3119 is used for this task, this microchip has a large current tolerance, which allows it to transfer a huge amount of power. To produce 5V and 3.3V, used LM43603 and TPS62111 converters. These converters were successfully used on the previous EPS models. In order to keep a flight heritage, was made a decision to keep the converters as it is. 
+  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger into the 5 power channels, shown on the Fig. \ref{fig: dc}. Power processing can be divided into 2 blocks: power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 7.4V. Common 7.4 V converter used to convert unregulated voltage from the solar panels. LTC3119 is used for this task, this microchip has a large current tolerance, which allows it to transfer a huge amount of power. To produce 5V and 3.3V, used LM43603 and TPS62111 converters. These converters were successfully used on the previous EPS models. In order to keep a flight heritage, was made a decision to keep the converters as it is. 
   
    \begin{figure}[h]
    	\centering
    	\includegraphics[scale=0.4]{dcdc.png}
    	\caption{Power processing}
-   	\label{fig: ltc4015}
+   	\label{fig: dc}
    \end{figure}
   
-  One of the important tasks of EPS and PPU is the deployment of 2 UHF antennas. To accomplish this task and provide a battery voltage to deployment mechanism, used 2 power lines for each UHF antenna with two TPS1H200A load switches in series for each line. To activate antenna release, two signals must be send from the microcontroller. The enable signals must close the switches, which will lead to the energy transfer and therefore to the activation of the release mechanism. Antenna release mechanism shown on the Fig.\ref{fig: PPU} as ARM1 and ARM2. 
+  One of the important tasks of EPS and PPU is the deployment of 2 UHF antennas. To accomplish this task and provide a battery voltage to deployment mechanism, used 2 power lines for each UHF antenna with two TPS1H200A load switches in series for each line. To activate antenna release, two signals must be send from the microcontroller. The enable signals must close the switches, which will lead to the energy transfer and therefore to the activation of the release mechanism. Antenna release mechanisms shown on the Fig.\ref{fig: PPU} as ARM1 and ARM2. 
   
-  In addition, PPU provide a current and voltage sensing of 16 analog lines,  which get converted via ADC MAX1231 that provide an SPI signal. 
   
-  Figure \ref{fig: PPU} Illustrate the simple PPU architecture block diagram. 
+  
+  Figure \ref{fig: PPU} Illustrates the simple PPU architecture block diagram. 
   
   \begin{figure}[h]
   	\centering
   	\includegraphics[scale=0.3]{PPU.png}
-  	\caption{Power Processing Unit}
+  	\caption{Block diagram of the Power Processing Unit}
   	\label{fig: PPU}
   \end{figure}
   
      \subsection{Battery Pack}
   
- Battery pack board used to provide a power storage for the EPS by using of 4 li-ion batteries with a 2 series 2 parallel configuration. One of the EPS requirements is to provide capacity of 160 Wh which can be made by using 2 battery packs with LI-ion batteries samsung INR21700 with a capacity of 4900mAh.
+ Battery Pack board is used to provide a power storage for the EPS by using of 4 li-ion batteries with a 2 series 2 parallel configuration. One of the EPS requirements is to provide capacity of 160 Wh which can be made by using 2 battery packs with LI-ion batteries samsung INR21700 with a capacity of 4900mAh.\\ \\
+ 
+ Fig. \ref{fig: bat} illustrates the one half peace of the Battery Pack board.
  
  \begin{figure}[h]
  	\centering
  	\includegraphics[scale=0.37]{bat.png}
- 	\caption{Battery pack board}
+ 	\caption{Battery Pack board}
  	\label{fig: bat}
  \end{figure}
  
-  As was discussed in the background section \ref{sec:tech1} Li-ion batteries required a protection circuit to prevent overcharge, over-discharge and a fast discharge(short). For the battery pack board every two cells in the series have their own protection integrated chip BQ29700D which has an overcharge, over-discharge and short protection. Due to 2S2P configuration, batteries which located in parallel have to be balance. BQ29209 is a battery balancer from Texas Instruments which \cite{23}"performs automatic cell-balance correction where the two cells are automatically corrected for voltage imbalance by loading the cell with the higher voltage with a small balancing current."  
+  As was discussed in the background section \ref{sec:tech1} Li-ion batteries required a protection circuit to prevent overcharge, over-discharge and a fast discharge(short). For the battery pack board every two cells in the series have their own protection integrated chip BQ29700D which has an overcharge, over-discharge and short protection. Due to 2S2P configuration, batteries which located in parallel have to be balanced. BQ29209 is a battery balancer from Texas Instruments which \cite{23}"performs automatic cell-balance correction where the two cells are automatically corrected for voltage imbalance by loading the cell with the higher voltage with a small balancing current."  
   
   \begin{figure}[h]
   	\centering
@@ -517,21 +519,22 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   
   The configuration \ref{fig: Bat_prot_bal} allows batteries to provide and collect the power at the same time keeping cells balanced and safe.
   
-  Due to the space environment, temperature of the batteries can decrease bellow the temperature threshold. To avoid the battery temperature drop bellow the limit, was decided to use resistor heaters. Battery pack board has 2 temperature sensors that located under the batteries, which allow to measure the temperature close to the temperature of the batteries. The temperature sensors provide an I$^{2}$C to the PC104 connector that transfer the data signal to the microcontroller of the PPU. Microcontroller reads the signal and decide whether it need to provide a heat to the batteries or not. Heat is implemented by sending a enable signal from the microcontroller to the load switch TPS1H200A that has a function to transfer a power from the batteries to the low value resisters.  \\ \\ \\ \\
+  Due to the space environment, temperature of the batteries can decrease bellow the temperature threshold. To avoid the battery temperature drop bellow the desired limit, it was decided to use the resistors as heaters. Battery Pack board has 2 temperature sensors that are located under the batteries, which allows to measure the temperature close to the the batteries. The temperature sensors provide an I$^{2}$C signal to the PC104 connector that transfer the data signal to the EPS microcontroller . The microcontroller reads the signals and decides whether it need to provide a heat to the batteries or not. Heating is done by sending an enable signal from the microcontroller to the TPS1H200A load switch, which has the function to transfer energy from the batteries to the low value resistors.  \\ 
+   Fig. \ref{fBP} shows the Block diagram of the Battery Pack board. \\ \\ 
   
   
   \begin{figure}[h]
   	\centering
   	\includegraphics[scale=0.3]{BP.png}
-  	\caption{Battery pack board}
-  	\label{fig: BP}
+  	\caption{Block diagram of the Battery Pack board}
+  	\label{fBP}
   \end{figure} 
    
   
   \subsection{Power Distribution Unit}
-  PDU is a part of the EPS that responsible for a power distribution and power monitoring. The main feature of PDU is the flexibility, that allows the PDU to fit every power requirement of the subsystem or payload.     To provide a power to the subsystems and payloads PDU uses 23 load switches of 3 different types TPS203x, TPS1H200A and FPF2701. The power distribution is controlled via EPS microcontroller by providing an enable signal to the pinhead connectors and partly by transmitting an I$^2$C signal to shift register that spread an array signal into the switches. 
+  PDU is part of the EPS responsible for power distribution and power monitoring. The key feature of the PDU is the flexibility that allows the PDU to meet the power requirements of the subsystems and payloads. To provide a power to the subsystems and payloads PDU uses 23 load switches of 3 different types TPS203x, TPS1H200A and FPF2701. The power distribution is controlled by EPS microcontroller by providing an enable signal to the pinhead connectors and partly by transmitting an I$^2$C signal to shift register that spread an array signal into the switches. 
   
-  In order to measure a current of the power lines to observe a power consumptions of the subsystems and payloads, MAX4372 is used. Current sensors located one for each power line, which allows to measure the current of each line. MAX4372 has an analog output, which requires to use an ADC converter to convert an analog into a digital signal. To convert analog into a digital signal was decided to use MAX1231 ADC converter that provides an SPI output signal to the EPS microcontroller. 
+  In order to measure a current of the power lines to observe a power consumptions of the subsystems and payloads, MAX4372 is used. Current sensors located one for each power line, what allows to measure the current of each line. MAX4372 has an analog output, which requires to use an ADC converter to convert an analog into a digital signal. To convert analog into a digital signal was decided to use MAX1231 ADC converter that provides an SPI output signal to the EPS microcontroller. 
   
     
   The detailed review, calculations and all explanations of the PDU board will be given in chapter \ref{sec:tech77}
