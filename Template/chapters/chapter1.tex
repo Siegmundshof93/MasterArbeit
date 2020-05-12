@@ -1,12 +1,14 @@
 \chapter{Introduction\label{cha:chapter1}}
-Due to the significant amount of new Missions, German Orbital System took a step up to create a type of satellite bus for a 6U satellite.  As a result of updating the bus from 3U to 6U, satellite functions have improved, which opens up the possibility for more subsystems and components, as well as for more payloads. The configuration of the separate Power Distribution Unit made it possible to place more components, which lead to an increase of the number of working subsystems and payloads. The development process of the satellite including EPS is taking a sizable amount of time, to use time more efficient it was decided to divide the EPS in to two units and create an universal Power Distribution Unit which is admissible for 6 Unit as well as for a 3 Unit CubeSats. 
+Due to the significant amount of new Missions, German Orbital System took a step up to create a type of satellite bus for a 6U satellite.  As a result of updating the bus from 3U to 6U, satellite functions have improved, which opens up the possibility for more subsystems and components, as well as for more payloads. The configuration of the separate Power Distribution Unit made it possible to place more components, which led to an increase in the number of working subsystems and payloads. The development process of the satellite including EPS is taking a sizable amount of time, to use time more efficient it was decided to divide the EPS in to two units and create an universal Power Distribution Unit which is admissible for 6 Unit as well as for a 3 Unit CubeSats. 
  
 
 \section{Motivation\label{sec:moti}}
-Nowadays most of the companies designing their Electrical Power System boards for a nano cubesats as a whole unit, consisted of all important devices for power management. This configuration is common and allowed to create space for a hardware in the tiny cubesat which is essential for a nano satellites due to its limited size and mass. 
-\\  Despite the fact that the mechanical space of the satellite is important, the space on the EPS board is limited for components which is narrowing satellite possibilities with bigger missions and more developed bus. 
-The motivation of this research is to find the best solution of the Power Distribution Unit architecture of Electrical Power System for the 6U CubeSat. Development of Power Distribution Unit will make a responsible use of time for the next missions, by development only a Power Processing Unit, which will be configured for each mission individually.\\
-One unit configuration is a common type of an EPS design, which is mostly used by nano cubesat developers. This type of EPS design allowed to combine all components of the EPS in one unit to save mechanical space for the rest of the bus hardware and a payload of a nano cubesat. The second type of technology is a separated type of the EPS which is divided into a PPU which is responsible for a power generation from a solar panels, battery charging and balancing as well as power processing and power convertation, and the PDU which has a main function of the power distribution. PDU consist mostly of switches and current sensors, this architecture allows to place significant amount of switches and connectors for a payloads, which are necessary for a missions requiring amount of payload connections, that will not be enough for a standard one unit EPS board type. \\
+Nowadays most of the companies designing their EPS boards as a whole unit, consisted of all important devices for power management. This configuration is common and allows to create space for a hardware in the tiny cubesat which is essential for a nanosatellites due to its limited size and mass. 
+\\  Despite the fact that the mechanical space of the satellite is important, the space on the EPS board is limited for components which is narrowing satellite possibilities with bigger missions and more developed bus.
+One unit configuration is a common type of an EPS design, which is mostly used by nano cubesat developers. This type of EPS design allows to combine all components of the EPS in one unit to save mechanical space for the rest of the bus hardware and a payload of a nano cubesat. The second type of technology is a separated type of the EPS which is divided into a PPU which is responsible for a power generation from a solar panels, battery charging and balancing as well as power processing and power convertation, and the PDU which has a main function of the power distribution. PDU consist mostly of switches and current sensors, this architecture allows to place significant amount of switches and connectors for a payloads, which are necessary for a missions requiring amount of payload connections, that will not be enough for a standard one unit EPS board type.\\
+
+The motivation of this research is to find the best solution of the PDU architecture of EPS for the 6U CubeSat. Development of PDU will make a responsible use of time for the next missions, by development only a PPU, which will be configured for each mission individually.\\
+
 
 \section{CubeSat Concept}
 The Cubesat concept was developed by California Polytechnic State University and Stanford University. The concept provides opportunity to reduce the time and cost for development a satellite. There are different types of CubeSats, One-unit (1U) CubeSat is a 100.0$\pm$0.1mm $\times$ 100.0$\pm$0.1mm $\times$ 113.5$\pm$0.1mm cube with the maximum weight of 1.33 kg. Two-unit (2U) CubeSat is a 100.0$\pm$0.1mm $\times$ 100.0$\pm$0.1mm $\times$ 227$\pm$0.2mm cube with the maximum weight of 2.66 kg. Three-unit (3U) CubeSat is a 100.0$\pm$0.1mm $\times$ 100.0$\pm$0.1mm $\times$ 345.5$\pm$0.3 mm cube with the maximum weight of 4kg.\\
@@ -15,8 +17,8 @@ The Cubesat concept was developed by California Polytechnic State University and
 
 \section{Goals of Present Work\label{Goals}}
 The goals of this work are determined by following bullet points:\\ \\
-  To develop the Power Distribution Unit which meets the requirements of the Descartes Mission.\\ \\
-  To design the flexible layout for the Power Distribution Unit in order to adjust the PCB for the future missions.\\ \\
+  To develop the PDU which meets the requirements of the Descartes Mission.\\ \\
+  To design the flexible layout for the PDU in order to adjust the PCB for the future missions.\\ \\
  To test the PDU by using the ground test equipment such as PSU, STM32 Nucleo-kit.\\ \\
   To test the PDU by using fly-hardware.\\ \\
 
@@ -32,13 +34,13 @@ The following gives a brief description of the content of the main chapters that
 \noindent This example thesis is separated into 8 chapters.
 \\
 \\
-\textbf{Chapter \ref{cha:chapter2}} provides the background information required for the Development of the Power Distribution Unit. This chapter covers basics of the Electrical Power System such as EPS overview, power generation of the satellite, power storage, power processing, principles of microcontroller and power distribution.
+\textbf{Chapter \ref{cha:chapter2}} provides the background information required for the Development of the PDU. This chapter covers basics of the EPS such as EPS overview, power generation of the satellite, power storage, power processing, principles of microcontroller and power distribution.
 \\
 \\
 \textbf{Chapter \ref{chapter3}} provides a short essential knowledge about Descartes mission with the main purposes of the mission, satellite characteristics and the satellite  abilities. Then topic will go deeper into the EPS architecture design of the 6U satellite.
 \\
 \\
-\textbf{Chapter \ref{cha:chapter3}} presents the requirements that were set by German Orbital Systems for the Power Distribution Board development.
+\textbf{Chapter \ref{cha:chapter3}} presents the requirements that were set by German Orbital Systems for the PDU Board development.
 \\
 \\
 \textbf{Chapter \ref{sec:tech77}} explains the design of the PDU. This chapter provides a calculation and explonation of every component that is used on the PDU. 

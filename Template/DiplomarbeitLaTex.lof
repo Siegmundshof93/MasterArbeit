@@ -2,7 +2,7 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces EPS Block Diagram\relax }}{5}{figure.caption.4}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Example of the EPS Block Diagram\relax }}{5}{figure.caption.4}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces 30\% Triple Junction GaAs Solar Cell \cite {4}\relax }}{6}{figure.caption.5}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Solar array\relax }}{7}{figure.caption.6}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a solar cell characteristics at different temperatures\cite {6} \relax }}{8}{figure.caption.7}
@@ -61,7 +61,7 @@
 \contentsline {figure}{\numberline {7.4}{\ignorespaces Voltage drop of on the HISP power line in comparison with the 5V BUS voltage line\relax }}{57}{figure.caption.65}
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Testbed of the Power monitoring test\relax }}{59}{figure.caption.66}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces EPS assembly (PDU, PPU, Battery board\relax }}{61}{figure.caption.67}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces EPS assembly (PDU, PPU, Battery board)\relax }}{61}{figure.caption.67}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

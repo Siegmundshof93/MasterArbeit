@@ -1,33 +1,37 @@
 \chapter{Background: Electrical Power System  \label{cha:chapter2}}
-This section is intended to provide essential knowledge on Electrical Power System that will help to explain the development of Power Distribution Unit.
-Therefore, an overview of the EPS will be presented. 
+This section is intended to provide essential knowledge on EPS that will help to explain the development of PDU.
+ 
 
-\section{Electircal Power System Overview \label{sec:tech}}
-The Electrical Power Subsystem is a vital part of a CubeSat-Bus. It is responsible for generation and storage of energy, the processing of electrical power to a defined state and the distribution of power to all satellite subsystems. The EPS is a main, essential and frequently form the third of total spacecraft mass. Power generation technology combine a solar cells, charger. Power storage typically includes a batteries; primary batteries (non-rechargeable), or secondary batteries (rechargable). Power distribution consist of power switchers, which facilitate power control to a subsystems of the spacecraft.
+\section{Electrircal Power System Overview \label{sec:tech}}
+The EPS is a vital part of a CubeSat-bus. It is responsible for the power generation, energy storage, the processing of electrical power to a defined state and the power distribution across all satellite subsystems. The EPS accounts for a 3rd of the spacecraft mass and is a core subsystem. Power generation technology combine a solar cells, charger. Power storage typically includes a batteries; primary batteries (non-rechargeable), or secondary batteries (rechargeable). Power distribution consist of power switchers, which facilitate power control to a subsystems of the spacecraft.
+
+Fig. \ref{fig: EPSS} illustrates an example of the EPS block diagram.
 
 
 
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.4]{EPS_basic.png}
-			\caption{EPS Block Diagram}
-			\label{fig: EPS}
+			\caption{Example of the EPS Block Diagram}
+			\label{fig: EPSS}
 	\end{figure}
 
 \subsection{Power Generation \label{sec:tech}}
 
 
 
-Yost\cite{1} Solar power generation is the most used method for the nano satellites to generate a power. Sollar cells are build of thin silicon disks (semiconductor wafers)  which convert the energy of a light into electric current. Solar intensity of a solar array is light availability of the sun, which can vary according to a distance from the sun as well as angle of a projected surface area between the sun and a solar array.  
+Yost\cite{1} Solar power generation is the most used method for the nanosatellites to generate a power. Solar cells are build of thin silicon disks (semiconductor wafers)  which convert the energy of a light into electric current. Solar intensity of a solar array is light availability of the sun, which can vary according to a distance from the sun as well as angle of a projected surface area between the sun and a solar array.  
 \\
-\noindent\hspace*{3mm} Alia-Novobilski\cite{2} The most common manufactured type of cells are single junction cells. Single junction type is commonly used on the Earth applications. Due to severe sensitivity to a space radiation energy and relatively low efficiency, single junction type is not preferable for a space applications. Although single junction solar cell is relatively cheap to design, modern spacecraft use a multi-junction solar cells. Manufactured of a light-absorbing materials, multiple layers are much tolerant to a radiation in a space environment and more efficiently  Yost\cite{1} "convert specific wavelength regions of the solar spectrum into energy, thereby using a wider spectrum of solar radiation". 
-Green\cite{3} In the space industry, triple-junction solar cells are the most common tu use due to their high efficiency and relatively affordable cost compared to an other types of solar cells. 
+\noindent\hspace*{3mm} Alia-Novobilski\cite{2} The most common manufactured type of cells are single junction cells. Single junction type is commonly used on the Earth applications. Due to severe sensitivity to a space radiation energy and relatively low efficiency, single junction type is not preferable for a space applications. Although single junction solar cell is relatively cheap to design, modern spacecraft use a multi-junction solar cells. Manufactured of a light-absorbing materials, multiple layers are much tolerant to a radiation in a space environment and more efficiently  Yost\cite{1} "convert specific wavelength regions of the solar spectrum into energy, thereby using a wider spectrum of solar radiation ". 
+Green\cite{3} In the space industry, triple-junction solar cells are the most common tu use due to their high efficiency and relatively affordable cost compared to an other types of solar cells.
+
+Fig. \ref{fig: GaAs} illustrates the example of a Triple Junction GaAs Solar Cell.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.4]{azur.png}
 	\caption{ 30\% Triple Junction GaAs Solar Cell \cite{4}}
-	\label{fig: EPS}
+	\label{fig: GaAs}
 \end{figure}
 
 Solar cells are usually interconnected to a solar array to get the desired power. Configuration of the solar array is flexible, such that it allows adjustment of the cells connection. To achieve the desired voltage, solar cells get interconnected in series (strings). To achieve the desired current, solar cells get interconnected in parallel.\\
@@ -38,7 +42,7 @@ Solar cells are usually interconnected to a solar array to get the desired power
 	\centering
 	\includegraphics[scale=0.3]{Cellen.png}
 	\caption{ Solar array}
-	\label{fig: EPS}
+	\label{array}
 \end{figure}
 	
 Solar cell is strongly effected by a temperature. Honsberg\cite{5} "Increases in temperature reduce the band gap of a semiconductor, thereby effecting most of the semiconductor material parameters. The decrease in the band gap of a semiconductor with increasing temperature can be viewed as increasing the energy of the electrons in the material."\\
@@ -81,18 +85,17 @@ where:\\
 		\label{fig: EPS11}
 	\end{figure}
 	
-According to a Figure \ref{fig: EPS11} a maximum power point shifts as a solar array getting hotter or colder. To keep power at the maximum point used Maximum Power Point Tracker (MPPT). The purpose of MPPT is to keep voltage on a particular level while solar panels are affected by a temperature or the orientation of the solar panels.\\
+According to a Fig. \ref{fig: EPS11} a maximum power point shifts as a solar array getting hotter or colder. To keep power at the maximum point used Maximum Power Point Tracker (MPPT). The purpose of MPPT is to keep voltage on a particular level while solar panels are affected by a temperature or the orientation of the solar panels.\\
 \cite{20} MPPT might be separated into two parts: power control, logic control. Power control is usually a step-up step-down DC-DC  converter which responsible for a voltage adjustment according to the input from the logic control. Logic control is responsible for a solar array parameters measurements and maximum power point adjustment according to the software algorithm.\\  
 
-During the circuit design of the solar panels, it is important to consider the redundancy and a case in which one of the cells will be damaged. For that reason diodes are used. The diodes ensure the power can bypass a damage solar cell. On the Fig 2.5 shown that the diodes D1 and D2 are placed in th parallel with the solar cells. Diode D3 which also observed on the Figure 2.3 is used to prevent the reverse current. Reverse current has a negative effect on the solar panel efficiency. When reverse current occurs, one effect is that current it's drawn from the batteries, therefore, discharging them. Secondly, reversed current adds additional current to the affected solar cell which shifts the maximum power point.\\
+During the circuit design of the solar panels, it is important to consider the redundancy and a case in which one of the cells will be damaged. For that reason diodes are used. The diodes ensure the power can bypass a damage solar cell. Fig. \ref{dioden} illustrates the diodes D1 and D2 which are placed in the parallel with the solar cells. The diode D3 which can be also observed on the Fig. \ref{array} is used to prevent the reverse current. Reverse current has a negative effect on the solar panel efficiency. When reverse current occurs, it begins to draw current from the batteries, hence discharging them. In addition, reversed current adds additional current to the affected solar cell which shifts the maximum power point.\\
 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.45]{DiodenSS.png}
 	\caption{ Example of the Solar cell circuit design}
-	\label{
-		: EPS}
+	\label{dioden}
 \end{figure}
  
 \newpage
@@ -102,12 +105,12 @@ During the circuit design of the solar panels, it is important to consider the r
 
 
 
-Yost\cite{1} During the the mission duration, solar energy is not always available due to eclipse. For this case primary and secondary batteries used to store power. All batteries are classified according to their chemical characteristics. For a short mission duration (up to one week) usually used primary type of batteries due to it's lack of recharge opportunity. the common chemical type of a primary battery is a silver-zinc, which is easier to handle, Yost\cite{1} "however there is also a variety of lithium-based primary batteries that have a higher energy density including: lithium sulphur dioxide (LiSO2), lithium carbon monofluoride (LiCFx) and lithium thionyl chloride (LiSOCl2) 20."\\
+Yost\cite{1} During the the mission duration, solar energy is not always available due to eclipse. For this case primary and secondary batteries used to store power. All batteries are classified according to their chemical characteristics. For a short mission duration (up to one week)  the primary type of batteries are usually used due to the lack of the possibility of recharging. The common chemical type of a primary battery is a silver-zinc, which is easier to handle, Yost\cite{1} "however there is also a variety of lithium-based primary batteries that have a higher energy density including: lithium sulphur dioxide (LiSO2), lithium carbon monofluoride (LiCFx) and lithium thionyl chloride (LiSOCl2)."\\
 \\
 Secondary-type batteries are rechargeable and provide an energy on demand. Secondary-type batteries are connected to a primary energy source of the satellite (usually solar panels) via battery charger. This type include: nickel-cadmium (NiCd), nickel-hydrogen (NiH2), lithium-ion polymer(LiPo), lithium-ion(Li-ion).
 
 \subsubsection{Nickel Cadmium \label{sec:tech}}
- Buchmann\cite{7} Nickel Cadmium is a type of rechargable batteries using nickel oxide hydroxide and metallic cadmium. This chemical connection allows battery to well perform by working in the savage conditions such as low or hot temperature. NiCd battery is the type which prefer to be charge fast instead of slow as types of secondary batteries. Full periodic discharge of a NiCd is an important process and necessary for battery performance. In case of absence  Buchmann\cite{7} " large crystals will form on the cell plates (also referred to as memory) and the NiCd will gradually lose its performance."
+ Buchmann\cite{7} Nickel Cadmium is a type of rechargeable batteries using nickel oxide hydroxide and metallic cadmium. This chemical connection allows battery to well perform by working in the savage conditions such as low or hot temperature. NiCd battery is the type which prefer to be charge fast instead of slow as types of secondary batteries. Full periodic discharge of a NiCd is an important process and necessary for battery performance. In case of absence  Buchmann\cite{7} " large crystals will form on the cell plates (also referred to as memory) and the NiCd will gradually lose its performance."
  
  \newpage
 
@@ -145,7 +148,7 @@ Fig. \ref{fig: nicd} illustrates an example of the NiCd battery.
 
 
 \subsubsection{Nickel Hydrogen \label{sec:tech}}
-Buchmann\cite{7} Nowadays Nickel Hydrogen batteries are mostly used in the satellite applications where long time operation needed. The development of the NiH2 battery started in early 1970 year. In that time metal hybrid alloy was unstable, what slowed down development of the NiH2. In 1980 new alloy was established and stable enough to use it in the cell. 
+Buchmann\cite{7} Nowadays Nickel Hydrogen batteries are mostly used in the satellite applications where long time operation is required. The development of the NiH2 battery started in early 1970 year. In that time metal hybrid alloy was unstable, what slowed down development of the NiH2. In 1980 new alloy was established and stable enough to use it in the cell. 
 \cite{10}"The replacement of cadmium with hydrogen electrodes has double the energy of Ni-Cd, but the specific energy of Ni- H2 is similar to Ni-Cd be case of the cylindrical configuration of the pressure. The first Ni- H2 battery was used in a GEO (geostationary mission) Intelsat V in 1983.  Almost all GEO spacecrafts now use Ni-H2 batteries. The first NASA LEO spacecraft to use Ni-H2 was in 1990."
 
 
@@ -264,7 +267,7 @@ Fig. \ref{fig: lipo} illustrates an example of the LiPo battery.
 
 \subsubsection{Charging}
 
-Santoni\cite{13}The hight capacity and low weight make Li-ion batteries very well suited for a nano satellite space applications. Nonetheless performance and safety charging issues should be taking into account. Insidor\cite{14} The chargie of a LI-ion batteries is very strict on the correct settings, mostly due to a high sensitivity to a overcharge. Typical Li-ion battery voltage per cell can vary from 4.1 to 4.3, which is defined in the datasheet. However, typical and most common value is 4.2V. Exceed of a battery voltage limit will increase capacity, but will also stress a battery, which can seriously harm a cell and and significantly reduce battery performances.\\ \\
+Santoni\cite{13}The hight capacity and low weight make Li-ion batteries very well suited for a nanosatellite space applications. Nonetheless performance and safety charging issues should be taking into account. Insidor\cite{14} The charge of a LI-ion batteries is very strict on the correct settings, mostly due to a high sensitivity to a overcharge. Typical Li-ion battery voltage per cell can vary from 4.1 to 4.3, which is defined in the datasheet. However, typical and most common value is 4.2V. Exceed of a battery voltage limit will increase capacity, but will also stress a battery, which can seriously harm a cell and and significantly reduce battery performances.\\ \\
 Li-ion/Po battery charge process can be divided into 2 main stages:\\
 $\bullet$ constant current charge\\
 $\bullet$ constant voltage charge\\
@@ -278,7 +281,7 @@ Fig. \ref{fig: bcs} illustrates the example of battery charging stages.
 	\label{fig: bcs}
 \end{figure}
  Charging rate of a battery measures in C. In case of 1000mAh battery cell 1C charging rate will be 1000mA and 500mA for 0.5C. Usually, recommended charging given in the datasheet.\\
- Charging process starts with a 100\%  constant current (according to a charging rate) process. During the time while battery voltage reaching the upper voltage threshold, its pushing a constant current into a battery. Once voltage reaches threshold point, charging process changes from the constant current mode into a constant voltage mode. In a constant voltage mode, voltage keeps its maximum level while current starts to slightly drop until it gets down to a threshold level, which usually written in a datasheet (around 3\%). After current drops below the threshold battery is fully charged. \\ \\
+ Charging process starts with a 100\%  constant current (according to a charging rate) process. During the time while battery voltage reaching the upper voltage threshold, its pushing a constant current into a battery. Once voltage reaches threshold point, charging process changes from the constant current mode into a constant voltage mode. In a constant voltage mode, voltage keeps its maximum level while current starts to slightly drop until it gets down to a threshold level, which usually written in a datasheet (around 3\%). After current drops below the threshold, battery is fully charged. \\ \\
  In most cases, IC chargers are used to provide constant current and constant voltage for lithium-ion / Po batteries. \cite{14} One of those IC chargers is a MAX745. 
 This IC is able to set a charge up to 4 cells in series, as well as set a current and charging voltage. This IC use PWM signal to control a charge voltage which does not allow IC to get too hot.\\ This IC is an example of a charger microchip which has all necessary  tools to charge a Li-ion/Po batteries. 
 
@@ -297,7 +300,7 @@ The Figure \ref{fig: EPS22} shows an example of a standard MAX745 application ci
 
 \subsubsection{Protection}
 
-Despite the fact that, Lithium-ion/Po batteries have a high density, they also require a careful handling. For that reason important to use safety protection circuits which prevent Li-ion/Po batteries from: overcharge, over-discharge and quick discharge.\\
+Despite the fact that, Lithium-ion/Po batteries have a high density, they also require a careful handling. For this reason, it is important to use protective circuits that prevent overcharging, over-discharge and quick discharge of Li-ion batteries.\\
 \cite{16} Overcharge of a Li-ion/Po batteries case an immense battery stress which creates a safety hazard with a possibility of fire. Li-ion batteries have a less tolerance to an overcharge and require a protection circuit.\\
 The over-discharge of a Lithium batteries is also harmful. The consequence of over-discharge is a reduced battery life, due to the dissolution of copper from the anode into the electrolyte, which can case a short circuit during a battery charge.\\
 Protection ICs used to comply all upper mention conditions. A main principal of a protection IC is to switch on and off a power line usually by using external MOSFETs to keep a batteries safe and not exceed a voltage threshold. The simple example of a protection IC is a BQ29700D which is a one cell protection device. 
@@ -404,10 +407,10 @@ voltage drop across a shunt resistor.  The voltage across the shunt  is  usually
 
 \newpage   
 \chapter{6 Unit Satellite Design \label{chapter3}}
-This chapter will provide a short essential knowledge about Descartes mission with the main purposes of the mission, satellite characteristics and the satellite  abilities. Then topic will go deeper into the EPS architecture design of the 6U satellite. \\
+This chapter will provide a short essential knowledge about Descartes Mission with the main purposes of the mission, satellite characteristics and the satellite  abilities. Then topic will go deeper into the EPS architecture design of the 6U satellite. \\
 \section{Introduction into the Descartes Mission}
 
-German Orbital System (GOS) plays a major role in the satellite development. GOS has accomplished nine successful 3U satellites launches into space since their realize as a company. Although 3U satellites are relatively cheap to build and their characteristics enough have a simple payload, GOS is keeping up with the time. At the moment GOS is developing the 6U nano-satellite (Descartes), that shown on the Figure \ref{fig: EPS222}. Descartes can be used for a wide range of tasks such as:\\ \\
+German Orbital System (GOS) plays a major role in the satellite development. GOS has accomplished nine successful 3U satellites launches into space since their realize as a company. Although 3U satellites are relatively cheap to build and their characteristics enough have a simple payload, GOS is keeping up with the time. At the moment GOS is developing the 6U nanosatellite (Descartes), that shown on the Figure \ref{fig: EPS222}. Descartes can be used for a wide range of tasks such as:\\ \\
 $\bullet$ Earth exploration\\ 
 $\bullet$ Student projects\\ 
 $\bullet$ Science projects\\ 
@@ -437,7 +440,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   $\bullet$ 2 Battery Packs\\
   
    \subsection{Power Processing Unit}
-   Power Processing Unit (PPU) is a part of EPS which responsible for a battery charge, power distribution control and a power processing. The PPU is illustrated on the Fig. \ref{fig: psu122}.
+   PPU is a part of EPS which responsible for a battery charge, power distribution control and a power processing. The PPU is illustrated on the Fig. \ref{fig: psu122}.
    
    \begin{figure}[h]
    	\centering
@@ -446,7 +449,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
    	\label{fig: psu122}
    \end{figure}
    
-   Power converted from the solar flux come first into a Power Processing Unit from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panels gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsiable for a battery charge, illustrated on the Figure \ref{fig: ltc40151}. Integrated circuit LTC4015 provide a constant voltage and current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip draws power from the solar input to the system, while batteries are charging and switch power source to a battery pack while eclipse or overcharge condition.
+   Power converted from the solar flux come first into a PPU from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panels gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsiable for a battery charge, illustrated on the Figure \ref{fig: ltc40151}. Integrated circuit LTC4015 provide a constant voltage and current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip draws power from the solar input to the system, while batteries are charging and switch power source to a battery pack while eclipse or overcharge condition.
    
   \begin{figure}[h]
   	\centering
@@ -523,12 +526,12 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
    
   
   \subsection{Power Distribution Unit}
-  Power Distribution Unit (PDU) is a part of the EPS that responsible for a power distribution and power monitoring. The main feature of PDU is the flexibility, that allows the PDU to fit every power requirement of the subsystem or payload.     To provide a power to the subsystems and payloads PDU uses 23 load switches of 3 different types TPS203x, TPS1H200A and FPF2701. The power distribution is controlled via EPS microcontroller by providing an enable signal to the pinhead connectors and partly by transmitting an I$^2$C signal to shift register that spread an array signal into the switches. 
+  PDU is a part of the EPS that responsible for a power distribution and power monitoring. The main feature of PDU is the flexibility, that allows the PDU to fit every power requirement of the subsystem or payload.     To provide a power to the subsystems and payloads PDU uses 23 load switches of 3 different types TPS203x, TPS1H200A and FPF2701. The power distribution is controlled via EPS microcontroller by providing an enable signal to the pinhead connectors and partly by transmitting an I$^2$C signal to shift register that spread an array signal into the switches. 
   
   In order to measure a current of the power lines to observe a power consumptions of the subsystems and payloads, MAX4372 is used. Current sensors located one for each power line, which allows to measure the current of each line. MAX4372 has an analog output, which requires to use an ADC converter to convert an analog into a digital signal. To convert analog into a digital signal was decided to use MAX1231 ADC converter that provides an SPI output signal to the EPS microcontroller. 
   
     
-  The detailed review, calculations and all explanations of the Power Distribution board will be given in chapter \ref{sec:tech77}
+  The detailed review, calculations and all explanations of the PDU board will be given in chapter \ref{sec:tech77}
   
     
   
