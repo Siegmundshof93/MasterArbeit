@@ -16,7 +16,7 @@ Fig. \ref{fig: EPSS} illustrates an example of the EPS block diagram.
 			\label{fig: EPSS}
 	\end{figure}
 
-\subsection{Power Generation \label{sec:tech}}
+\subsection{Power Generation \label{sec:tech00}}
 
 
 
@@ -411,7 +411,9 @@ Power monitoring is the necessary part of the EPS, which allows to observe the c
 This chapter will provide a short essential knowledge about Descartes Mission with the main purposes of the mission, satellite characteristics and the satellite  abilities. Then topic will go deeper into the EPS architecture design of the 6U satellite. \\
 \section{Introduction into the Descartes Mission}
 
-German Orbital System (GOS) plays a major role in the satellite development. GOS has accomplished nine successful 3U satellites launches into space since their realize as a company. Although 3U satellites are relatively cheap to build and their characteristics enough have a simple payload, GOS is keeping up with the time. At the moment GOS is developing the 6U nanosatellite (Descartes), that shown on the Figure \ref{fig: EPS222}. Descartes can be used for a wide range of tasks such as:\\ \\
+German Orbital System (GOS) plays a major role in the satellite development. GOS has accomplished nine successful launches of 3U satellites into space since their release as a company. Although 3U satellites are relatively cheap to build and their characteristics enough have a simple payload, GOS is keeping up with the time. At the moment GOS is developing the 6U nanosatellite (Descartes), that shown on the Fig. \ref{fig: EPS222}. 
+
+Descartes can be used for a wide range of tasks such as:\\ \\
 $\bullet$ Earth exploration\\ 
 $\bullet$ Student projects\\ 
 $\bullet$ Science projects\\ 
@@ -428,15 +430,15 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
 \end{figure}
 
 
-  Descartes is a 6U satellite with dimensions 360$\times$240$\times$120 and mass less than 8kg. 6U satellite has 3.5U of payload free space, which is reserved for the four different payloads. Descartes developed for a 2 years of lifetime on the Low Earth Orbit. For his orbital lifetime satellite will measure the space weather, observe the aircrafts, monitor the ultraviolet radiation on the Earth atmosphere  and provide remote sensing of Earth. The Space weather measurements implemented by DeCor payload. DeCor is a detector of gamma radiation and charged particles in the range of 0.3-3 MeV.This device allows to study the fast variations of electron fluxes in the gap zone between radiation belts and dynamics of particle fluxes and gamma radiation in low orbits depending on geomagnetic conditions. Aircraft data are monitored using a payload called AMUR. AMUR is designed to collect, process and filter aircraft data. 
-  In addition to having a four different payloads, Descartes is using 3-axis attitude control which consist of reaction wheels, magnetorquers and sets of magnetic and solar sensors. To transmit the telemetry and commands Descartes use 2 UHF modules which were designed ba GOS. In addition to 2 UHF modules, 6U satellite operate with a 2.4 GHz HISPICO S-band transceiver.\\ \\
+  Descartes is a 6U satellite with dimensions 360$\times$240$\times$120 and mass less than 8kg. 6U satellite has 3.5U of payload free space, which is reserved for the four different payloads. Descartes is designed for 2 years of lifetime on the Low Earth Orbit. During its orbital life, the satellite will measure the space weather, observe the aircrafts, monitor the ultraviolet radiation on the Earth's atmosphere  and provide remote sensing of the Earth. The Space weather measurements implemented by DeCor payload. DeCor is a detector of gamma radiation and charged particles in the range of 0.3-3 MeV.This device allows to study the fast variations of electron fluxes in the gap zone between radiation belts and dynamics of particle fluxes and gamma radiation in low orbits depending on geomagnetic conditions. Aircraft data are monitored using a payload called AMUR. AMUR is designed to collect, process and filter aircraft data. 
+  In addition to having a four different payloads, Descartes is using 3-axis attitude control which consist of reaction wheels, magnetorquers and sets of magnetic and solar sensors. To transmit the telemetry and commands Descartes use 2 UHF modules which were designed by GOS. In addition to the 2 UHF modules, 6U satellite operate with a 2.4 GHz HISPICO S-band transceiver.\\ \\
  
  
   \section{EPS Architecture of the 6U Satellite}
-  According to an introduction into the mission it is noticeable that design of the 6U satellite highly improved in comparison with the previous 3U satellites which were designed by GOS. The biggest divergence is a size and availability of the satellite to work with more payloads as well as to perform 3-axis stabilization. Due to that fact, the EPS of the satellite has also undergone changes.
+  According to the introduction into the  Descartes Mission, it is noticeable that the design of the 6U satellite was significantly updated compared to the previous 3U satellites which were designed by GOS. The biggest divergence is a size and availability of the satellite to work with more payloads as well as to perform 3-axis stabilization. Due to that fact, the EPS of the satellite has also undergone changes.
   
-  Due to the energy requirements, 6U satellite has to provide a 160 Wh of energy and  distribute it to 23 channels. To accomplish this requirements, considering the available space of the 6U satellite, EPS was devided into 3 main parts which connectrd between each other via PC104 connector:\\ \\
-  $\bullet$ Power Proccessing Unit\\
+  Due to the energy requirements, 6U satellite has to provide a 160 Wh of energy and  distribute it to 23 channels. To accomplish this requirements, considering the available space of the 6U satellite, EPS was divided into 3 main parts which connected between each other via PC104 connector:\\ \\
+  $\bullet$ Power Processing Unit\\
   $\bullet$ Power Distribution Unit\\
   $\bullet$ 2 Battery Packs\\
   
@@ -450,7 +452,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
    	\label{fig: psu122}
    \end{figure}
    
-   Power converted from the solar flux come first into a PPU from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panels gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsiable for a battery charge, illustrated on the Figure \ref{fig: ltc40151}. Integrated circuit LTC4015 provide a constant voltage and current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip draws power from the solar input to the system, while batteries are charging and switch power source to a battery pack while eclipse or overcharge condition.
+   Power converted from the solar flux come first into a PPU from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panel gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsible for a battery charge, illustrated on the Fig. \ref{fig: ltc40151}. Integrated circuit LTC4015 provide a constant voltage and constant current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak, which was explained in subsection \ref{sec:tech00}. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip uses the solar power to charge the batteries and feed the system  during the sunlight condition, during the eclipse or overcharge conditions, the microchip switches the power source from solar power to the batteries.
    
   \begin{figure}[h]
   	\centering
@@ -461,7 +463,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   
  After the power has been distributed from the charger, is separates in two power lines, one power line goes through the LDO converter to feed the microcontroller and second distributes the power into five DC-DC converters for the subsystems and payloads.
  
- LDO converts input power from the charger into 3.3V to supply a power for microcontroller. After surpassing the LDO, power goes through the load switch, controlled by watchdog. Watchdog provide a constant output signal to the load switch, that alloud him to commutate and transfer power further to the microcontroller. 
+ LDO converts input power from the charger into 3.3V to supply a power for the microcontroller. After surpassing the LDO, power goes through the load switch, controlled by watchdog. Watchdog provides a constant output signal to the load switch, that allowed him to commutate and transfer power further to the microcontroller. 
   
     \begin{figure}[h]
     	\centering
@@ -469,9 +471,9 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
     	\caption{microcontroler power supply}
     	\label{fig: ltc4015}
     \end{figure}
-  Microcontroller sends a reset signal to the watchdog, to to reset the counter. As long as counter reset, watchdog keep the enable output pin "HIGH". However, when watchdog does not receive the reset signal from the microcontroller due to some system problems, watchdog restart himself and enable output pin getting low and high, which restart microcontroller.
+  Microcontroller sends a reset signal to the watchdog to reset the counter. As long as counter reset, watchdog keeps the enable output pin "HIGH". However, when watchdog does not receive the reset signal from the microcontroller due to some system problems, watchdog restarts himself and enable output pin getting low and high, which restarts the microcontroller.
   
-  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger. Power processing can be divided into 2 blocks power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 7.4V. Common 7.4 V converter used to convert unregulated voltage from the solar panels. For this task LTC3119 used, this microchip has a big current tolerance which allows him to transfer huge amount of power.To produce 5V and 3.3V, used LM43603 and TPS62111 converters. This converters were successfully used on the previous EPS models. In order to keep a flight heritage, were made decision to keep the converters as it is. 
+  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger. Power processing can be divided into 2 blocks: power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 7.4V. Common 7.4 V converter used to convert unregulated voltage from the solar panels. LTC3119 is used for this task, this microchip has a large current tolerance, which allows it to transfer a huge amount of power. To produce 5V and 3.3V, used LM43603 and TPS62111 converters. These converters were successfully used on the previous EPS models. In order to keep a flight heritage, was made a decision to keep the converters as it is. 
   
    \begin{figure}[h]
    	\centering
@@ -480,7 +482,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
    	\label{fig: ltc4015}
    \end{figure}
   
-  One of important tasks of the EPS and PPU is to deploy 2 UHF antennas. To accomplish this task and provide a battery voltage to deployment mechanism, used 2 power lines for each UHF antenna with two TPS1H200A load switches in series for each line. To activate antenna release, two signals must be send from the microcontroller which enable the load switch to commutate and provide a power to accomplish antenna release on the Fig.\ref{fig: PPU} antenna release mechanism shown as ARM1 and ARM2. 
+  One of the important tasks of EPS and PPU is the deployment of 2 UHF antennas. To accomplish this task and provide a battery voltage to deployment mechanism, used 2 power lines for each UHF antenna with two TPS1H200A load switches in series for each line. To activate antenna release, two signals must be send from the microcontroller. The enable signals must close the switches, which will lead to the energy transfer and therefore to the activation of the release mechanism. Antenna release mechanism shown on the Fig.\ref{fig: PPU} as ARM1 and ARM2. 
   
   In addition, PPU provide a current and voltage sensing of 16 analog lines,  which get converted via ADC MAX1231 that provide an SPI signal. 
   
