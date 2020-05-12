@@ -350,15 +350,9 @@ Figure \ref{fig: EPS41} illustrates an example of the simple Inductive DC-DC ste
 \\
 
 \subsection{Microcontroller \label{sec:tech}}
-The main responsibility of the EPS microcontroller is to manage a power distribution for a hole satellite by sending an enable signals to a commutating components, in most of the cases integrated switches. In addition, microcontroller provide a housekeepeng telemetry by reading the values of sensors, such as temperature sensors, current sensors and others. For this task EPS microcontroller uses protocol lines as $I^{2}C$ or $SPI$. Furthermore, EPS microcontroller needs to communicate to an OBC microcontroller to share the housekeeping information or for reason to receive a commands from OBC. Communication between EPS and OBC as well as with other microcontrollers implemented via CAN bus. Moreover, EPS microcontroller can be used to handle MMPT algorithm to obtain the maximum power from the solar energy. The example of microcontroller block diagram architecture shown on the Fig \ref{fig: EPS4121}.	
+The main responsibility of the EPS microcontroller is to manage a power distribution for a hole satellite by sending an enable signals to the commutating components, in most cases to the integrated switches. In addition, microcontroller provide a housekeepeng telemetry by reading the values of sensors, such as temperature sensors, current sensors and others. For this task EPS microcontroller uses protocol lines as $I^{2}C$ or $SPI$. Furthermore, EPS microcontroller needs to communicate to an OBC microcontroller to share the housekeeping information or for reason to receive a commands from OBC. Communication between EPS and OBC as well as with other microcontrollers implemented via CAN bus. Moreover, EPS microcontroller can be used to handle MMPT algorithm to obtain the maximum power from the solar energy. 	
 \\
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.4]{uC.png}
-	\caption{block diagram of microcontroller communication}
-	\label{fig: EPS4121}
-\end{figure}
-\\
+
 EPS Data signals:\\ \\
 $\bullet$ CAN\\
 $\bullet$ UART\\
@@ -367,11 +361,19 @@ $\bullet$  SPI\\
 $\bullet$  EN\\
 \\
 As for power consumption, microcontrollers consume very little power. Some microcontrollers such as STM32L  can consume  around 10 to 100 $\mu$A.\\
-To prevent the microcontroller of getting stuck, external watchdog is used. Watchdog receives the signal from the microcontroller which restart the timer. If case that watchdog did not receive a signal, he will send a signal to a load switch, which will restart the microcontroller by turning the supply power "OFF" and "ON".
+To prevent the microcontroller of getting stuck, external watchdog is used. Watchdog receives the signal from the microcontroller which restart the timer. If case that watchdog did not receive a signal, he will send a signal to a load switch, which will restart the microcontroller by turning the supply power "OFF" and "ON". The example of the watchdog to microcontroller communication can be seen in Fig. \ref{fig: EPSS}.
+
+The example of microcontroller block diagram architecture shown on the Fig \ref{fig: EPS4121}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{uC.png}
+	\caption{block diagram of microcontroller communication}
+	\label{fig: EPS4121}
+\end{figure}
 
 \subsection{Power Distribution \label{sec:tech}}
 
-Power distribution is a vital part of the EPS, needed to \cite{21} "supply electrical power to the subsystems and payloads of the satellite" as well as prevent an overload of the main power bus. Power distribution usually consist of load switches which distribute power with help of microcontroller by sending the enable signal to an appropriate pin of the switch. In addition, current sensors are used to monitor the payload or power consumption of the subsystem. This combination allows to fully control the process of power distribution. Figure \ref{fig: EPS111} illustrates an example of the EPS power distribution where $R_{sense}$ is a shunt resistor for a current sensor. 
+Power distribution is needed to \cite{21} "supply electrical power to the subsystems and payloads of the satellite" as well as prevent an overload of the main power bus. The power distribution usually consists of load switches that distribute the energy using a microcontroller by sending the enable signal to an appropriate pin on the switch. In addition, current sensors are used to monitor the power consumption of the payloads or subsystems. This combination makes it possible to fully control the process of energy distribution. Fig. \ref{fig: EPS111} illustrates an example of the EPS power distribution where $R_{sense}$ is a shunt resistor for a current sensor. 
 
 
 \begin{figure}[h]
@@ -384,7 +386,7 @@ Power distribution is a vital part of the EPS, needed to \cite{21} "supply elect
 \newpage
 
 \subsubsection{Switches}
-Power distribution include load switches which responsible for a power commutation of a satellite. Power switches are integrated chips which designed for specific cases and scenarios. One of the important parameters is a power load. Switches have to be chosen according to a load of a power lines considering voltage and maximum current. Otherwise, if the input power exceeds the power that the switch can operate with, this might lead to destruction of the switch and the entire power line.  Another aspect which has to be considered is the inrush current. Inrush current is a maximal instantaneous current draw by an electrical device, appeared for few microseconds when first turn on. Inrush current cased a voltage drop for the supplied subsystems, which might harm device or case incorrect device performance.
+Power distribution include load switches which responsible for a power commutation of a satellite. Load switches are integrated circuits that are designed for specific cases and scenarios. One of the important parameters is a power load. The switches must be selected according to the load of a power line, taking into account the voltage and the maximum current. Otherwise, if the input power exceeds the threshold power of the switch, it can destroy the switch and the entire power line.  Another aspect which has to be considered is the inrush current. Inrush current is a maximal instantaneous current draw by an electrical device, appeared for few microseconds when first turn on. Inrush current cause a voltage drop for the supplied subsystems, which might harm device or affect on its performance.
 
  Capacitors might be used to prevent inrush current. The value of capacitor has to be calculated by equation \ref{eq:3} \cite{32}:
  
@@ -398,12 +400,11 @@ Power distribution include load switches which responsible for a power commutati
  $dV_{out}$ - maximum allowable voltage drop\\
  $dt$ - rise time\\
 
-Another important ability of the switcher is the fault detection. Fault detection appear while current on the power line exceed the programmed current of the switch. Whilst Overcurrent was detected, switch sends a signal to a microcontroller to disable the switch. Fault detection often used to detect Lautch-up of the satellite.\\
+Another important ability of the switcher is the fault detection. Fault detection appears while current on the power line exceed the programmed current of the switch. While overcurrent has been detected, the switch sends a signal to the microcontroller to disconnect the corresponding power line. Fault detection often used to detect Lautch-up of the satellite.\\
 
 \subsubsection{Power Monitoring}
 
-Power monitoring is the necessary part of the EPS, which allows to observe the current status of each subsystem and payloads of the satellite. \cite{22} "Power monitoring is implemented by measuring the 
-voltage drop across a shunt resistor.  The voltage across the shunt  is  usually  amplified  using  a  differential amplifier" and produce the analog output. Nowadays Current sensor ICs used to monitor a current on the power lines. Modern current sensors have ability to output measured information as I$^{2}$C or SPI data by converting an analog output signal to the digital via integrated analog to digital converter. 
+Power monitoring is the necessary part of the EPS, which allows to observe the current status of each subsystem and payload of the satellite. \cite{22} "Power monitoring is implemented by measuring the voltage drop across a shunt resistor.  The voltage across the shunt  is  usually  amplified  using  a  differential amplifier" and  provides an analog output. Nowadays Current sensor ICs are used to monitor a current on the power lines. Modern current sensors have ability to output measured information as I$^{2}$C or SPI data by converting an analog output signal to the digital via integrated analog to digital converter. 
 
 \newpage   
 \chapter{6 Unit Satellite Design \label{chapter3}}
