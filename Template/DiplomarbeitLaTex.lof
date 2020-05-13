@@ -32,19 +32,19 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces PDU board\relax }}{31}{figure.caption.38}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces TPS203x \cite {26}\relax }}{33}{figure.caption.39}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces TPS2030 on the VCC0 channel\relax }}{34}{figure.caption.40}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces FPF2701 \cite {27}\relax }}{35}{figure.caption.41}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces FPF2701 \cite {27}\relax }}{34}{figure.caption.41}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces FPF2701 on the COM0 power line\relax }}{35}{figure.caption.42}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Latch-off mode\cite {28}\relax }}{36}{figure.caption.43}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Typical inrush current at startup (0.001 s) in A over time in s\relax }}{37}{figure.caption.44}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces TPS1H200A on the HISP power line\relax }}{37}{figure.caption.45}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces TPS1H200A on the HISP power line\relax }}{38}{figure.caption.45}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Schematics of the shift register MAX7328\relax }}{38}{figure.caption.46}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces MAX7328 operation principle\cite {29}\relax }}{39}{figure.caption.47}
 \contentsline {figure}{\numberline {5.11}{\ignorespaces MAX4372T \cite {24}\relax }}{39}{figure.caption.48}
 \contentsline {figure}{\numberline {5.12}{\ignorespaces MAX1231 for Descartes application\relax }}{42}{figure.caption.49}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Clock mode of the MAX1231 \cite {25}\relax }}{42}{figure.caption.50}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces ADUM1250 isolating main I$^2$C from the payload 2 \relax }}{43}{figure.caption.51}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces MAX14850\relax }}{44}{figure.caption.52}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces EPS connector P2\relax }}{44}{figure.caption.53}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces operation principle of the MAX1231 \cite {25}\relax }}{42}{figure.caption.50}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces ADUM1250 isolating main I$^2$C data line from the (payload 2) I$^2$C data line \relax }}{43}{figure.caption.51}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces MAX14850 isolating main SPI data line from the (payload 1) SPI data line \relax }}{44}{figure.caption.52}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces EPS connector P2\relax }}{45}{figure.caption.53}
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Payload connector K10\relax }}{45}{figure.caption.54}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Power Distribution Board PCB\relax }}{47}{figure.caption.55}
