@@ -75,7 +75,7 @@ Enable pins of the power switches might be activated manually by providing a 3.3
 \end{figure}
 
 STEPS:\\
-\textbf{1.}  First of all, PDU has to be connected to the power source (PSU) which is adjusted to needed voltage.\\ \\
+\textbf{1.}  First of all, the PDU has to be connected to the power source (PSU) which is adjusted to needed voltage.\\ \\
 \textbf{2.} After power was supplied to the PDU, input voltage has to be checked. Figure \ref{fig: pdu_test_front} and Figure \ref{fig: pdu_test_back} illustrate the zero ohm resistors which connect the power lines into the load switches. Voltage measure of the resistors can be done via multimeter. \\ \\
 \textbf{3.} Shift register is initially turned on by default. To check shift register functionality it is necessary to provide an I$^2$C signal with a bit array to a shift register, which might be possible by using microcontroller (in my case STM32 L073Rz was used). Section \ref{shiftty} describes the work principles of the shift register in detail. \\ \\
 \textbf{4.} Check every output of the power line by providing enable signal according  to the test file. This step can be done in two ways: providing a 3.3v from the PSU to enable connector or providing enable signals to the PDU by using STM32 L073Rz, providing an enable signal using push button interrupt. As a result, switch has to transfer the power of the channel.\\ \\
@@ -162,7 +162,7 @@ Fig. \ref{fig: oscilloscope} illustrates the voltage drop on the HISP line due t
 	\newpage
 	STEPS:\\ \\
 	\textbf{1.} First of all, PCB has to be connected with a 3.3V BUS voltage to supply the ADC. Then, in accordance with the power channel, it is necessary to apply the appropriate voltage. \\ \\
-	\textbf{2.} After power was supplied to the PCB, SPI signals have to be connected between PDU and a microcontroller STM32 Nucleo -L073Rz. SPI has a 3 signal lines: SLCK - clock line, MOSI - master output slave input and MISO - master input slave output. SPI protocol is a serial bus. To choose a slave, SPI uses the (Slave Select) pin which is usually inverted. PDU board has two MAX1231 ADCs with two slave select pins for each ADC.\\ \\
+	\textbf{2.} After power was supplied to the PCB, SPI signals have to be connected between the PDU and a microcontroller STM32 Nucleo -L073Rz. SPI has a 3 signal lines: SLCK - clock line, MOSI - master output slave input and MISO - master input slave output. SPI protocol is a serial bus. To choose a slave, SPI uses the (Slave Select) pin which is usually inverted. The PDU board has two MAX1231 ADCs with two slave select pins for each ADC.\\ \\
 	\textbf{3.} After power and signal lines are connected, electrical load can be added into the system by connecting it to the output pin of the relative channel.\\ \\
 	\textbf{4.} The next step would be the current reading of the power line and displaying it on the monitor by using STM32 and minicom.
 	  Fig. \ref{fig: adctest} illustrates the testbed of the Power monitoring test.

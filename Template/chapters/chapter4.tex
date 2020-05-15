@@ -187,7 +187,7 @@ For the TPS1H200A on the HISP channel CL pin is adjusted to 2A and DELAY pin is 
  
 \section{Shift Register}\label{shiftty}
 
-Due to the lack of free GPIO pins on the microcontroller, EPS can only provide 17 GPIO channels for PDU. Based on this, it was decided to include a shift register into design of the PDU. PDU in its design has 5 empty power lines VCC4, VCC5, VCC6, VCC7, VCC18 which are not going to be used for Descartes Mission. All this power lines are enabled via shift register as well as VCC19 which is responsible for triggering the power line, that supplies power to the thermo-sensors. The design idea of having empty power channels and thermo-sensors channel on the shift register, is to include less important power lines under shift register control, thereby exclude the risk of the pin control via additional device. 
+Due to the lack of free GPIO pins on the microcontroller, the EPS can only provide 17 GPIO channels for PDU. Based on this, it was decided to include a shift register into design of the PDU. PDU in its design has 5 empty power lines VCC4, VCC5, VCC6, VCC7, VCC18 which are not going to be used for Descartes Mission. All this power lines are enabled via shift register as well as VCC19 which is responsible for triggering the power line, that supplies power to the thermo-sensors. The design idea of having empty power channels and thermo-sensors channel on the shift register, is to include less important power lines under shift register control, thereby exclude the risk of the pin control via additional device. 
 
 
  MAX7328 is a two wire  serial-interfaced peripherals with eight I/O ports. MAX7328 has 16 pin SO wide footprint package. \cite{29} MAX7328 is general-purpose port expanders operating from a 2.5V to 5.5V supply that provide eight open-drain output ports with a 20mA sink capability. In addition, integrated pull up resistors are used for the I$^2$C line, which are not shown on the Fig. \ref{fig: sr1}.       MAX7328 has a 3 address inputs A0, A1 and A2. Those address inputs can be configured by soldering the external zero ohm resistors to the appropriate input pins.  
@@ -357,10 +357,10 @@ $\bullet$ two EPS connectors\\
 $\bullet$ one EGSE connector\\
 $\bullet$ one PC104 connector\\
 
-PC104 is a main connector which are used to bridge main pcb boards such as PPU, PDU, OBC, OBC-PH, UHF module and Hispico transceiver.
-EGSE connector is used to program the EPS and OBC microcontrollers, that located on the PPU and OBC boards.
+PC104 is a main connector which are used to bridge main pcb boards such as the PPU, PDU, OBC, OBC-PH, UHF module and Hispico transceiver.
+EGSE connector is used to program the EPS and the OBC microcontrollers, that located on the PPU and OBC boards.
 
-EPS connectors P1 and P2 were added into design due to the lack of free pins on the PC104 connector. These connectors are used to transfer the data signals and power pines between PPU and PDU. EPS connectors provide an enable signals from the EPS microcontroller directly to the PDU via P2 connector and bus power lines 3.3V and 5V via P1 connector.
+The EPS connectors P1 and P2 were added into design due to the lack of free pins on the PC104 connector. These connectors are used to transfer the data signals and power pines between the PPU and PDU. The EPS connectors provide an enable signals from the EPS microcontroller directly to the PDU via P2 connector and bus power lines 3.3V and 5V via P1 connector.
 
   \begin{figure}[h]
   	\centering
@@ -381,7 +381,7 @@ The connection design of connector K10 is illustrated on the figure \ref{fig: is
 	\label{fig: iso1}
 \end{figure} 
  
-The PDU is designed in the way that all payload connectors have an opportunity to be supplied from different power sources and with different voltages. The reason for this is the functional requirement FR1 in the chapter \ref{eq:3}. This design allows PDU to be compatible with every payload requirement. Each payload connector has ability to transfer at least 3.3V, 5V and 7.4V to the payload.  This requirement was accomplished with zero ohm  resistors  design which can configure the input of the power supply to the payload connector.\\
+The PDU is designed in the way that all payload connectors have an opportunity to be supplied from different power sources and with different voltages. The reason for this is the functional requirement FR1 in the chapter \ref{eq:3}. This design allows the PDU to be compatible with every payload requirement. Each payload connector has ability to transfer at least 3.3V, 5V and 7.4V to the payload.  This requirement was accomplished with zero ohm  resistors  design which can configure the input of the power supply to the payload connector.\\
 
 All connectors and their pin descriptions are shown in Appendix A. 
 

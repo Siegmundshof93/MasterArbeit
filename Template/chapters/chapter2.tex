@@ -1,5 +1,5 @@
 \chapter{Background: Electrical Power System  \label{cha:chapter2}}
-This section is intended to provide general knowledge of the EPS that is essential to understand the development of a PDU. 
+This section is intended to provide general knowledge of the EPS that is essential to understand the development of the PDU. 
  
 
 \section{Electrircal Power System Overview \label{sec:tech}}
@@ -405,7 +405,7 @@ Another important ability of the switcher is the fault detection. Fault detectio
 
 Power monitoring is the necessary task of the EPS to observe the current status of each subsystem and payload of the satellite. \cite{22} "Power monitoring is implemented by measuring the voltage drop across a shunt resistor.  The voltage across the shunt  is  usually  amplified  using  a  differential amplifier" and  provides an analog output. Nowadays Current sensor ICs are used to monitor a current on the power lines. Modern current sensors have ability to output measured information as I$^{2}$C or SPI data by converting an analog output signal to the digital via integrated analog to digital converter. 
 
- 
+
 \chapter{6 Unit Satellite Design \label{chapter3}}
 This chapter will provide a short essential knowledge about Descartes Mission with the main purposes of the mission, satellite characteristics and the satellite  abilities. Then topic will go deeper into the EPS architecture design of the 6U satellite. \\
 \section{Introduction into the Descartes Mission}
@@ -436,13 +436,13 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
   \section{EPS Architecture of the 6U Satellite}
   According to the introduction into the  Descartes Mission, it is noticeable that the design of the 6U satellite was significantly updated compared to the previous 3U satellites which were designed by GOS. The biggest divergence is a size and availability of the satellite to work with more payloads as well as to perform 3-axis stabilization. Due to that fact, the EPS of the satellite has also undergone changes.
   
-  Due to the energy requirements, 6U satellite has to provide a 160 Wh of energy and  distribute it to 23 channels. To accomplish this requirements, considering the available space of the 6U satellite, EPS was divided into 3 main parts which connected between each other via PC104 connector:\\ \\
+  Due to the energy requirements, 6U satellite has to provide a 160 Wh of energy and  distribute it to 23 channels. To accomplish this requirements, considering the available space of the 6U satellite, the EPS was divided into 3 main parts which connected between each other via PC104 connector:\\ \\
   $\bullet$ Power Processing Unit\\
   $\bullet$ Power Distribution Unit\\
   $\bullet$ 2 Battery Packs\\
   
    \subsection{Power Processing Unit}
-   PPU is a part of EPS which responsible for a battery charge, power distribution control and a power processing. The PPU is illustrated on the Fig. \ref{fig: psu122}.
+   The PPU is a part of the EPS which responsible for a battery charge, power distribution control and a power processing. The PPU is illustrated on the Fig. \ref{fig: psu122}.
    
    \begin{figure}[h]
    	\centering
@@ -451,7 +451,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
    	\label{fig: psu122}
    \end{figure}
    
-   Power converted from the solar flux come first into a PPU from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panel gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsible for a battery charge, illustrated on the Fig. \ref{fig: ltc40151}. Integrated circuit LTC4015 provide a constant voltage and constant current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak, which was explained in subsection \ref{sec:tech00}. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip uses the solar power to charge the batteries and feed the system  during the sunlight condition, during the eclipse or overcharge conditions, the microchip switches the power source from solar power to the batteries.
+   Power converted from the solar flux come first into the PPU from 6 solar panels: X+, X-, Y+, Y-, Z+, Z-. At first, input power of each solar panel gets measured by MAX7328 current sensor. Then power goes into a microchip LTC4015 which is responsible for a battery charge, illustrated on the Fig. \ref{fig: ltc40151}. Integrated circuit LTC4015 provide a constant voltage and constant current into a batteries at the same time passing unregulated power from the solar panels directly into a system load. Although LTC4015 can be adjusted for a battery charge manually, microchip might use an MPPT algorithm to regulate the voltage in order to keep maximum power peak, which was explained in subsection \ref{sec:tech00}. This allows to charge and discharge the batteries according to a batteries state of charge and solar condition (eclipse). Microchip uses the solar power to charge the batteries and feed the system  during the sunlight condition, during the eclipse or overcharge conditions, the microchip switches the power source from solar power to the batteries.
    
   \begin{figure}[h]
   	\centering
@@ -472,7 +472,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
     \end{figure}
   Microcontroller sends a reset signal to the watchdog to reset the counter. As long as counter reset, watchdog keeps the enable output pin "HIGH". However, when watchdog does not receive the reset signal from the microcontroller due to some system problems, watchdog restarts himself and enable output pin getting low and high, which restarts the microcontroller. 
   
-  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger into the 5 power channels, shown on the Fig. \ref{fig: dc}. Power processing can be divided into 2 blocks: power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 7.4V. Common 7.4 V converter used to convert unregulated voltage from the solar panels. LTC3119 is used for this task, this microchip has a large current tolerance, which allows it to transfer a huge amount of power. To produce 5V and 3.3V, used LM43603 and TPS62111 converters. These converters were successfully used on the previous EPS models. In order to keep a flight heritage, was made a decision to keep the converters as it is. 
+  5 DC-DC converters of the PPU convert the input power from the LTC4015 charger into the 5 power channels, shown on the Fig. \ref{fig: dc}. Power processing can be divided into 2 blocks: power processing for the BUS and power processing for the payload. Each block has 2 DC-DC step down converters, 5V, 3.3V and one common 7.4V. Common 7.4 V converter used to convert unregulated voltage from the solar panels. LTC3119 is used for this task, this microchip has a large current tolerance, which allows it to transfer a huge amount of power. To produce 5V and 3.3V, used LM43603 and TPS62111 converters. These converters were successfully used on the previous the EPS models. In order to keep a flight heritage, was made a decision to keep the converters as it is. 
   
    \begin{figure}[h]
    	\centering
@@ -481,7 +481,7 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
    	\label{fig: dc}
    \end{figure}
   
-  One of the important tasks of EPS and PPU is the deployment of 2 UHF antennas. To accomplish this task and provide a battery voltage to deployment mechanism, used 2 power lines for each UHF antenna with two TPS1H200A load switches in series for each line. To activate antenna release, two signals must be send from the microcontroller. The enable signals must close the switches, which will lead to the energy transfer and therefore to the activation of the release mechanism. Antenna release mechanisms shown on the Fig.\ref{fig: PPU} as ARM1 and ARM2. 
+  One of the important tasks of the EPS and the PPU is the deployment of 2 UHF antennas. To accomplish this task and provide a battery voltage to deployment mechanism, used 2 power lines for each UHF antenna with two TPS1H200A load switches in series for each line. To activate antenna release, two signals must be send from the microcontroller. The enable signals must close the switches, which will lead to the energy transfer and therefore to the activation of the release mechanism. Antenna release mechanisms shown on the Fig.\ref{fig: PPU} as ARM1 and ARM2. 
   
   
   
@@ -531,9 +531,9 @@ $\bullet$ Auto Dependent Surveillance Broadcast\\
    
   
   \subsection{Power Distribution Unit}
-  PDU is part of the EPS responsible for power distribution and power monitoring. The key feature of the PDU is the flexibility that allows the PDU to meet the power requirements of the subsystems and payloads. To provide a power to the subsystems and payloads PDU uses 23 load switches of 3 different types TPS203x, TPS1H200A and FPF2701. The power distribution is controlled by EPS microcontroller by providing an enable signal to the pinhead connectors and partly by transmitting an I$^2$C signal to shift register that spread an array signal into the switches. 
+  The PDU is part of the EPS responsible for power distribution and power monitoring. The key feature of the PDU is the flexibility that allows the PDU to meet the power requirements of the subsystems and payloads. To provide a power to the subsystems and payloads the PDU uses 23 load switches of 3 different types TPS203x, TPS1H200A and FPF2701. The power distribution is controlled by microcontroller by providing an enable signal to the pinhead connectors and partly by transmitting an I$^2$C signal to shift register that spread an array signal into the switches. 
   
-  In order to measure a current of the power lines to observe a power consumptions of the subsystems and payloads, MAX4372 is used. Current sensors located one for each power line, what allows to measure the current of each line. MAX4372 has an analog output, which requires to use an ADC converter to convert an analog into a digital signal. To convert analog into a digital signal was decided to use MAX1231 ADC converter that provides an SPI output signal to the EPS microcontroller. 
+  In order to measure a current of the power lines to observe a power consumptions of the subsystems and payloads, MAX4372 is used. Current sensors located one for each power line, what allows to measure the current of each line. MAX4372 has an analog output, which requires to use an ADC converter to convert an analog into a digital signal. To convert analog into a digital signal was decided to use MAX1231 ADC converter that provides an SPI output signal to the microcontroller. 
   
     
   The detailed review, calculations and all explanations of the PDU board will be presented in chapter \ref{sec:tech77}
