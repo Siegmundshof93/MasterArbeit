@@ -18,7 +18,7 @@
 \contentsline {subsubsection}{\nonumberline Charging}{12}{section*.17}
 \contentsline {subsubsection}{\nonumberline Protection}{14}{section*.20}
 \contentsline {subsection}{\numberline {2.1.3}Power processing }{15}{subsection.2.1.3}
-\contentsline {subsubsection}{\nonumberline Linear Voltage Converters }{16}{section*.22}
+\contentsline {subsubsection}{\nonumberline Linear Voltage Converters }{15}{section*.22}
 \contentsline {subsubsection}{\nonumberline Inductive DC-DC Converters }{16}{section*.23}
 \contentsline {subsection}{\numberline {2.1.4}Microcontroller }{17}{subsection.2.1.4}
 \contentsline {subsection}{\numberline {2.1.5}Power Distribution }{18}{subsection.2.1.5}

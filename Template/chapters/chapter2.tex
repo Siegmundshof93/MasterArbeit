@@ -20,10 +20,11 @@ Fig. \ref{fig: EPSS} illustrates an example of the EPS block diagram.
 
 
 
-Yost\cite{1} Solar power generation is the most used method by nanosatellites to generate a power. Solar cells are built of thin silicon disks (semiconductor wafers)  which convert the energy of light into electric current. The solar intensity of a solar array is the light availability of the sun, which can vary according to the distance from the sun as well as the angle of a projected surface area between the sun and solar array.  
+ Solar power generation is the most used method by nanosatellites to generate a power. Solar cells are built of thin silicon disks (semiconductor wafers)  which convert the energy of light into electric current. The solar intensity of a solar array is the light availability of the sun, which can vary according to the distance from the sun as well as the angle of a projected surface area between the sun and solar array \cite{1}.  
 \\
-\noindent\hspace*{3mm} Alia-Novobilski\cite{2} The most common manufactured type of cells are single junction cells. The single junction type is commonly used for Earth applications. Due to severe sensitivity to radiation and relatively low efficiency, the single junction type is not preferable for space applications. Although single junction solar cells are relatively cheap to design, modern spacecraft use multi-junction solar cells. Manufactured of light-absorbing materials, multiple layers are much more tolerant to radiation in a space environment and more efficient  Yost\cite{1} "convert specific wavelength regions of the solar spectrum into energy, thereby using a wider spectrum of solar radiation ". 
-Green\cite{3} In the space industry, triple-junction solar cells are the most common to use due to their high efficiency and relatively affordable cost compared to other types of solar cells.
+
+The most common manufactured type of cells are single junction cells. The single junction type is commonly used for Earth applications \cite{2}. Due to severe sensitivity to radiation and relatively low efficiency, the single junction type is not preferable for space applications. Although single junction solar cells are relatively cheap to design, modern spacecraft use multi-junction solar cells. Manufactured of light-absorbing materials, multiple layers are much more tolerant to radiation in a space environment and more efficient  \cite{1} "convert specific wavelength regions of the solar spectrum into energy, thereby using a wider spectrum of solar radiation ". 
+ In the space industry, triple-junction solar cells are the most common to use due to their high efficiency and relatively affordable cost compared to other types of solar cells \cite{3}.
 
 Fig. \ref{fig: GaAs} illustrates the example of a Triple Junction GaAs Solar Cell.
 
@@ -45,9 +46,9 @@ Solar cells are usually interconnected in a solar array to get the desired power
 	\label{array}
 \end{figure}
 	
-Solar cells are strongly effected by a temperature. Honsberg\cite{5} "Increases in temperature reduce the band gap of a semiconductor, thereby effecting most of the semiconductor material parameters. The decrease in the band gap of a semiconductor with increasing temperature can be viewed as increasing the energy of the electrons in the material."\\
+Solar cells are strongly effected by a temperature. \cite{5} "Increases in temperature reduce the band gap of a semiconductor, thereby effecting most of the semiconductor material parameters. The decrease in the band gap of a semiconductor with increasing temperature can be viewed as increasing the energy of the electrons in the material."\\
 \\
-Brieß\cite{6} The dependency on temperature to the electric power of a silicon solar cell can be described as:\\ \\ \\
+ The dependency on temperature to the electric power of a silicon solar cell can be described as\cite{6}:\\ \\ \\
 
 \begin{equation}
 P = P_{ref} [ 1 - K_{P} ( T - T_{ref}) ]
@@ -86,7 +87,7 @@ where:\\
 	\end{figure}
 	
 According to a Fig. \ref{fig: EPS11}, the maximum power point shifts as a solar array gets hotter or colder. To keep power at the maximum point a Maximum Power Point Tracker (MPPT) is used. The purpose of MPPT is to keep voltage at particular level while solar panels are affected by temperature or the orientation of the solar panels.\\
-\cite{20} MPPT might be separated into two parts: power control and logic control. Power control is usually a step-up-step-down DC-DC  converter which is responsible for voltage adjustment according to the input from the logic control. Logic control is responsible for solar array parameters measurements and maximum power point adjustment according to the software algorithm.\\  
+ MPPT might be separated into two parts: power control and logic control. Power control is usually a step-up-step-down DC-DC  converter which is responsible for voltage adjustment according to the input from the logic control. Logic control is responsible for solar array parameters measurements and maximum power point adjustment according to the software algorithm\cite{20}.\\  
 
 During the circuit design of the solar panels, it is important to consider redundancy and a case in which one of the cells will be damaged. For this reason diodes are used. The diodes ensure the power can bypass a damaged solar cell. Fig. \ref{dioden} illustrates the diodes D1 and D2 which are placed in parallel with the solar cells. The diode D3 which can be also observed on the Fig. \ref{array} is used to prevent the reverse current. Reverse current has a negative effect on the solar panel efficiency. When reverse current occurs, it begins to draw current from the batteries, hence discharging them. In addition, reversed current adds additional current to the affected solar cell which shifts the maximum power point.\\
 
@@ -105,12 +106,12 @@ During the circuit design of the solar panels, it is important to consider redun
 
 
 
-Yost\cite{1} During the mission duration, solar energy is not always available due to eclipse. For this case primary and secondary batteries are used to store power. All batteries are classified according to their chemical characteristics. For a short mission duration (up to one week)  the primary type of batteries are usually used due to the lack of the possibility of recharging. The common chemical type of a primary battery is silver-zinc, which is easier to handle, Yost\cite{1} "however there is also a variety of lithium-based primary batteries that have a higher energy density including: lithium sulphur dioxide (LiSO2), lithium carbon monofluoride (LiCFx) and lithium thionyl chloride (LiSOCl2)."\\
+ During the mission duration, solar energy is not always available due to eclipse. For this case primary and secondary batteries are used to store power \cite{1}. All batteries are classified according to their chemical characteristics. For a short mission duration (up to one week)  the primary type of batteries are usually used due to the lack of the possibility of recharging. The common chemical type of a primary battery is silver-zinc, which is easier to handle, \cite{1} "however there is also a variety of lithium-based primary batteries that have a higher energy density including: lithium sulphur dioxide (LiSO2), lithium carbon monofluoride (LiCFx) and lithium thionyl chloride (LiSOCl2)."\\
 \\
 Secondary-type batteries are rechargeable and provide an energy on demand. Secondary-type batteries are connected to a primary energy source of the satellite (usually solar panels) via a battery charger. This type includes: nickel-cadmium (NiCd), nickel-hydrogen (NiH2), lithium-ion polymer (LiPo) and lithium-ion (Li-ion).
 
 \subsubsection{Nickel Cadmium \label{sec:tech}}
- Buchmann\cite{7} Nickel Cadmium is a type of rechargeable battery using nickel oxide hydroxide and metallic cadmium. This chemical connection allows battery to well perform by working in the severe conditions such as very high or low temperature. NiCd battery is the type which needs to be charged fast rather than slow, like other types of secondary batteries. Full periodic discharge of a NiCd battery is an important process and necessary for battery performance. In case of absence  Buchmann\cite{7} " large crystals will form on the cell plates (also referred to as memory) and the NiCd will gradually lose its performance."
+  Nickel Cadmium is a type of rechargeable battery using nickel oxide hydroxide and metallic cadmium. This chemical connection allows battery to well perform by working in the severe conditions such as very high or low temperature \cite{7}. NiCd battery is the type which needs to be charged fast rather than slow, like other types of secondary batteries. Full periodic discharge of a NiCd battery is an important process and necessary for battery performance. In case of absence   \cite{7} " large crystals will form on the cell plates (also referred to as memory) and the NiCd will gradually lose its performance."
  
  \newpage
 
@@ -147,11 +148,11 @@ Fig. \ref{fig: nicd} illustrates an example of the NiCd battery.
 
 
 \subsubsection{Nickel Hydrogen \label{sec:tech}}
-Buchmann\cite{7} Nowadays Nickel Hydrogen batteries are mostly used in the satellite applications where long term operation is required. The development of the NiH2 battery started in early 1970. In that time metal hybrid alloy was unstable, which slowed down development of the NiH2. In 1980 new alloy was established and stable enough to use it in the cell. 
+Nowadays Nickel Hydrogen batteries are mostly used in the satellite applications where long term operation is required. The development of the NiH2 battery started in early 1970 \cite{8}. In that time metal hybrid alloy was unstable, which slowed down development of the NiH2. In 1980 new alloy was established and stable enough to use it in the cell\cite{7}. 
 \cite{10}"The replacement of cadmium with hydrogen electrodes has double the energy of Ni-Cd, but the specific energy of Ni- H2 is similar to Ni-Cd be case of the cylindrical configuration of the pressure. The first Ni- H2 battery was used in a GEO (geostationary mission) Intelsat V in 1983.  Almost all GEO spacecrafts now use Ni-H2 batteries. The first NASA LEO spacecraft to use Ni-H2 was in 1990."
 
 
-Wenige\cite{8} Despite the fact that memory effect on NiH2 is undoubtedly less than on a NiCd batteries, it still exist and needs a special treatment in order to accommodate the normal level of the battery. Wenige\cite{8} "Typical calendar life of more than 20 years can be reached by NiH2, i.e. five years ground storage plus 15  years  orbital  life  in  GEO." \\ \\
+ Despite the fact that memory effect on NiH2 is undoubtedly less than on a NiCd batteries, it still exist and needs a special treatment in order to accommodate the normal level of the battery. \cite{8} "Typical calendar life of more than 20 years can be reached by NiH2, i.e. five years ground storage plus 15  years  orbital  life  in  GEO." \\ \\
 
 
 \begin{multicols}{2}
@@ -190,7 +191,7 @@ Fig. \ref{fig: nih2} illustrates an example of the NiH2 battery.
 
 \subsubsection{Lithium Ion \label{sec:tech}}
 
-Buchmann\cite{7}Today lithium ion batteries are the most progressive and most promising batteries. Lithium is the lightest metal and able to provide the largest energy density. The energy density of a Lithium Ion batteries is about twice that of NiCd. In addition, Li-ion batteries share similar discharge characteristics to NiCd. Another advantage of Li-ion batteries is high cell voltage, which provides high power with relatively low mass. Despite the fact that Li-ion batteries have many advantages, they also have their drawbacks. Li-ion batteries are very sensitive to overcharge as well as overdischarge. For that reason Li-ion batteries are usually used with protection circuits, which limit the peak voltage. In addition Li-ion batteries are prone to age even if not used Buchmann\cite{7} Over two or perhaps three years, the battery frequently fails.
+Today lithium ion batteries are the most progressive and most promising batteries. Lithium is the lightest metal and able to provide the largest energy density. The energy density of a Lithium Ion batteries is about twice that of NiCd. In addition, Li-ion batteries share similar discharge characteristics to NiCd. Another advantage of Li-ion batteries is high cell voltage, which provides high power with relatively low mass. Despite the fact that Li-ion batteries have many advantages, they also have their drawbacks. Li-ion batteries are very sensitive to overcharge as well as overdischarge. For that reason Li-ion batteries are usually used with protection circuits, which limit the peak voltage. In addition Li-ion batteries are prone to age even if not used  Over two or perhaps three years, the battery frequently fails \cite{7}.
 
 
 \begin{multicols}{2}
@@ -266,7 +267,7 @@ Fig. \ref{fig: lipo} illustrates an example of the LiPo battery.
 
 \subsubsection{Charging}
 
-Santoni\cite{13}The high capacity and low weight make Li-ion batteries very well suited for a nanosatellite applications. Nonetheless performance and safety charging issues should be taken into account. Insidor\cite{14} The charge of LI-ion batteries is very strict on the correct settings, mostly due to a high sensitivity to an overcharge. Typical Li-ion battery voltage per cell can vary from 4.1 to 4.3, which is defined in the datasheet. However, the typical and most common value is 4.2V. Exceeding the battery voltage limit will increase capacity, but will also stress a battery, which can seriously harm a cell and and significantly reduce battery performances.\\ \\
+\cite{13}The high capacity and low weight make Li-ion batteries very well suited for a nanosatellite applications. Nonetheless performance and safety charging issues should be taken into account \cite{13}. The charge of LI-ion batteries is very strict on the correct settings, mostly due to a high sensitivity to an overcharge. Typical Li-ion battery voltage per cell can vary from 4.1 to 4.3, which is defined in the datasheet. However, the typical and most common value is 4.2V. Exceeding the battery voltage limit will increase capacity, but will also stress a battery, which can seriously harm a cell and and significantly reduce battery performances \cite{14}.\\ \\
 The Li-ion/Po battery charge process can be divided into 2 main stages:\\
 $\bullet$ constant current charge\\
 $\bullet$ constant voltage charge\\
@@ -281,8 +282,8 @@ Fig. \ref{fig: bcs} illustrates the example of battery charging stages.
 \end{figure}
  The charging rate of a battery is measured in "C". In the case of 1000mAh battery cell 1C charging rate will be 1000mA and 500mA for 0.5C. Usually, the recommended charge conditions are given in the datasheet.\\
  The charging process starts with 100\%  constant current (according to a charging rate) process. While the battery voltage approaches the upper voltage threshold, it pushes a constant current into a battery. Once voltage reaches the threshold point, the charging process changes from constant current mode to a constant voltage mode. In constant voltage mode, voltage keeps its maximum level while current starts to drop slightly until it reaches a lower threshold level, which is usually given in a datasheet (around 3\%). After current drops below the threshold, battery is fully charged. \\ \\
- In most cases, IC chargers are used to provide constant current and constant voltage for lithium-ion / Po batteries. \cite{14} One of those IC chargers is a MAX745. 
-This IC is able to set a charge up to 4 cells in series, as well as set a current and charging voltage. This IC use PWM signal to control a charge voltage which does not allow IC to get too hot.\\ This IC is an example of a charger microchip which has all necessary  tools to charge a Li-ion/Po batteries. 
+ In most cases, IC chargers are used to provide constant current and constant voltage for lithium-ion / Po batteries.  One of those IC chargers is a MAX745. 
+This IC is able to set a charge up to 4 cells in series, as well as set a current and charging voltage. This IC use PWM signal to control a charge voltage which does not allow IC to get too hot.\\ This IC is an example of a charger microchip which has all necessary  tools to charge a Li-ion/Po batteries \cite{15}. 
 
 
 
@@ -315,11 +316,11 @@ Fig. \ref{fig: EPS1} shows a typical schematic of a protection circuit where the
 
 \subsection{Power processing \label{sec:tech}}
 
-Power processing is an important part of an EPS which is responsible for transforming voltages to be suitable for satellite subsystems and payloads. Nowadays there are many converters available; each type has it's own advantages and disadvantages. Hemmo\cite{18} A converter has to be chosen according to subsystem requirements such as voltage range, maximum power output, output voltage tolerance, efficiency and footprint. The power efficiency of a converter is a very important criterion of stored energy due to the fact that battery energy is limited. High efficiency of  power conversion reduces the power dissipation of  components, thereby decreasing the power consumption of batteries. Furthermore, the need for any heat sinks is reduced or altogether eliminated. 
+Power processing is an important part of an EPS which is responsible for transforming voltages to be suitable for satellite subsystems and payloads. Nowadays there are many converters available; each type has it's own advantages and disadvantages. A converter has to be chosen according to subsystem requirements such as voltage range, maximum power output, output voltage tolerance, efficiency and footprint. The power efficiency of a converter is a very important criterion of stored energy due to the fact that battery energy is limited. High efficiency of  power conversion reduces the power dissipation of  components, thereby decreasing the power consumption of batteries. Furthermore, the need for any heat sinks is reduced or altogether eliminated \cite{18}. 
 
 \subsubsection{Linear Voltage Converters \label{sec:tech}}
 
-Hemmo\cite{18} One of the oldest methods to convert power is linear voltage conversion. This method is based on power dissipation by a resistor, which causes a voltage drop. Power dissipation of a linear voltage converter can be calculated by using formula:\\ \\
+ One of the oldest methods to convert power is linear voltage conversion. This method is based on power dissipation by a resistor, which causes a voltage drop. Power dissipation of a linear voltage converter can be calculated by using formula \cite{18}:\\ \\
 
 \begin{equation}\label{eq:2}
 P_{diss}=U_{drop} \times I
@@ -329,13 +330,13 @@ P_{diss}=U_{drop} \times I
 where:\\
 $U_{drop}$ - resistor voltage drop\\
 $I$ - current through a resisor\\ \\
- Tietze \cite{18} Linear voltage conversion is a simple method, which does not require many additional passive components, relatively cheap and easy to use. Nonetheless due to a power dissipation linear voltage converters get hot, which makes them ineffective while current through a resistor is large or difference between $V_{in}$ and $V_{out}$ is high according to \eqref{eq:2}. For that reason, linear voltage converters are used only in the case of low current and a low voltage drop, for example, to convert power into a micro controller or to provide a voltage reference.\\
+   Linear voltage conversion is a simple method, which does not require many additional passive components, relatively cheap and easy to use. Nonetheless due to a power dissipation linear voltage converters get hot, which makes them ineffective while current through a resistor is large or difference between $V_{in}$ and $V_{out}$ is high according to \eqref{eq:2}. For that reason, linear voltage converters are used only in the case of low current and a low voltage drop, for example, to convert power into a micro controller or to provide a voltage reference \cite{18}.\\
  \\
  
  
 \subsubsection{Inductive DC-DC Converters \label{sec:tech}}
 
-Tietze\cite{18} Each inductive DC-DC converter consists of three passive components: inductor $L$, power switch $S$ and capacitor $C$. The use of these components in various combinations, allows one to create various types of DC-DC converters. For example: step-down converter where output voltage $0 \leq U_{a} \leq U_{e} $ , step-up converter where output voltage $U_{a} \geq U_{e} $  and   step-down step-up converter which is able to decrease and increase output voltage, for this type of a converter $ U_{a} > 0$. The use of inductive DC-DC converters offers greater efficiency due to the switching of power supply, which gives an advantage over the linear voltage regulator. Hemmo\cite{17} High efficiency is absolute requirement for a space application due to the limited power generation. In addition, inductive DC-DC converters are able to produce  voltage output $U_{a}$ which is higher then voltage input $U_{e}$. Inductive DC-DC converters are used in most cases in the aerospace industry due to their high efficiency and capability to manage high voltages and high current.
+ Each inductive DC-DC converter consists of three passive components: inductor $L$, power switch $S$ and capacitor $C$. The use of these components in various combinations, allows one to create various types of DC-DC converters. For example: step-down converter where output voltage $0 \leq U_{a} \leq U_{e} $ , step-up converter where output voltage $U_{a} \geq U_{e} $  and   step-down step-up converter which is able to decrease and increase output voltage, for this type of a converter $ U_{a} > 0$. The use of inductive DC-DC converters offers greater efficiency due to the switching of power supply, which gives an advantage over the linear voltage regulator \cite{18}.  High efficiency is absolute requirement for a space application due to the limited power generation. In addition, inductive DC-DC converters are able to produce  voltage output $U_{a}$ which is higher then voltage input $U_{e}$. Inductive DC-DC converters are used in most cases in the aerospace industry due to their high efficiency and capability to manage high voltages and high current \cite{17}.
 
 \begin{figure}[h]
 	\centering

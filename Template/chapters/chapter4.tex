@@ -130,7 +130,7 @@ Fig. \ref{fig: fpf27_schema} illustrates the
 
 \subsection{TPS1H200A}
 
-TPS1H200A \cite{28} has an operating voltage 3.4V to 40V and an adjustable current up to 6A. TPS1H200A has a 8-pin HVSSOP footprint package. Descartes Mission and PDU design, according to top level requirements, TL1 and TL3, require a switch capable of switching the voltage of 5V and 7.4V which is inside the tolerance of the TPS1H200A chip. The second reason for choosing the TPS1H200A chip is the ability to set the current limit with an external regulating resistor that meets the FR5 requirement. The third reason is the ability to detect line overload and notify the microcontroller. Moreover, the chip was used for previous satellite missions.\\
+TPS1H200A has an operating voltage 3.4V to 40V and an adjustable current up to 6A. TPS1H200A has a 8-pin HVSSOP footprint package. Descartes Mission and PDU design, according to top level requirements, TL1 and TL3, require a switch capable of switching the voltage of 5V and 7.4V which is inside the tolerance of the TPS1H200A chip. The second reason for choosing the TPS1H200A chip is the ability to set the current limit with an external regulating resistor that meets the FR5 requirement. The third reason is the ability to detect line overload and notify the microcontroller. Moreover, the chip was used for previous satellite missions \cite{28}.\\
 
 Descartes Mission requires eight Vbat power lines, where Vbat equals 7.4V. However, PDU design consists of ten power lines which used TPS1H200A switch. One of the reasons for this is the ability to work at 5V and withstand heavy loads up to 6A. \\ 
 
@@ -187,10 +187,10 @@ For the TPS1H200A on the HISP channel CL pin is adjusted to 2A and DELAY pin is 
  
 \section{Shift Register}\label{shiftty}
 
-Due to the lack of free GPIO pins on the microcontroller, the EPS can only provide 17 GPIO channels for PDU. Based on this, it was decided to include a shift register into design of the PDU. PDU in its design has 5 empty power lines VCC4, VCC5, VCC6, VCC7, VCC18 which are not going to be used for Descartes Mission. All this power lines are enabled via shift register as well as VCC19 which is responsible for triggering the power line, that supplies power to the thermo-sensors. The design idea of having empty power channels and thermo-sensors channel on the shift register, is to include less important power lines under shift register control, thereby exclude the risk of the pin control via additional device. 
+Due to the lack of free GPIO pins on the microcontroller, the EPS can only provide 17 GPIO channels for the PDU. Based on this, it was decided to include a shift register into design of the PDU. In the design of the PDU,there are 5 empty power lines VCC4, VCC5, VCC6, VCC7, VCC18 which are not going to be used for Descartes Mission. All this power lines are enabled via shift register as well as VCC19 which is responsible for triggering the power line, that supplies power to the thermo-sensors. The design idea of having empty power channels and thermo-sensors channel on the shift register, is to include less important power lines under shift register control, thereby reducing the risk of pin control via additional device. 
 
 
- MAX7328 is a two wire  serial-interfaced peripherals with eight I/O ports. MAX7328 has 16 pin SO wide footprint package. \cite{29} MAX7328 is general-purpose port expanders operating from a 2.5V to 5.5V supply that provide eight open-drain output ports with a 20mA sink capability. In addition, integrated pull up resistors are used for the I$^2$C line, which are not shown on the Fig. \ref{fig: sr1}.       MAX7328 has a 3 address inputs A0, A1 and A2. Those address inputs can be configured by soldering the external zero ohm resistors to the appropriate input pins.  
+ MAX7328 is a two wire  serial-interfaced peripherals with eight I/O ports and has a 16 pin SO wide footprint package. MAX7328 is general-purpose port expanders operating from a 2.5V to 5.5V supply that provide eight open-drain output ports with a 20mA sink capability. In addition, integrated pull up resistors are used for the I$^2$C line, which are not shown on the Fig. \ref{fig: sr1}.       MAX7328 has a 3 address inputs A0, A1 and A2. Those address inputs can be configured by soldering the external zero ohm resistors to the appropriate input pins \cite{29}.  
 
 
 \begin{figure}[h]
@@ -200,7 +200,7 @@ Due to the lack of free GPIO pins on the microcontroller, the EPS can only provi
 	\label{fig: sr1}
 \end{figure}
 
-The MAX7328 shift register has an easy operation principle. The control of the shift register is implemented via I$^2$C protocol. The microcontroller must communicate with the slave device (MAX7328) by sending the address of the slave device to the I$^2$C bus, which must be accompanied by a confirmation bit. Then port data can be sent to enable or disable the port. The operation principle of MAX7328 is shown on the Fig. \ref{fig: sr_op1}. 
+The MAX7328 shift register has an easy operation principle. The control of the shift register is implemented via I$^2$C protocol. The microcontroller must communicate with the slave device (MAX7328) by sending the address of the slave device to the I$^2$C bus, which must be accompanied by a confirmation bit. Then the port data can be sent to enable or disable the port. The operation principle of MAX7328 is shown on the Fig. \ref{fig: sr_op1}. 
 \newpage
 \begin{figure}[h]
 	\centering
@@ -211,7 +211,7 @@ The MAX7328 shift register has an easy operation principle. The control of the s
  
 \section{Current Measurement and Conversion}
 
-Due to the fact that PDU requires to have 23 current sensors for each power line, it was decided to use 23 analog current sensors in combination with an ADC. The main reason for this choice is to keep the flight heritage which was used for previous missions. Second reason is a relatively huge amount of sensors. Current sensors that give an output directly to I$^2$C or SPI have a limited amount of slaves which make them unsuitable to use for the current application.\\
+Due to the fact that the PDU needs to have 23 current sensors for each power line, it was decided to use 23 analog current sensors in combination with an ADC instead. The main reason for this choice is to keep the flight heritage which was used for previous missions. Secondly is due to the relatively huge amount of sensors on the board. Current sensors that give an output directly to I$^2$C or SPI have a limited amount of slaves which make them unsuitable to use for the current application.\\
 
 For the Descartes mission, the MAX4372T current sensor is used. MAX4372 is a current-sense amplifier which offers a gain of 20. MAX4372T operates on 3.3V and draws 30 µA. MAX4372 has a compact SOT23-5 package with 5 pins. Fig. \ref{fig: max4372t_inside} illustrates the functionality of max4372T current sensor.
 
@@ -225,9 +225,9 @@ For the Descartes mission, the MAX4372T current sensor is used. MAX4372 is a cur
  \newpage
  
 
-\cite{23} Current flows through the sense resistor, generating a sense voltage  Since A1’s inverting input is high impedance, the voltage on the negative terminal equals V IN - V SENSE . A1 forces its
+ Current flows through the sense resistor, generating a sense voltage.  Since A1’s inverting input is high impedance, the voltage on the negative terminal equals V IN - V SENSE \cite{23}. A1 forces its
 positive terminal to match its negative terminal; therefore, the voltage across $R_{G1}\times (V_{IN} - V_{1}-)$ equals $V_{SENSE}$ . This
-creates a current to flow through $R_{G1}$ equal to $V_{SENSE}$ /
+creates a current flow through $R_{G1}$ equal to $V_{SENSE}$ /
 $R_{G1}$ . The transistor and current mirror amplify the current
 by a factor of $\beta$. This makes the current flowing out of the
 current mirror equal to: 
@@ -263,7 +263,7 @@ The gain of the device equals:
   I is a current on the power line\\
   V$_{out}$ is an output voltage\\ 
  
- The Tab. \ref{Tab:res} provide a calculated values of the shunt resistors according to the current recuirements of the power lines. V$_{out}$ = 0.5V was chosen as a reference output voltage for the shunt resistor selection. This value is in the tolerance and allows to choose shunt resistor with lower value in order to decrease the voltage drop.
+ The Tab. \ref{Tab:res} provides calculated values of the shunt resistors according to the current recuirements of the power lines. V$_{out}$ = 0.5V was chosen as a reference output voltage for the shunt resistor selection. This value is in the tolerance and allows to choose shunt resistor with lower value in order to decrease the voltage drop.
   \newpage
   
   \captionof{table}{Shunt resistor choosing}
@@ -299,9 +299,9 @@ The gain of the device equals:
  Another important aspect to consider is the resistance of the power line. The resistance of the power line should be as low as possible to avoid a voltage drop in the presence of high current. In the system design stage, voltage drop can be avoided by providing a low shunt resistor value. In accordance with current requirements, the HISP and VCC16 power channels must provide $ \ geq $ 1500mA, with a resistance of 1Ohm the system will have a voltage drop of $ \ geq $ 1.5V, which will significantly affect the functionality of the output connected device.
  For this reason resistor values for HISPICO and ARM(antenna release mechanism) were chosen with minimal resistance.\\ \\ 
  
- 6U satellite contains 23 analog outputs from the current sensors which have to be converted into a digital signals. To fulfill this requirement, two analog-to-digital converters MAX1231 are used. MAX1231 has already been used for previous 3U mission, in order to preserve the heritage of the flight, it was decided to keep this component for the 6U satellite.
+ the 6U satellite contains 23 analog outputs from the current sensors which have to be converted into a digital signals. To fulfill this requirement, two analog-to-digital converters MAX1231 are used. MAX1231 has already been used for a previous 3U mission, in order to preserve flight heritage, it was decided to keep this component for the 6U satellite.
  
-  \cite{25}MAX1231 is a serial 12 bit  analog-to-digital converter with an internal reference and maximum sampling rate of 300ksps. MAX1231 has a 24 pin configuration with 15 available analog inputs and. The device operates at 3.3 V and contains 10 MHz SPI protocol for communication.
+  MAX1231 is a serial 12 bit  analog-to-digital converter with an internal reference and maximum sampling rate of 300ksps . MAX1231 has a 24 pin configuration with 15 available analog inputs. The device operates at 3.3 V and contains 10 MHz SPI protocol for communication \cite{25}.
   
    \begin{figure}[h]
    	\centering
@@ -310,7 +310,7 @@ The gain of the device equals:
    	\label{fig: adc}
    \end{figure} 
  
-  Figure \ref{fig: adc} illustrates the MAX1231 for the Descartes application. This figure shows external connections of the ADC chip. Pins 1 to 12 used for the analog inputs. Each analog input has a 1k resistor, which is used to protect the ADC and prevent high current input from the sensor. In addition, decoupling capacitors with a capacity of 0.01µF are located in parallel, which are used to filter the input signal. Pins 22, 23, 20 and 21 are used for the SPI communication where pin 21 is a slave select. Pin 24 is the $\overline{EOC}$ End of Conversion output pin used to notify the microcontroller about the end of the conversion. Pin 19 is a power supply pin for the ADC chip, supplied with a 3.3V. To minimize the noise effect, the VDD input bypassed the 0.1 µF capacitor to GND. In addition, 2.2K ferrit chip connected in series with the supply to improve power-supply filtering. 
+  Figure \ref{fig: adc} illustrates the MAX1231 for the Descartes application. This figure shows external connections of the ADC chip. Pins 1 to 12 are used for the analog inputs. Each analog input has a 1k resistor, which is used to protect the ADC and prevent high current input from the sensor. In addition, decoupling capacitors with a capacity of 0.01µF are located in parallel, which are used to filter the input signal. Pins 22, 23, 20 and 21 are used for the SPI communication where pin 21 is a slave select. Pin 24 is the $\overline{EOC}$ End of Conversion output pin used to notify the microcontroller about the end of the conversion. Pin 19 is a power supply pin for the ADC chip, supplied with a 3.3V. To minimize the noise effect, the VDD input bypasses the 0.1 µF capacitor to GND. In addition, 2.2K ferrit chip is connected in series with the supply to improve power-supply filtering. 
   
   
  
@@ -321,16 +321,16 @@ The gain of the device equals:
   	\label{fig: adc}
   \end{figure} 
  
- Fig. \ref{fig: adc} illustrates the operation principle of the MAX1231. The MAX1231 has 4 different clock modes. However, the Descartes Mission uses an external clock mode from the microcontroller. To begin communication with the MAX1231, chip select pin has to be latched up in order to define the slave. Then microcontroller sends a conversion register address with the channel information. After the Register address transmission, slave will send 12 bytes of data separated in two bytes. First receiving byte contains first 4 empty bits which have to be ignored and following 4 bits are the MSB. The second following byte contain the left 8 bits. After the second byte has been sent to the microcontroller, the $ \ overline {EOC} $ pin gets HIGH to notify the microcontroller that the conversion is complete, and the $ \ overline {CS} $ pin becomes LOW.
+ Fig. \ref{fig: adc} illustrates the operation principle of the MAX1231. The MAX1231 has 4 different clock modes. However, the Descartes Mission uses an external clock mode from the microcontroller. To begin communication with the MAX1231, chip select pin has to be latched up in order to define the slave. Then microcontroller sends a conversion register address with the channel information. After the Register address transmission, the slave will send 12 bytes of data separated in two bytes. First receiving byte contains first 4 empty bits which have to be ignored and following 4 bits are the MSB. The second following byte contain the left 8 bits. After the second byte has been sent to the microcontroller, the $ \overline {EOC} $ pin gets HIGH to notify the microcontroller that the conversion is complete, and the $ \overline {CS} $ pin becomes LOW.
  
  \section{Isolators}
  
-The operation principle of the electrical isolators is the partial separation of electricity from the system for safety reasons during maintenance work. PDU includes two payload connectors that carry I$^2$C and SPI signals from the payloads. Due to the functional requirement FR4 from chapter \ref{eq:3} every payload I$^2$C and SPI nodes shall have the isolation. For that reason was made a decision to include well known from the previous missions two types of isolators:\\ \\
+The operation principle of the electrical isolators is the partial separation of electricity from the system for safety reasons during maintenance work. PDU includes two payload connectors that carry I$^2$C and SPI signals from the payloads. Due to the functional requirement FR4 from chapter \ref{eq:3} every payload I$^2$C and SPI nodes shall have the isolation. For that reason the decision was made to include two types of isolators from previous missions :\\ \\
 
 $\bullet$ ADUM1250\\
 $\bullet$ MAX1485\\ \\
 
-ADUM1250 \cite{30} is a hot swappable digital isolators with a bidirectional I2C communication channels. "This eliminates the need to separate I2C signals into separate transmit and receive signals for use with stand-alone optocouplers." Fig. \ref{fig: adum} illustrates the schematics of the ADUM1250 isolator, which isolates the main I$^2$C data line from the payload I$^2$C data line.
+ADUM1250 is a hot swappable digital isolators with a bidirectional I2C communication channels. "This eliminates the need to separate I2C signals into separate transmit and receive signals for use with stand-alone optocouplers." Fig. \ref{fig: adum} illustrates the schematics of the ADUM1250 isolator, which isolates the main I$^2$C data line from the payload I$^2$C data line \cite{30}.
 
  \begin{figure}[h]
  	\centering
@@ -339,7 +339,7 @@ ADUM1250 \cite{30} is a hot swappable digital isolators with a bidirectional I2C
  	\label{fig: adum}
  \end{figure} 
 
-\cite{31} The MAX14850 is a six-channel digital isolator that provides low-cost digital signal transfer between circuits with different power supplies. The MAX14850 provides low power consumption and stable operation at high temperatures. The MAX14850 can be used to insulate SPI buses, I2C buses, RS-232, RS-485 / RS-422 buses, and general purpose insulation. Fig. \ref{fig: adum122} illustrates the MAX14850 isolator which isolates the main SPI from the SPI of the payload.
+ The MAX14850 is a six-channel digital isolator that provides low-cost digital signal transfer between circuits with different power supplies. The MAX14850 provides low power consumption and stable operation at high temperatures. The MAX14850 can be used to insulate SPI buses, I2C buses, RS-232, RS-485 / RS-422 buses, and general purpose insulation. Fig. \ref{fig: adum122} illustrates the MAX14850 isolator which isolates the main SPI from the SPI of the payload \cite{31}.
 
 \begin{figure}[h]
 	\centering
@@ -352,15 +352,15 @@ ADUM1250 \cite{30} is a hot swappable digital isolators with a bidirectional I2C
 
 Power Distribution Unit has 12 connectors on it's design. \\
 
-$\bullet$ eight payload connectors\\
-$\bullet$ two EPS connectors\\
-$\bullet$ one EGSE connector\\
-$\bullet$ one PC104 connector\\
+$\bullet$ Eight payload connectors\\
+$\bullet$ Two EPS connectors\\
+$\bullet$ One EGSE connector\\
+$\bullet$ One PC104 connector\\
 
 PC104 is a main connector which are used to bridge main pcb boards such as the PPU, PDU, OBC, OBC-PH, UHF module and Hispico transceiver.
-EGSE connector is used to program the EPS and the OBC microcontrollers, that located on the PPU and OBC boards.
+EGSE connector is used to program the EPS and the OBC microcontrollers, that located on the PPU and the OBC boards.
 
-The EPS connectors P1 and P2 were added into design due to the lack of free pins on the PC104 connector. These connectors are used to transfer the data signals and power pines between the PPU and PDU. The EPS connectors provide an enable signals from the EPS microcontroller directly to the PDU via P2 connector and bus power lines 3.3V and 5V via P1 connector.
+The EPS connectors P1 and P2 were added into design due to the lack of free pins on the PC104 connector. These connectors are used to transfer the data signals and power pines between the PPU and the PDU. The EPS connectors provide an enable signals from the EPS microcontroller directly to the PDU via P2 connector and bus power lines 3.3V and 5V via P1 connector.
 
   \begin{figure}[h]
   	\centering
@@ -369,10 +369,10 @@ The EPS connectors P1 and P2 were added into design due to the lack of free pins
   	\label{fig: EPSCON}
   \end{figure} 
 
-Payload connectors have a primary function to transfer the signals and power to the payload. Eight payload connectors divided into 8-pin connectors and 9-pin connectors. 8-pin connectors designed to carry payloads that require UART and CAN protocols. 9th pin required for the payloads that transfer I$^2$C and SPI protocols in order to give a power feedback into the ADUM1250 or MAX14850 isolators.  
+Payload connectors have a primary function to transfer the signals and power to the payload. Eight payload connectors are divided into 8-pin connectors and 9-pin connectors. 8-pin connectors are designed to carry payloads that require UART and CAN protocols. The 9th pin is required for the payloads that transfer I$^2$C and SPI protocols in order to give a power feedback into the ADUM1250 or MAX14850 isolators.  
 
-Two payload connectors K10 and K11 were made to include a possible opportunity to handle a payload that require a I$^2$C or SPI protocols.
-The connection design of connector K10 is illustrated on the figure \ref{fig: iso1}. To adjust the signal input between I$^2$C and SPI simple zero ohm resistors are used.
+Two payload connectors, K10 and K11 were included for the possible opportunity to handle a payload that require a I$^2$C or SPI protocols.
+The connection design of the connector K10 is illustrated on the figure \ref{fig: iso1}. To adjust the signal input between I$^2$C and SPI simple zero ohm resistors are used.
 
 \begin{figure}[h]
 	\centering
@@ -381,9 +381,9 @@ The connection design of connector K10 is illustrated on the figure \ref{fig: is
 	\label{fig: iso1}
 \end{figure} 
  
-The PDU is designed in the way that all payload connectors have an opportunity to be supplied from different power sources and with different voltages. The reason for this is the functional requirement FR1 in the chapter \ref{eq:3}. This design allows the PDU to be compatible with every payload requirement. Each payload connector has ability to transfer at least 3.3V, 5V and 7.4V to the payload.  This requirement was accomplished with zero ohm  resistors  design which can configure the input of the power supply to the payload connector.\\
+The PDU is designed in such a way that all payload connectors have an opportunity to be supplied from different power sources and with different voltages. The reason for this is because of the functional requirement, FR1 in chapter \ref{eq:3}. This design allows the PDU to be compatible with every payload requirement. Each payload connector has the ability to transfer at least 3.3V, 5V and 7.4V to the payload.  This requirement was accomplished with a zero ohm  resistors  design which can configure the input of the power supply to the payload connector.\\
 
-All connectors and their pin descriptions are shown in Appendix A. 
+All of the connectors and their pin descriptions are shown in Appendix A. 
 
  
   
